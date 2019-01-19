@@ -1,0 +1,396 @@
+a disparu : a disparue -> a disparu
+a grandi : a grandit -> a grandi
+à partir : a partir -> à partir
+À partir : A partir -> À partir
+a permis : a permi -> a permis
+à postériori : à posteriori -> à postériori ou a posteriori
+a réagi : a réagit -> a réagi
+Abattre et abattage : (A|a)bb?att?(ages?|re) -> $1batt$2
+Abbatiale, abbé, abbesse : (A|a)b(atiale|é|esse)(s?) -> $1bb$2$3
+Aberration : (A|a)bb?[eéêè]rr?ation(s?) -> $1berration$2
+Aborigène : (A|a)r?borig[éeèêë]ne(s?) -> $1borigène$2
+Abscisse : (A|a)bcisse(s?) -> $1bscisse$2
+Absorption : (A|a)bsorbtion(s?) -> $1bsorption$2
+Académie : (A|a)cc?ad[éeèêë]mie(s?) -> $1cadémie$2
+Acacia : (A|a)ccacia -> $1cacia
+Accalmie : (A|a)calmie -> $1ccalmie$2
+Accès : (A|a)cc[éeêë]s -> $1ccès
+Acoustique : (A|a)ccoustique(s?) -> $1coustique$2
+Acquisition : (A|a)quisition(s?) -> $1cquisition$2
+Adresse : (A|a)ddresse(s?) -> $1dresse$2 (anglicisme)
+Addiction : (A|a)diction(s?) -> $1ddiction$2 (du bas latin « addictus », signifiant abandonné, puis en latin médiéval « addictio », puis adjectif « addict » en anglais)
+Addition : (A|a)dition(ner|née?s?|s) -> $1ddition$2 (le mot « adition » existe (acceptation d'un héritage))
+d'affilée : d('|’)affilés -> d$1affilée
+âgé : agé(e?s?) -> âgé$1
+Âgé : Agé(e?s?) -> Âgé$1
+agio : aggio -> agio
+aigu : aigü -> aigu (« aiguë » au féminin, ou « aigüe » recommandé depuis les rectifications orthographiques du français en 1990)
+Alcool : (A|a)lcoo?le? -> $1lcool
+Ambigu : (A|a)mbigü -> $1mbigu (« ambiguë » au féminin, ou « ambigüe » recommandé depuis les rectifications orthographiques du français en 1990)
+Américain : (A|a)mericain(s?) -> $1méricain$2
+Année : (A|a)nnee(s?) -> $1nnée$2
+Annotation : (A|a)notation(s?) -> $1nnotation$2
+Antécédent : (A|a)nt[eéè]c[eéè]dant(s?) -> $1ntécédent$2
+Anthologie : (A|a)ntologie -> $1nthologie$2
+Apparaître / Apparaitre : (A|a)para(i|î)tre -> $1ppara$2tre
+aqueux : acqueux -> aqueux
+arrété : arrété -> arrêté
+ascenseur : acenseur -> ascenseur (le mot « acenseur », ou accenseur, existe, c'est celui qui prend une terre à cens ou à ferme)
+Astérix : (A|a)sterix -> $1stérix
+Atmosphère : (A|a)tmosph[eéêë]re(s?) -> $1tmosphère$2
+Atmosphérique : (A|a)thmosph[eéêë]rique(s?) -> $1tmosphérique$2
+atteint : atteind -> atteint
+Au côté : (A|a)u côtés -> $1ux côtés ou $1u côté (On peut écrire « au côté » (sens littéral, « sur le côté ») ou « aux côtés » (le plus fréquent, « auprès »))
+Aux côtés : (A|a)ux côté\b -> $1ux côtés ou $1u côté (On peut écrire « au côté » (sens littéral, « sur le côté ») ou « aux côtés » (le plus fréquent, « auprès »))
+Au-delà : (A|a)u[ -]del[âàa] -> $1u-delà
+Au-dessous : (A|a)u dessous -> $1u-dessous (mais on écrit « en dessous »)
+Au-dessus : (A|a)u dessus -> $1u-dessus
+Aujourd'hui : (A|a)ujour?d'?hui -> $1ujourd'hui
+Auprès : (A|a)upr[eé]s -> $1uprès
+autours ou autour (La forme « autours » ne s'emploie que pour désigner des rapaces voisins de l'épervier.)
+Auteur : (A|a)uteure -> $1uteur (peu utilisé au féminin, essentiellement employé dans sa forme auteur, même pour les femmes. Employé au Canada et préconisé par l'Office Québecois de la Langue Française2)
+au plus vite : (A|a)ux plus vite -> $1u plus vite
+Au sein : (A|a)u seins -> $1u sein
+aux dépens : aux dépends -> aux dépens
+avoir l'air ému ou avoir l'air émue (s'accorde avec « air » ou avec le sujet, suivant le sens (Ac. fr., 9e éd.)
+ayant droit : ayant-droit -> ayant droit , pl. ayants-droit -> ayants droit (Ac. fr., 9e éd.). Certains autres dictionnaires indiquent que la forme ayant-droit est une forme vieillie.
+Bailliage : (B|b)aillage(s?) -> $1ailliage$2
+Bayer aux corneilles : (B|b)[aâ]iller aux corneilles -> $1ayer aux corneilles (du verbe bayer « avoir la bouche ouverte »)
+Baïonnette : (B|b)a(?:[iï]|ill|y)onn?ette(s?) -> $1aïonnette$2
+balade ou ballade (une balade est une promenade, une ballade est une forme du lyrisme courtois du Moyen Âge ou un morceau de musique)
+Bancaire : (B|b)anquaire(s?) -> $1ancaire$2
+Baseball : (B|b)ase[ -][Bb]all -> $1aseball
+Bissextile : (B|b)isextile -> $1issextile
+Bizarre : (B|b)izard -> $1izarre
+Blanchiment : (B|b)lanchiement(s?) -> $1lanchiment$2
+Blizzard : (B|b)lizard -> $1lizzard
+boite ou boîte (il « boite » en portant une petite « boîte ») Retirée d'après wikt:Annexe:Rectifications_orthographiques_du_français_en_1990#Accent_circonflexe
+champs ou champ
+comme même ou quand même (Les mots « comme » et « même » peuvent se succéder dans une phrase, mais pas à la place de la locution « quand même » signifant « malgré tout ».)
+côte ou cote (au sens mesure, « cote altimétrique » ; au sens relief, « côte d'Adam »)
+ça ou çà (ne s'écrit « çà » que dans le sens « ici », essentiellement dans l'expression « çà et là »)
+cantonnais ou cantonais (La graphie « cantonnais » est une variante admise pour un habitant de Canton mais est la seule orthographe possible pour la conjugaison du verbe « cantonner ».)
+Canberra : Camberra -> Canberra
+Capoeira : (C|c)apoiera -> $1apoeira
+Carrousel : (C|c)arr?ouss?el(s?) -> $1arrousel$2
+Catéchisme : (C|c)athéchisme -> $1atéchisme
+Catégorie : (C|c)ategorie(s?) -> $1atégorie$2
+Cauchemar : cauchemar(d|ds) -> cauchemar ou cauchemars
+Cela : celà -> cela
+Cueillir : ceuillir -> cueillir
+Châtain : (C|c)hatain(s?) -> $1hâtain$2
+Châtelain : (C|c)hatelain(e?s?) -> $1hâtelain$2
+Cherté : (C|c)hèreté -> $1herté
+Chiffre d'affaires : (C|c)hiff?re d'affaire -> $1hiffre d'affaires
+Cime : (C|c)îme(s?) -> $1ime$2
+Cimetière : (C|c)im[ie]ti[eèéê]re(s?) -> $1imetière$2
+Clemenceau : Clémenceau -> Clemenceau
+Coalition : (C|c)oallition(s?) -> $1oalition$2
+Commandement : (C|c)omm?(a|e)ndemant(s?) -> $1ommandement$3
+Compagnie : (C|c)ompanie[^s] -> $1ompagnie (Au singulier, c'est soit « compagnie » (français), soit « compagny » (anglais))
+Concurrence : (C|c)oncuren(c|t)e(s?) -> $1oncurren$2e$3
+Conjugaison : (C|c)onjuguaison(s?) -> $1onjugaison$2
+Conseils d'administration : (C|c)onseil(s?) d'[Aa]dministrations -> $1onseil$2 d'administration
+Considérer : (C|c)onsider(er|ée?s?|ant|ables?|ablement|ations?) -> $1onsidér$2
+Controverse : (C|c)ontreverse(s?) -> $1ontroverse$2
+corrolaire -> corollaire ou corolaire
+Côte d’Azur : [Cc]ôte-d['’][Aa]zur -> Côte d’Azur
+Coteau : (C|c)ôteau(x?) -> $1oteau$2 (mais on écrit « côte »)
+Courir : (C|c)ourrir -> $1ourir
+Croient : croyent -> croient
+Cigogne : (C|c)ygogne(s?) -> $1igogne$2
+De toute façon : (D|d)e toutes? fa[cç]ons? -> $1e toute façon (Toujours au singulier)
+dance ou danse (La dance est un genre musical, dont l'orthographe vient de la traduction en anglais du mot « danse ».)
+d'avantage ou davantage (« Davantage » s'écrit en un seul mot dans le sens de « plus », tandis qu'en deux mots il s'agit d'un avantage au sens de « profit ».)
+Début : (D|d)ebut(s?) -> $1ébut$2
+Décembre : (D|d)ecembre -> décembre
+Déconnexion : (D|d)éconn?ection(s?) -> $1éconnexion$2 (anglicisme)
+Dédicace : (D|d)édicasse(s?) -> $1édicace$2
+Dégât : (D|d)[eéè]gat(s?) -> $1égât$2
+Demi- : (D|d)emie-([a-zA-Z]++) -> $1emi-$2 (demi ne prend pas de "e")
+Dépêche : (D|d)ép[éè]che(s?) -> $1épêche$2
+Dépôt : (D|d)[eéè]pot(s?) -> $1épôt$2
+Desservir : (D|d)éservir -> $1esservir
+Diffère : (D|d)iff[eé]r(e|ent) -> $1iffèr$2
+différent ou différend (Un « différend » est une dispute.)
+Dilemme : Dilemne -> Dilemme (erreur très fréquente causée par l'analogie avec « indemne »)
+Diluvien : (D|d)illuvien(s?|nes?) -> $1iluvien$2
+Dysfonctionnement : (D|d)[iy]sfonctionn?emm?ent(s?) -> $1ysfonctionnement$2
+dus : dûs -> dus (« dû » ne prend un accent circonflexe qu'au masculin singulier)
+due : dûe(s?) -> due$1 (« dû » ne prend un accent circonflexe qu'au masculin singulier)
+dissidence de : dissidence en -> dissidence de
+échange : echange(s?) -> échange$1
+Échange : Echange(s?) -> Échange$1
+éclairage : eclairage(s?) -> éclairage$1
+Éclairage : Eclairage(s?) -> Éclairage$1
+écologie : ecologie -> écologie
+Écologie : Ecologie -> Écologie
+écossais : ecossais(e?s?) -> écossais$1
+Écossais : Ecossais(e?s?) -> Écossais$1
+édifice : edifice(s?) -> édifice$1
+Édifice : Edifice(s?) -> Édifice$1
+éducation : education(s?) -> éducation$1
+Éducation : Education(s?) -> Éducation$1
+élection : election(s?) -> élection$1
+Élection : Election(s?) -> Élection$1
+électronique : electronique(s?) -> électronique$1
+Électronique : Electronique(s?) -> Électronique$1
+éloge : eloge(s?) -> éloge$1
+Éloge : Eloge(s?) -> Éloge$1
+éloge : une éloge -> un éloge
+emménager : eménager -> emménager
+emmental : emental -> emmental
+emploit -> emploi ou emploie (un « emploi », mais il « emploie »)
+empreint : est emprunt -> est empreint
+empreinte : est emprunte -> est empreinte
+empreintes : sont empruntes -> sont empreintes
+empreints : sont emprunts -> sont empreints
+en règle générale : (E|e)n r[èeéê]gle g[éeèê]n[éeèê]rale? -> $1n règle générale
+énergie : energie(s?) -> énergie$1
+Énergie : Energie(s?) -> Énergie$1
+Enivré : (E|e)nnivr(ée?s?|er) -> $1nivré$2
+Entrepôt : (E|e)ntrepot(s?) -> $1ntrepôt$2
+environ ou environs (« environ » est un adverbe invariable signifiant « à peu près », « environs » est le pluriel du nom « environ », « les environs » signifie « les alentours »)
+En termes de : (E|e)n terme de -> $1n termes de (Même à propos d’un mot particulier, terme se met au pluriel dans l’expression "en termes de")
+Éole : [Eeé]ole -> Éole
+éolien : eolien(nes?|s?) -> éolien$1
+Éolien : Eolien(nes?|s?) -> Éolien$1
+épistémologie et dérivés : epist[eéè]molog([a-z]*+) -> épistémolog$1
+Épistémologie et dérivés : Epist[eéè]molog([a-z]*+) -> Épistémolog$1
+époque : epoque(s?) -> époque$1
+Époque : Epoque(s?) -> Époque$1
+équateur : equateur(s?) -> équateur$1
+Équateur : Equateur(s?) -> Équateur$1
+équilibrer et dérivés : equilibr(er|es?|ée?s?|is[mt]es?|ages?) -> équilibr$1
+Équilibrer et dérivés : Equilibr(er|es?|ée?s?|is[mt]es?|ages?) -> Équilibr$1
+ermite : hermite(s?) -> ermite$1
+Ermite : Hermite(s?) -> Ermite$1
+une espèce : un espèce -> une espèce (une espèce de chapeau et non « un » espèce)
+établissement : etabliss?emm?ent(s?) -> établissement$1
+Établissement : Etabliss?emm?ent(s?) -> Établissement$1
+état : etat(s?) -> état$1
+État : Etat(s?) -> État$1
+États-Unis : É-U -> États-Unis
+États-Unis : U\.S\.A\. -> États-Unis
+États-Unis : USA(\.?) -> États-Unis$1
+éthique : eth?ique(s?) -> éthique$1
+Éthique : Eth?ique(s?) -> Éthique$1
+étoile et dérivés : etoil(es?|ée?s?) -> étoil$1
+Étoile et dérivés : Etoil(es?|ée?s?) -> Étoil$1
+Évidement [eé]vid[aeé]mm?[ae]n[ts]? -> évidemment ou évidement (« évidement » est l'action d'évider, « évidemment » signifie bien sûr)
+évaluer et dérivés : evalu([a-z]*+) -> évalu$1
+Évaluer et dérivés : Evalu([a-z]*+) -> Évalu$1
+éveil et dérivés : eveil([a-z]*+) -> éveil$1
+Éveil et dérivés : Eveil([a-z]*+) -> Éveil$1
+évoluer et dérivés : evolu([a-z]*+) -> évolu$1
+Évoluer et dérivés : Evolu([a-z]*+) -> Évolu$1
+ex æquo : ex aequo -> ex æquo
+existe : exsite -> existe (faute de frappe)
+exsangue : exangue -> exsangue
+Exhaustif et Exhaustive : (E|e)xausti(f|ve) -> $1xhausti$2
+exaucer : exhaucer -> exaucer (accorder à quelqu'un ce qu'il a demandé ; ne pas confondre avec « exhausser », augmenter la hauteur)
+Exorbitant : (E|e)xhorbitant -> $1xorbitant
+Exciter et dérivés : (E|e)xit(ée?s?|er|ations?) -> $1xcit$2
+fabriquant ou fabricant (« fabricant » de jouets, mais « fabriquant » s'il s'agit du participe présent du verbe « fabriquer »)
+faîtes ou faites (« vous faites », mais l'orthographe « faîtes » existe, comme pluriel de « faîte », substantif synonyme de « sommet »)
+fatiguant ou fatigant (comme adjectif, « fatigant » a perdu le u « un travail fatigant » mais il le garde comme participe présent : « C'est en se fatiguant trop qu'il est tombé malade »)
+Fatras : (F|f)ratras -> $1atras
+fond ou fonds (« un fonds de commerce », « le fonds d'une bibliothèque » ; autre mot que dans « le fond du vase »)
+Faire partie de, Faire-part de : (F|f)aire part(?:i|is|it|ies) de -> $1aire partie de ou $1aire-part de (La locution verbale s'écrit sans trait d'union, tandis que le substantif en prend un.)
+Fait partie de/du/des : (F|f)ait part(?:i|is|it|ies) (des?|du) -> $1ait partie $2
+Fait également/aussi/pas/plus partie : (F|f)ait (également|aussi|pas|plus) part(?:i|is|it|ies) -> $1ait $2 partie
+Il/Elle en fait partie : ([Ii]l|[Ee]lle) en fait part(?:i|is|it|ies) -> $1 en fait partie
+Familial : (F|f)amillial -> $1amilial
+Fédération : (F|f)[éeèê]d[éeèê]ration(s?) -> $1édération$2
+Ferroviaire : (F|f)err?ovière(s?) -> $1erroviaire$2
+février : [Ff]evrier -> février
+Filigrane : (F|f)ill?igra(?:mm?|nn?)e(s?) -> $1iligrane$2
+Font partie de/du/des : (F|f)ont part(?:i|is|it|ies) (des?|du) -> $1ont partie $2
+Font également/aussi/pas/plus partie : (F|f)ont (également|aussi|pas|plus) part(?:i|is|it|ies) -> $1ont $2 partie
+Ils/Elles en font partie : ([Ii]ls|[Ee]lles) en font part(?:i|is|it|ies) -> $1 en font partie
+Fréquent et dérivés : (F|f)r[eèê]quent([a-z]*+) -> $1réquent$2
+frustre ou fruste (L'adjectif qualificatif « fruste » a le sens de « grossier » mais le verbe « frustrer » se conjugue normalement au singulier : « il frustre ».)
+Fuchsia : (F|f)us?chia -> $1uchsia
+Gaufre : (G|g)auffre -> $1aufre
+Généalogie et dérivés : (G|g)[eéè]nn?[eéè]alogi(stes?|ques?|es?) -> $1énéalogi$2
+Genèse : (G|g)[eéè]nn?[eéè]se -> $1enèse
+Génois : (G|g)[êè]nois(e?s?) -> $1énois$2
+Géographie : (G|g)[eèê]ographie(s?) -> $1éographie$2
+Gratte-ciel : (G|g)rattes-ciels -> $1ratte-ciel ou $1ratte-ciels
+Gravitationne : (G|g)ravitatione(ls?|lles?) -> $1ravitationne$2
+grès ou gré (Le grès est une roche tandis que le gré est la volonté, comme dans « savoir gré », « de gré ou de force », « de bon gré ».)
+Groseillier : (G|g)roseiller -> $1roseillier
+Guyane : [Gg]uyanne -> Guyane
+Haut-parleurs : (H|h)auts-parleurs -> $1aut-parleurs
+Hawai -> Hawaii ou Hawaï (La forme « Hawaii » est l'écriture officielle anglaise. La forme « Hawaï » n'est pas reconnue par certains dictionnaires. Elle est considérée comme équivalente à « Hawaii » par d'autres. Enfin, quelques dictionnaires prônent cette forme « Hawaï » qui interdit explicitement tout digramme en français entre le « a » et le « i »)
+Hasard : (H|h)azard -> $1asard (anglicisme)
+Héroïne : (H|h)éroine(s?) -> $1éroïne$2
+Héros : (H|h)[ée]ros? -> $1éros
+Héros : (L|l)'héros -> $1e héros
+hors ou or (« Hors » signifie « en-dehors de », alors que « or » est une conjonction de coordination : « Le sage est heureux. Or Socrate est sage, donc Socrate est heureux. »)
+Huis clos : (H|h)uit clos -> $1uis clos (erreur sur l'expression à huis clos)
+Imbécilité : (I|i)mb[eéèê]cill?ité(s?) -> $1mbécillité$2 ou $1mbécilité$2
+Inclus ou inclut : (I|i)nclu -> $1nclus ou $1nclut
+Inclura : incluera -> inclura
+Inconsciemment : (I|i)ncons?c?iemm?ent -> $1nconsciemment
+Inférieur : (I|i)nf[eéèê]rr?ieur(e?s?) -> $1nférieur$2
+Ingrat : (I|i)ngras -> $1ngrat
+Installation : (I|i)nstalation(s?) -> $1nstallation$2
+Intelligemment : (I|i)ntell?igemm?ent -> $1ntelligemment
+Intercommunale et dérivés : (I|i)ntercomuna(le?s?|ux|lités?) -> $1ntercommuna$2 (intercommunal et les mots de la même famille.)
+Japonais : (J|j)aponnais -> $1aponais (selon qu’on désigne une personne « Japonais » ou qu’il s’agisse d’un emploi en tant qu’adjectif ou de la langue « japonais »)
+Journaux : (J|j)ourne?au[sx] -> $1ournaux
+la la : la\sla -> la (attention, nombreux faux-positifs)
+Libye : Lybie -> Libye (l'orthographe Lybie est étymologiquement impossible)
+Licence : (L|l)icense(s?) -> $1icence$2 (en anglais, les deux orthographes sont correctes)
+Lieu-dit : (L|l)ieu dit -> $1ieu-dit
+Lieux-dits : (L|l)ieux dits? -> $1ieux-dits
+Littéralement : (L|l)itt?[éeè]rr?all?emm?ent -> $1ittéralement
+Lorsque : (L|l)orsque qu(e|') -> $1orsqu$2
+Lorsqu'un : (L|l)orsque un(e?) -> $1orsqu'un$2
+Magazine : (M|m)agasine(s?) -> $1agazine$2
+Magasin ou Magazine : (M|m)agazin(s?) -> $1agasin$2 ou $1agazine$2
+Maligne : maline(s?) -> maligne$1 (registre soutenu)
+Maxima et Minima : ([Mm]ax|[Mm]in)imas -> $1ima
+Meilleur : (M|m)eileur(e?s?) -> $1eilleur$2
+Médaille : (M|m)edaille(s?) -> $1édaille$2
+Mémoire : (M|m)emoire(s?) -> $1émoire$2
+Mnémotechnique : (M|m)émotechnique(s?) -> $1némotechnique$2
+Midi-Pyrénées : [Mm]idi[ -][Pp]yrénées -> Midi-Pyrénées
+Mœurs : (M|m)oeurs? -> $1œurs
+Moyen-Orient : [Mm]oyen[ -][Oo]rient -> Moyen-Orient
+Naoutchnyï : Nauchnyj -> Naoutchnyï
+Non officiel : non-officiel(s?) -> non officiel$1
+Non-respect : (N|n)on respect -> $1on-respect
+Non-violation : (N|n)on violation -> $1on-violation
+Numéro : (N|n)umero(s?) -> $1uméro$2
+Obédience : (O|o)bédiance(s?) -> $1bédience$2
+Obligeamment : (O|o)bligea?mm?ent -> $1bligeamment
+Obnubiler : (O|o)bnibul(ée?s?|er) -> $1bnubil$2
+Obnubiler : (O|o)mn[iu]b[iu]l(ée?s?|er) -> $1bnubil$2
+Oculaire : (O|o)ccull?aire(s?) -> $1culaire$2
+Occurrence : (O|o)cc?urr?ence(s?) -> $1ccurrence$2
+ont disparu : ont disparue?s -> ont disparu
+Opéra : (O|o)pera(s?) -> $1péra$2
+Orchestre : (O|o)rcheste(s?) -> $1rchestre$2 (rassemblement de musiciens. Attention, « orcheste » sans R existe en biologie, cf. Curculionidae)
+Ornithorynque : (O|o)rn[iy]th?or[iy]nque(s?) -> $1rnithorynque$2
+oyez : oyé -> oyez (impératif du verbe « ouïr »)
+palier ou pallier (« palier », avec un seul « l », désignant une plate-forme terminant un étage, tandis que « pallier » est un verbe transitif qui ne doit pas être suivi d'une préposition (donc, on ne doit pas dire ou écrire « pallier à »))
+Panama : Panamá -> Panama
+Parce que : (P|p)arceque -> $1arce que
+Parmi : Parmis -> Parmi
+Pâtisserie : (P|p)atisserie -> $1âtisserie
+Pécuniaire : (P|p)écunier -> $1écuniaire
+Pénate :(P|p)enate(s?) -> $1énate$2
+Père : pere(s?) -> père$1 (« Pere » n'est pas détecté car il s'agit d'un prénom en catalan)
+Permanence : (P|p)ermann?[ae]nce(s?) -> $1ermanence$2
+Permis : (P|p)ermi -> $1ermis
+Pertinemment : (P|p)ertin[ae]mm?ent -> $1ertinemment
+Philanthrope : (P|p)h[iy]ll?antrop(ique|ie|e)(s?) -> $1hilanthrop$2$3
+Philharmonique : (P|p)h[iy]ll?armonn?ique(s?) -> $1hilharmonique$2
+Pilier/Piller : (P|p)illier -> $1ilier ou $1iller (Un pilier est une colonne tandis que le verbe « piller » signifie s'accaparer les ressources.)
+Pilule : (P|p)illule(s?) -> $1ilule$2
+Planification : (P|p)lannification(s?) -> $1lanification$2
+Pléiade : (P|p)léïade(s?) -> $1léiade$2
+Plutôt : (P|p)l[ùûu]t[ôo]t -> $1lutôt
+Pole position : (p|P)[oô]les? position(s?) -> $1ole position$2 (anglicisme)
+Polyptyque : (P|p)ol[iy]pt[iy]que(s?) -> $1olyptyque$2
+Pots-de-vin : pots[ -]de[ -]vins? -> pots-de-vin
+Pourrir : (P|p)ourir -> $1ourrir
+Précipitamment : (P|p)récipit[ae]mm?ent -> $1récipitamment
+Précisément : (P|p)récis[éeè]mm?ent -> $1récisément
+Prémisse/Prémice : (P|p)rémice -> $1rémisse ou $1rémices (Une prémisse est l'hypothèse d'une implication ou d'un syllogisme, tandis que les prémices, toujours au pluriel, sont les premières traces d'un phénomène.)
+Procès-verbal : (P|p)roc[éeèë]s[ -][Vv]erba(l|ux) -> $1rocès-verba$2
+Profondément : (P|p)rofond[éeè]mm?ent -> $1rofondément
+Provisoire : (P|p)rovisoir(s?) -> $1provisoire$2
+Professionnel et dérivés : (P|p)roff?ess?ionn?el([a-zA-Z]*+) -> $1rofessionnel$2
+Puis : (P|p)uis ensuite -> $1uis
+Puis/Puits : (P|p)uit -> $1uis ou $1uits (L'adverbe « puis » et le substantif « puits » sont tous deux invariables.)
+Puissamment : (P|p)uissament -> $1uissamment
+Pyrénées : [Pp][yi]rr?[éeèêë]nn?[éeèêë]es? -> Pyrénées
+Quatuor : quattuor -> quatuor
+Qu'un(e) : que un(e?) -> qu'un$1
+Quel que soit et dérivés : quelque soit -> quel que soit ou quelle que soit ou quels que soient ou quelles que soient
+Quelque temps : quelques temps -> quelque temps
+Quelques-un(e)s : (Q|q)uelques un(e?)s -> $1uelques-un$2s
+Résonance : (R|r)(?:ai|e|è)sonn?ance(s?) -> $1ésonance$2
+Rationaliser et dérivées : (R|r)ationnalis(ée?s?|er|ations?) -> $1ationalis$2
+Rébellion : (R|r)ebell?ion(s?) -> $1ébellion$2
+Recèle : (R|r)ecelle(s) -> $1ecèle$2
+Recueillir : (R|r)eceuill?ir -> $1ecueillir
+Recommandation : (R|r)ecomm?+[ae]ndation(s) -> $1ecommandation$2 (anglicisme)
+Récompense : (R|r)écompence(s) -> $1écompense$2
+Récompense : (R|r)[eèê]compense(s) -> $1écompense$2
+récurent ou récurrent (La conjugaison du verbe « récurer » est régulière et se différencie de l'adjectif « récurrent ».)
+Réédition : (R|r)édition(s) -> $1eddition$2 ou $1éédition$2 (La reddition est le fait de se rendre, tandis que la réédition est la réimpression d'un ouvrage.)
+Référence : (R|r)efer[ae]nce(s?) -> $1éférence$2
+Région : (R|r)[eèê]gion(s?) -> $1égion$2
+Régionale et dérivés : (R|r)[eèê]giona(le?s?|lisations?|lisée?s?|liser|ux) -> $1égiona$2
+Remords : (R|r)emord -> $1emords
+Renommer : (R|r)enom(ée?+s?|er) -> $1enomm$2
+Rémunérer : (R|r)énumér(ée?s?|er) -> $1émunér$2
+Représenter et dérivés : (R|r)[eéèêë]pp?+r[eéèêë]s[ae]nt(ée?s?|er|ants?|ations?|atifs?) -> $1eprésent$2
+République : (R|r)[eè]publique(s?) -> $1épublique$2
+Résorption : (R|r)ésorbtion(s?) -> $1ésorption$2
+Résous : résouds -> résous (tu résous)
+Résout : résoud -> résout (il résout)
+Résultat : (R|r)esultat(s?) -> $1ésultat$2
+Rhétorique : (R|r)rh?+[eéêèë]th?+orique(s?) -> $1hétorique$2
+Rôle : (R|r)ole(s?) -> $1ôle$2
+Royaume-Uni : UK -> Royaume-Uni
+S'il : (S|s)i il -> $1'il
+Satellites : (S|s)att?+ell?+ite(s?) -> $1atellite$2
+Saynète : (S|s)c?+[éè]nette(s?) -> $1aynète$2
+Sens dessus dessous : sans[ -]dessus[ -]dessous -> sens dessus dessous
+Scéance : (S|s)céance(s?) -> $1éance$2
+Saurais gré : serais gré -> saurais gré (de l'expression « je vous saurais gré »)
+Série : (S|s)erie(s?) -> $1érie$2
+Sibyllin : (S|s)[iy]b[iy]ll?+in(e?+s?) -> $1ibyllin$2
+Siphon : (S|s)yphon(s?) -> $1iphon$2
+Soubresaut : (S|s)oubressaut(s?) -> $1oubresaut$2
+Souffrir : (S|s)oufrir -> $1ouffrir
+Souterrain : (S|s)ous[ -]terr?+ain(e?+s?) -> $1outerrain$2
+Spatial : (S|s)pacial(e?+s?) -> $1patial$2
+Succédané : (S|s)uccédanné -> $1uccédané
+Succédé : succédée?s? -> succédé (se sont succédé, aucun accord possible.)
+Successeur : (S|s)ucc?+ess?+eur(e?+s?) -> $1uccesseur$2
+Supérieur : (S|s)upp?+[eéè]rr?+ieur(e?+s?) -> $1upérieur$2
+Support et dérivés : (S|s)uport([a-zA-Z]*+) -> $1upport$2
+Synchrone : (S|s)[iy]nch?+rone(s?) -> $1ynchrone$2
+Syphilis : (S|s)yphillis -> $1yphilis
+t'il -> t-il
+tâche ou tache (les « taches » d'un vêtement, ou une « tâche » au sens travail)
+Tant pis : (T|t)a[mn]pis -> $1ant pis
+Télescope : (T|t)[éeèêë]l[éeèêë]scope(s?) -> $1élescope$2
+Théâtre : (T|t)h?[éeèêë]ath?re(s?) -> $1héâtre$2
+Thème : (T|t)h[éeêë]me(s?) -> $1hème$2
+Timbres-poste : (T|t)imbre(s?)[ -][Pp]ostes -> $1imbre$2-poste (il n'y a qu'une poste mais plusieurs timbres)
+Tonal : (T|t)onnal(e?s?) -> $1onal$2
+Tonnerre : (T|t)onn?[éeèêë]rr?e -> $1onnerre
+Toponymie : (T|t)oponomie(s?) -> $1oponymie$2 (Voir Bistro du 8/12/2011)
+Tous deux, tous trois : (T|t)out (deux|trois)(?<!(?:(en|pour|le|malgré) tout (deux|trois))) -> $1ous $2 (on dit « tous deux » ou « toutes deux » quand on veut dire « tous les deux »)
+Tout à coup : tout[ -][aà][ -]coup -> tout à coup
+Tout à fait : tout[ -][aà][ -]fait -> tout à fait
+tord ou tort
+Trafic : (T|t)raffic(s?) -> $1rafic$2 (anglicisme)
+Tranquillité : (T|t)ranquill?itée? -> $1ranquillité
+Tranquillement : (T|t)ranquill?[ae]mm?ent -> $1ranquillement
+Très : (T|t)rés -> $1rès
+Trône : (T|t)rone(s?) -> $1rône$2
+Les dérivés de « utilis* » où il manque un des 2 'i'
+Utile : (U|u)til -> $1tile
+Vaillamment : (V|v)aill[ae]mm?ent -> $1aillamment
+Vainc : vainct -> vainc (il vainc)
+Valeur : (V|v)aleure(s?) -> $1aleur$2
+Velours : (V|v)elour -> $1elours
+Vertu : (V|v)ertue(s?) -> $1ertu$2
+Vidéo : (V|v)ideo(s?) -> $1idéo$2
+Violemment : (V|v)iolamm?ent -> $1iolemment
+Voirie : (V|v)oierie(s?) -> $1oirie$2
+volatil ou volatile (Le substantif masculin, au sens de « oiseau » s'écrit uniquement « volatile » ; au sens ancien et littéraire de « pourvu d'ailes », il s'écrit « volatile » et il est commun aux deux genres. L'adjectif, signifiant « qui s'évapore facilement », s'écrit « volatil » au masculin et « volatile » au féminin)3,4
+Voler en éclats : vol(er|e|ent|a|èrent|era|eront|ait|aient) en [ée]clat -> vol$1 en éclats
+Volupté : (V|v)oluptes -> $1oluptés ou $1olutes
+Vraisemblable : (V|v)raissemblable -> $1raisemblable
+(W|w)aggon(s?) -> $1agon$2 (anglicisme)
+Y a t'il -> Y a-t-il
+(Y|y)atch(s?) -> $1acht$2
