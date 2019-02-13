@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modifs language="fr" wp_dump_date="2007-01-01" wp_first_page_id="1" wp_last_page_id="3000000">
+    <modif id="1" wp_page_id="3" wp_before_rev_id="1350936" wp_after_rev_id="1409789" wp_user_id="3763" wp_user_num_modif="15342" wp_comment="correction de numéraux">
+        <before>Antoine Meillet ( né Paul-Jules-Antoine Meillet 11 novembre 1866-21 septembre 1936 ) est le principal linguiste français des premières décennies du <m num_words="1">XXe</m> siècle .</before>
+        <after>Antoine Meillet ( né Paul-Jules-Antoine Meillet 11 novembre 1866-21 septembre 1936 ) est le principal linguiste français des premières décennies du <m num_words="2">XX e</m> siècle .</after>
+    </modif>
+    <modif id="2" wp_page_id="3" wp_before_rev_id="4529726" wp_after_rev_id="13190244" wp_user_id="7343" wp_user_num_modif="319" wp_comment="ortho">
+        <before> <m num_words="1">A</m> la Sorbonne , Meillet surveille le travail Milman Parry . En 1923 , un an avant que Milman Parry ne commence son travail avec Meillet , Meillet écrit ceci ( cité dans la première des deux thèses de Milman Parry , à savoir , celle qui traite de l' épithète homérique ) :</before>
+        <after> <m num_words="1">À</m> la Sorbonne , Meillet surveille le travail de Milman Parry . En 1923 , un an avant que Milman Parry ne commence son travail avec Meillet , Meillet écrit ceci ( cité dans la première des deux thèses de Milman Parry , à savoir , celle qui traite de l' épithète homérique ) :</after>
+    </modif>
+    <modif id="3" wp_page_id="3" wp_before_rev_id="13190244" wp_after_rev_id="14051961" wp_user_id="9158" wp_user_num_modif="14331" wp_comment="nettoyage , Typos fixed : lesquel → lesquels , AWB">
+        <before>Il a formé toute une génération de linguistes français , parmi <m num_words="1">lesquel</m> Emile Benveniste , Marcel Cohen , Georges Dumézil , André Martinet , Aurélien Sauvageot , Lucien Tesnière , Joseph Vendryes .</before>
+        <after>Il a formé toute une génération de linguistes français , parmi <m num_words="1">lesquels</m> Emile Benveniste , Marcel Cohen , Georges Dumézil , André Martinet , Aurélien Sauvageot , Lucien Tesnière , Joseph Vendryes .</after>
+    </modif>
+    <modif id="4" wp_page_id="3" wp_before_rev_id="18398158" wp_after_rev_id="19601285" wp_user_id="0" wp_user_num_modif="612471" wp_comment="">
+        <before>À la <m num_words="1">Sorbonne</m> , Meillet surveille le travail de Milman Parry . En 1923 , un an avant que Milman Parry ne commence son travail avec Meillet , Meillet écrit ceci ( cité dans la première des deux thèses de Milman Parry , à savoir , celle qui traite de l' épithète homérique ) :</before>
+        <after>À la <m num_words="3">Faculté des lettres</m> , Meillet surveille le travail de Milman Parry . En 1923 , un an avant que Milman Parry ne commence son travail avec Meillet , Meillet écrit ceci ( cité dans la première des deux thèses de Milman Parry , à savoir , celle qui traite de l' épithète homérique ) :</after>
+    </modif>
+</modifs>

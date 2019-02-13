@@ -52,7 +52,9 @@ public class CsvFileWriter {
         
         for (int i = 0 ; i < titles.length ; i++) {
             write(data.get(titles[i]), bw);
-            //write(""+separator, bw);
+            if(i < titles.length-1) {
+            		write(""+separator, bw);
+            }
         }
         bw.write("\n");
     }
