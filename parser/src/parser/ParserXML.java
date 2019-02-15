@@ -23,14 +23,17 @@ import org.xml.sax.SAXException;
 
 import caster.Caster;
 import caster.SentenceCaster;
+import filter.Filter;
 
 public class ParserXML {
 
 	private List<Caster> casters;
+	private List<Filter> filters;
 	private CsvFileWriter writer;
 	
 	public ParserXML(CsvFileWriter w) {
 		casters = new ArrayList<Caster>();
+		filters = new ArrayList<Filter>();
 		writer = w;
 	}
 	
@@ -39,6 +42,13 @@ public class ParserXML {
 	public void addCaster(Caster... cas) {
 		for(Caster c : cas) {
 			casters.add(c);
+		}
+	}
+	
+	
+	public void addFilter(Filter... fil) {
+		for(Filter f : fil) {
+			filters.add(f);
 		}
 	}
 	
@@ -129,6 +139,15 @@ public class ParserXML {
 					else {
 						i += k;
 					}
+				}
+			}
+			
+			
+			/* applique les filtres sur la white list */
+			//TODO parcourir tous les element de la whitelist et supprimer ceux qui doivent etre supprimes
+			for(int i = whiteList.size()-1 ; i > 0  ; i--) {
+				for(Filter f : filters) {
+					//TODO
 				}
 			}
 			
