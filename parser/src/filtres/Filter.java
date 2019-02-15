@@ -4,7 +4,8 @@ package filtres;
 public interface Filter {
 
 	/*
-	 * this method applies to each StringBuilder the filter they are create for
+	 * this method applies directly the filter to each parameters
+	 * (it modifies the parameters)
 	 * then it returns false if the filter doesn't worked
 	 * OR
 	 * true if everything is OK

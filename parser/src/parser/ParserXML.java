@@ -66,7 +66,7 @@ public class ParserXML {
 	 */
 	public void parser() throws IOException {
 		
-		/* ouverture du fichier xml en entree */
+		/* ouverture du fichier xml en entre */
 		Document document = ParserXML.getDocumentTraversal("../alex/doss.nosync/wico_v1.xml");
 		//Document document = ParserXML.getDocumentTraversal("../truc.xml");
 		DocumentTraversal traversal = (DocumentTraversal) document;
@@ -144,7 +144,7 @@ public class ParserXML {
 	
 	
 	/*
-	 * traite le contenu d une balise <modif>
+	 * treat the <modifs> contents
 	 */
 	public void traiterModif(Node node, StringBuilder strBefore, StringBuilder strAfter, StringBuilder strComments, Map<String, String> map) throws IOException {
 		
@@ -183,6 +183,9 @@ public class ParserXML {
 	}
 	
 
+	/*
+	 * return a Document : usefull for the XMLparsing
+	 */
 	public static Document getDocumentTraversal(String fileName) {
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		Document docATraiter = null;
@@ -198,7 +201,7 @@ public class ParserXML {
 	
 	
 	/*
-	 * applique les filtres sur la selection passe en parametre
+	 * apply the filters on the parameters
 	 */
 	public boolean filtrer(StringBuilder before, StringBuilder after, StringBuilder comments, Map<String,String> map) {
 		for(Filter f : filtres) {
@@ -230,15 +233,24 @@ public class ParserXML {
 			file = new File("sortie.csv"); 
 		}
 		
+		//test if the file already exist
 		if(file.exists()) {
 			System.out.println("le fichier existe deja");
 			System.exit(0);
 		}
+		
+		//create the different column for the CSV file
 		String[] titles = { "before" , "after" , "comments"};
 		CsvFileWriter writer = new CsvFileWriter(file, '\t', titles);
 		
+		//add the writer to the parser
 		ParserXML parser = new ParserXML(writer);
+		
+		//adding differents filters
 		parser.addFilter(new SentenceCaster());
+		
+		
+		//start the treatment
 		parser.parser();
 	}
 	
