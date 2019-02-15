@@ -38,7 +38,6 @@ public class ParserXML {
 	}
 	
 	
-	
 	public void addCaster(Caster... cas) {
 		for(Caster c : cas) {
 			casters.add(c);
@@ -51,6 +50,7 @@ public class ParserXML {
 			filters.add(f);
 		}
 	}
+	
 	
 	
 	/*
@@ -77,13 +77,14 @@ public class ParserXML {
 	public void parser() throws IOException {
 		
 		/* ouverture du fichier xml en entre */
-		Document document = ParserXML.getDocumentTraversal("../alex/doss.nosync/wico_v1.xml");
-		//Document document = ParserXML.getDocumentTraversal("../truc.xml");
+		//Document document = ParserXML.getDocumentTraversal("../alex/doss.nosync/wico_v1.xml");
+		Document document = ParserXML.getDocumentTraversal("../alex/truc.xml");
 		DocumentTraversal traversal = (DocumentTraversal) document;
 		if(traversal == null) {
 			System.out.println("erreur");
 			System.exit(0);
 		}
+		
 		/* variables de stockage de lecture => ecriture */
 		Map<String, String> map = new HashMap<String, String>();
 		
@@ -144,10 +145,8 @@ public class ParserXML {
 			
 			
 			/* applique les filtres sur la white list */
-			//TODO parcourir tous les element de la whitelist et supprimer ceux qui doivent etre supprimes
 			for(int i = whiteList.size()-1 ; i > 0  ; i--) {
 				for(Filter f : filters) {
-					//TODO
 					if(f.hasToBeRemoved(nList.item(whiteList.get(i)))) {
 						whiteList.remove(i);
 						break;
@@ -164,6 +163,7 @@ public class ParserXML {
 		//fermeture writer
 		writer.close();
 	}
+	
 	
 	
 	/*
@@ -201,7 +201,6 @@ public class ParserXML {
 			strBefore.delete(0, strBefore.length());
 			strAfter.delete(0, strAfter.length());
 			strComments.delete(0, strComments.length());
-
 		}	
 	}
 	
@@ -221,6 +220,7 @@ public class ParserXML {
 		
 		return docATraiter;
 	}
+	
 	
 	
 	/*
