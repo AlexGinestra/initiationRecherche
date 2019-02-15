@@ -148,6 +148,10 @@ public class ParserXML {
 			for(int i = whiteList.size()-1 ; i > 0  ; i--) {
 				for(Filter f : filters) {
 					//TODO
+					if(f.hasToBeRemoved(nList.item(whiteList.get(i)))) {
+						whiteList.remove(i);
+						break;
+					}
 				}
 			}
 			

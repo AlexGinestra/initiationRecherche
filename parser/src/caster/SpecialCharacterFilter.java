@@ -1,6 +1,6 @@
 package caster;
 
-public class SpecialCharacter implements Caster{
+public class SpecialCharacterFilter implements Caster{
 
 	@Override
 	public boolean cast(StringBuilder before, StringBuilder after, StringBuilder comments) {
