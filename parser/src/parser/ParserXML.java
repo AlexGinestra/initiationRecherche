@@ -250,7 +250,6 @@ public class ParserXML {
 		
 		if(args.length > 0) {
 			file = new File(args[0]); 
-			
 		}
 		else {
 			file = new File("sortie.csv"); 
