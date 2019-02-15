@@ -1,7 +1,7 @@
-package filtres;
+package caster;
 
 
-public class SentenceCaster implements Filter{
+public class SentenceCaster implements Caster{
 
 	
 	public SentenceCaster() {
@@ -11,10 +11,10 @@ public class SentenceCaster implements Filter{
 	/*
 	 * Cast to only one sentence if the StringBuilder are composed of multi sentences
 	 * (non-Javadoc)
-	 * @see filtres.Filter#filtre(java.lang.StringBuilder, java.lang.StringBuilder, java.lang.StringBuilder)
+	 * @see casters.Caster#Caster(java.lang.StringBuilder, java.lang.StringBuilder, java.lang.StringBuilder)
 	 */
 	@Override
-	public boolean filtre(StringBuilder before, StringBuilder after, StringBuilder comments) {
+	public boolean cast(StringBuilder before, StringBuilder after, StringBuilder comments) {
 		if(before == null || after == null || comments == null) {
 			return false;
 		}

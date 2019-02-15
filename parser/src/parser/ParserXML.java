@@ -21,24 +21,24 @@ import org.w3c.dom.traversal.NodeFilter;
 import org.w3c.dom.traversal.NodeIterator;
 import org.xml.sax.SAXException;
 
-import filtres.Filter;
-import filtres.SentenceCaster;
+import caster.Caster;
+import caster.SentenceCaster;
 
 public class ParserXML {
 
-	private List<Filter> filtres;
+	private List<Caster> casters;
 	private CsvFileWriter writer;
 	
 	public ParserXML(CsvFileWriter w) {
-		filtres = new ArrayList<Filter>();
+		casters = new ArrayList<Caster>();
 		writer = w;
 	}
 	
 	
 	
-	public void addFilter(Filter... fil) {
-		for(Filter f : fil) {
-			filtres.add(f);
+	public void addCaster(Caster... cas) {
+		for(Caster c : cas) {
+			casters.add(c);
 		}
 	}
 	
@@ -172,7 +172,7 @@ public class ParserXML {
 			}
 		}
 		//on ajoute dans le csv
-		if(filtrer(strBefore, strAfter, strComments, map) ) {
+		if(caster(strBefore, strAfter, strComments, map) ) {
 			writer.write(map);
 			map = new HashMap<String, String>();
 			strBefore.delete(0, strBefore.length());
@@ -201,11 +201,11 @@ public class ParserXML {
 	
 	
 	/*
-	 * apply the filters on the parameters
+	 * apply the cast on the parameters
 	 */
-	public boolean filtrer(StringBuilder before, StringBuilder after, StringBuilder comments, Map<String,String> map) {
-		for(Filter f : filtres) {
-			if(!f.filtre(before, after, comments)) {
+	public boolean caster(StringBuilder before, StringBuilder after, StringBuilder comments, Map<String,String> map) {
+		for(Caster c : casters) {
+			if(!c.cast(before, after, comments)) {
 				return false;
 			}
 		}
@@ -246,8 +246,8 @@ public class ParserXML {
 		//add the writer to the parser
 		ParserXML parser = new ParserXML(writer);
 		
-		//adding differents filters
-		parser.addFilter(new SentenceCaster());
+		//adding differents casters
+		parser.addCaster(new SentenceCaster());
 		
 		
 		//start the treatment
