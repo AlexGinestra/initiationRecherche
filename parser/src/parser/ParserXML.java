@@ -167,7 +167,7 @@ public class ParserXML {
 	
 	
 	/*
-	 * treat the <modifs> contents
+	 * treat the <modif> tag contents
 	 */
 	public void traiterModif(Node node, StringBuilder strBefore, StringBuilder strAfter, StringBuilder strComments, Map<String, String> map) throws IOException {
 		
