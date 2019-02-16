@@ -9,6 +9,17 @@ public class SentenceCaster implements Caster{
 	}
 	
 	/*
+	 * return true if it's a sentence separator
+	 */
+	private boolean isSentenceSeparator(char c) {
+		if(c == '.' || c == ':' || c == ';') {
+			return true;
+		}
+		return false;
+	}
+	
+	
+	/*
 	 * Cast to only one sentence if the StringBuilder are composed of multi sentences
 	 * (non-Javadoc)
 	 * @see casters.Caster#Caster(java.lang.StringBuilder, java.lang.StringBuilder, java.lang.StringBuilder)
@@ -26,14 +37,14 @@ public class SentenceCaster implements Caster{
 			if(before.charAt(startIndex) != after.charAt(startIndex)) {
 				break;
 			}
-			if(before.charAt(startIndex) == '.') {
+			if(isSentenceSeparator(before.charAt(startIndex))){
 				firstPoint = startIndex;
 			}
 		}
 		
 		//aller jusqu a la fin de la phrase 
-		for(lastPointB = startIndex ; lastPointB < before.length() && before.charAt(lastPointB) != '.'; lastPointB++); 
-		for(lastPointA = startIndex ; lastPointA < after.length() && after.charAt(lastPointA) != '.'; lastPointA++); 
+		for(lastPointB = startIndex ; lastPointB < before.length() && !isSentenceSeparator(before.charAt(lastPointB)); lastPointB++); 
+		for(lastPointA = startIndex ; lastPointA < after.length() && !isSentenceSeparator(after.charAt(lastPointA)); lastPointA++); 
 
 		// supprime les phrases suivantes
 		if(before.length() > lastPointB) {
