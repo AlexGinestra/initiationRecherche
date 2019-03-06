@@ -23,7 +23,9 @@ import org.xml.sax.SAXException;
 
 import caster.Caster;
 import caster.SentenceCaster;
+import caster.SpecialCharacterCaster;
 import filter.Filter;
+import filter.NumberFilter;
 
 public class ParserXML {
 
@@ -268,8 +270,14 @@ public class ParserXML {
 		//add the writer to the parser
 		ParserXML parser = new ParserXML(writer);
 		
+		List<Character> specialCharacters = List.of('*','/','#','$','€');
+		
 		//adding differents casters
 		parser.addCaster(new SentenceCaster());
+		parser.addCaster(new SpecialCharacterCaster(specialCharacters));
+		
+		//adding differents filters
+		parser.addFilter(new NumberFilter());
 		
 		
 		//start the treatment
