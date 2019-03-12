@@ -2,7 +2,7 @@ package filter;
 
 import org.w3c.dom.Node;
 
-public interface Filter {
+public interface RejectionFilter {
 
 	/*
 	 * this method apply to a <modif> tag return

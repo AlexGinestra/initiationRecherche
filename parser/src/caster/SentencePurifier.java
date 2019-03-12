@@ -1,10 +1,10 @@
 package caster;
 
 
-public class SentenceCaster implements Caster{
+public class SentencePurifier implements PurifierFilter{
 
 	
-	public SentenceCaster() {
+	public SentencePurifier() {
 		
 	}
 	

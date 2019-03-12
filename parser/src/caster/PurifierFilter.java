@@ -1,7 +1,7 @@
 package caster;
 
 
-public interface Caster {
+public interface PurifierFilter {
 
 	/*
 	 * this method applies directly the cast to each parameters

@@ -2,11 +2,11 @@ package filter;
 
 import org.w3c.dom.Node;
 
-public class EsteticalRestructuration implements Filter{
+public class InternLinkRejector implements RejectionFilter{
 
 	@Override
 	/*
-	 * return true if the Node n contains only a sentence restructuration
+	 * Return true if the Node contains a modification on a intern link
 	 * @see filter.Filter#hasToBeRemoved(org.w3c.dom.Node)
 	 */
 	public boolean hasToBeRemoved(Node n) {

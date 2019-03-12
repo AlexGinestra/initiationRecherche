@@ -3,12 +3,12 @@ package caster;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SpecialCharacterCaster implements Caster{
+public class SpecialCaracterPurifier implements PurifierFilter{
 	
 
 	private List<Character> charList;
 	
-	public SpecialCharacterCaster(List<Character> specialCharacters) {
+	public SpecialCaracterPurifier(List<Character> specialCharacters) {
 		charList = new ArrayList<Character>();
 		for(char c : specialCharacters) {
 			charList.add(c);

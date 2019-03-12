@@ -21,34 +21,34 @@ import org.w3c.dom.traversal.NodeFilter;
 import org.w3c.dom.traversal.NodeIterator;
 import org.xml.sax.SAXException;
 
-import caster.Caster;
-import caster.SentenceCaster;
-import caster.SpecialCharacterCaster;
-import filter.Filter;
-import filter.NumberFilter;
+import caster.PurifierFilter;
+import caster.SentencePurifier;
+import caster.SpecialCaracterPurifier;
+import filter.RejectionFilter;
+import filter.NumberRejector;
 
 public class ParserXML {
 
-	private List<Caster> casters;
-	private List<Filter> filters;
+	private List<PurifierFilter> casters;
+	private List<RejectionFilter> filters;
 	private CsvFileWriter writer;
 	
 	public ParserXML(CsvFileWriter w) {
-		casters = new ArrayList<Caster>();
-		filters = new ArrayList<Filter>();
+		casters = new ArrayList<PurifierFilter>();
+		filters = new ArrayList<RejectionFilter>();
 		writer = w;
 	}
 	
 	
-	public void addCaster(Caster... cas) {
-		for(Caster c : cas) {
+	public void addCaster(PurifierFilter... cas) {
+		for(PurifierFilter c : cas) {
 			casters.add(c);
 		}
 	}
 	
 	
-	public void addFilter(Filter... fil) {
-		for(Filter f : fil) {
+	public void addFilter(RejectionFilter... fil) {
+		for(RejectionFilter f : fil) {
 			filters.add(f);
 		}
 	}
@@ -148,7 +148,7 @@ public class ParserXML {
 			
 			/* applique les filtres sur la white list */
 			for(int i = whiteList.size()-1 ; i > 0  ; i--) {
-				for(Filter f : filters) {
+				for(RejectionFilter f : filters) {
 					if(f.hasToBeRemoved(nList.item(whiteList.get(i)))) {
 						whiteList.remove(i);
 						break;
@@ -229,7 +229,7 @@ public class ParserXML {
 	 * apply the cast on the parameters
 	 */
 	public boolean caster(StringBuilder before, StringBuilder after, StringBuilder comments, Map<String,String> map) {
-		for(Caster c : casters) {
+		for(PurifierFilter c : casters) {
 			if(!c.cast(before, after, comments)) {
 				return false;
 			}
@@ -270,14 +270,14 @@ public class ParserXML {
 		//add the writer to the parser
 		ParserXML parser = new ParserXML(writer);
 		
-		List<Character> specialCharacters = List.of('*','/','#','$','€');
+		List<Character> specialCharacters = List.of('*','/','#','$','ï¿½');
 		
 		//adding differents casters
-		parser.addCaster(new SentenceCaster());
-		parser.addCaster(new SpecialCharacterCaster(specialCharacters));
+		parser.addCaster(new SentencePurifier());
+		parser.addCaster(new SpecialCaracterPurifier(specialCharacters));
 		
 		//adding differents filters
-		parser.addFilter(new NumberFilter());
+		parser.addFilter(new NumberRejector());
 		
 		
 		//start the treatment
