@@ -30,7 +30,7 @@ public class RollbackFilter implements RejectionFilter{
 		else {
 			List<String[]>[] listTemp = new ArrayList[size];
 			for(int i = 0 ; i < size ; i++) {
-				if(listBefAft != null) {
+				if(listBefAft[i] != null) {
 					listTemp[i] = listBefAft[i];
 				}
 				else {
