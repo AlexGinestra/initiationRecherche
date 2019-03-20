@@ -26,6 +26,7 @@ import caster.PurifierFilter;
 import caster.SentencePurifier;
 import caster.SpecialCaracterPurifier;
 import filter.RejectionFilter;
+import filter.RollbackFilter;
 import filter.NumberRejector;
 
 public class ParserXML {
@@ -108,7 +109,7 @@ public class ParserXML {
 					boolean hasToBeAddedInDB = true;
 					/* applique les filtres sur le contenu */
 					for(RejectionFilter f : filters) {
-						if(f.hasToBeRemoved(nList.item(whiteList.get(i)))) {
+						if(f.hasToBeRemoved(nList.item(i))) {
 							hasToBeAddedInDB = false;
 							break;
 						}
@@ -239,6 +240,7 @@ public class ParserXML {
 		
 		//adding differents filters
 		parser.addRejector(new NumberRejector());
+		parser.addRejector(new RollbackFilter());
 		
 		
 		//start the treatment

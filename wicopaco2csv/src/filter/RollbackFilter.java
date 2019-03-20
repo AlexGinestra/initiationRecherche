@@ -33,7 +33,7 @@ public class RollbackFilter implements RejectionFilter{
 		else {
 			List<String[]>[] listTemp = new ArrayList[size];
 			for(int i = 0 ; i < size ; i++) {
-				if(listBefAft[i] != null) {
+				if(i < listBefAft.length && listBefAft[i] != null) {
 					listTemp[i] = listBefAft[i];
 				}
 				else {
@@ -54,7 +54,7 @@ public class RollbackFilter implements RejectionFilter{
 		String[] strinngTab = new String[2];
 		strinngTab[0] = before;
 		strinngTab[1] = after;
-		listBefAft[wordNumbBef].add(strinngTab);
+		listBefAft[wordNumbBef-1].add(strinngTab);
 	}
 	
 	
@@ -90,12 +90,14 @@ public class RollbackFilter implements RejectionFilter{
 		if(wordNumber > listBefAft.length) {
 			return false;
 		}
-		
-		for(String[] strTab : listBefAft[wordNumber-1]) {
-			if(strTab[1].equals(str)) {
-				return true;
+		for(List<String[]> l : listBefAft) {
+			for(String[] strTab : l) {
+				if(strTab[1].equals(str)) {
+					return true;
+				}
 			}
 		}
+		
 		return false;
 	}
 	
@@ -122,6 +124,7 @@ public class RollbackFilter implements RejectionFilter{
 						Node mTag = lTemp.item(i);
 						before = mTag.getTextContent();
 						wordNumbBef = getWordNumber(mTag);
+						System.out.println(before +" " +afterAlreadySeen(before, wordNumbBef));
 						if(afterAlreadySeen(before, wordNumbBef)) {
 							isARollback = true;
 						}
@@ -136,6 +139,8 @@ public class RollbackFilter implements RejectionFilter{
 						Node mTag = lTemp.item(i);
 						after = mTag.getTextContent();
 						wordNumbAft = getWordNumber(mTag);
+						System.out.println(after+ " " + beforeAlreadySeen(after, wordNumbAft));
+
 						if(isARollback && beforeAlreadySeen(after, wordNumbAft)) {
 							return true;
 						}
@@ -144,8 +149,7 @@ public class RollbackFilter implements RejectionFilter{
 				}
 			}
 		}
-		
-		
+		System.out.println("\n");
 		return false;
 	}
 
