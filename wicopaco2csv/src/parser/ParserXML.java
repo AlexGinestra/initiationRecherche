@@ -6,6 +6,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -40,14 +41,14 @@ public class ParserXML {
 	}
 	
 	
-	public void addCaster(PurifierFilter... cas) {
+	public void addPurifier(PurifierFilter... cas) {
 		for(PurifierFilter c : cas) {
 			casters.add(c);
 		}
 	}
 	
 	
-	public void addFilter(RejectionFilter... fil) {
+	public void addRejector(RejectionFilter... fil) {
 		for(RejectionFilter f : fil) {
 			filters.add(f);
 		}
@@ -98,68 +99,26 @@ public class ParserXML {
 		
 		ArrayList<Integer> whiteList = new ArrayList<Integer>();
 		
-		
 		if(n.getNodeName().contentEquals("modifs")) {
 			NodeList nList = n.getChildNodes();
-			
-			
-			/* creation de la white list */
-			int j, k;
-			Node currentN, nextN;
+						
 			for(int i = 0 ; i < nList.getLength()-1 ; i++) {				
 				if(nList.item(i).getNodeName().equals("modif")) {
-					j = 0;
-					k = 1;
-					currentN = nList.item(i);
 					
-					//look for the next "modif" node
-					while(i+k < nList.getLength() && !nList.item(i+k).getNodeName().equals("modif")) {
-						k++;
-					}
-					if(i+k == nList.getLength()) {
-						whiteList.add(i);
-						break;
-					}
-					nextN = nList.item(i+k);
-					
-					// look if there is a step backward in the correction
-					while(i+k < nList.getLength() && getAttributeContent(currentN.getAttributes(), "wp_after_rev_id").equals(
-									getAttributeContent(nextN.getAttributes(), "wp_before_rev_id"))) {
-						j = k;
-						currentN = nList.item(i+j);
-						
-						//look for the next "modif" node
-						while(i+k < nList.getLength() && !nList.item(i+k).getNodeName().equals("modif")) {
-							k++;
-						}
-						if(i+k < nList.getLength()) {
-							nextN = nList.item(i+k);
+					boolean hasToBeAddedInDB = true;
+					/* applique les filtres sur le contenu */
+					for(RejectionFilter f : filters) {
+						if(f.hasToBeRemoved(nList.item(whiteList.get(i)))) {
+							hasToBeAddedInDB = false;
+							break;
 						}
 					}
-					if(j == 0) {
-						whiteList.add(i);
-					}
-					else {
-						i += k;
-					}
-				}
-			}
-			
-			
-			/* applique les filtres sur la white list */
-			for(int i = whiteList.size()-1 ; i > 0  ; i--) {
-				for(RejectionFilter f : filters) {
-					if(f.hasToBeRemoved(nList.item(whiteList.get(i)))) {
-						whiteList.remove(i);
-						break;
+					
+					if(hasToBeAddedInDB) {
+						/* Parcours les enfants de modif */
+						traiterModif(nList.item(i), strB, strA, strC, map);
 					}
 				}
-			}
-			
-			
-			/* Parcours les enfants de modfis */
-			for(int i : whiteList) {				
-				traiterModif(nList.item(i), strB, strA, strC, map);
 			}
 		}
 		//fermeture writer
@@ -270,14 +229,16 @@ public class ParserXML {
 		//add the writer to the parser
 		ParserXML parser = new ParserXML(writer);
 		
-		List<Character> specialCharacters = List.of('*','/','#','$','�');
+		Character[] specChar = {'*','/','#','$','�'};
+		List<Character> specialCharacters = Arrays.asList(specChar);
+		
 		
 		//adding differents casters
-		parser.addCaster(new SentencePurifier());
-		parser.addCaster(new SpecialCaracterPurifier(specialCharacters));
+		parser.addPurifier(new SentencePurifier());
+		parser.addPurifier(new SpecialCaracterPurifier(specialCharacters));
 		
 		//adding differents filters
-		parser.addFilter(new NumberRejector());
+		parser.addRejector(new NumberRejector());
 		
 		
 		//start the treatment

@@ -15,7 +15,7 @@ public class RollbackFilter implements RejectionFilter{
 	
 	
 	public RollbackFilter() {
-		newlist(3); 
+		newList(3); 
 		
 	}
 	
@@ -23,7 +23,7 @@ public class RollbackFilter implements RejectionFilter{
 	/*
 	 * create a new listBefAft with the size in parameter (copy the content if it already exists)
 	 */
-	private void newlist(int size) {
+	private void newList(int size) {
 		if(listBefAft == null) {
 			listBefAft = new ArrayList[size];
 			for(int i = 0 ; i < size ; i++) {
@@ -45,6 +45,20 @@ public class RollbackFilter implements RejectionFilter{
 	}
 	
 	/*
+	 * add the two String in the listBefAft
+	 */
+	private void addWordsInList(String before, int wordNumbBef, String after) {
+		if(listBefAft.length < wordNumbBef) {
+			newList(wordNumbBef);
+		}
+		String[] strinngTab = new String[2];
+		strinngTab[0] = before;
+		strinngTab[1] = after;
+		listBefAft[wordNumbBef].add(strinngTab);
+	}
+	
+	
+	/*
 	 * return the word number in the tag : <m>
 	 */
 	private int getWordNumber(Node mTag){
@@ -53,23 +67,37 @@ public class RollbackFilter implements RejectionFilter{
 	
 	
 	/*
-	 * return true if the word str is already in the list
+	 * return true if the word str is already in the list at the before place 
 	 */
-	public boolean alreadySeen(String str, int wordNumber) {
+	public boolean beforeAlreadySeen(String str, int wordNumber) {
 		if(wordNumber > listBefAft.length) {
 			return false;
 		}
 		
 		for(String[] strTab : listBefAft[wordNumber-1]) {
-			if(strTab[0].equals(str) || strTab[1].equals(str)) {
+			if(strTab[0].equals(str)) {
 				return true;
 			}
 		}
-		
-		
 		return false;
 	}
 	
+	
+	/*
+	 * return true if the word str is already in the list at the after place
+	 */
+	public boolean afterAlreadySeen(String str, int wordNumber) {
+		if(wordNumber > listBefAft.length) {
+			return false;
+		}
+		
+		for(String[] strTab : listBefAft[wordNumber-1]) {
+			if(strTab[1].equals(str)) {
+				return true;
+			}
+		}
+		return false;
+	}
 	
 	
 	
@@ -79,7 +107,9 @@ public class RollbackFilter implements RejectionFilter{
 		
 		// TODO Auto-generated method stub
 		NodeList nList = n.getChildNodes();
-		String before;
+		String before = null, after = null;
+		int wordNumbBef = 0, wordNumbAft = 0;
+		boolean isARollback = false;
 		
 		/* Parcours les enfants de modif */
 		for(int j = 0 ; j < nList.getLength() ; j++) {
@@ -90,11 +120,10 @@ public class RollbackFilter implements RejectionFilter{
 				for(int i = 0 ; i < lTemp.getLength()-1 ; i++) {
 					if(lTemp.item(i).getNodeName().equals("m")) {
 						Node mTag = lTemp.item(i);
-						if(alreadySeen(mTag.getTextContent() ,getWordNumber(mTag)) ) {
-							return false;
-						}
-						else {
-							before = mTag.getTextContent();
+						before = mTag.getTextContent();
+						wordNumbBef = getWordNumber(mTag);
+						if(afterAlreadySeen(before, wordNumbBef)) {
+							isARollback = true;
 						}
 					}
 				}
@@ -105,7 +134,12 @@ public class RollbackFilter implements RejectionFilter{
 				for(int i = 0 ; i < lTemp.getLength()-1 ; i++) {
 					if(lTemp.item(i).getNodeName().equals("m")) {
 						Node mTag = lTemp.item(i);
-						//TODO
+						after = mTag.getTextContent();
+						wordNumbAft = getWordNumber(mTag);
+						if(isARollback && beforeAlreadySeen(after, wordNumbAft)) {
+							return true;
+						}
+						addWordsInList(before, wordNumbBef, after);
 					}
 				}
 			}
