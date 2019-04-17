@@ -4,12 +4,12 @@ import org.w3c.dom.Node;
 
 public class InternLinkRejector implements LocalRejectionFilter{
 
-	private int sentenceTreadted;
+	private int sentenceTreated;
 	private int sentenceRejected;
 
 	
 	public InternLinkRejector() {
-		sentenceTreadted = 0;
+		sentenceTreated = 0;
 		sentenceRejected = 0;
 	}
 	
@@ -19,15 +19,14 @@ public class InternLinkRejector implements LocalRejectionFilter{
 	 * @see filter.Filter#hasToBeRemoved(org.w3c.dom.Node)
 	 */
 	public boolean hasToBeRemoved(Node n) {
-		sentenceTreadted++;
+		sentenceTreated++;
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
 	public void printStatistics() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("The intern link rejector treated " + sentenceTreated + " sentences, and rejected " + sentenceRejected +" sentences.");				
 	}
 
 }

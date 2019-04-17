@@ -22,6 +22,7 @@ import org.w3c.dom.traversal.NodeFilter;
 import org.w3c.dom.traversal.NodeIterator;
 import org.xml.sax.SAXException;
 
+import filters.FiltersStatistics;
 import filters.globalRejector.GlobalRejectionFilter;
 import filters.globalRejector.RollbackFilter;
 import filters.localRejector.LocalRejectionFilter;
@@ -146,6 +147,7 @@ public class ParserXML {
 			}
 			
 		}
+		
 		//fermeture writer
 		writer.close();
 	}
@@ -226,6 +228,21 @@ public class ParserXML {
 	
 	
 	
+	/*
+	 * print the statistics of the filters
+	 */
+	private void printStatistics() {
+		for(FiltersStatistics f : globalRejectors) {
+			f.printStatistics();
+		}
+		for(FiltersStatistics f : localRejectors) {
+			f.printStatistics();
+		}
+		for(FiltersStatistics f : purifiers) {
+			f.printStatistics();
+		}
+	}
+	
 	
 	
 	
@@ -271,6 +288,9 @@ public class ParserXML {
 		
 		//start the treatment
 		parser.parser();
+		
+		//print the statistics
+		parser.printStatistics();
 	}
 	
 }

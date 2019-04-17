@@ -83,8 +83,7 @@ public class NumberRejector implements LocalRejectionFilter{
 
 	@Override
 	public void printStatistics() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("The number rejector treated " + sentenceTreated + " sentences, and rejected " + sentenceRejected +" sentences.");		
 	}
 
 }

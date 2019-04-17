@@ -4,12 +4,12 @@ import org.w3c.dom.Node;
 
 public class EsteticalRestructurationRejector implements LocalRejectionFilter{
 
-	private int sentenceTreadted;
+	private int sentenceTreated;
 	private int sentenceRejected;
 
 	
 	public EsteticalRestructurationRejector() {
-		sentenceTreadted = 0;
+		sentenceTreated = 0;
 		sentenceRejected = 0;
 	}
 	
@@ -20,14 +20,13 @@ public class EsteticalRestructurationRejector implements LocalRejectionFilter{
 	 */
 	public boolean hasToBeRemoved(Node n) {
 		// TODO Auto-generated method stub
-		sentenceTreadted++;
+		sentenceTreated++;
 		return false;
 	}
 
 	@Override
 	public void printStatistics() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("The estetical restructuration rejector treated " + sentenceTreated + " sentences, and rejected " + sentenceRejected +" sentences.");				
 	}
 
 }

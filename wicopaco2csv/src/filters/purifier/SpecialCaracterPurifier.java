@@ -48,8 +48,7 @@ public class SpecialCaracterPurifier implements PurifierFilter{
 
 	@Override
 	public void printStatistics() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("The sepecial caracters purifier treated " + sentenceNumber + " sentences, and deleted " + charDeleted + " char.");
 	}
 
 }

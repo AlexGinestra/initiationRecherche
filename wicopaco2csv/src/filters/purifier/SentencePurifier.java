@@ -73,8 +73,7 @@ public class SentencePurifier implements PurifierFilter{
 
 	@Override
 	public void printStatistics() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("The sentece purifier treated " + charTreated + " char, and deleted " + charDeleted +" char.");		
 	}
 
 }

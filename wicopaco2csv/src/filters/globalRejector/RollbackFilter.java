@@ -11,14 +11,14 @@ import parser.ParserXML;
 
 public class RollbackFilter implements GlobalRejectionFilter{
 	
-	private int sentenceTreadted;
+	private int sentenceTreated;
 	private int sentenceRejected;
 	public List<String[]>[] listBefAft = null; //list[wordsNumberOfsentenceBefore], String[0] = before, String[1] = after
 	
 	
 	public RollbackFilter() {
 		newList(3); 
-		sentenceTreadted = 0;
+		sentenceTreated = 0;
 		sentenceRejected = 0;
 	}
 	
@@ -193,7 +193,7 @@ public class RollbackFilter implements GlobalRejectionFilter{
 			}
 		}
 		
-		sentenceTreadted += nodeList.size();
+		sentenceTreated += nodeList.size();
 		sentenceRejected += nodeWillBeRemoved.size();
 		/* remove the node from the main list */
 		for(int i = nodeWillBeRemoved.size()-1 ; i >= 0 ; i--) {
@@ -204,8 +204,7 @@ public class RollbackFilter implements GlobalRejectionFilter{
 
 	@Override
 	public void printStatistics() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("The rollback filter treated " + sentenceTreated + " sentences, and rejected " + sentenceRejected +" sentences.");				
 	}
 
 }
