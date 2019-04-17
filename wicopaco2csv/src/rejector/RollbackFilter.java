@@ -1,4 +1,4 @@
-package filter;
+package rejector;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -105,7 +105,6 @@ public class RollbackFilter implements RejectionFilter{
 	
 	@Override
 	public boolean hasToBeRemoved(Node n) {
-
 		
 		// TODO Auto-generated method stub
 		NodeList nList = n.getChildNodes();

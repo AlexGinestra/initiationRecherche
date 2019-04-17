@@ -1,4 +1,4 @@
-package caster;
+package purifier;
 
 import java.util.ArrayList;
 import java.util.List;

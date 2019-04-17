@@ -1,4 +1,4 @@
-package caster;
+package purifier;
 
 
 public interface PurifierFilter {

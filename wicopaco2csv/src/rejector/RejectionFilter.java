@@ -1,4 +1,4 @@
-package filter;
+package rejector;
 
 import org.w3c.dom.Node;
 
