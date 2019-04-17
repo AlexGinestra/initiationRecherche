@@ -105,56 +105,6 @@ public class RollbackFilter implements GlobalRejectionFilter{
 	
 	
 	
-	
-	/*public boolean hasToBeRemoved(Node n) {
-		
-		// TODO Auto-generated method stub
-		NodeList nList = n.getChildNodes();
-		String before = null, after = null;
-		int wordNumbBef = 0, wordNumbAft = 0;
-		boolean isARollback = false;
-		
-		/ Parcours les enfants de modif /
-		for(int j = 0 ; j < nList.getLength() ; j++) {
-			Node nTempBefAft = nList.item(j);
-			//balise before
-			if(nTempBefAft.getNodeName().equals("before")) {
-				NodeList lTemp = nTempBefAft.getChildNodes();
-				for(int i = 0 ; i < lTemp.getLength()-1 ; i++) {
-					if(lTemp.item(i).getNodeName().equals("m")) {
-						Node mTag = lTemp.item(i);
-						before = mTag.getTextContent();
-						wordNumbBef = getWordNumber(mTag);
-						System.out.println(before +" " +afterAlreadySeen(before, wordNumbBef));
-						if(afterAlreadySeen(before, wordNumbBef)) {
-							isARollback = true;
-						}
-					}
-				}
-			}
-			//balise after
-			else if(nTempBefAft.getNodeName().equals("after")) {
-				NodeList lTemp = nTempBefAft.getChildNodes();
-				for(int i = 0 ; i < lTemp.getLength()-1 ; i++) {
-					if(lTemp.item(i).getNodeName().equals("m")) {
-						Node mTag = lTemp.item(i);
-						after = mTag.getTextContent();
-						wordNumbAft = getWordNumber(mTag);
-						System.out.println(after+ " " + beforeAlreadySeen(after, wordNumbAft));
-
-						if(isARollback && beforeAlreadySeen(after, wordNumbAft)) {
-							return true;
-						}
-						addWordsInList(before, wordNumbBef, after);
-					}
-				}
-			}
-		}
-		System.out.println("\n");
-		return false;
-	}*/
-
-
 	@Override
 	/*
 	 * nodeList : <modif> tag list
