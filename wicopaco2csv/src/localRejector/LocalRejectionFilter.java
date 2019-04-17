@@ -1,8 +1,8 @@
-package rejector;
+package localRejector;
 
 import org.w3c.dom.Node;
 
-public interface RejectionFilter {
+public interface LocalRejectionFilter {
 
 	/*
 	 * this method apply to a <modif> tag return

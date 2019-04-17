@@ -1,4 +1,4 @@
-package rejector;
+package localRejector;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +8,7 @@ import org.w3c.dom.NodeList;
 
 import parser.ParserXML;
 
-public class RollbackFilter implements RejectionFilter{
+public class RollbackFilter implements LocalRejectionFilter{
 	
 	
 	public List<String[]>[] listBefAft = null; //list[wordsNumberOfsentenceBefore], String[0] = before, String[1] = after

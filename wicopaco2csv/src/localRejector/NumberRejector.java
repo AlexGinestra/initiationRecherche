@@ -1,9 +1,9 @@
-package rejector;
+package localRejector;
 
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-public class NumberRejector implements RejectionFilter{
+public class NumberRejector implements LocalRejectionFilter{
 
 	
 	public NumberRejector() {

@@ -22,22 +22,22 @@ import org.w3c.dom.traversal.NodeFilter;
 import org.w3c.dom.traversal.NodeIterator;
 import org.xml.sax.SAXException;
 
+import localRejector.NumberRejector;
+import localRejector.LocalRejectionFilter;
+import localRejector.RollbackFilter;
 import purifier.PurifierFilter;
 import purifier.SentencePurifier;
 import purifier.SpecialCaracterPurifier;
-import rejector.NumberRejector;
-import rejector.RejectionFilter;
-import rejector.RollbackFilter;
 
 public class ParserXML {
 
 	private List<PurifierFilter> casters;
-	private List<RejectionFilter> filters;
+	private List<LocalRejectionFilter> filters;
 	private CsvFileWriter writer;
 	
 	public ParserXML(CsvFileWriter w) {
 		casters = new ArrayList<PurifierFilter>();
-		filters = new ArrayList<RejectionFilter>();
+		filters = new ArrayList<LocalRejectionFilter>();
 		writer = w;
 	}
 	
@@ -49,8 +49,8 @@ public class ParserXML {
 	}
 	
 	
-	public void addRejector(RejectionFilter... fil) {
-		for(RejectionFilter f : fil) {
+	public void addRejector(LocalRejectionFilter... fil) {
+		for(LocalRejectionFilter f : fil) {
 			filters.add(f);
 		}
 	}
@@ -108,7 +108,7 @@ public class ParserXML {
 					
 					boolean hasToBeAddedInDB = true;
 					/* applique les filtres sur le contenu */
-					for(RejectionFilter f : filters) {
+					for(LocalRejectionFilter f : filters) {
 						if(f.hasToBeRemoved(nList.item(i))) {
 							hasToBeAddedInDB = false;
 							break;

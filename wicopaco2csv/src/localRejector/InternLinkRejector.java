@@ -1,8 +1,8 @@
-package rejector;
+package localRejector;
 
 import org.w3c.dom.Node;
 
-public class InternLinkRejector implements RejectionFilter{
+public class InternLinkRejector implements LocalRejectionFilter{
 
 	@Override
 	/*

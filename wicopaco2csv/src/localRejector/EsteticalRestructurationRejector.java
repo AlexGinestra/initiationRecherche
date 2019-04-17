@@ -1,8 +1,8 @@
-package rejector;
+package localRejector;
 
 import org.w3c.dom.Node;
 
-public class EsteticalRestructurationRejector implements RejectionFilter{
+public class EsteticalRestructurationRejector implements LocalRejectionFilter{
 
 	@Override
 	/*
