@@ -248,6 +248,8 @@ public class ParserXML {
 	
 	public static void main(String[] args) throws IOException {
 		
+		long startTime = System.currentTimeMillis();
+		
 		/* creation fichier csv de sortie et du writer */
 		File file = null; 
 		
@@ -282,15 +284,16 @@ public class ParserXML {
 		//adding differents localRejector
 		parser.addLocalRejector(new NumberRejector());
 		
-		
 		//adding differents globalRejector
 		parser.addGlobalRejector(new RollbackFilter());
 		
 		//start the treatment
 		parser.parser();
-		
+				
 		//print the statistics
 		parser.printStatistics();
+		
+		System.out.println("execution time : "+(System.currentTimeMillis()-startTime) + " ms");
 	}
 	
 }
