@@ -134,7 +134,6 @@ public class RollbackFilter implements GlobalRejectionFilter{
 						if(lTemp.item(i).getNodeName().equals("m")) {
 							Node mTag = lTemp.item(i);
 							before = mTag.getTextContent();
-							System.out.println(k+ "    "+before);
 							wordsNumber[k][0] = getWordNumber(mTag);							
 						}
 					}
