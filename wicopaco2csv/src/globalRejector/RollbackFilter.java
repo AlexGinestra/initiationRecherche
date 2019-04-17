@@ -1,4 +1,4 @@
-package localRejector;
+package globalRejector;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,9 +6,10 @@ import java.util.List;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import localRejector.LocalRejectionFilter;
 import parser.ParserXML;
 
-public class RollbackFilter implements LocalRejectionFilter{
+public class RollbackFilter implements GlobalRejectionFilter{
 	
 	
 	public List<String[]>[] listBefAft = null; //list[wordsNumberOfsentenceBefore], String[0] = before, String[1] = after
@@ -48,6 +49,7 @@ public class RollbackFilter implements LocalRejectionFilter{
 	 * add the two String in the listBefAft
 	 */
 	private void addWordsInList(String before, int wordNumbBef, String after) {
+		
 		if(listBefAft.length < wordNumbBef) {
 			newList(wordNumbBef);
 		}
@@ -103,8 +105,8 @@ public class RollbackFilter implements LocalRejectionFilter{
 	
 	
 	
-	@Override
-	public boolean hasToBeRemoved(Node n) {
+	
+	/*public boolean hasToBeRemoved(Node n) {
 		
 		// TODO Auto-generated method stub
 		NodeList nList = n.getChildNodes();
@@ -112,7 +114,7 @@ public class RollbackFilter implements LocalRejectionFilter{
 		int wordNumbBef = 0, wordNumbAft = 0;
 		boolean isARollback = false;
 		
-		/* Parcours les enfants de modif */
+		/ Parcours les enfants de modif /
 		for(int j = 0 ; j < nList.getLength() ; j++) {
 			Node nTempBefAft = nList.item(j);
 			//balise before
@@ -150,6 +152,100 @@ public class RollbackFilter implements LocalRejectionFilter{
 		}
 		System.out.println("\n");
 		return false;
+	}*/
+
+
+	@Override
+	/*
+	 * nodeList : <modif> tag list
+	 * remove from the list the changes that are canceled 
+	 * like: A -> B then B -> A 
+	 * (non-Javadoc)
+	 * @see globalRejector.GlobalRejectionFilter#cleanTheList(java.util.List)
+	 */
+	public void cleanTheList(List<Node> nodeList) {
+		List<Integer> nodeWillBeRemoved = new ArrayList<Integer>();
+		int[][] wordsNumber = new int[nodeList.size()][2]; //wordsNumber[index][0] = nbOfWordsBefore , wordsNumber[index][1] = nbOfWordsAfter
+
+		String before = null, after = null;
+		/* add all the case to the list to see if there is no rollback */
+		for(int k = 0 ; k < nodeList.size() ; k++) {
+			Node n = nodeList.get(k);
+			NodeList nList = n.getChildNodes();
+			
+			/* browse the child of <modif> tag */
+			for(int j = 0 ; j < nList.getLength() ; j++) {
+				Node nTempBefAft = nList.item(j);
+				
+				//<before> tag
+				if(nTempBefAft.getNodeName().equals("before")) {
+					NodeList lTemp = nTempBefAft.getChildNodes();
+					for(int i = 0 ; i < lTemp.getLength()-1 ; i++) {
+						if(lTemp.item(i).getNodeName().equals("m")) {
+							Node mTag = lTemp.item(i);
+							before = mTag.getTextContent();
+							System.out.println(k+ "    "+before);
+							wordsNumber[k][0] = getWordNumber(mTag);							
+						}
+					}
+				}
+				
+				//<after> tag
+				else if(nTempBefAft.getNodeName().equals("after")) {
+					NodeList lTemp = nTempBefAft.getChildNodes();
+					for(int i = 0 ; i < lTemp.getLength()-1 ; i++) {
+						if(lTemp.item(i).getNodeName().equals("m")) {
+							Node mTag = lTemp.item(i);
+							after = mTag.getTextContent();
+							wordsNumber[k][1] = getWordNumber(mTag);
+							addWordsInList(before, wordsNumber[k][0], after);
+						}
+					}
+				}
+			}
+		}
+		
+		/* keep only the on which has to be treated */
+		for(int k = 0 ; k < nodeList.size() ; k++) {
+			Node n = nodeList.get(k);
+			NodeList nList = n.getChildNodes();
+
+			
+			/* browse the child of <modif> tag */
+			for(int j = 0 ; j < nList.getLength() ; j++) {
+				Node nTempBefAft = nList.item(j);
+				
+				//<before> tag
+				if(nTempBefAft.getNodeName().equals("before")) {
+					NodeList lTemp = nTempBefAft.getChildNodes();
+					for(int i = 0 ; i < lTemp.getLength()-1 ; i++) {
+						if(lTemp.item(i).getNodeName().equals("m")) {
+							Node mTag = lTemp.item(i);
+							before = mTag.getTextContent();
+						}
+					}
+				}
+				
+				//<after> tag
+				else if(nTempBefAft.getNodeName().equals("after")) {
+					NodeList lTemp = nTempBefAft.getChildNodes();
+					for(int i = 0 ; i < lTemp.getLength()-1 ; i++) {
+						if(lTemp.item(i).getNodeName().equals("m")) {
+							Node mTag = lTemp.item(i);
+							after = mTag.getTextContent();
+							if(afterAlreadySeen(before, wordsNumber[k][0]) && beforeAlreadySeen(after, wordsNumber[k][1])) {
+								nodeWillBeRemoved.add(k);
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		/* remove the node from the main list */
+		for(int i = nodeWillBeRemoved.size()-1 ; i >= 0 ; i--) {
+			nodeList.remove((int)nodeWillBeRemoved.get(i));
+		}
 	}
 
 }
