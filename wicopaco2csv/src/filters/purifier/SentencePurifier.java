@@ -1,11 +1,14 @@
-package purifier;
+package filters.purifier;
 
 
 public class SentencePurifier implements PurifierFilter{
-
+	
+	private int charTreated;
+	private int charDeleted;
 	
 	public SentencePurifier() {
-		
+		charTreated = 0;
+		charDeleted = 0;
 	}
 	
 	/*
@@ -29,6 +32,9 @@ public class SentencePurifier implements PurifierFilter{
 		if(before == null || after == null || comments == null) {
 			return false;
 		}
+		
+		charTreated += before.length(); //data for stat
+		
 		int startIndex = 0, firstPoint = 0, lastPointB = 0, lastPointA = 0;
 		
 		//trouve le debut de la phrase
@@ -46,6 +52,8 @@ public class SentencePurifier implements PurifierFilter{
 		for(lastPointB = startIndex ; lastPointB < before.length() && !isSentenceSeparator(before.charAt(lastPointB)); lastPointB++); 
 		for(lastPointA = startIndex ; lastPointA < after.length() && !isSentenceSeparator(after.charAt(lastPointA)); lastPointA++); 
 
+		charDeleted += before.length()-(lastPointB - firstPoint); //data for stat
+		
 		// supprime les phrases suivantes
 		if(before.length() > lastPointB) {
 			before.delete(lastPointB+1, before.length());
@@ -62,21 +70,11 @@ public class SentencePurifier implements PurifierFilter{
 		
 		return true;
 	}
-	
-	/*
-	public static void main(String... args) {
-		StringBuilder b = new StringBuilder(), a = new StringBuilder(), c = new StringBuilder();
-		b.append("az.ertyuiop. fkfk");
-		a.append("Az.ertyyuiop. fkfk");
-		c.append("dldkdk");
-		HashMap<String, String> map = new HashMap<String, String>();
+
+	@Override
+	public void printStatistics() {
+		// TODO Auto-generated method stub
 		
-		MyFilter filter = new MyFilter();
-		
-		filter.filtre(b, a, c, map);
-		System.out.println(b);
-		System.out.println(a);
-		
-	}*/
+	}
 
 }

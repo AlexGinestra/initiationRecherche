@@ -1,10 +1,12 @@
-package globalRejector;
+package filters.globalRejector;
 
 import java.util.List;
 
 import org.w3c.dom.Node;
 
-public interface GlobalRejectionFilter {
+import filters.FiltersStatistics;
+
+public interface GlobalRejectionFilter extends FiltersStatistics{
 	
 	/*
 	 * this method apply to a <modif> tag list return

@@ -1,4 +1,4 @@
-package globalRejector;
+package filters.globalRejector;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,18 +6,20 @@ import java.util.List;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import localRejector.LocalRejectionFilter;
+import filters.localRejector.LocalRejectionFilter;
 import parser.ParserXML;
 
 public class RollbackFilter implements GlobalRejectionFilter{
 	
-	
+	private int sentenceTreadted;
+	private int sentenceRejected;
 	public List<String[]>[] listBefAft = null; //list[wordsNumberOfsentenceBefore], String[0] = before, String[1] = after
 	
 	
 	public RollbackFilter() {
 		newList(3); 
-		
+		sentenceTreadted = 0;
+		sentenceRejected = 0;
 	}
 	
 	
@@ -191,10 +193,19 @@ public class RollbackFilter implements GlobalRejectionFilter{
 			}
 		}
 		
+		sentenceTreadted += nodeList.size();
+		sentenceRejected += nodeWillBeRemoved.size();
 		/* remove the node from the main list */
 		for(int i = nodeWillBeRemoved.size()-1 ; i >= 0 ; i--) {
 			nodeList.remove((int)nodeWillBeRemoved.get(i));
 		}
+	}
+
+
+	@Override
+	public void printStatistics() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

@@ -22,13 +22,13 @@ import org.w3c.dom.traversal.NodeFilter;
 import org.w3c.dom.traversal.NodeIterator;
 import org.xml.sax.SAXException;
 
-import globalRejector.GlobalRejectionFilter;
-import globalRejector.RollbackFilter;
-import localRejector.NumberRejector;
-import localRejector.LocalRejectionFilter;
-import purifier.PurifierFilter;
-import purifier.SentencePurifier;
-import purifier.SpecialCaracterPurifier;
+import filters.globalRejector.GlobalRejectionFilter;
+import filters.globalRejector.RollbackFilter;
+import filters.localRejector.LocalRejectionFilter;
+import filters.localRejector.NumberRejector;
+import filters.purifier.PurifierFilter;
+import filters.purifier.SentencePurifier;
+import filters.purifier.SpecialCaracterPurifier;
 
 public class ParserXML {
 

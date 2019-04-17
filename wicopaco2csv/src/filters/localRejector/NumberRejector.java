@@ -1,13 +1,16 @@
-package localRejector;
+package filters.localRejector;
 
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 public class NumberRejector implements LocalRejectionFilter{
 
+	private int sentenceTreated;
+	private int sentenceRejected;
 	
 	public NumberRejector() {
-		
+		sentenceTreated = 0;
+		sentenceRejected = 0;
 	}
 	
 	/*
@@ -36,8 +39,11 @@ public class NumberRejector implements LocalRejectionFilter{
 	 */
 	@Override
 	public boolean hasToBeRemoved(Node n) {
+		sentenceTreated++;
+		
 		// TODO Auto-generated method stub
 		NodeList nList = n.getChildNodes();
+		boolean res;
 		
 		/* Parcours les enfants de modif */
 		for(int j = 0 ; j < nList.getLength() ; j++) {
@@ -48,7 +54,11 @@ public class NumberRejector implements LocalRejectionFilter{
 				for(int i = 0 ; i < lTemp.getLength()-1 ; i++) {
 					if(lTemp.item(i).getNodeName().equals("m")) {
 						Node mTag = lTemp.item(i);
-						return isNumberIn(mTag.getTextContent());
+						if(isNumberIn(mTag.getTextContent())){
+							sentenceRejected++;
+							return true;
+						}
+						return false;
 					}
 				}
 			}
@@ -58,13 +68,23 @@ public class NumberRejector implements LocalRejectionFilter{
 				for(int i = 0 ; i < lTemp.getLength()-1 ; i++) {
 					if(lTemp.item(i).getNodeName().equals("m")) {
 						Node mTag = lTemp.item(i);
-						return isNumberIn(mTag.getTextContent());
+						if(isNumberIn(mTag.getTextContent())) {
+							sentenceRejected++;
+							return true;
+						}
+						return false;
 					}
 				}
 			}
 		}
 		
 		return false;
+	}
+
+	@Override
+	public void printStatistics() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
