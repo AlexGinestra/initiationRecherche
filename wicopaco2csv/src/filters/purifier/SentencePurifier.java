@@ -1,7 +1,12 @@
 package filters.purifier;
 
+import java.io.File;
+import java.io.IOException;
 
-public class SentencePurifier implements PurifierFilter{
+import filters.FiltersStatistics;
+import parser.CsvFileWriter;
+
+public class SentencePurifier extends FiltersStatistics implements PurifierFilter{
 	
 	private int charTreated;
 	private int charDeleted;
@@ -74,6 +79,27 @@ public class SentencePurifier implements PurifierFilter{
 	@Override
 	public void printStatistics() {
 		System.out.println("The sentece purifier treated " + charTreated + " char, and deleted " + charDeleted +" char.");		
+	}
+
+	@Override
+	public void createCSVOutput() {
+		/* creation fichier csv de sortie et du writer */
+		File file = new File("SentencePurifier.csv"); 
+		
+		//test if the file already exist
+		if(file.exists()) {
+			System.out.println("le fichier SentencePurifier.csv existe deja");
+			System.exit(0);
+		}
+		
+		//create the different column for the CSV file
+		String[] titles = { "before" , "after"};
+		try {
+			outputFile = new CsvFileWriter(file, '\t', titles);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}				
 	}
 
 }

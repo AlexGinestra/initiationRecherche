@@ -6,7 +6,7 @@ import org.w3c.dom.Node;
 
 import filters.FiltersStatistics;
 
-public interface GlobalRejectionFilter extends FiltersStatistics{
+public interface GlobalRejectionFilter{
 	
 	/*
 	 * this method apply to a <modif> tag list return

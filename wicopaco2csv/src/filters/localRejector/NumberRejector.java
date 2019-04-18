@@ -1,9 +1,16 @@
 package filters.localRejector;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.HashMap;
+
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-public class NumberRejector implements LocalRejectionFilter{
+import filters.FiltersStatistics;
+import parser.CsvFileWriter;
+
+public class NumberRejector extends FiltersStatistics implements LocalRejectionFilter{
 
 	private int sentenceTreated;
 	private int sentenceRejected;
@@ -54,6 +61,18 @@ public class NumberRejector implements LocalRejectionFilter{
 					if(lTemp.item(i).getNodeName().equals("m")) {
 						Node mTag = lTemp.item(i);
 						if(isNumberIn(mTag.getTextContent())){
+							//output for the rejected case
+							if(outputOn) {
+								map = new HashMap<String, String>();
+								map.put("before",mTag.getTextContent());
+								map.put("after"," ");
+								map.put("id", ""+getIdNode(n));
+								try {
+									outputFile.write(map);
+								} catch (IOException e) {
+									e.printStackTrace();
+								}
+							}
 							sentenceRejected++;
 							return true;
 						}
@@ -68,6 +87,18 @@ public class NumberRejector implements LocalRejectionFilter{
 					if(lTemp.item(i).getNodeName().equals("m")) {
 						Node mTag = lTemp.item(i);
 						if(isNumberIn(mTag.getTextContent())) {
+							//output for the rejected case
+							if(outputOn) {
+								map = new HashMap<String, String>();
+								map.put("before"," ");
+								map.put("after",mTag.getTextContent());
+								map.put("id", ""+getIdNode(n));
+								try {
+									outputFile.write(map);
+								} catch (IOException e) {
+									e.printStackTrace();
+								}
+							}
 							sentenceRejected++;
 							return true;
 						}
@@ -83,6 +114,28 @@ public class NumberRejector implements LocalRejectionFilter{
 	@Override
 	public void printStatistics() {
 		System.out.println("The number rejector treated " + sentenceTreated + " sentences, and rejected " + sentenceRejected +" sentences.");		
+	}
+
+	@Override
+	public void createCSVOutput() {
+		/* creation fichier csv de sortie et du writer */
+		File file = new File("NumberRejector.csv"); 
+		
+		//test if the file already exist
+		if(file.exists()) {
+			System.out.println("le fichier NumberRejector.csv existe deja");
+			System.exit(0);
+		}
+		
+		//create the different column for the CSV file
+		String[] titles = { "before" , "after", "id"};
+		try {
+			outputFile = new CsvFileWriter(file, '\t', titles);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}		
+		
 	}
 
 }

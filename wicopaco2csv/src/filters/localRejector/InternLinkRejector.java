@@ -2,7 +2,9 @@ package filters.localRejector;
 
 import org.w3c.dom.Node;
 
-public class InternLinkRejector implements LocalRejectionFilter{
+import filters.FiltersStatistics;
+
+public class InternLinkRejector extends FiltersStatistics implements LocalRejectionFilter{
 
 	private int sentenceTreated;
 	private int sentenceRejected;
@@ -27,6 +29,12 @@ public class InternLinkRejector implements LocalRejectionFilter{
 	@Override
 	public void printStatistics() {
 		System.out.println("The intern link rejector treated " + sentenceTreated + " sentences, and rejected " + sentenceRejected +" sentences.");				
+	}
+
+	@Override
+	public void createCSVOutput() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

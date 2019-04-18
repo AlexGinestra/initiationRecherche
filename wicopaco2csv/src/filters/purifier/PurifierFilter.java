@@ -1,8 +1,9 @@
 package filters.purifier;
 
-import filters.FiltersStatistics;
+import org.w3c.dom.Node;
 
-public interface PurifierFilter extends FiltersStatistics{
+
+public interface PurifierFilter {
 
 	/*
 	 * this method applies directly the cast to each parameters
@@ -11,6 +12,6 @@ public interface PurifierFilter extends FiltersStatistics{
 	 * OR
 	 * true if everything is OK
 	 */
-	public boolean cast(StringBuilder before, StringBuilder after, StringBuilder comments);
+	public  boolean cast(StringBuilder before, StringBuilder after, StringBuilder comments);
 
 }

@@ -3,7 +3,9 @@ package filters.purifier;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SpecialCaracterPurifier implements PurifierFilter{
+import filters.FiltersStatistics;
+
+public class SpecialCaracterPurifier extends FiltersStatistics implements PurifierFilter{
 	
 	private int charDeleted;
 	private int sentenceNumber;
@@ -49,6 +51,12 @@ public class SpecialCaracterPurifier implements PurifierFilter{
 	@Override
 	public void printStatistics() {
 		System.out.println("The sepecial caracters purifier treated " + sentenceNumber + " sentences, and deleted " + charDeleted + " char.");
+	}
+
+	@Override
+	public void createCSVOutput() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
