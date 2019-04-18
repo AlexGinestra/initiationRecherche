@@ -96,21 +96,26 @@ public class EsteticalRestructurationRejector implements LocalRejectionFilter{
 		}
 		
 		int levenshteinDist = calculateLevenshtein(afterM, beforeM);
-		int lengthMinSentence = Math.min(afterM.length(), beforeM.length());
+		int sizeMinSentence = Math.min(afterM.length(), beforeM.length());
+		 
 		
-		if(lengthMinSentence < 4 && levenshteinDist < 3) {
-			System.out.println("before = " + beforeM + "\t\tafter = "+afterM);
+		if(sizeMinSentence < 4 ) {
+			int sizeMaxSentence = Math.max(afterM.length(), beforeM.length());
+
+			if((levenshteinDist == sizeMaxSentence || levenshteinDist > 2) && sizeMaxSentence > 1) {
+				//System.out.println("rejected : before = " + beforeM + "\t\tafter = "+afterM+ "\t\tDist = "+levenshteinDist);
+				sentenceRejected++;
+				return true;
+			}
+			//System.out.println("before = " + beforeM + "\t\tafter = "+afterM+ "\t\tDist = "+levenshteinDist);
 			return false;
 		}
 		
 		//if the Levenshtein distance is higher than the half of the shorter modification
-		if(2*levenshteinDist > lengthMinSentence) {
+		if(2*levenshteinDist > sizeMinSentence) {
 			sentenceRejected++;
-			System.out.println("rejected : before = " + beforeM + "\t\tafter = "+afterM);
 			return true;
 		}
-		System.out.println("before = " + beforeM + "\t\tafter = "+afterM);
-
 		return false;
 	}
 
