@@ -43,7 +43,6 @@ public class NumberRejector implements LocalRejectionFilter{
 		
 		// TODO Auto-generated method stub
 		NodeList nList = n.getChildNodes();
-		boolean res;
 		
 		/* Parcours les enfants de modif */
 		for(int j = 0 ; j < nList.getLength() ; j++) {
