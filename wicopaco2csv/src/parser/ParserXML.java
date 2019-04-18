@@ -230,7 +230,7 @@ public class ParserXML {
 		//add the writer to the parser
 		ParserXML parser = new ParserXML(writer);
 		
-		Character[] specChar = {'*','/','#','$','�'};
+		Character[] specChar = {'*','/','#','$'};
 		List<Character> specialCharacters = Arrays.asList(specChar);
 		
 		
