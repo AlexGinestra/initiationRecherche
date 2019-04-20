@@ -1,9 +1,13 @@
 package filters.purifier;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import filters.FiltersStatistics;
+import parser.CsvFileWriter;
 
 public class SpecialCaracterPurifier extends FiltersStatistics implements PurifierFilter{
 	
@@ -35,15 +39,41 @@ public class SpecialCaracterPurifier extends FiltersStatistics implements Purifi
 		
 		sentenceNumber += 2;
 		
-		//supprime le caractere special en debut de phrase
-		if(charList.contains(before.charAt(0))) {
-			before.deleteCharAt(0);
-			charDeleted++;
+		if(outputOn) {
+			map = new HashMap<String, String>();
+			//supprime le caractere special en debut de phrase
+			if(charList.contains(before.charAt(0))) {
+				map.put("before", ""+before.charAt(0));
+				before.deleteCharAt(0);
+				charDeleted++;
+			}
+			if(charList.contains(after.charAt(0))) {
+				map.put("after", ""+after.charAt(0));
+				after.deleteCharAt(0);
+				charDeleted++;
+			}
+			try {
+				if(!map.isEmpty()) {
+					outputFile.write(map);
+				}
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
-		if(charList.contains(after.charAt(0))) {
-			after.deleteCharAt(0);
-			charDeleted++;
+		else {
+			//supprime le caractere special en debut de phrase
+			if(charList.contains(before.charAt(0))) {
+				before.deleteCharAt(0);
+				charDeleted++;
+			}
+			if(charList.contains(after.charAt(0))) {
+				after.deleteCharAt(0);
+				charDeleted++;
+			}
 		}
+		
+		
 		
 		return true;
 	}
@@ -55,8 +85,23 @@ public class SpecialCaracterPurifier extends FiltersStatistics implements Purifi
 
 	@Override
 	public void createCSVOutput() {
-		// TODO Auto-generated method stub
+		/* creation fichier csv de sortie et du writer */
+		File file = new File("rejectedBySpecialCaracterPurifier.csv"); 
 		
+		//test if the file already exist
+		if(file.exists()) {
+			System.out.println("le fichier rejectedBySpecialCaracterPurifier.csv existe deja");
+			System.exit(0);
+		}
+		
+		//create the different column for the CSV file
+		String[] titles = {"before", "after"};
+		try {
+			outputFile = new CsvFileWriter(file, '\t', titles);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}				
 	}
 
 }

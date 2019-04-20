@@ -161,11 +161,11 @@ public class EsteticalRestructurationRejector extends FiltersStatistics implemen
 	@Override
 	public void createCSVOutput() {
 		/* creation fichier csv de sortie et du writer */
-		File file = new File("EsteticalRestructurationRejector.csv"); 
+		File file = new File("rejectedByEsteticalRestructurationRejector.csv"); 
 		
 		//test if the file already exist
 		if(file.exists()) {
-			System.out.println("le fichier EsteticalRestructurationRejector.csv existe deja");
+			System.out.println("le fichier rejectedByEsteticalRestructurationRejector.csv existe deja");
 			System.exit(0);
 		}
 		

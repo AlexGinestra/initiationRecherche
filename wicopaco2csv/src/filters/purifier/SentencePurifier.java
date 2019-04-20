@@ -2,6 +2,7 @@ package filters.purifier;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.HashMap;
 
 import filters.FiltersStatistics;
 import parser.CsvFileWriter;
@@ -59,18 +60,49 @@ public class SentencePurifier extends FiltersStatistics implements PurifierFilte
 
 		charDeleted += before.length()-(lastPointB - firstPoint); //data for stat
 		
-		// supprime les phrases suivantes
-		if(before.length() > lastPointB) {
-			before.delete(lastPointB+1, before.length());
+		if(outputOn) {
+			map = new HashMap<String,String>();
+			// supprime les phrases suivantes
+			if(before.length() > lastPointB) {
+				map.put("end before", before.substring(lastPointB+1, before.length()));
+				before.delete(lastPointB+1, before.length());
+			}
+			if(after.length() > lastPointA) {
+				map.put("end after", after.substring(lastPointA+1, after.length()));
+				after.delete(lastPointA+1, after.length());
+			}
+			
+			//supprime les phrases precedentes 
+			if(firstPoint != 0) {
+				map.put("beginning before", before.substring(0, firstPoint+1));
+				map.put("beginning after", after.substring(0, firstPoint+1));
+				after.delete(0, firstPoint+2);
+				before.delete(0, firstPoint+2);
+			}
+			
+			if(!map.isEmpty()) {
+				try {
+					outputFile.write(map);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
 		}
-		if(after.length() > lastPointA) {
-			after.delete(lastPointA+1, after.length());
-		}
-		
-		//supprime les phrases precedentes 
-		if(firstPoint != 0) {
-			after.delete(0, firstPoint+2);
-			before.delete(0, firstPoint+2);
+		else {
+			// supprime les phrases suivantes
+			if(before.length() > lastPointB) {
+				before.delete(lastPointB+1, before.length());
+			}
+			if(after.length() > lastPointA) {
+				after.delete(lastPointA+1, after.length());
+			}
+			
+			//supprime les phrases precedentes 
+			if(firstPoint != 0) {
+				after.delete(0, firstPoint+2);
+				before.delete(0, firstPoint+2);
+			}
 		}
 		
 		return true;
@@ -84,16 +116,16 @@ public class SentencePurifier extends FiltersStatistics implements PurifierFilte
 	@Override
 	public void createCSVOutput() {
 		/* creation fichier csv de sortie et du writer */
-		File file = new File("SentencePurifier.csv"); 
+		File file = new File("rejectedBySentencePurifier.csv"); 
 		
 		//test if the file already exist
 		if(file.exists()) {
-			System.out.println("le fichier SentencePurifier.csv existe deja");
+			System.out.println("le fichier rejectedBySentencePurifier.csv existe deja");
 			System.exit(0);
 		}
 		
 		//create the different column for the CSV file
-		String[] titles = { "before" , "after"};
+		String[] titles = { "beginning before", "end before", "beginning after", "end after"};
 		try {
 			outputFile = new CsvFileWriter(file, '\t', titles);
 		} catch (IOException e) {

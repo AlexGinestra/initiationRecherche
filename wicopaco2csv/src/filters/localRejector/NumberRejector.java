@@ -119,11 +119,11 @@ public class NumberRejector extends FiltersStatistics implements LocalRejectionF
 	@Override
 	public void createCSVOutput() {
 		/* creation fichier csv de sortie et du writer */
-		File file = new File("NumberRejector.csv"); 
+		File file = new File("rejectedByNumberRejector.csv"); 
 		
 		//test if the file already exist
 		if(file.exists()) {
-			System.out.println("le fichier NumberRejector.csv existe deja");
+			System.out.println("le fichier rejectedByNumberRejector.csv existe deja");
 			System.exit(0);
 		}
 		

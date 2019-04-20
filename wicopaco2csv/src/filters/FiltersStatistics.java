@@ -9,7 +9,7 @@ public abstract class FiltersStatistics {
 	
 	protected boolean outputOn = false;
 	protected CsvFileWriter outputFile = null;
-	protected Map<String, String> map;
+	protected Map<String, String> map = null;
 	
 	public void activateOutput() {
 		outputOn = true;

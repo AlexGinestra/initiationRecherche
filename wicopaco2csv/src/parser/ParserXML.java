@@ -272,10 +272,10 @@ public class ParserXML {
 		
 		//adding differents casters
 		//parser.addPurifier(new SentencePurifier());
-		//parser.addPurifier(new SpecialCaracterPurifier(specialCharacters));
+		parser.addPurifier(new SpecialCaracterPurifier(specialCharacters));
 		
 		//adding differents localRejector
-		parser.addLocalRejector(new NumberRejector());
+		//parser.addLocalRejector(new NumberRejector());
 		//parser.addLocalRejector(new EsteticalRestructurationRejector());
 
 		
@@ -296,6 +296,9 @@ public class ParserXML {
 		//start the treatment
 		parser.parser();
 		
+		for(PurifierFilter f : parser.purifiers) {
+			((FiltersStatistics) f).printStatistics();
+		}
 		System.out.println("execution time : "+(System.currentTimeMillis()-startTime) + " ms");
 	}
 	
