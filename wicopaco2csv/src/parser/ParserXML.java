@@ -280,7 +280,7 @@ public class ParserXML {
 		
 		//adding differents casters
 		//parser.addPurifier(new SentencePurifier());
-		parser.addPurifier(new SpecialCaracterPurifier(specialCharacters));
+		//parser.addPurifier(new SpecialCaracterPurifier(specialCharacters));
 		
 		
 		/*for(GlobalRejectionFilter f : parser.globalRejectors) {
