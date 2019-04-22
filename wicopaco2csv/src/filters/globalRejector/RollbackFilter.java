@@ -10,7 +10,6 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import filters.FiltersStatistics;
-import filters.localRejector.LocalRejectionFilter;
 import parser.CsvFileWriter;
 import parser.ParserXML;
 
@@ -83,7 +82,7 @@ public class RollbackFilter extends FiltersStatistics implements GlobalRejection
 			return false;
 		}
 		
-		for(String[] strTab : listBefAft[wordNumberBef-1]) {
+		for(String[] strTab : listBefAft[wordNumberAft-1]) {
 			if(strTab[1].equals(strBef) && strTab[0].equals(strAft)) {
 				return true;
 			}
@@ -171,6 +170,7 @@ public class RollbackFilter extends FiltersStatistics implements GlobalRejection
 							Node mTag = lTemp.item(i);
 							after = mTag.getTextContent();
 							
+
 							//test if the correction is a rollback 
 							if(alreadySeen(before, wordsNumber[k][0], after, wordsNumber[k][1])){
 								nodeWillBeRemoved.add(k);
@@ -187,6 +187,8 @@ public class RollbackFilter extends FiltersStatistics implements GlobalRejection
 										e.printStackTrace();
 									}
 								}
+							}
+							else {
 							}
 						}
 					}

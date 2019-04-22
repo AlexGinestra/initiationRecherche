@@ -1,10 +1,7 @@
 package filters.globalRejector;
 
 import java.util.List;
-
 import org.w3c.dom.Node;
-
-import filters.FiltersStatistics;
 
 public interface GlobalRejectionFilter{
 	

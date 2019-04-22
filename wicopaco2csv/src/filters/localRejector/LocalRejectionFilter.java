@@ -2,8 +2,6 @@ package filters.localRejector;
 
 import org.w3c.dom.Node;
 
-import filters.FiltersStatistics;
-
 public interface LocalRejectionFilter{
 
 	/*

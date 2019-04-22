@@ -272,7 +272,7 @@ public class ParserXML {
 		
 		//adding differents casters
 		//parser.addPurifier(new SentencePurifier());
-		parser.addPurifier(new SpecialCaracterPurifier(specialCharacters));
+		//parser.addPurifier(new SpecialCaracterPurifier(specialCharacters));
 		
 		//adding differents localRejector
 		//parser.addLocalRejector(new NumberRejector());
@@ -280,7 +280,7 @@ public class ParserXML {
 
 		
 		//adding differents globalRejector
-		//parser.addGlobalRejector(new RollbackFilter());
+		parser.addGlobalRejector(new RollbackFilter());
 		
 		
 		for(GlobalRejectionFilter f : parser.globalRejectors) {
