@@ -270,20 +270,20 @@ public class ParserXML {
 		List<Character> specialCharacters = Arrays.asList(specChar);
 		
 		
-		//adding differents casters
-		//parser.addPurifier(new SentencePurifier());
-		//parser.addPurifier(new SpecialCaracterPurifier(specialCharacters));
-		
-		//adding differents localRejector
-		//parser.addLocalRejector(new NumberRejector());
-		//parser.addLocalRejector(new EsteticalRestructurationRejector());
-
 		
 		//adding differents globalRejector
 		parser.addGlobalRejector(new RollbackFilter());
 		
+		//adding differents localRejector
+		parser.addLocalRejector(new NumberRejector());
+		parser.addLocalRejector(new EsteticalRestructurationRejector());
 		
-		for(GlobalRejectionFilter f : parser.globalRejectors) {
+		//adding differents casters
+		//parser.addPurifier(new SentencePurifier());
+		parser.addPurifier(new SpecialCaracterPurifier(specialCharacters));
+		
+		
+		/*for(GlobalRejectionFilter f : parser.globalRejectors) {
 			((FiltersStatistics) f).activateOutput();
 		}
 		for(LocalRejectionFilter f : parser.localRejectors) {
@@ -291,11 +291,17 @@ public class ParserXML {
 		}
 		for(PurifierFilter f : parser.purifiers) {
 			((FiltersStatistics) f).activateOutput();
-		}
+		}*/
 		
 		//start the treatment
 		parser.parser();
 		
+		for(GlobalRejectionFilter f : parser.globalRejectors) {
+			((FiltersStatistics) f).printStatistics();
+		}
+		for(LocalRejectionFilter f : parser.localRejectors) {
+			((FiltersStatistics) f).printStatistics();
+		}
 		for(PurifierFilter f : parser.purifiers) {
 			((FiltersStatistics) f).printStatistics();
 		}
