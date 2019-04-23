@@ -1,11 +1,16 @@
 package filters.localRejector;
 
-import java.util.Arrays;
+import java.io.File;
+import java.io.IOException;
+import java.util.HashMap;
 
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-public class EsteticalRestructurationRejector implements LocalRejectionFilter{
+import filters.FiltersStatistics;
+import parser.CsvFileWriter;
+
+public class EsteticalRestructurationRejector extends FiltersStatistics implements LocalRejectionFilter{
 
 	private int sentenceTreated;
 	private int sentenceRejected;
@@ -103,6 +108,20 @@ public class EsteticalRestructurationRejector implements LocalRejectionFilter{
 			int sizeMaxSentence = Math.max(afterM.length(), beforeM.length());
 
 			if((levenshteinDist == sizeMaxSentence || levenshteinDist > 2) && sizeMaxSentence > 1) {
+				
+				//output for the rejected case
+				if(outputOn) {
+					map = new HashMap<String, String>();
+					map.put("before",beforeM);
+					map.put("after",afterM);
+					map.put("id", ""+getIdNode(n));
+					try {
+						outputFile.write(map);
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+				}
+				
 				//System.out.println("rejected : before = " + beforeM + "\t\tafter = "+afterM+ "\t\tDist = "+levenshteinDist);
 				sentenceRejected++;
 				return true;
@@ -113,6 +132,18 @@ public class EsteticalRestructurationRejector implements LocalRejectionFilter{
 		
 		//if the Levenshtein distance is higher than the half of the shorter modification
 		if(2*levenshteinDist > sizeMinSentence) {
+			//output for the rejected case
+			if(outputOn) {
+				map = new HashMap<String, String>();
+				map.put("before",beforeM);
+				map.put("after",afterM);
+				map.put("id", ""+getIdNode(n));
+				try {
+					outputFile.write(map);
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
 			sentenceRejected++;
 			return true;
 		}
@@ -122,6 +153,28 @@ public class EsteticalRestructurationRejector implements LocalRejectionFilter{
 	@Override
 	public void printStatistics() {
 		System.out.println("The estetical restructuration rejector treated " + sentenceTreated + " sentences, and rejected " + sentenceRejected +" sentences.");				
+	}
+
+
+	@Override
+	public void createCSVOutput() {
+		/* creation fichier csv de sortie et du writer */
+		File file = new File("rejectedByEsteticalRestructurationRejector.csv"); 
+		
+		//test if the file already exist
+		if(file.exists()) {
+			System.out.println("le fichier rejectedByEsteticalRestructurationRejector.csv existe deja");
+			System.exit(0);
+		}
+		
+		//create the different column for the CSV file
+		String[] titles = { "before" , "after", "id"};
+		try {
+			outputFile = new CsvFileWriter(file, '\t', titles);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}		
 	}
 
 }

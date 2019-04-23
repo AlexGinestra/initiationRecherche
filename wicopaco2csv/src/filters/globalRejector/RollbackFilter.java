@@ -1,15 +1,19 @@
 package filters.globalRejector;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import filters.localRejector.LocalRejectionFilter;
+import filters.FiltersStatistics;
+import parser.CsvFileWriter;
 import parser.ParserXML;
 
-public class RollbackFilter implements GlobalRejectionFilter{
+public class RollbackFilter extends FiltersStatistics implements GlobalRejectionFilter{
 	
 	private int sentenceTreated;
 	private int sentenceRejected;
@@ -71,37 +75,18 @@ public class RollbackFilter implements GlobalRejectionFilter{
 	
 	
 	/*
-	 * return true if the word str is already in the list at the before place 
+	 * return true if the word strBef and strAft is already in the list 
 	 */
-	public boolean beforeAlreadySeen(String str, int wordNumber) {
-		if(wordNumber > listBefAft.length) {
+	public boolean alreadySeen(String strBef, int wordNumberBef, String strAft, int wordNumberAft) {
+		if(wordNumberBef > listBefAft.length || wordNumberAft > listBefAft.length) {
 			return false;
 		}
 		
-		for(String[] strTab : listBefAft[wordNumber-1]) {
-			if(strTab[0].equals(str)) {
+		for(String[] strTab : listBefAft[wordNumberAft-1]) {
+			if(strTab[1].equals(strBef) && strTab[0].equals(strAft)) {
 				return true;
 			}
 		}
-		return false;
-	}
-	
-	
-	/*
-	 * return true if the word str is already in the list at the after place
-	 */
-	public boolean afterAlreadySeen(String str, int wordNumber) {
-		if(wordNumber > listBefAft.length) {
-			return false;
-		}
-		for(List<String[]> l : listBefAft) {
-			for(String[] strTab : l) {
-				if(strTab[1].equals(str)) {
-					return true;
-				}
-			}
-		}
-		
 		return false;
 	}
 	
@@ -184,8 +169,26 @@ public class RollbackFilter implements GlobalRejectionFilter{
 						if(lTemp.item(i).getNodeName().equals("m")) {
 							Node mTag = lTemp.item(i);
 							after = mTag.getTextContent();
-							if(afterAlreadySeen(before, wordsNumber[k][0]) && beforeAlreadySeen(after, wordsNumber[k][1])) {
+							
+
+							//test if the correction is a rollback 
+							if(alreadySeen(before, wordsNumber[k][0], after, wordsNumber[k][1])){
 								nodeWillBeRemoved.add(k);
+								
+								//output for the rejected case
+								if(outputOn) {
+									map = new HashMap<String, String>();
+									map.put("before",before);
+									map.put("after",after);
+									map.put("id", ""+k);
+									try {
+										outputFile.write(map);
+									} catch (IOException e) {
+										e.printStackTrace();
+									}
+								}
+							}
+							else {
 							}
 						}
 					}
@@ -205,6 +208,28 @@ public class RollbackFilter implements GlobalRejectionFilter{
 	@Override
 	public void printStatistics() {
 		System.out.println("The rollback filter treated " + sentenceTreated + " sentences, and rejected " + sentenceRejected +" sentences.");				
+	}
+
+
+	@Override
+	public void createCSVOutput() {
+		/* creation fichier csv de sortie et du writer */
+		File file = new File("rejectedByRollbackFilter.csv"); 
+		
+		//test if the file already exist
+		if(file.exists()) {
+			System.out.println("le fichier rejectedByRollbackFilter.csv existe deja");
+			System.exit(0);
+		}
+		
+		//create the different column for the CSV file
+		String[] titles = { "before" , "after", "id"};
+		try {
+			outputFile = new CsvFileWriter(file, '\t', titles);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }

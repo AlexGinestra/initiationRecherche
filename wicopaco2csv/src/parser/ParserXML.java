@@ -149,8 +149,18 @@ public class ParserXML {
 			
 		}
 		
-		//fermeture writer
+		//closing writers
+		for(GlobalRejectionFilter f : globalRejectors) {
+			((FiltersStatistics) f).closeOutput();
+		}
+		for(LocalRejectionFilter f : localRejectors) {
+			((FiltersStatistics) f).closeOutput();
+		}
+		for(PurifierFilter f : purifiers) {
+			((FiltersStatistics) f).closeOutput();
+		}
 		writer.close();
+		
 	}
 	
 	
@@ -229,24 +239,6 @@ public class ParserXML {
 	
 	
 	
-	/*
-	 * print the statistics of the filters
-	 */
-	private void printStatistics() {
-		for(FiltersStatistics f : globalRejectors) {
-			f.printStatistics();
-		}
-		for(FiltersStatistics f : localRejectors) {
-			f.printStatistics();
-		}
-		for(FiltersStatistics f : purifiers) {
-			f.printStatistics();
-		}
-	}
-	
-	
-	
-	
 	public static void main(String[] args) throws IOException {
 		
 		long startTime = System.currentTimeMillis();
@@ -278,24 +270,41 @@ public class ParserXML {
 		List<Character> specialCharacters = Arrays.asList(specChar);
 		
 		
-		//adding differents casters
-		parser.addPurifier(new SentencePurifier());
-		parser.addPurifier(new SpecialCaracterPurifier(specialCharacters));
-		
-		//adding differents localRejector
-		parser.addLocalRejector(new NumberRejector());
-		parser.addLocalRejector(new EsteticalRestructurationRejector());
-
 		
 		//adding differents globalRejector
 		parser.addGlobalRejector(new RollbackFilter());
 		
+		//adding differents localRejector
+		parser.addLocalRejector(new NumberRejector());
+		parser.addLocalRejector(new EsteticalRestructurationRejector());
+		
+		//adding differents casters
+		//parser.addPurifier(new SentencePurifier());
+		//parser.addPurifier(new SpecialCaracterPurifier(specialCharacters));
+		
+		
+		/*for(GlobalRejectionFilter f : parser.globalRejectors) {
+			((FiltersStatistics) f).activateOutput();
+		}
+		for(LocalRejectionFilter f : parser.localRejectors) {
+			((FiltersStatistics) f).activateOutput();
+		}
+		for(PurifierFilter f : parser.purifiers) {
+			((FiltersStatistics) f).activateOutput();
+		}*/
+		
 		//start the treatment
 		parser.parser();
-				
-		//print the statistics
-		parser.printStatistics();
 		
+		for(GlobalRejectionFilter f : parser.globalRejectors) {
+			((FiltersStatistics) f).printStatistics();
+		}
+		for(LocalRejectionFilter f : parser.localRejectors) {
+			((FiltersStatistics) f).printStatistics();
+		}
+		for(PurifierFilter f : parser.purifiers) {
+			((FiltersStatistics) f).printStatistics();
+		}
 		System.out.println("execution time : "+(System.currentTimeMillis()-startTime) + " ms");
 	}
 	
