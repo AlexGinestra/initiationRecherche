@@ -1,8 +1,10 @@
-package filter;
+package filters.localRejector;
 
 import org.w3c.dom.Node;
 
-public interface RejectionFilter {
+import filters.FiltersStatistics;
+
+public interface LocalRejectionFilter extends FiltersStatistics{
 
 	/*
 	 * this method apply to a <modif> tag return

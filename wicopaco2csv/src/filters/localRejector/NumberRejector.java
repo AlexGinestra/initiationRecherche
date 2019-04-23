@@ -1,13 +1,16 @@
-package filter;
+package filters.localRejector;
 
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-public class NumberRejector implements RejectionFilter{
+public class NumberRejector implements LocalRejectionFilter{
 
+	private int sentenceTreated;
+	private int sentenceRejected;
 	
 	public NumberRejector() {
-		
+		sentenceTreated = 0;
+		sentenceRejected = 0;
 	}
 	
 	/*
@@ -36,6 +39,8 @@ public class NumberRejector implements RejectionFilter{
 	 */
 	@Override
 	public boolean hasToBeRemoved(Node n) {
+		sentenceTreated++;
+		
 		// TODO Auto-generated method stub
 		NodeList nList = n.getChildNodes();
 		
@@ -48,7 +53,11 @@ public class NumberRejector implements RejectionFilter{
 				for(int i = 0 ; i < lTemp.getLength()-1 ; i++) {
 					if(lTemp.item(i).getNodeName().equals("m")) {
 						Node mTag = lTemp.item(i);
-						return isNumberIn(mTag.getTextContent());
+						if(isNumberIn(mTag.getTextContent())){
+							sentenceRejected++;
+							return true;
+						}
+						return false;
 					}
 				}
 			}
@@ -58,13 +67,22 @@ public class NumberRejector implements RejectionFilter{
 				for(int i = 0 ; i < lTemp.getLength()-1 ; i++) {
 					if(lTemp.item(i).getNodeName().equals("m")) {
 						Node mTag = lTemp.item(i);
-						return isNumberIn(mTag.getTextContent());
+						if(isNumberIn(mTag.getTextContent())) {
+							sentenceRejected++;
+							return true;
+						}
+						return false;
 					}
 				}
 			}
 		}
 		
 		return false;
+	}
+
+	@Override
+	public void printStatistics() {
+		System.out.println("The number rejector treated " + sentenceTreated + " sentences, and rejected " + sentenceRejected +" sentences.");		
 	}
 
 }

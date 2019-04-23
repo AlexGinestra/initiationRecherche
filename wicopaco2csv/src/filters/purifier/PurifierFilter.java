@@ -1,7 +1,8 @@
-package caster;
+package filters.purifier;
 
+import filters.FiltersStatistics;
 
-public interface PurifierFilter {
+public interface PurifierFilter extends FiltersStatistics{
 
 	/*
 	 * this method applies directly the cast to each parameters

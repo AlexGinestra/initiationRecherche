@@ -22,36 +22,48 @@ import org.w3c.dom.traversal.NodeFilter;
 import org.w3c.dom.traversal.NodeIterator;
 import org.xml.sax.SAXException;
 
-import caster.PurifierFilter;
-import caster.SentencePurifier;
-import caster.SpecialCaracterPurifier;
-import filter.RejectionFilter;
-import filter.RollbackFilter;
-import filter.NumberRejector;
+import filters.FiltersStatistics;
+import filters.globalRejector.GlobalRejectionFilter;
+import filters.globalRejector.RollbackFilter;
+import filters.localRejector.EsteticalRestructurationRejector;
+import filters.localRejector.LocalRejectionFilter;
+import filters.localRejector.NumberRejector;
+import filters.purifier.PurifierFilter;
+import filters.purifier.SentencePurifier;
+import filters.purifier.SpecialCaracterPurifier;
 
 public class ParserXML {
 
-	private List<PurifierFilter> casters;
-	private List<RejectionFilter> filters;
+	private List<PurifierFilter> purifiers;
+	private List<LocalRejectionFilter> localRejectors;
+	private List<GlobalRejectionFilter> globalRejectors;
 	private CsvFileWriter writer;
 	
 	public ParserXML(CsvFileWriter w) {
-		casters = new ArrayList<PurifierFilter>();
-		filters = new ArrayList<RejectionFilter>();
+		purifiers = new ArrayList<PurifierFilter>();
+		localRejectors = new ArrayList<LocalRejectionFilter>();
+		globalRejectors = new ArrayList<GlobalRejectionFilter>();
+
 		writer = w;
 	}
 	
 	
 	public void addPurifier(PurifierFilter... cas) {
 		for(PurifierFilter c : cas) {
-			casters.add(c);
+			purifiers.add(c);
 		}
 	}
 	
 	
-	public void addRejector(RejectionFilter... fil) {
-		for(RejectionFilter f : fil) {
-			filters.add(f);
+	public void addLocalRejector(LocalRejectionFilter... fil) {
+		for(LocalRejectionFilter f : fil) {
+			localRejectors.add(f);
+		}
+	}
+	
+	public void addGlobalRejector(GlobalRejectionFilter... fil) {
+		for(GlobalRejectionFilter f : fil) {
+			globalRejectors.add(f);
 		}
 	}
 	
@@ -98,30 +110,45 @@ public class ParserXML {
 	
 		StringBuilder strB = new StringBuilder(), strA = new StringBuilder(), strC = new StringBuilder();
 		
-		ArrayList<Integer> whiteList = new ArrayList<Integer>();
+		
+		
 		
 		if(n.getNodeName().contentEquals("modifs")) {
-			NodeList nList = n.getChildNodes();
+			NodeList nList = n.getChildNodes(); //var temp
+			
+			ArrayList<Node> nodeList = new ArrayList<Node>(); //contains <modif> items that are going to be treated		
 						
+			//add all the <modif> nodes in the nodeList that will be treated
 			for(int i = 0 ; i < nList.getLength()-1 ; i++) {				
 				if(nList.item(i).getNodeName().equals("modif")) {
-					
-					boolean hasToBeAddedInDB = true;
-					/* applique les filtres sur le contenu */
-					for(RejectionFilter f : filters) {
-						if(f.hasToBeRemoved(nList.item(i))) {
-							hasToBeAddedInDB = false;
-							break;
-						}
-					}
-					
-					if(hasToBeAddedInDB) {
-						/* Parcours les enfants de modif */
-						traiterModif(nList.item(i), strB, strA, strC, map);
-					}
+					nodeList.add(nList.item(i));
 				}
 			}
+			
+			//clean the node list that have to be treated
+			for(GlobalRejectionFilter f : globalRejectors) {
+				f.cleanTheList(nodeList);
+			}
+					
+			//treat the node list that will be in the output file
+			for(Node node : nodeList) {
+				boolean hasToBeAddedInDB = true;
+				/* apply local rejectorfilters */
+				for(LocalRejectionFilter f : localRejectors) {
+					if(f.hasToBeRemoved(node)) {
+						hasToBeAddedInDB = false;
+						break;
+					}
+				}
+				
+				if(hasToBeAddedInDB) {
+					/* apply a purification on the case, then add it to the output file */
+					traiterModif(node, strB, strA, strC, map);
+				}
+			}
+			
 		}
+		
 		//fermeture writer
 		writer.close();
 	}
@@ -157,7 +184,7 @@ public class ParserXML {
 			}
 		}
 		//on ajoute dans le csv
-		if(caster(strBefore, strAfter, strComments, map) ) {
+		if(caster(strBefore, strAfter, strComments, map)) {
 			writer.write(map);
 			map = new HashMap<String, String>();
 			strBefore.delete(0, strBefore.length());
@@ -189,7 +216,7 @@ public class ParserXML {
 	 * apply the cast on the parameters
 	 */
 	public boolean caster(StringBuilder before, StringBuilder after, StringBuilder comments, Map<String,String> map) {
-		for(PurifierFilter c : casters) {
+		for(PurifierFilter c : purifiers) {
 			if(!c.cast(before, after, comments)) {
 				return false;
 			}
@@ -202,10 +229,27 @@ public class ParserXML {
 	
 	
 	
+	/*
+	 * print the statistics of the filters
+	 */
+	private void printStatistics() {
+		for(FiltersStatistics f : globalRejectors) {
+			f.printStatistics();
+		}
+		for(FiltersStatistics f : localRejectors) {
+			f.printStatistics();
+		}
+		for(FiltersStatistics f : purifiers) {
+			f.printStatistics();
+		}
+	}
+	
 	
 	
 	
 	public static void main(String[] args) throws IOException {
+		
+		long startTime = System.currentTimeMillis();
 		
 		/* creation fichier csv de sortie et du writer */
 		File file = null; 
@@ -238,13 +282,21 @@ public class ParserXML {
 		parser.addPurifier(new SentencePurifier());
 		parser.addPurifier(new SpecialCaracterPurifier(specialCharacters));
 		
-		//adding differents filters
-		parser.addRejector(new NumberRejector());
-		parser.addRejector(new RollbackFilter());
+		//adding differents localRejector
+		parser.addLocalRejector(new NumberRejector());
+		parser.addLocalRejector(new EsteticalRestructurationRejector());
+
 		
+		//adding differents globalRejector
+		parser.addGlobalRejector(new RollbackFilter());
 		
 		//start the treatment
 		parser.parser();
+				
+		//print the statistics
+		parser.printStatistics();
+		
+		System.out.println("execution time : "+(System.currentTimeMillis()-startTime) + " ms");
 	}
 	
 }
