@@ -25,7 +25,7 @@ import org.xml.sax.SAXException;
 import filters.FiltersStatistics;
 import filters.globalRejector.GlobalRejectionFilter;
 import filters.globalRejector.RollbackFilter;
-import filters.localRejector.EsteticalRestructurationRejector;
+import filters.localRejector.EstheticalRestructurationRejector;
 import filters.localRejector.LocalRejectionFilter;
 import filters.localRejector.NumberRejector;
 import filters.purifier.PurifierFilter;
@@ -276,7 +276,7 @@ public class ParserXML {
 		
 		//adding differents localRejector
 		parser.addLocalRejector(new NumberRejector());
-		parser.addLocalRejector(new EsteticalRestructurationRejector());
+		parser.addLocalRejector(new EstheticalRestructurationRejector());
 		
 		//adding differents casters
 		//parser.addPurifier(new SentencePurifier());
