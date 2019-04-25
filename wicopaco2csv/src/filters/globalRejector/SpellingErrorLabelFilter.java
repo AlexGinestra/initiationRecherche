@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.traversal.DocumentTraversal;
@@ -19,12 +20,14 @@ import parser.ParserXML;
 public class SpellingErrorLabelFilter extends FiltersStatistics implements GlobalRejectionFilter{
 	
 	private int[] errorLabels;
+	private int pointeurBorneInf;
 	
 	public SpellingErrorLabelFilter() {
 		if(!loadLabels()) {
 			System.out.println("erreur dans le chargement du dictionnaire d\'etiquettes");
 			errorLabels = null;
 		}
+		pointeurBorneInf = 0;
 		
 	}
 
@@ -46,6 +49,8 @@ public class SpellingErrorLabelFilter extends FiltersStatistics implements Globa
 		
 		if(n.getNodeName().contentEquals("spelling_labels")) {
 			NodeList nList = n.getChildNodes(); //var temp
+			String modif_id = null, label = null;
+
 
 			//add all the <modif> nodes in the nodeList that will be treated
 			for(int i = 0 ; i < nList.getLength()-1 ; i++) {				
@@ -53,33 +58,36 @@ public class SpellingErrorLabelFilter extends FiltersStatistics implements Globa
 					NodeList nltemp = nList.item(i).getChildNodes();
 					
 					/* tag <annotation> */
-					Node modif_id, label;
 					for(int j = 0 ; j < nltemp.getLength()-1 ; j++) {
 						if(nltemp.item(j).getNodeName().equals("modif_id")){
-							modif_id = nltemp.item(j);
+							modif_id = nltemp.item(j).getTextContent();
 						}
 						/* not used for the moment
 						 * else if(nltemp.item(j).getNodeName().equals("label")) {
 						 
-							label = nltemp.item(j);
+							label = nltemp.item(j).getTextContent();
 						}*/
 					}
 					
-					
-							
+					listLabel.add(Integer.parseInt(modif_id));	
 				}
 			}
 		}
 		
+		errorLabels = new int[listLabel.size()];
 		
+		for(int i = 0 ; i < listLabel.size() ; i++) {
+			errorLabels[i] = listLabel.get(i);
+		}		
 		
 		return true;
 	}
 	
 	
 	private boolean isInTheErrorLabels(int label) {
-		for(int i = 0 ; i < errorLabels.length ; i++) {
+		for(int i = pointeurBorneInf ; i < errorLabels.length ; i++) {
 			if(errorLabels[i] == label) {
+				pointeurBorneInf = i;
 				return true;
 			}
 			else if(errorLabels[i] > label) {
@@ -91,9 +99,35 @@ public class SpellingErrorLabelFilter extends FiltersStatistics implements Globa
 	
 	@Override
 	public void cleanTheList(List<Node> nodeList) {
-		// TODO Auto-generated method stub
+		List<Integer> nodeWillBeRemoved = new ArrayList<Integer>();
+		String before = null, after = null;
 		
+		for(int k = 0 ; k < nodeList.size() ; k++) {
+			Node n = nodeList.get(k);
+			NodeList nList = n.getChildNodes();
+			
+			/* browse the child of <modif> tag */
+			for(int j = 0 ; j < nList.getLength() ; j++) {
+				NamedNodeMap attr = nList.item(j).getAttributes();
+				if(isInTheErrorLabels(Integer.parseInt(attr.getNamedItem("id").getTextContent()))) {
+					nodeWillBeRemoved.add(j);
+				}
+				
+				//TODO
+			}
+			
+			
+		}
+		
+		
+		//remove the node that have to be in the list
+		for(int i = nodeWillBeRemoved.size()-1 ; i >= 0 ; i--) {
+			nodeList.remove((int)nodeWillBeRemoved.get(i));
+		}
 	}
+	
+	
+	
 
 	@Override
 	public void createCSVOutput() {

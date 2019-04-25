@@ -25,6 +25,7 @@ import org.xml.sax.SAXException;
 import filters.FiltersStatistics;
 import filters.globalRejector.GlobalRejectionFilter;
 import filters.globalRejector.RollbackFilter;
+import filters.globalRejector.SpellingErrorLabelFilter;
 import filters.localRejector.EstheticalRestructurationRejector;
 import filters.localRejector.LocalRejectionFilter;
 import filters.localRejector.NumberRejector;
@@ -272,6 +273,7 @@ public class ParserXML {
 		
 		
 		//adding differents globalRejector
+		parser.addGlobalRejector(new SpellingErrorLabelFilter());
 		parser.addGlobalRejector(new RollbackFilter());
 		
 		//adding differents localRejector
