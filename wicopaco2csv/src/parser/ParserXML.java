@@ -274,18 +274,18 @@ public class ParserXML {
 		
 		//adding differents globalRejector
 		parser.addGlobalRejector(new SpellingErrorLabelFilter());
-		parser.addGlobalRejector(new RollbackFilter());
+		//parser.addGlobalRejector(new RollbackFilter());
 		
 		//adding differents localRejector
-		parser.addLocalRejector(new NumberRejector());
-		parser.addLocalRejector(new EstheticalRestructurationRejector());
+		//parser.addLocalRejector(new NumberRejector());
+		//parser.addLocalRejector(new EstheticalRestructurationRejector());
 		
 		//adding differents casters
 		//parser.addPurifier(new SentencePurifier());
 		//parser.addPurifier(new SpecialCaracterPurifier(specialCharacters));
 		
 		
-		/*for(GlobalRejectionFilter f : parser.globalRejectors) {
+		for(GlobalRejectionFilter f : parser.globalRejectors) {
 			((FiltersStatistics) f).activateOutput();
 		}
 		for(LocalRejectionFilter f : parser.localRejectors) {
@@ -293,7 +293,7 @@ public class ParserXML {
 		}
 		for(PurifierFilter f : parser.purifiers) {
 			((FiltersStatistics) f).activateOutput();
-		}*/
+		}
 		
 		//start the treatment
 		parser.parser();

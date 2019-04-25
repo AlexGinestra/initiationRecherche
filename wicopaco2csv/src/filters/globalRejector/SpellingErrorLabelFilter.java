@@ -3,7 +3,9 @@ package filters.globalRejector;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
@@ -104,24 +106,70 @@ public class SpellingErrorLabelFilter extends FiltersStatistics implements Globa
 		
 		for(int k = 0 ; k < nodeList.size() ; k++) {
 			Node n = nodeList.get(k);
-			NodeList nList = n.getChildNodes();
-			
-			/* browse the child of <modif> tag */
-			for(int j = 0 ; j < nList.getLength() ; j++) {
-				NamedNodeMap attr = nList.item(j).getAttributes();
-				if(isInTheErrorLabels(Integer.parseInt(attr.getNamedItem("id").getTextContent()))) {
-					nodeWillBeRemoved.add(j);
+
+			if(n.getNodeName().equals("modif")) {
+				NamedNodeMap attr = n.getAttributes();
+				int id = Integer.parseInt(attr.getNamedItem("id").getTextContent());
+				
+				NodeList nList = n.getChildNodes();
+					
+				if(isInTheErrorLabels(id)) {
+					nodeWillBeRemoved.add(k);
+					
+					/* write in the file if the output is on */
+					if(outputOn) {
+						/* browse <modif> tag */
+						for(int j = 0 ; j < nList.getLength() ; j++) {
+							
+							String bef, aft;
+							NodeList nodeListBefAft = nList.item(j).getChildNodes();
+							/* browse the child of <modif> tag */
+							for(int l = 0 ; l < nList.getLength() ; l++) {
+								Node nTempBefAft = nList.item(l);
+								
+								//<before> tag
+								if(nTempBefAft.getNodeName().equals("before")) {
+									NodeList lTemp = nTempBefAft.getChildNodes();
+									for(int i = 0 ; i < lTemp.getLength()-1 ; i++) {
+										if(lTemp.item(i).getNodeName().equals("m")) {
+											before = lTemp.item(i).getTextContent();
+										}
+									}
+								}
+								
+								//<after> tag
+								else if(nTempBefAft.getNodeName().equals("after")) {
+									NodeList lTemp = nTempBefAft.getChildNodes();
+									for(int i = 0 ; i < lTemp.getLength()-1 ; i++) {
+										if(lTemp.item(i).getNodeName().equals("m")) {
+											after = lTemp.item(i).getTextContent();
+										}
+									}
+								}
+							}
+						}
+						Map<String, String> data = new HashMap<String,String>();
+						data.put("before", before);
+						data.put("after", after);
+						data.put("id", ""+id);
+						try {
+							outputFile.write(data);
+						} catch (IOException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+						
+					}
 				}
 				
-				//TODO
 			}
-			
 			
 		}
 		
 		
 		//remove the node that have to be in the list
 		for(int i = nodeWillBeRemoved.size()-1 ; i >= 0 ; i--) {
+			System.out.println(i + " " + (int)nodeWillBeRemoved.get(i));
 			nodeList.remove((int)nodeWillBeRemoved.get(i));
 		}
 	}
