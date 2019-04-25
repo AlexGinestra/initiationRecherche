@@ -39,8 +39,9 @@ public class SpecialCaracterPurifier extends FiltersStatistics implements Purifi
 		
 		sentenceNumber += 2;
 		
+		System.out.println(before);
 		if(outputOn) {
-			map = new HashMap<String, String>();
+			map.clear();
 			//supprime le caractere special en debut de phrase
 			if(charList.contains(before.charAt(0))) {
 				map.put("before", ""+before.charAt(0));

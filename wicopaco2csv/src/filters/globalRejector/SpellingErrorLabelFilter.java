@@ -113,7 +113,7 @@ public class SpellingErrorLabelFilter extends FiltersStatistics implements Globa
 				
 				NodeList nList = n.getChildNodes();
 					
-				if(isInTheErrorLabels(id)) {
+				if(!isInTheErrorLabels(id)) {
 					nodeWillBeRemoved.add(k);
 					
 					/* write in the file if the output is on */
@@ -169,7 +169,6 @@ public class SpellingErrorLabelFilter extends FiltersStatistics implements Globa
 		
 		//remove the node that have to be in the list
 		for(int i = nodeWillBeRemoved.size()-1 ; i >= 0 ; i--) {
-			System.out.println(i + " " + (int)nodeWillBeRemoved.get(i));
 			nodeList.remove((int)nodeWillBeRemoved.get(i));
 		}
 	}

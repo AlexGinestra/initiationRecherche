@@ -111,7 +111,7 @@ public class EstheticalRestructurationRejector extends FiltersStatistics impleme
 				
 				//output for the rejected case
 				if(outputOn) {
-					map = new HashMap<String, String>();
+					map.clear();
 					map.put("before",beforeM);
 					map.put("after",afterM);
 					map.put("id", ""+getIdNode(n));

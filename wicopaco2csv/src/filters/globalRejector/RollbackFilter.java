@@ -177,7 +177,7 @@ public class RollbackFilter extends FiltersStatistics implements GlobalRejection
 								
 								//output for the rejected case
 								if(outputOn) {
-									map = new HashMap<String, String>();
+									map.clear();
 									map.put("before",before);
 									map.put("after",after);
 									map.put("id", ""+k);

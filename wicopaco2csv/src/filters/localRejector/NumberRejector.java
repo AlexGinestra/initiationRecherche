@@ -50,6 +50,7 @@ public class NumberRejector extends FiltersStatistics implements LocalRejectionF
 		
 		// TODO Auto-generated method stub
 		NodeList nList = n.getChildNodes();
+		boolean rejected = false;
 		
 		/* Parcours les enfants de modif */
 		for(int j = 0 ; j < nList.getLength() ; j++) {
@@ -62,21 +63,11 @@ public class NumberRejector extends FiltersStatistics implements LocalRejectionF
 						Node mTag = lTemp.item(i);
 						if(isNumberIn(mTag.getTextContent())){
 							//output for the rejected case
-							if(outputOn) {
-								map = new HashMap<String, String>();
-								map.put("before",mTag.getTextContent());
-								map.put("after"," ");
-								map.put("id", ""+getIdNode(n));
-								try {
-									outputFile.write(map);
-								} catch (IOException e) {
-									e.printStackTrace();
-								}
-							}
-							sentenceRejected++;
-							return true;
+							rejected = true;
 						}
-						return false;
+						if(outputOn) {
+							map.put("before",mTag.getTextContent());
+						}
 					}
 				}
 			}
@@ -86,11 +77,9 @@ public class NumberRejector extends FiltersStatistics implements LocalRejectionF
 				for(int i = 0 ; i < lTemp.getLength()-1 ; i++) {
 					if(lTemp.item(i).getNodeName().equals("m")) {
 						Node mTag = lTemp.item(i);
-						if(isNumberIn(mTag.getTextContent())) {
+						if(rejected || isNumberIn(mTag.getTextContent())) {
 							//output for the rejected case
 							if(outputOn) {
-								map = new HashMap<String, String>();
-								map.put("before"," ");
 								map.put("after",mTag.getTextContent());
 								map.put("id", ""+getIdNode(n));
 								try {
