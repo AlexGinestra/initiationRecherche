@@ -1,0 +1,808 @@
+Il y a trop de bruit pour travailler.
+nombre de cas étudier : 1
+nombre de cas étudier qui sont faux : 1
+
+La raison est que tu as déjà suivi le cours.
+nombre de cas étudier : 2
+nombre de cas étudier qui sont faux : 1
+
+Pourquoi la population ne se réveille-t-elle pas ?
+nombre de cas étudier : 3
+nombre de cas étudier qui sont faux : 1
+
+Ici, on a la chance de vivre et de s’exprimer en français.
+nombre de cas étudier : 4
+nombre de cas étudier qui sont faux : 1
+
+Je crois qu’on n'a rien à cacher.
+nombre de cas étudier : 5
+nombre de cas étudier qui sont faux : 1
+
+Je lui téléphone souvent.
+nombre de cas étudier : 6
+nombre de cas étudier qui sont faux : 1
+
+Peut-être que ses parents n’ont rien vu venir.
+nombre de cas étudier : 7
+nombre de cas étudier qui sont faux : 1
+
+Je vais manger.
+nombre de cas étudier : 8
+nombre de cas étudier qui sont faux : 1
+
+Il a essayé.
+nombre de cas étudier : 9
+nombre de cas étudier qui sont faux : 1
+
+Je veux ce modèle de graveur.
+nombre de cas étudier : 10
+nombre de cas étudier qui sont faux : 1
+
+Ce sera la semaine prochaine.
+nombre de cas étudier : 11
+nombre de cas étudier qui sont faux : 1
+
+Il se trompe.
+nombre de cas étudier : 12
+nombre de cas étudier qui sont faux : 1
+
+Je viendrai demain.
+nombre de cas étudier : 13
+nombre de cas étudier qui sont faux : 1
+
+Si je le pouvais, je viendrais.
+nombre de cas étudier : 14
+nombre de cas étudier qui sont faux : 1
+
+Où est-il ?
+nombre de cas étudier : 15
+nombre de cas étudier qui sont faux : 1
+
+Tu désires du fromage ou un dessert ?
+nombre de cas étudier : 16
+nombre de cas étudier qui sont faux : 1
+
+Il souhaite qu'il ait lu sa lettre.
+nombre de cas étudier : 17
+nombre de cas étudier qui sont faux : 1
+
+Il souhaitait qu'il eût lu sa lettre.
+nombre de cas étudier : 18
+nombre de cas étudier qui sont faux : 1
+
+C'est une femme très intelligente.
+nombre de cas étudier : 19
+nombre de cas étudier qui sont faux : 1
+
+Il s'est blessé.
+nombre de cas étudier : 20
+nombre de cas étudier qui sont faux : 2
+
+Pierre a mangé la tarte.
+nombre de cas étudier : 21
+nombre de cas étudier qui sont faux : 2
+
+La tarte que Pierre a mangée.
+nombre de cas étudier : 22
+nombre de cas étudier qui sont faux : 2
+
+Il faut pallier ce problème.
+nombre de cas étudier : 23
+nombre de cas étudier qui sont faux : 3
+
+Donne-le moi !
+nombre de cas étudier : 24
+nombre de cas étudier qui sont faux : 4
+
+Donne m'en un !
+nombre de cas étudier : 25
+nombre de cas étudier qui sont faux : 5
+
+Elles sont parties.
+nombre de cas étudier : 26
+nombre de cas étudier qui sont faux : 5
+
+Ils sont fous.
+nombre de cas étudier : 27
+nombre de cas étudier qui sont faux : 5
+
+Ce pull est-il à son goût ?
+nombre de cas étudier : 28
+nombre de cas étudier qui sont faux : 5
+
+Toutes avaient des bijoux en or.
+nombre de cas étudier : 29
+nombre de cas étudier qui sont faux : 5
+
+Les racines tordues s'accrochent entre les cailloux.
+nombre de cas étudier : 30
+nombre de cas étudier qui sont faux : 5
+
+Viens sur mes genoux.
+nombre de cas étudier : 31
+nombre de cas étudier qui sont faux : 5
+
+Ce sont de vrais hiboux.
+nombre de cas étudier : 32
+nombre de cas étudier qui sont faux : 5
+
+Il avait de nombreux joujoux.
+nombre de cas étudier : 33
+nombre de cas étudier qui sont faux : 5
+
+Savez-vous planter les choux ?
+nombre de cas étudier : 34
+nombre de cas étudier qui sont faux : 6
+
+La malpropreté facilite la propagation des poux.
+nombre de cas étudier : 35
+nombre de cas étudier qui sont faux : 6
+
+Elle ouvrit la porte et la referma violemment.
+nombre de cas étudier : 36
+nombre de cas étudier qui sont faux : 6
+
+Les Anglais se préparaient à supporter patiemment le despotisme de Henri VIII.
+nombre de cas étudier : 37
+nombre de cas étudier qui sont faux : 6
+
+Il parle intelligemment de toutes choses.
+nombre de cas étudier : 38
+nombre de cas étudier qui sont faux : 6
+
+Les objets brillamment éclairés sont entourés d'une frange colorée.
+nombre de cas étudier : 39
+nombre de cas étudier qui sont faux : 6
+
+Elle va étonnamment bien à présent.
+nombre de cas étudier : 40
+nombre de cas étudier qui sont faux : 6
+
+Il a pris un chapeau.
+nombre de cas étudier : 41
+nombre de cas étudier qui sont faux : 6
+
+Tu n'as pas fait ça ?
+nombre de cas étudier : 42
+nombre de cas étudier qui sont faux : 6
+
+Tu as vu mes clés ?
+nombre de cas étudier : 43
+nombre de cas étudier qui sont faux : 6
+
+Remets-ça là tout de suite.
+nombre de cas étudier : 44
+nombre de cas étudier qui sont faux : 6
+
+Je la reconnais.
+nombre de cas étudier : 45
+nombre de cas étudier qui sont faux : 6
+
+Il faut boire du lait tous les jours.
+nombre de cas étudier : 46
+nombre de cas étudier qui sont faux : 7
+
+J'ai dû l'achever.
+nombre de cas étudier : 47
+nombre de cas étudier qui sont faux : 7
+
+Cela ne peut être dû qu’à une erreur humaine.
+nombre de cas étudier : 48
+nombre de cas étudier qui sont faux : 7
+
+Cette somme est un dû.
+nombre de cas étudier : 49
+nombre de cas étudier qui sont faux : 7
+
+Ce film est peu intéressant.
+nombre de cas étudier : 50
+nombre de cas étudier qui sont faux : 7
+
+Peu de gens le savent.
+nombre de cas étudier : 51
+nombre de cas étudier qui sont faux : 7
+
+J'ai peu de temps.
+nombre de cas étudier : 52
+nombre de cas étudier qui sont faux : 8
+
+Je ne peux plus me concentrer avec tout ce bruit.
+nombre de cas étudier : 53
+nombre de cas étudier qui sont faux : 9
+
+Tu peux fumer si tu veux.
+nombre de cas étudier : 54
+nombre de cas étudier qui sont faux : 9
+
+Il peut partir du jour au lendemain.
+nombre de cas étudier : 55
+nombre de cas étudier qui sont faux : 9
+
+Personne ne peut le faire.
+nombre de cas étudier : 56
+nombre de cas étudier qui sont faux : 9
+
+Ce cheval n’en peut plus.
+nombre de cas étudier : 57
+nombre de cas étudier qui sont faux : 9
+
+Tu peux te faire très mal !
+nombre de cas étudier : 58
+nombre de cas étudier qui sont faux : 10
+
+Il n'en a pas.
+nombre de cas étudier : 59
+nombre de cas étudier qui sont faux : 10
+
+Il faut le retrouver avant qu'il ne fasse une bêtise.
+nombre de cas étudier : 60
+nombre de cas étudier qui sont faux : 11
+
+On a fait la vaisselle après qu'ils sont partis.
+nombre de cas étudier : 61
+nombre de cas étudier qui sont faux : 11
+
+Ce garçon peut être agressif quand il a bu !
+nombre de cas étudier : 62
+nombre de cas étudier qui sont faux : 11
+
+Peut-être aussi les Parisiens ont-ils peur de l’orage.
+nombre de cas étudier : 63
+nombre de cas étudier qui sont faux : 11
+
+Il a menti.
+nombre de cas étudier : 64
+nombre de cas étudier qui sont faux : 11
+
+Je pense à Fernande...
+nombre de cas étudier : 65
+nombre de cas étudier qui sont faux : 11
+
+Tout homme est mortel.
+nombre de cas étudier : 66
+nombre de cas étudier qui sont faux : 11
+
+Tout le monde est là.
+nombre de cas étudier : 67
+nombre de cas étudier qui sont faux : 11
+
+Toute la classe travaille.
+nombre de cas étudier : 68
+nombre de cas étudier qui sont faux : 11
+
+Tous les élèves travaillent.
+nombre de cas étudier : 69
+nombre de cas étudier qui sont faux : 11
+
+Toutes les filles travaillent.
+nombre de cas étudier : 70
+nombre de cas étudier qui sont faux : 11
+
+Le papier fut réduit en tout petits morceaux.
+nombre de cas étudier : 71
+nombre de cas étudier qui sont faux : 11
+
+Tout est bien qui finit bien.
+nombre de cas étudier : 72
+nombre de cas étudier qui sont faux : 12
+
+Toutes travaillent.
+nombre de cas étudier : 73
+nombre de cas étudier qui sont faux : 12
+
+Le tout est d'essayer.
+nombre de cas étudier : 74
+nombre de cas étudier qui sont faux : 12
+
+Toute autre solution n'est pas envisageable.
+nombre de cas étudier : 75
+nombre de cas étudier qui sont faux : 12
+
+Quelle heure est-il ?
+nombre de cas étudier : 76
+nombre de cas étudier qui sont faux : 12
+
+Qu’elle est belle, la barbe de Victor !
+nombre de cas étudier : 77
+nombre de cas étudier qui sont faux : 13
+
+Ce sont leurs chats.
+nombre de cas étudier : 78
+nombre de cas étudier qui sont faux : 13
+
+L'argent qu'ils leur ont volé.
+nombre de cas étudier : 79
+nombre de cas étudier qui sont faux : 13
+
+Les écritures de la Cour de Rome sont pleines d’abréviations.
+nombre de cas étudier : 80
+nombre de cas étudier qui sont faux : 13
+
+L’acompte est un premier versement à valoir sur l’achat.
+nombre de cas étudier : 81
+nombre de cas étudier qui sont faux : 13
+
+La Cour d’appel a annulé ce testament.
+nombre de cas étudier : 82
+nombre de cas étudier qui sont faux : 13
+
+Une connexion est l'action de lier, d'unir des choses l'une avec l'autre.
+nombre de cas étudier : 83
+nombre de cas étudier qui sont faux : 14
+
+Les conséquences de cet évènement se développèrent quelques années après.
+nombre de cas étudier : 84
+nombre de cas étudier qui sont faux : 15
+
+Pour cause ou sous prétexte d’étymologie, il introduisit des lettres dans les mots.
+nombre de cas étudier : 85
+nombre de cas étudier qui sont faux : 15
+
+Il était ému par une de ces sensations pour lesquelles il manque un langage.
+nombre de cas étudier : 86
+nombre de cas étudier qui sont faux : 15
+
+Ma tante Fernande m’a légué dix mille euros.
+nombre de cas étudier : 87
+nombre de cas étudier qui sont faux : 16
+
+Si j'avais su, je ne serais pas venu.
+nombre de cas étudier : 88
+nombre de cas étudier qui sont faux : 16
+
+La pomme que j'ai mangée est fade.
+nombre de cas étudier : 89
+nombre de cas étudier qui sont faux : 16
+
+Les disques durs que j'ai plantés.
+nombre de cas étudier : 90
+nombre de cas étudier qui sont faux : 16
+
+La femme à qui j'ai parlé.
+nombre de cas étudier : 91
+nombre de cas étudier qui sont faux : 16
+
+Les femmes auxquelles j'ai pensé.
+nombre de cas étudier : 92
+nombre de cas étudier qui sont faux : 16
+
+Les femmes dont j'ai rêvé.
+nombre de cas étudier : 93
+nombre de cas étudier qui sont faux : 16
+
+Au temps pour moi.
+nombre de cas étudier : 94
+nombre de cas étudier qui sont faux : 16
+
+C'est la voiture de ma mère.
+nombre de cas étudier : 95
+nombre de cas étudier qui sont faux : 16
+
+Arthur est un ami à moi.
+nombre de cas étudier : 96
+nombre de cas étudier qui sont faux : 16
+
+Cette chienne appartient à mon père.
+nombre de cas étudier : 97
+nombre de cas étudier qui sont faux : 16
+
+Peut-il le faire ?
+nombre de cas étudier : 98
+nombre de cas étudier qui sont faux : 16
+
+Comprend-il ?
+nombre de cas étudier : 99
+nombre de cas étudier qui sont faux : 16
+
+Va-t-il le faire ?
+nombre de cas étudier : 100
+nombre de cas étudier qui sont faux : 16
+
+Comment va-t-il ?
+nombre de cas étudier : 101
+nombre de cas étudier qui sont faux : 16
+
+Où va-t-elle ?
+nombre de cas étudier : 102
+nombre de cas étudier qui sont faux : 16
+
+Quand va-t-on réagir ?
+nombre de cas étudier : 103
+nombre de cas étudier qui sont faux : 16
+
+Que va-t-il faire ?
+nombre de cas étudier : 104
+nombre de cas étudier qui sont faux : 16
+
+Qui va-t-elle interroger ?
+nombre de cas étudier : 105
+nombre de cas étudier qui sont faux : 16
+
+Pouvons-nous y aller ?
+nombre de cas étudier : 106
+nombre de cas étudier qui sont faux : 16
+
+Explique-le lui.
+nombre de cas étudier : 107
+nombre de cas étudier qui sont faux : 17
+
+Donne-moi l'heure.
+nombre de cas étudier : 108
+nombre de cas étudier qui sont faux : 18
+
+Quelquefois, il pète un plomb !
+nombre de cas étudier : 109
+nombre de cas étudier qui sont faux : 18
+
+Je suis allé quelques fois au cinéma.
+nombre de cas étudier : 110
+nombre de cas étudier qui sont faux : 19
+
+Vous avez grand tort de parler comme vous faites.
+nombre de cas étudier : 111
+nombre de cas étudier qui sont faux : 19
+
+Ils ont tort tous deux.
+nombre de cas étudier : 112
+nombre de cas étudier qui sont faux : 19
+
+Elle se tord les pieds dans les ornières.
+nombre de cas étudier : 113
+nombre de cas étudier qui sont faux : 19
+
+Si ce sale morpion vient encore m'emmerder, je lui tords le cou.
+nombre de cas étudier : 114
+nombre de cas étudier qui sont faux : 19
+
+Il ne roule qu'en voiture.
+nombre de cas étudier : 115
+nombre de cas étudier qui sont faux : 19
+
+Il ne travaille qu'en été...
+nombre de cas étudier : 116
+nombre de cas étudier qui sont faux : 19
+
+Quand tu auras fini, fais-moi signe.
+nombre de cas étudier : 117
+nombre de cas étudier qui sont faux : 19
+
+J’irai vous voir quand je pourrai.
+nombre de cas étudier : 118
+nombre de cas étudier qui sont faux : 19
+
+Quant à vous cher amis, nous allons avoir une petite discussion.
+nombre de cas étudier : 119
+nombre de cas étudier qui sont faux : 20
+
+Quant aux fautes d'orthographe, sachez que je serai impitoyable.
+nombre de cas étudier : 120
+nombre de cas étudier qui sont faux : 21
+
+Quel temps fait-il Mme Sardine ?
+nombre de cas étudier : 121
+nombre de cas étudier qui sont faux : 21
+
+Le temps avait passé.
+nombre de cas étudier : 122
+nombre de cas étudier qui sont faux : 21
+
+Le temps semble s’être arrêté.
+nombre de cas étudier : 123
+nombre de cas étudier qui sont faux : 22
+
+J'ai tant de travail que je partirai plus tard ce soir.
+nombre de cas étudier : 124
+nombre de cas étudier qui sont faux : 23
+
+Je n'ai jamais vu tant de fautes que dans ce livre.
+nombre de cas étudier : 125
+nombre de cas étudier qui sont faux : 24
+
+Je n'ai pas le temps ni la patiente, je te quitte.
+nombre de cas étudier : 126
+nombre de cas étudier qui sont faux : 24
+
+Il a tant d’amis qu’il ne manquera de rien.
+nombre de cas étudier : 127
+nombre de cas étudier qui sont faux : 25
+
+Je me retenais à la rampe tant mes jambes mollissaient.
+nombre de cas étudier : 128
+nombre de cas étudier qui sont faux : 26
+
+T'en a-t-il parlé ?
+nombre de cas étudier : 129
+nombre de cas étudier qui sont faux : 27
+
+T'en souviens-tu ?
+nombre de cas étudier : 130
+nombre de cas étudier qui sont faux : 28
+
+Ne t'en fais pas.
+nombre de cas étudier : 131
+nombre de cas étudier qui sont faux : 28
+
+Sers-toi, je t’en prie.
+nombre de cas étudier : 132
+nombre de cas étudier qui sont faux : 29
+
+SIl tend l'oreille.
+nombre de cas étudier : 133
+nombre de cas étudier qui sont faux : 29
+
+La situation tend à devenir explosive.
+nombre de cas étudier : 134
+nombre de cas étudier qui sont faux : 29
+
+Prélavez le textile, qui tend à rétrécir au lavage.
+nombre de cas étudier : 135
+nombre de cas étudier qui sont faux : 29
+
+Il me tend une part de tarte.
+nombre de cas étudier : 136
+nombre de cas étudier qui sont faux : 29
+
+Je tends les bras.
+nombre de cas étudier : 137
+nombre de cas étudier qui sont faux : 29
+
+Je tends les bras.
+nombre de cas étudier : 138
+nombre de cas étudier qui sont faux : 29
+
+Tu tends le doigt.
+nombre de cas étudier : 139
+nombre de cas étudier qui sont faux : 29
+
+Tends l'oreille et tu entendras.
+nombre de cas étudier : 140
+nombre de cas étudier qui sont faux : 29
+
+Tu tends une feuille de chiendent entre tes deux pouces et tu souffles dans l’intervalle.
+nombre de cas étudier : 141
+nombre de cas étudier qui sont faux : 29
+
+Faire rapporter les baux précédents.
+nombre de cas étudier : 142
+nombre de cas étudier qui sont faux : 29
+
+Ce naturaliste a des coraux très rares.
+nombre de cas étudier : 143
+nombre de cas étudier qui sont faux : 29
+
+Le tout est éclairé par le brin de lumière naturelle qui passe à travers les soupiraux.
+nombre de cas étudier : 144
+nombre de cas étudier qui sont faux : 29
+
+Derrière la herse était une porte épaisse à deux vantaux.
+nombre de cas étudier : 145
+nombre de cas étudier qui sont faux : 29
+
+Le jour ne pénétrait qu’à travers les vitraux coloriés.
+nombre de cas étudier : 146
+nombre de cas étudier qui sont faux : 29
+
+Votre maison est belle.
+nombre de cas étudier : 147
+nombre de cas étudier qui sont faux : 29
+
+Tu veux voir notre chien ?
+nombre de cas étudier : 148
+nombre de cas étudier qui sont faux : 29
+
+Le vôtre est plus beau.
+nombre de cas étudier : 149
+nombre de cas étudier qui sont faux : 29
+
+Essaye le nôtre.
+nombre de cas étudier : 150
+nombre de cas étudier qui sont faux : 30
+
+C'est toi qui es le plus lourd.
+nombre de cas étudier : 151
+nombre de cas étudier qui sont faux : 30
+
+C'est moi qui ai gagné.
+nombre de cas étudier : 152
+nombre de cas étudier qui sont faux : 30
+
+C'est toi qui es la plus belle.
+nombre de cas étudier : 153
+nombre de cas étudier qui sont faux : 30
+
+C'est elle qui est la plus folle.
+nombre de cas étudier : 154
+nombre de cas étudier qui sont faux : 30
+
+C'est moi qui suis le plus intelligent.
+nombre de cas étudier : 155
+nombre de cas étudier qui sont faux : 31
+
+C'est moi qui vais.
+nombre de cas étudier : 156
+nombre de cas étudier qui sont faux : 31
+
+Le couple français a en moyenne 1,7 enfant.
+nombre de cas étudier : 157
+nombre de cas étudier qui sont faux : 31
+
+Le premier prix est de deux millions d'euros.
+nombre de cas étudier : 158
+nombre de cas étudier qui sont faux : 31
+
+Il est plutôt paresseux.
+nombre de cas étudier : 159
+nombre de cas étudier qui sont faux : 31
+
+Il est parti plus tôt que prévu.
+nombre de cas étudier : 160
+nombre de cas étudier qui sont faux : 31
+
+Ils étaient contraints de dormir tête-bêche.
+nombre de cas étudier : 161
+nombre de cas étudier qui sont faux : 31
+
+Je me demande pourquoi elle est partie ?
+nombre de cas étudier : 162
+nombre de cas étudier qui sont faux : 32
+
+Notre émission de ce soir vous expliquera comment il a pu s'échapper.
+nombre de cas étudier : 163
+nombre de cas étudier qui sont faux : 33
+
+J'aimerais savoir combien il a gagné au poker.
+nombre de cas étudier : 164
+nombre de cas étudier qui sont faux : 33
+
+Ses discours font toujours appel à la compassion et à la non-violence.
+nombre de cas étudier : 165
+nombre de cas étudier qui sont faux : 33
+
+Il a été condamné pour non-assistance à personne en danger.
+nombre de cas étudier : 166
+nombre de cas étudier qui sont faux : 33
+
+Il laissa sa phrase non achevée.
+nombre de cas étudier : 167
+nombre de cas étudier qui sont faux : 33
+
+Il s'agit d'un personnage non négligeable.
+nombre de cas étudier : 168
+nombre de cas étudier qui sont faux : 34
+
+Il est encore très lucide quoiqu'il soit déjà très âgé.
+nombre de cas étudier : 169
+nombre de cas étudier qui sont faux : 34
+
+Quoi que je dise, personne ne veut m'écouter.
+nombre de cas étudier : 170
+nombre de cas étudier qui sont faux : 34
+
+Je commence à progresser quoique le français soit une langue difficile.
+nombre de cas étudier : 171
+nombre de cas étudier qui sont faux : 35
+
+As-tu vu ça ?
+nombre de cas étudier : 172
+nombre de cas étudier qui sont faux : 35
+
+Ça m'arrive souvent.
+nombre de cas étudier : 173
+nombre de cas étudier qui sont faux : 36
+
+On voyait çà et là des tableaux d’une petite dimension.
+nombre de cas étudier : 174
+nombre de cas étudier qui sont faux : 36
+
+Jamais d'espace avant la virgule et le point, toujours un espace après.
+nombre de cas étudier : 175
+nombre de cas étudier qui sont faux : 37
+
+Ces investissements ne m'ont pas coûté très cher.
+nombre de cas étudier : 176
+nombre de cas étudier qui sont faux : 37
+
+Dans ce cas, le verbe est mis au participe.
+nombre de cas étudier : 177
+nombre de cas étudier qui sont faux : 38
+
+Il y a toujours un espace avant et jamais après le signe ouvrant. Il y a toujours un espace après et jamais avant le signe fermant.
+nombre de cas étudier : 178
+nombre de cas étudier qui sont faux : 39
+
+La soirée était agitée et bruyante ; le conducteur avait peur, quoiqu’il se fût imbibé d'alcool.
+nombre de cas étudier : 179
+nombre de cas étudier qui sont faux : 40
+
+Les guillemets françaises sont à utiliser principalement ; les guillemets anglaises servent seulement à l'interieur des guillemets françaises.
+nombre de cas étudier : 180
+nombre de cas étudier qui sont faux : 41
+
+Les trois plus grandes villes de France sont : Paris, Marseille et Lyon.
+nombre de cas étudier : 181
+nombre de cas étudier qui sont faux : 41
+
+Paul Valéry a dit :« L'art est fait de beaux détails. »
+nombre de cas étudier : 182
+nombre de cas étudier qui sont faux : 42
+
+Que cette fleur est belle !
+nombre de cas étudier : 183
+nombre de cas étudier qui sont faux : 42
+
+Hélas ! vous ne le reverrez pas avant longtemps.
+nombre de cas étudier : 184
+nombre de cas étudier qui sont faux : 43
+
+Allez-vous dimanche prochain à la piscine ?
+nombre de cas étudier : 185
+nombre de cas étudier qui sont faux : 43
+
+Comment ça va ? Ça va.
+nombre de cas étudier : 186
+nombre de cas étudier qui sont faux : 43
+
+Cette mesure est révisée (sur décision du Conseil).
+nombre de cas étudier : 187
+nombre de cas étudier qui sont faux : 43
+
+Ce que je vais vous dire, écoutez-bien ( ceci est très important), est la pure vérité.
+nombre de cas étudier : 188
+nombre de cas étudier qui sont faux : 44
+
+Ton récit est très bien, quoique (il est) un peu court.
+nombre de cas étudier : 189
+nombre de cas étudier qui sont faux : 45
+
+Il n'a pu se présenter à son entretien (ce n'était d'ailleurs pas la première fois) et n'a même pas pris la peine de s'excuser.
+nombre de cas étudier : 190
+nombre de cas étudier qui sont faux : 45
+
+« Il se tourna vers moi et me demanda : "Avez-vous vu ?" ».
+nombre de cas étudier : 191
+nombre de cas étudier qui sont faux : 46
+
+« Raymond Queneau la décrivait comme "la science du malheur des hommes".
+nombre de cas étudier : 192
+nombre de cas étudier qui sont faux : 47
+
+« Pierre Reverdy a dit : "Créer revient à penser plus fortement." »
+nombre de cas étudier : 193
+nombre de cas étudier qui sont faux : 48
+
+« "Çà" est un adverbe de lieu. »
+nombre de cas étudier : 194
+nombre de cas étudier qui sont faux : 49
+
+Cette table est vraiment « maganée », comme on dit au Québec.
+nombre de cas étudier : 195
+nombre de cas étudier qui sont faux : 49
+
+Après une séance de yoga, je me sens tellement « cool ».
+nombre de cas étudier : 196
+nombre de cas étudier qui sont faux : 50
+
+C'est l'abréviation de « cela ».
+nombre de cas étudier : 197
+nombre de cas étudier qui sont faux : 50
+
+Selon L'Académie française, « prolongation » doit être employé dans le sens temporel.
+nombre de cas étudier : 198
+nombre de cas étudier qui sont faux : 51
+
+Il ne faut aucun espace ni avant ni après l'apostrophe.
+nombre de cas étudier : 199
+nombre de cas étudier qui sont faux : 52
+
+L'église du village avec sa chaire en bois sculpté.
+nombre de cas étudier : 200
+nombre de cas étudier qui sont faux : 52
+
+Pourquoi est-elle partie ?
+nombre de cas étudier : 201
+nombre de cas étudier qui sont faux : 52
+
+Fais-lui plaisir.
+nombre de cas étudier : 202
+nombre de cas étudier qui sont faux : 53
+
