@@ -25,7 +25,8 @@ import org.xml.sax.SAXException;
 import filters.FiltersStatistics;
 import filters.globalRejector.GlobalRejectionFilter;
 import filters.globalRejector.RollbackFilter;
-import filters.localRejector.EsteticalRestructurationRejector;
+import filters.globalRejector.SpellingErrorLabelFilter;
+import filters.localRejector.EstheticalRestructurationRejector;
 import filters.localRejector.LocalRejectionFilter;
 import filters.localRejector.NumberRejector;
 import filters.purifier.PurifierFilter;
@@ -93,7 +94,7 @@ public class ParserXML {
 	public void parser() throws IOException {
 		
 		/* ouverture du fichier xml en entre */
-		//Document document = ParserXML.getDocumentTraversal("../alex/doss.nosync/wico_v1.xml");
+		//Document document = ParserXML.getDocumentTraversal("../doss.nosync/wico_v1.xml");
 		Document document = ParserXML.getDocumentTraversal("../alex/truc.xml");
 		DocumentTraversal traversal = (DocumentTraversal) document;
 		if(traversal == null) {
@@ -130,6 +131,8 @@ public class ParserXML {
 				f.cleanTheList(nodeList);
 			}
 					
+			
+			
 			//treat the node list that will be in the output file
 			for(Node node : nodeList) {
 				boolean hasToBeAddedInDB = true;
@@ -196,7 +199,7 @@ public class ParserXML {
 		//on ajoute dans le csv
 		if(caster(strBefore, strAfter, strComments, map)) {
 			writer.write(map);
-			map = new HashMap<String, String>();
+			map.clear();
 			strBefore.delete(0, strBefore.length());
 			strAfter.delete(0, strAfter.length());
 			strComments.delete(0, strComments.length());
@@ -272,18 +275,19 @@ public class ParserXML {
 		
 		
 		//adding differents globalRejector
+		parser.addGlobalRejector(new SpellingErrorLabelFilter());
 		parser.addGlobalRejector(new RollbackFilter());
 		
 		//adding differents localRejector
 		parser.addLocalRejector(new NumberRejector());
-		parser.addLocalRejector(new EsteticalRestructurationRejector());
+		parser.addLocalRejector(new EstheticalRestructurationRejector());
 		
 		//adding differents casters
-		//parser.addPurifier(new SentencePurifier());
-		//parser.addPurifier(new SpecialCaracterPurifier(specialCharacters));
+		parser.addPurifier(new SentencePurifier());
+		parser.addPurifier(new SpecialCaracterPurifier(specialCharacters));
 		
 		
-		/*for(GlobalRejectionFilter f : parser.globalRejectors) {
+		for(GlobalRejectionFilter f : parser.globalRejectors) {
 			((FiltersStatistics) f).activateOutput();
 		}
 		for(LocalRejectionFilter f : parser.localRejectors) {
@@ -291,7 +295,7 @@ public class ParserXML {
 		}
 		for(PurifierFilter f : parser.purifiers) {
 			((FiltersStatistics) f).activateOutput();
-		}*/
+		}
 		
 		//start the treatment
 		parser.parser();

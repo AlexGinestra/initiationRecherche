@@ -61,7 +61,7 @@ public class SentencePurifier extends FiltersStatistics implements PurifierFilte
 		charDeleted += before.length()-(lastPointB - firstPoint); //data for stat
 		
 		if(outputOn) {
-			map = new HashMap<String,String>();
+			map.clear();
 			// supprime les phrases suivantes
 			if(before.length() > lastPointB) {
 				map.put("end before", before.substring(lastPointB+1, before.length()));

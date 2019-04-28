@@ -10,13 +10,13 @@ import org.w3c.dom.NodeList;
 import filters.FiltersStatistics;
 import parser.CsvFileWriter;
 
-public class EsteticalRestructurationRejector extends FiltersStatistics implements LocalRejectionFilter{
+public class EstheticalRestructurationRejector extends FiltersStatistics implements LocalRejectionFilter{
 
 	private int sentenceTreated;
 	private int sentenceRejected;
 
 	
-	public EsteticalRestructurationRejector() {
+	public EstheticalRestructurationRejector() {
 		sentenceTreated = 0;
 		sentenceRejected = 0;
 	}
@@ -111,7 +111,7 @@ public class EsteticalRestructurationRejector extends FiltersStatistics implemen
 				
 				//output for the rejected case
 				if(outputOn) {
-					map = new HashMap<String, String>();
+					map.clear();
 					map.put("before",beforeM);
 					map.put("after",afterM);
 					map.put("id", ""+getIdNode(n));

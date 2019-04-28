@@ -1,0 +1,5 @@
+\babel@toc {french}{}
+\contentsline {section}{\numberline {1}Analyse du probl\`{e}me et organisation}{6}
+\contentsline {subsection}{\numberline {1.1}Raisonnement \`{a} partir de cas}{6}
+\contentsline {subsection}{\numberline {1.2}Travail existant}{7}
+\contentsline {subsection}{\numberline {1.3}Mise en place du projet}{7}
