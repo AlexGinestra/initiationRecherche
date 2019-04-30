@@ -88,8 +88,8 @@ public class ParserXML {
 	public void parser() throws IOException {
 
 		/* ouverture du fichier xml en entre */
-		Document document = ParserXML.getDocumentTraversal("../doss.nosync/wico_v2_complet.xml");
-		// Document document = ParserXML.getDocumentTraversal("../alex/truc.xml");
+		//Document document = ParserXML.getDocumentTraversal("../doss.nosync/wico_v2_complet.xml");
+		Document document = ParserXML.getDocumentTraversal("../../test/wico_v2_complet.xml");
 		DocumentTraversal traversal = (DocumentTraversal) document;
 		if (traversal == null) {
 			System.out.println("erreur");
