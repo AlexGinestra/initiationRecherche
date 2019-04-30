@@ -38,14 +38,14 @@ public class ParserXML {
 	private List<PurifierFilter> purifiers;
 	private List<LocalRejectionFilter> localRejectors;
 	private List<GlobalRejectionFilter> globalRejectors;
-	//private CsvFileWriter writer;
+	private CsvFileWriter writer;
 
 	public ParserXML(CsvFileWriter w) {
 		purifiers = new ArrayList<PurifierFilter>();
 		localRejectors = new ArrayList<LocalRejectionFilter>();
 		globalRejectors = new ArrayList<GlobalRejectionFilter>();
 
-		//writer = w;
+		writer = w;
 	}
 
 	public void addPurifier(PurifierFilter... cas) {
@@ -154,7 +154,7 @@ public class ParserXML {
 		for (PurifierFilter f : purifiers) {
 			((FiltersStatistics) f).closeOutput();
 		}
-		//writer.close();
+		writer.close();
 
 	}
 
@@ -186,7 +186,7 @@ public class ParserXML {
 		}
 		// on ajoute dans le csv
 		if (caster(strBefore, strAfter, strComments, map)) {
-			//writer.write(map);
+			writer.write(map);
 			map.clear();
 			map = null;
 		}
