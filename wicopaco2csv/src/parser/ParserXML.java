@@ -96,7 +96,7 @@ public class ParserXML {
 			System.exit(0);
 		}
 
-		
+
 
 		/* debut de la lecture */
 		NodeIterator iterator = traversal.createNodeIterator(document.getDocumentElement(), NodeFilter.SHOW_ELEMENT,
@@ -126,7 +126,7 @@ public class ParserXML {
 				((FiltersStatistics) f).closeOutput();
 				f = null;
 			}
-			
+
 			System.gc();
 			// treat the node list that will be in the output file
 			for (Node node : nodeList) {
@@ -162,10 +162,10 @@ public class ParserXML {
 	 * treat the <modif> tag contents
 	 */
 	public void traiterModif(Node node) throws IOException {
-		
+
 		StringBuilder strBefore = new StringBuilder(), strAfter = new StringBuilder(), strComments = new StringBuilder();
 		HashMap<String, String> map = new HashMap<String, String>();
-		
+
 		/* Recupere l'attribut commentaire */
 		NamedNodeMap attributes = node.getAttributes();
 		for (int j = 0; j < attributes.getLength(); j++) {
@@ -264,26 +264,26 @@ public class ParserXML {
 		parser.addPurifier(new SentencePurifier());
 		parser.addPurifier(new SpecialCaracterPurifier(specialCharacters));
 
-		/*
-		 * for(GlobalRejectionFilter f : parser.globalRejectors) { ((FiltersStatistics)
-		 * f).activateOutput(); } for(LocalRejectionFilter f : parser.localRejectors) {
-		 * ((FiltersStatistics) f).activateOutput(); } for(PurifierFilter f :
-		 * parser.purifiers) { ((FiltersStatistics) f).activateOutput(); }
-		 */
 
-		// start the treatment
-		parser.parser();
+		for(GlobalRejectionFilter f : parser.globalRejectors) { ((FiltersStatistics)
+				f).activateOutput(); } for(LocalRejectionFilter f : parser.localRejectors) {
+					((FiltersStatistics) f).activateOutput(); } for(PurifierFilter f :
+						parser.purifiers) { ((FiltersStatistics) f).activateOutput(); }
 
-		for (GlobalRejectionFilter f : parser.globalRejectors) {
-			((FiltersStatistics) f).printStatistics();
-		}
-		for (LocalRejectionFilter f : parser.localRejectors) {
-			((FiltersStatistics) f).printStatistics();
-		}
-		for (PurifierFilter f : parser.purifiers) {
-			((FiltersStatistics) f).printStatistics();
-		}
-		System.out.println("execution time : " + (System.currentTimeMillis() - startTime) + " ms");
+
+					// start the treatment
+					parser.parser();
+
+					for (GlobalRejectionFilter f : parser.globalRejectors) {
+						((FiltersStatistics) f).printStatistics();
+					}
+					for (LocalRejectionFilter f : parser.localRejectors) {
+						((FiltersStatistics) f).printStatistics();
+					}
+					for (PurifierFilter f : parser.purifiers) {
+						((FiltersStatistics) f).printStatistics();
+					}
+					System.out.println("execution time : " + (System.currentTimeMillis() - startTime) + " ms");
 	}
 
 }
