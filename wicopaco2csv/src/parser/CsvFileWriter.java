@@ -33,6 +33,7 @@ public class CsvFileWriter {
             write(title, bw);
         }
         bw.write("\n");
+        bw.flush();
     }
 
   
@@ -57,6 +58,7 @@ public class CsvFileWriter {
             }
         }
         bw.write("\n");
+        bw.flush();
     }
 
     
