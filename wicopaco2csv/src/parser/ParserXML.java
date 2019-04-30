@@ -179,10 +179,8 @@ public class ParserXML {
 		for (int j = 0; j < nSousList.getLength(); j++) {
 			Node nTempBefAft = nSousList.item(j);
 			if (nTempBefAft.getNodeName().equals("before")) {
-				System.out.println(nTempBefAft.getTextContent());
 				strBefore.append(nTempBefAft.getTextContent());
 			} else if (nTempBefAft.getNodeName().equals("after")) {
-				System.out.println(nTempBefAft.getTextContent());
 				strAfter.append(nTempBefAft.getTextContent());
 			}
 		}
