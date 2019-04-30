@@ -1,0 +1,1548 @@
+nombre de cas étudier : 1
+nombre de cas étudier qui sont faux : 1
+
+nombre de cas étudier : 2
+nombre de cas étudier qui sont faux : 1
+
+nombre de cas étudier : 3
+nombre de cas étudier qui sont faux : 1
+
+nombre de cas étudier : 4
+nombre de cas étudier qui sont faux : 2
+
+nombre de cas étudier : 5
+nombre de cas étudier qui sont faux : 2
+
+nombre de cas étudier : 6
+nombre de cas étudier qui sont faux : 3
+
+nombre de cas étudier : 7
+nombre de cas étudier qui sont faux : 3
+
+nombre de cas étudier : 8
+nombre de cas étudier qui sont faux : 3
+
+nombre de cas étudier : 9
+nombre de cas étudier qui sont faux : 3
+
+nombre de cas étudier : 10
+nombre de cas étudier qui sont faux : 3
+
+nombre de cas étudier : 11
+nombre de cas étudier qui sont faux : 4
+
+nombre de cas étudier : 12
+nombre de cas étudier qui sont faux : 4
+
+nombre de cas étudier : 13
+nombre de cas étudier qui sont faux : 4
+
+nombre de cas étudier : 14
+nombre de cas étudier qui sont faux : 4
+
+nombre de cas étudier : 15
+nombre de cas étudier qui sont faux : 4
+
+nombre de cas étudier : 16
+nombre de cas étudier qui sont faux : 5
+
+nombre de cas étudier : 17
+nombre de cas étudier qui sont faux : 6
+
+nombre de cas étudier : 18
+nombre de cas étudier qui sont faux : 7
+
+nombre de cas étudier : 19
+nombre de cas étudier qui sont faux : 8
+
+nombre de cas étudier : 20
+nombre de cas étudier qui sont faux : 9
+
+nombre de cas étudier : 21
+nombre de cas étudier qui sont faux : 10
+
+nombre de cas étudier : 22
+nombre de cas étudier qui sont faux : 11
+
+nombre de cas étudier : 23
+nombre de cas étudier qui sont faux : 12
+
+nombre de cas étudier : 24
+nombre de cas étudier qui sont faux : 13
+
+nombre de cas étudier : 25
+nombre de cas étudier qui sont faux : 13
+
+nombre de cas étudier : 26
+nombre de cas étudier qui sont faux : 13
+
+nombre de cas étudier : 27
+nombre de cas étudier qui sont faux : 14
+
+nombre de cas étudier : 28
+nombre de cas étudier qui sont faux : 14
+
+nombre de cas étudier : 29
+nombre de cas étudier qui sont faux : 14
+
+nombre de cas étudier : 30
+nombre de cas étudier qui sont faux : 14
+
+nombre de cas étudier : 31
+nombre de cas étudier qui sont faux : 15
+
+nombre de cas étudier : 32
+nombre de cas étudier qui sont faux : 16
+
+nombre de cas étudier : 33
+nombre de cas étudier qui sont faux : 16
+
+nombre de cas étudier : 34
+nombre de cas étudier qui sont faux : 17
+
+nombre de cas étudier : 35
+nombre de cas étudier qui sont faux : 18
+
+nombre de cas étudier : 36
+nombre de cas étudier qui sont faux : 19
+
+nombre de cas étudier : 37
+nombre de cas étudier qui sont faux : 20
+
+nombre de cas étudier : 38
+nombre de cas étudier qui sont faux : 20
+
+nombre de cas étudier : 39
+nombre de cas étudier qui sont faux : 20
+
+nombre de cas étudier : 40
+nombre de cas étudier qui sont faux : 21
+
+nombre de cas étudier : 41
+nombre de cas étudier qui sont faux : 22
+
+nombre de cas étudier : 42
+nombre de cas étudier qui sont faux : 23
+
+nombre de cas étudier : 43
+nombre de cas étudier qui sont faux : 24
+
+nombre de cas étudier : 44
+nombre de cas étudier qui sont faux : 25
+
+nombre de cas étudier : 45
+nombre de cas étudier qui sont faux : 26
+
+nombre de cas étudier : 46
+nombre de cas étudier qui sont faux : 26
+
+nombre de cas étudier : 47
+nombre de cas étudier qui sont faux : 26
+
+nombre de cas étudier : 48
+nombre de cas étudier qui sont faux : 26
+
+nombre de cas étudier : 49
+nombre de cas étudier qui sont faux : 26
+
+nombre de cas étudier : 50
+nombre de cas étudier qui sont faux : 26
+
+nombre de cas étudier : 51
+nombre de cas étudier qui sont faux : 27
+
+nombre de cas étudier : 52
+nombre de cas étudier qui sont faux : 27
+
+nombre de cas étudier : 53
+nombre de cas étudier qui sont faux : 28
+
+nombre de cas étudier : 54
+nombre de cas étudier qui sont faux : 28
+
+nombre de cas étudier : 55
+nombre de cas étudier qui sont faux : 28
+
+nombre de cas étudier : 56
+nombre de cas étudier qui sont faux : 29
+
+nombre de cas étudier : 57
+nombre de cas étudier qui sont faux : 30
+
+nombre de cas étudier : 58
+nombre de cas étudier qui sont faux : 31
+
+nombre de cas étudier : 59
+nombre de cas étudier qui sont faux : 32
+
+nombre de cas étudier : 60
+nombre de cas étudier qui sont faux : 32
+
+nombre de cas étudier : 61
+nombre de cas étudier qui sont faux : 33
+
+nombre de cas étudier : 62
+nombre de cas étudier qui sont faux : 34
+
+nombre de cas étudier : 63
+nombre de cas étudier qui sont faux : 35
+
+nombre de cas étudier : 64
+nombre de cas étudier qui sont faux : 36
+
+nombre de cas étudier : 65
+nombre de cas étudier qui sont faux : 37
+
+nombre de cas étudier : 66
+nombre de cas étudier qui sont faux : 38
+
+nombre de cas étudier : 67
+nombre de cas étudier qui sont faux : 39
+
+nombre de cas étudier : 68
+nombre de cas étudier qui sont faux : 40
+
+nombre de cas étudier : 69
+nombre de cas étudier qui sont faux : 41
+
+nombre de cas étudier : 70
+nombre de cas étudier qui sont faux : 42
+
+nombre de cas étudier : 71
+nombre de cas étudier qui sont faux : 42
+
+nombre de cas étudier : 72
+nombre de cas étudier qui sont faux : 42
+
+nombre de cas étudier : 73
+nombre de cas étudier qui sont faux : 43
+
+nombre de cas étudier : 74
+nombre de cas étudier qui sont faux : 43
+
+nombre de cas étudier : 75
+nombre de cas étudier qui sont faux : 44
+
+nombre de cas étudier : 76
+nombre de cas étudier qui sont faux : 44
+
+nombre de cas étudier : 77
+nombre de cas étudier qui sont faux : 45
+
+nombre de cas étudier : 78
+nombre de cas étudier qui sont faux : 46
+
+nombre de cas étudier : 79
+nombre de cas étudier qui sont faux : 47
+
+nombre de cas étudier : 80
+nombre de cas étudier qui sont faux : 48
+
+nombre de cas étudier : 81
+nombre de cas étudier qui sont faux : 49
+
+nombre de cas étudier : 82
+nombre de cas étudier qui sont faux : 50
+
+nombre de cas étudier : 83
+nombre de cas étudier qui sont faux : 51
+
+nombre de cas étudier : 84
+nombre de cas étudier qui sont faux : 52
+
+nombre de cas étudier : 85
+nombre de cas étudier qui sont faux : 53
+
+nombre de cas étudier : 86
+nombre de cas étudier qui sont faux : 53
+
+nombre de cas étudier : 87
+nombre de cas étudier qui sont faux : 54
+
+nombre de cas étudier : 88
+nombre de cas étudier qui sont faux : 55
+
+nombre de cas étudier : 89
+nombre de cas étudier qui sont faux : 55
+
+nombre de cas étudier : 90
+nombre de cas étudier qui sont faux : 56
+
+nombre de cas étudier : 91
+nombre de cas étudier qui sont faux : 56
+
+nombre de cas étudier : 92
+nombre de cas étudier qui sont faux : 56
+
+nombre de cas étudier : 93
+nombre de cas étudier qui sont faux : 57
+
+nombre de cas étudier : 94
+nombre de cas étudier qui sont faux : 57
+
+nombre de cas étudier : 95
+nombre de cas étudier qui sont faux : 57
+
+nombre de cas étudier : 96
+nombre de cas étudier qui sont faux : 58
+
+nombre de cas étudier : 97
+nombre de cas étudier qui sont faux : 58
+
+nombre de cas étudier : 98
+nombre de cas étudier qui sont faux : 58
+
+nombre de cas étudier : 99
+nombre de cas étudier qui sont faux : 59
+
+nombre de cas étudier : 100
+nombre de cas étudier qui sont faux : 59
+
+nombre de cas étudier : 101
+nombre de cas étudier qui sont faux : 59
+
+nombre de cas étudier : 102
+nombre de cas étudier qui sont faux : 60
+
+nombre de cas étudier : 103
+nombre de cas étudier qui sont faux : 61
+
+nombre de cas étudier : 104
+nombre de cas étudier qui sont faux : 62
+
+nombre de cas étudier : 105
+nombre de cas étudier qui sont faux : 62
+
+nombre de cas étudier : 106
+nombre de cas étudier qui sont faux : 62
+
+nombre de cas étudier : 107
+nombre de cas étudier qui sont faux : 62
+
+nombre de cas étudier : 108
+nombre de cas étudier qui sont faux : 63
+
+nombre de cas étudier : 109
+nombre de cas étudier qui sont faux : 64
+
+nombre de cas étudier : 110
+nombre de cas étudier qui sont faux : 64
+
+nombre de cas étudier : 111
+nombre de cas étudier qui sont faux : 64
+
+nombre de cas étudier : 112
+nombre de cas étudier qui sont faux : 64
+
+nombre de cas étudier : 113
+nombre de cas étudier qui sont faux : 64
+
+nombre de cas étudier : 114
+nombre de cas étudier qui sont faux : 65
+
+nombre de cas étudier : 115
+nombre de cas étudier qui sont faux : 65
+
+nombre de cas étudier : 116
+nombre de cas étudier qui sont faux : 66
+
+nombre de cas étudier : 117
+nombre de cas étudier qui sont faux : 67
+
+nombre de cas étudier : 118
+nombre de cas étudier qui sont faux : 68
+
+nombre de cas étudier : 119
+nombre de cas étudier qui sont faux : 69
+
+nombre de cas étudier : 120
+nombre de cas étudier qui sont faux : 70
+
+nombre de cas étudier : 121
+nombre de cas étudier qui sont faux : 70
+
+nombre de cas étudier : 122
+nombre de cas étudier qui sont faux : 70
+
+nombre de cas étudier : 123
+nombre de cas étudier qui sont faux : 70
+
+nombre de cas étudier : 124
+nombre de cas étudier qui sont faux : 70
+
+nombre de cas étudier : 125
+nombre de cas étudier qui sont faux : 70
+
+nombre de cas étudier : 126
+nombre de cas étudier qui sont faux : 71
+
+nombre de cas étudier : 127
+nombre de cas étudier qui sont faux : 71
+
+nombre de cas étudier : 128
+nombre de cas étudier qui sont faux : 72
+
+nombre de cas étudier : 129
+nombre de cas étudier qui sont faux : 72
+
+nombre de cas étudier : 130
+nombre de cas étudier qui sont faux : 72
+
+nombre de cas étudier : 131
+nombre de cas étudier qui sont faux : 73
+
+nombre de cas étudier : 132
+nombre de cas étudier qui sont faux : 74
+
+nombre de cas étudier : 133
+nombre de cas étudier qui sont faux : 75
+
+nombre de cas étudier : 134
+nombre de cas étudier qui sont faux : 76
+
+nombre de cas étudier : 135
+nombre de cas étudier qui sont faux : 77
+
+nombre de cas étudier : 136
+nombre de cas étudier qui sont faux : 77
+
+nombre de cas étudier : 137
+nombre de cas étudier qui sont faux : 77
+
+nombre de cas étudier : 138
+nombre de cas étudier qui sont faux : 77
+
+nombre de cas étudier : 139
+nombre de cas étudier qui sont faux : 78
+
+nombre de cas étudier : 140
+nombre de cas étudier qui sont faux : 79
+
+nombre de cas étudier : 141
+nombre de cas étudier qui sont faux : 79
+
+nombre de cas étudier : 142
+nombre de cas étudier qui sont faux : 80
+
+nombre de cas étudier : 143
+nombre de cas étudier qui sont faux : 80
+
+nombre de cas étudier : 144
+nombre de cas étudier qui sont faux : 80
+
+nombre de cas étudier : 145
+nombre de cas étudier qui sont faux : 81
+
+nombre de cas étudier : 146
+nombre de cas étudier qui sont faux : 81
+
+nombre de cas étudier : 147
+nombre de cas étudier qui sont faux : 82
+
+nombre de cas étudier : 148
+nombre de cas étudier qui sont faux : 82
+
+nombre de cas étudier : 149
+nombre de cas étudier qui sont faux : 82
+
+nombre de cas étudier : 150
+nombre de cas étudier qui sont faux : 82
+
+nombre de cas étudier : 151
+nombre de cas étudier qui sont faux : 82
+
+nombre de cas étudier : 152
+nombre de cas étudier qui sont faux : 82
+
+nombre de cas étudier : 153
+nombre de cas étudier qui sont faux : 83
+
+nombre de cas étudier : 154
+nombre de cas étudier qui sont faux : 84
+
+nombre de cas étudier : 155
+nombre de cas étudier qui sont faux : 84
+
+nombre de cas étudier : 156
+nombre de cas étudier qui sont faux : 84
+
+nombre de cas étudier : 157
+nombre de cas étudier qui sont faux : 84
+
+nombre de cas étudier : 158
+nombre de cas étudier qui sont faux : 85
+
+nombre de cas étudier : 159
+nombre de cas étudier qui sont faux : 85
+
+nombre de cas étudier : 160
+nombre de cas étudier qui sont faux : 85
+
+nombre de cas étudier : 161
+nombre de cas étudier qui sont faux : 85
+
+nombre de cas étudier : 162
+nombre de cas étudier qui sont faux : 86
+
+nombre de cas étudier : 163
+nombre de cas étudier qui sont faux : 87
+
+nombre de cas étudier : 164
+nombre de cas étudier qui sont faux : 88
+
+nombre de cas étudier : 165
+nombre de cas étudier qui sont faux : 89
+
+nombre de cas étudier : 166
+nombre de cas étudier qui sont faux : 90
+
+nombre de cas étudier : 167
+nombre de cas étudier qui sont faux : 91
+
+nombre de cas étudier : 168
+nombre de cas étudier qui sont faux : 92
+
+nombre de cas étudier : 169
+nombre de cas étudier qui sont faux : 93
+
+nombre de cas étudier : 170
+nombre de cas étudier qui sont faux : 94
+
+nombre de cas étudier : 171
+nombre de cas étudier qui sont faux : 95
+
+nombre de cas étudier : 172
+nombre de cas étudier qui sont faux : 95
+
+nombre de cas étudier : 173
+nombre de cas étudier qui sont faux : 96
+
+nombre de cas étudier : 174
+nombre de cas étudier qui sont faux : 97
+
+nombre de cas étudier : 175
+nombre de cas étudier qui sont faux : 98
+
+nombre de cas étudier : 176
+nombre de cas étudier qui sont faux : 98
+
+nombre de cas étudier : 177
+nombre de cas étudier qui sont faux : 99
+
+nombre de cas étudier : 178
+nombre de cas étudier qui sont faux : 100
+
+nombre de cas étudier : 179
+nombre de cas étudier qui sont faux : 100
+
+nombre de cas étudier : 180
+nombre de cas étudier qui sont faux : 100
+
+nombre de cas étudier : 181
+nombre de cas étudier qui sont faux : 101
+
+nombre de cas étudier : 182
+nombre de cas étudier qui sont faux : 101
+
+nombre de cas étudier : 183
+nombre de cas étudier qui sont faux : 102
+
+nombre de cas étudier : 184
+nombre de cas étudier qui sont faux : 102
+
+nombre de cas étudier : 185
+nombre de cas étudier qui sont faux : 102
+
+nombre de cas étudier : 186
+nombre de cas étudier qui sont faux : 102
+
+nombre de cas étudier : 187
+nombre de cas étudier qui sont faux : 103
+
+nombre de cas étudier : 188
+nombre de cas étudier qui sont faux : 104
+
+nombre de cas étudier : 189
+nombre de cas étudier qui sont faux : 105
+
+nombre de cas étudier : 190
+nombre de cas étudier qui sont faux : 105
+
+nombre de cas étudier : 191
+nombre de cas étudier qui sont faux : 105
+
+nombre de cas étudier : 192
+nombre de cas étudier qui sont faux : 106
+
+nombre de cas étudier : 193
+nombre de cas étudier qui sont faux : 107
+
+nombre de cas étudier : 194
+nombre de cas étudier qui sont faux : 108
+
+nombre de cas étudier : 195
+nombre de cas étudier qui sont faux : 109
+
+nombre de cas étudier : 196
+nombre de cas étudier qui sont faux : 109
+
+nombre de cas étudier : 197
+nombre de cas étudier qui sont faux : 109
+
+nombre de cas étudier : 198
+nombre de cas étudier qui sont faux : 110
+
+nombre de cas étudier : 199
+nombre de cas étudier qui sont faux : 111
+
+nombre de cas étudier : 200
+nombre de cas étudier qui sont faux : 112
+
+nombre de cas étudier : 201
+nombre de cas étudier qui sont faux : 113
+
+nombre de cas étudier : 202
+nombre de cas étudier qui sont faux : 113
+
+nombre de cas étudier : 203
+nombre de cas étudier qui sont faux : 113
+
+nombre de cas étudier : 204
+nombre de cas étudier qui sont faux : 114
+
+nombre de cas étudier : 205
+nombre de cas étudier qui sont faux : 114
+
+nombre de cas étudier : 206
+nombre de cas étudier qui sont faux : 115
+
+nombre de cas étudier : 207
+nombre de cas étudier qui sont faux : 115
+
+nombre de cas étudier : 208
+nombre de cas étudier qui sont faux : 116
+
+nombre de cas étudier : 209
+nombre de cas étudier qui sont faux : 116
+
+nombre de cas étudier : 210
+nombre de cas étudier qui sont faux : 116
+
+nombre de cas étudier : 211
+nombre de cas étudier qui sont faux : 116
+
+nombre de cas étudier : 212
+nombre de cas étudier qui sont faux : 116
+
+nombre de cas étudier : 213
+nombre de cas étudier qui sont faux : 117
+
+nombre de cas étudier : 214
+nombre de cas étudier qui sont faux : 118
+
+nombre de cas étudier : 215
+nombre de cas étudier qui sont faux : 119
+
+nombre de cas étudier : 216
+nombre de cas étudier qui sont faux : 119
+
+nombre de cas étudier : 217
+nombre de cas étudier qui sont faux : 119
+
+nombre de cas étudier : 218
+nombre de cas étudier qui sont faux : 120
+
+nombre de cas étudier : 219
+nombre de cas étudier qui sont faux : 120
+
+nombre de cas étudier : 220
+nombre de cas étudier qui sont faux : 121
+
+nombre de cas étudier : 221
+nombre de cas étudier qui sont faux : 121
+
+nombre de cas étudier : 222
+nombre de cas étudier qui sont faux : 122
+
+nombre de cas étudier : 223
+nombre de cas étudier qui sont faux : 122
+
+nombre de cas étudier : 224
+nombre de cas étudier qui sont faux : 122
+
+nombre de cas étudier : 225
+nombre de cas étudier qui sont faux : 123
+
+nombre de cas étudier : 226
+nombre de cas étudier qui sont faux : 124
+
+nombre de cas étudier : 227
+nombre de cas étudier qui sont faux : 124
+
+nombre de cas étudier : 228
+nombre de cas étudier qui sont faux : 125
+
+nombre de cas étudier : 229
+nombre de cas étudier qui sont faux : 125
+
+nombre de cas étudier : 230
+nombre de cas étudier qui sont faux : 125
+
+nombre de cas étudier : 231
+nombre de cas étudier qui sont faux : 125
+
+nombre de cas étudier : 232
+nombre de cas étudier qui sont faux : 125
+
+nombre de cas étudier : 233
+nombre de cas étudier qui sont faux : 125
+
+nombre de cas étudier : 234
+nombre de cas étudier qui sont faux : 125
+
+nombre de cas étudier : 235
+nombre de cas étudier qui sont faux : 125
+
+nombre de cas étudier : 236
+nombre de cas étudier qui sont faux : 126
+
+nombre de cas étudier : 237
+nombre de cas étudier qui sont faux : 126
+
+nombre de cas étudier : 238
+nombre de cas étudier qui sont faux : 126
+
+nombre de cas étudier : 239
+nombre de cas étudier qui sont faux : 126
+
+nombre de cas étudier : 240
+nombre de cas étudier qui sont faux : 126
+
+nombre de cas étudier : 241
+nombre de cas étudier qui sont faux : 126
+
+nombre de cas étudier : 242
+nombre de cas étudier qui sont faux : 127
+
+nombre de cas étudier : 243
+nombre de cas étudier qui sont faux : 128
+
+nombre de cas étudier : 244
+nombre de cas étudier qui sont faux : 129
+
+nombre de cas étudier : 245
+nombre de cas étudier qui sont faux : 129
+
+nombre de cas étudier : 246
+nombre de cas étudier qui sont faux : 130
+
+nombre de cas étudier : 247
+nombre de cas étudier qui sont faux : 131
+
+nombre de cas étudier : 248
+nombre de cas étudier qui sont faux : 132
+
+nombre de cas étudier : 249
+nombre de cas étudier qui sont faux : 133
+
+nombre de cas étudier : 250
+nombre de cas étudier qui sont faux : 134
+
+nombre de cas étudier : 251
+nombre de cas étudier qui sont faux : 134
+
+nombre de cas étudier : 252
+nombre de cas étudier qui sont faux : 135
+
+nombre de cas étudier : 253
+nombre de cas étudier qui sont faux : 135
+
+nombre de cas étudier : 254
+nombre de cas étudier qui sont faux : 135
+
+nombre de cas étudier : 255
+nombre de cas étudier qui sont faux : 135
+
+nombre de cas étudier : 256
+nombre de cas étudier qui sont faux : 136
+
+nombre de cas étudier : 257
+nombre de cas étudier qui sont faux : 136
+
+nombre de cas étudier : 258
+nombre de cas étudier qui sont faux : 137
+
+nombre de cas étudier : 259
+nombre de cas étudier qui sont faux : 138
+
+nombre de cas étudier : 260
+nombre de cas étudier qui sont faux : 139
+
+nombre de cas étudier : 261
+nombre de cas étudier qui sont faux : 140
+
+nombre de cas étudier : 262
+nombre de cas étudier qui sont faux : 141
+
+nombre de cas étudier : 263
+nombre de cas étudier qui sont faux : 142
+
+nombre de cas étudier : 264
+nombre de cas étudier qui sont faux : 143
+
+nombre de cas étudier : 265
+nombre de cas étudier qui sont faux : 144
+
+nombre de cas étudier : 266
+nombre de cas étudier qui sont faux : 145
+
+nombre de cas étudier : 267
+nombre de cas étudier qui sont faux : 146
+
+nombre de cas étudier : 268
+nombre de cas étudier qui sont faux : 146
+
+nombre de cas étudier : 269
+nombre de cas étudier qui sont faux : 147
+
+nombre de cas étudier : 270
+nombre de cas étudier qui sont faux : 147
+
+nombre de cas étudier : 271
+nombre de cas étudier qui sont faux : 147
+
+nombre de cas étudier : 272
+nombre de cas étudier qui sont faux : 148
+
+nombre de cas étudier : 273
+nombre de cas étudier qui sont faux : 149
+
+nombre de cas étudier : 274
+nombre de cas étudier qui sont faux : 150
+
+nombre de cas étudier : 275
+nombre de cas étudier qui sont faux : 151
+
+nombre de cas étudier : 276
+nombre de cas étudier qui sont faux : 152
+
+nombre de cas étudier : 277
+nombre de cas étudier qui sont faux : 153
+
+nombre de cas étudier : 278
+nombre de cas étudier qui sont faux : 154
+
+nombre de cas étudier : 279
+nombre de cas étudier qui sont faux : 155
+
+nombre de cas étudier : 280
+nombre de cas étudier qui sont faux : 156
+
+nombre de cas étudier : 281
+nombre de cas étudier qui sont faux : 156
+
+nombre de cas étudier : 282
+nombre de cas étudier qui sont faux : 156
+
+nombre de cas étudier : 283
+nombre de cas étudier qui sont faux : 157
+
+nombre de cas étudier : 284
+nombre de cas étudier qui sont faux : 158
+
+nombre de cas étudier : 285
+nombre de cas étudier qui sont faux : 158
+
+nombre de cas étudier : 286
+nombre de cas étudier qui sont faux : 159
+
+nombre de cas étudier : 287
+nombre de cas étudier qui sont faux : 159
+
+nombre de cas étudier : 288
+nombre de cas étudier qui sont faux : 160
+
+nombre de cas étudier : 289
+nombre de cas étudier qui sont faux : 160
+
+nombre de cas étudier : 290
+nombre de cas étudier qui sont faux : 161
+
+nombre de cas étudier : 291
+nombre de cas étudier qui sont faux : 162
+
+nombre de cas étudier : 292
+nombre de cas étudier qui sont faux : 163
+
+nombre de cas étudier : 293
+nombre de cas étudier qui sont faux : 164
+
+nombre de cas étudier : 294
+nombre de cas étudier qui sont faux : 165
+
+nombre de cas étudier : 295
+nombre de cas étudier qui sont faux : 165
+
+nombre de cas étudier : 296
+nombre de cas étudier qui sont faux : 165
+
+nombre de cas étudier : 297
+nombre de cas étudier qui sont faux : 166
+
+nombre de cas étudier : 298
+nombre de cas étudier qui sont faux : 167
+
+nombre de cas étudier : 299
+nombre de cas étudier qui sont faux : 168
+
+nombre de cas étudier : 300
+nombre de cas étudier qui sont faux : 168
+
+nombre de cas étudier : 301
+nombre de cas étudier qui sont faux : 168
+
+nombre de cas étudier : 302
+nombre de cas étudier qui sont faux : 169
+
+nombre de cas étudier : 303
+nombre de cas étudier qui sont faux : 170
+
+nombre de cas étudier : 304
+nombre de cas étudier qui sont faux : 170
+
+nombre de cas étudier : 305
+nombre de cas étudier qui sont faux : 171
+
+nombre de cas étudier : 306
+nombre de cas étudier qui sont faux : 172
+
+nombre de cas étudier : 307
+nombre de cas étudier qui sont faux : 172
+
+nombre de cas étudier : 308
+nombre de cas étudier qui sont faux : 173
+
+nombre de cas étudier : 309
+nombre de cas étudier qui sont faux : 173
+
+nombre de cas étudier : 310
+nombre de cas étudier qui sont faux : 173
+
+nombre de cas étudier : 311
+nombre de cas étudier qui sont faux : 174
+
+nombre de cas étudier : 312
+nombre de cas étudier qui sont faux : 174
+
+nombre de cas étudier : 313
+nombre de cas étudier qui sont faux : 174
+
+nombre de cas étudier : 314
+nombre de cas étudier qui sont faux : 175
+
+nombre de cas étudier : 315
+nombre de cas étudier qui sont faux : 175
+
+nombre de cas étudier : 316
+nombre de cas étudier qui sont faux : 175
+
+nombre de cas étudier : 317
+nombre de cas étudier qui sont faux : 175
+
+nombre de cas étudier : 318
+nombre de cas étudier qui sont faux : 175
+
+nombre de cas étudier : 319
+nombre de cas étudier qui sont faux : 176
+
+nombre de cas étudier : 320
+nombre de cas étudier qui sont faux : 176
+
+nombre de cas étudier : 321
+nombre de cas étudier qui sont faux : 177
+
+nombre de cas étudier : 322
+nombre de cas étudier qui sont faux : 178
+
+nombre de cas étudier : 323
+nombre de cas étudier qui sont faux : 178
+
+nombre de cas étudier : 324
+nombre de cas étudier qui sont faux : 179
+
+nombre de cas étudier : 325
+nombre de cas étudier qui sont faux : 180
+
+nombre de cas étudier : 326
+nombre de cas étudier qui sont faux : 181
+
+nombre de cas étudier : 327
+nombre de cas étudier qui sont faux : 181
+
+nombre de cas étudier : 328
+nombre de cas étudier qui sont faux : 181
+
+nombre de cas étudier : 329
+nombre de cas étudier qui sont faux : 182
+
+nombre de cas étudier : 330
+nombre de cas étudier qui sont faux : 182
+
+nombre de cas étudier : 331
+nombre de cas étudier qui sont faux : 183
+
+nombre de cas étudier : 332
+nombre de cas étudier qui sont faux : 184
+
+nombre de cas étudier : 333
+nombre de cas étudier qui sont faux : 185
+
+nombre de cas étudier : 334
+nombre de cas étudier qui sont faux : 186
+
+nombre de cas étudier : 335
+nombre de cas étudier qui sont faux : 187
+
+nombre de cas étudier : 336
+nombre de cas étudier qui sont faux : 187
+
+nombre de cas étudier : 337
+nombre de cas étudier qui sont faux : 188
+
+nombre de cas étudier : 338
+nombre de cas étudier qui sont faux : 189
+
+nombre de cas étudier : 339
+nombre de cas étudier qui sont faux : 189
+
+nombre de cas étudier : 340
+nombre de cas étudier qui sont faux : 190
+
+nombre de cas étudier : 341
+nombre de cas étudier qui sont faux : 190
+
+nombre de cas étudier : 342
+nombre de cas étudier qui sont faux : 190
+
+nombre de cas étudier : 343
+nombre de cas étudier qui sont faux : 190
+
+nombre de cas étudier : 344
+nombre de cas étudier qui sont faux : 191
+
+nombre de cas étudier : 345
+nombre de cas étudier qui sont faux : 191
+
+nombre de cas étudier : 346
+nombre de cas étudier qui sont faux : 192
+
+nombre de cas étudier : 347
+nombre de cas étudier qui sont faux : 192
+
+nombre de cas étudier : 348
+nombre de cas étudier qui sont faux : 192
+
+nombre de cas étudier : 349
+nombre de cas étudier qui sont faux : 193
+
+nombre de cas étudier : 350
+nombre de cas étudier qui sont faux : 193
+
+nombre de cas étudier : 351
+nombre de cas étudier qui sont faux : 193
+
+nombre de cas étudier : 352
+nombre de cas étudier qui sont faux : 193
+
+nombre de cas étudier : 353
+nombre de cas étudier qui sont faux : 193
+
+nombre de cas étudier : 354
+nombre de cas étudier qui sont faux : 193
+
+nombre de cas étudier : 355
+nombre de cas étudier qui sont faux : 193
+
+nombre de cas étudier : 356
+nombre de cas étudier qui sont faux : 193
+
+nombre de cas étudier : 357
+nombre de cas étudier qui sont faux : 194
+
+nombre de cas étudier : 358
+nombre de cas étudier qui sont faux : 194
+
+nombre de cas étudier : 359
+nombre de cas étudier qui sont faux : 195
+
+nombre de cas étudier : 360
+nombre de cas étudier qui sont faux : 195
+
+nombre de cas étudier : 361
+nombre de cas étudier qui sont faux : 195
+
+nombre de cas étudier : 362
+nombre de cas étudier qui sont faux : 196
+
+nombre de cas étudier : 363
+nombre de cas étudier qui sont faux : 197
+
+nombre de cas étudier : 364
+nombre de cas étudier qui sont faux : 197
+
+nombre de cas étudier : 365
+nombre de cas étudier qui sont faux : 198
+
+nombre de cas étudier : 366
+nombre de cas étudier qui sont faux : 198
+
+nombre de cas étudier : 367
+nombre de cas étudier qui sont faux : 198
+
+nombre de cas étudier : 368
+nombre de cas étudier qui sont faux : 198
+
+nombre de cas étudier : 369
+nombre de cas étudier qui sont faux : 199
+
+nombre de cas étudier : 370
+nombre de cas étudier qui sont faux : 199
+
+nombre de cas étudier : 371
+nombre de cas étudier qui sont faux : 199
+
+nombre de cas étudier : 372
+nombre de cas étudier qui sont faux : 199
+
+nombre de cas étudier : 373
+nombre de cas étudier qui sont faux : 200
+
+nombre de cas étudier : 374
+nombre de cas étudier qui sont faux : 201
+
+nombre de cas étudier : 375
+nombre de cas étudier qui sont faux : 202
+
+nombre de cas étudier : 376
+nombre de cas étudier qui sont faux : 202
+
+nombre de cas étudier : 377
+nombre de cas étudier qui sont faux : 203
+
+nombre de cas étudier : 378
+nombre de cas étudier qui sont faux : 204
+
+nombre de cas étudier : 379
+nombre de cas étudier qui sont faux : 205
+
+nombre de cas étudier : 380
+nombre de cas étudier qui sont faux : 206
+
+nombre de cas étudier : 381
+nombre de cas étudier qui sont faux : 206
+
+nombre de cas étudier : 382
+nombre de cas étudier qui sont faux : 207
+
+nombre de cas étudier : 383
+nombre de cas étudier qui sont faux : 207
+
+nombre de cas étudier : 384
+nombre de cas étudier qui sont faux : 208
+
+nombre de cas étudier : 385
+nombre de cas étudier qui sont faux : 209
+
+nombre de cas étudier : 386
+nombre de cas étudier qui sont faux : 210
+
+nombre de cas étudier : 387
+nombre de cas étudier qui sont faux : 211
+
+nombre de cas étudier : 388
+nombre de cas étudier qui sont faux : 212
+
+nombre de cas étudier : 389
+nombre de cas étudier qui sont faux : 212
+
+nombre de cas étudier : 390
+nombre de cas étudier qui sont faux : 213
+
+nombre de cas étudier : 391
+nombre de cas étudier qui sont faux : 214
+
+nombre de cas étudier : 392
+nombre de cas étudier qui sont faux : 214
+
+nombre de cas étudier : 393
+nombre de cas étudier qui sont faux : 214
+
+nombre de cas étudier : 394
+nombre de cas étudier qui sont faux : 215
+
+nombre de cas étudier : 395
+nombre de cas étudier qui sont faux : 216
+
+nombre de cas étudier : 396
+nombre de cas étudier qui sont faux : 217
+
+nombre de cas étudier : 397
+nombre de cas étudier qui sont faux : 218
+
+nombre de cas étudier : 398
+nombre de cas étudier qui sont faux : 219
+
+nombre de cas étudier : 399
+nombre de cas étudier qui sont faux : 220
+
+nombre de cas étudier : 400
+nombre de cas étudier qui sont faux : 221
+
+nombre de cas étudier : 401
+nombre de cas étudier qui sont faux : 222
+
+nombre de cas étudier : 402
+nombre de cas étudier qui sont faux : 223
+
+nombre de cas étudier : 403
+nombre de cas étudier qui sont faux : 224
+
+nombre de cas étudier : 404
+nombre de cas étudier qui sont faux : 225
+
+nombre de cas étudier : 405
+nombre de cas étudier qui sont faux : 226
+
+nombre de cas étudier : 406
+nombre de cas étudier qui sont faux : 227
+
+nombre de cas étudier : 407
+nombre de cas étudier qui sont faux : 227
+
+nombre de cas étudier : 408
+nombre de cas étudier qui sont faux : 227
+
+nombre de cas étudier : 409
+nombre de cas étudier qui sont faux : 227
+
+nombre de cas étudier : 410
+nombre de cas étudier qui sont faux : 227
+
+nombre de cas étudier : 411
+nombre de cas étudier qui sont faux : 227
+
+nombre de cas étudier : 412
+nombre de cas étudier qui sont faux : 228
+
+nombre de cas étudier : 413
+nombre de cas étudier qui sont faux : 229
+
+nombre de cas étudier : 414
+nombre de cas étudier qui sont faux : 230
+
+nombre de cas étudier : 415
+nombre de cas étudier qui sont faux : 231
+
+nombre de cas étudier : 416
+nombre de cas étudier qui sont faux : 232
+
+nombre de cas étudier : 417
+nombre de cas étudier qui sont faux : 232
+
+nombre de cas étudier : 418
+nombre de cas étudier qui sont faux : 233
+
+nombre de cas étudier : 419
+nombre de cas étudier qui sont faux : 234
+
+nombre de cas étudier : 420
+nombre de cas étudier qui sont faux : 235
+
+nombre de cas étudier : 421
+nombre de cas étudier qui sont faux : 236
+
+nombre de cas étudier : 422
+nombre de cas étudier qui sont faux : 237
+
+nombre de cas étudier : 423
+nombre de cas étudier qui sont faux : 238
+
+nombre de cas étudier : 424
+nombre de cas étudier qui sont faux : 238
+
+nombre de cas étudier : 425
+nombre de cas étudier qui sont faux : 239
+
+nombre de cas étudier : 426
+nombre de cas étudier qui sont faux : 240
+
+nombre de cas étudier : 427
+nombre de cas étudier qui sont faux : 241
+
+nombre de cas étudier : 428
+nombre de cas étudier qui sont faux : 242
+
+nombre de cas étudier : 429
+nombre de cas étudier qui sont faux : 242
+
+nombre de cas étudier : 430
+nombre de cas étudier qui sont faux : 243
+
+nombre de cas étudier : 431
+nombre de cas étudier qui sont faux : 244
+
+nombre de cas étudier : 432
+nombre de cas étudier qui sont faux : 245
+
+nombre de cas étudier : 433
+nombre de cas étudier qui sont faux : 246
+
+nombre de cas étudier : 434
+nombre de cas étudier qui sont faux : 247
+
+nombre de cas étudier : 435
+nombre de cas étudier qui sont faux : 247
+
+nombre de cas étudier : 436
+nombre de cas étudier qui sont faux : 247
+
+nombre de cas étudier : 437
+nombre de cas étudier qui sont faux : 247
+
+nombre de cas étudier : 438
+nombre de cas étudier qui sont faux : 247
+
+nombre de cas étudier : 439
+nombre de cas étudier qui sont faux : 248
+
+nombre de cas étudier : 440
+nombre de cas étudier qui sont faux : 249
+
+nombre de cas étudier : 441
+nombre de cas étudier qui sont faux : 250
+
+nombre de cas étudier : 442
+nombre de cas étudier qui sont faux : 250
+
+nombre de cas étudier : 443
+nombre de cas étudier qui sont faux : 251
+
+nombre de cas étudier : 444
+nombre de cas étudier qui sont faux : 252
+
+nombre de cas étudier : 445
+nombre de cas étudier qui sont faux : 252
+
+nombre de cas étudier : 446
+nombre de cas étudier qui sont faux : 253
+
+nombre de cas étudier : 447
+nombre de cas étudier qui sont faux : 253
+
+nombre de cas étudier : 448
+nombre de cas étudier qui sont faux : 253
+
+nombre de cas étudier : 449
+nombre de cas étudier qui sont faux : 254
+
+nombre de cas étudier : 450
+nombre de cas étudier qui sont faux : 255
+
+nombre de cas étudier : 451
+nombre de cas étudier qui sont faux : 255
+
+nombre de cas étudier : 452
+nombre de cas étudier qui sont faux : 255
+
+nombre de cas étudier : 453
+nombre de cas étudier qui sont faux : 256
+
+nombre de cas étudier : 454
+nombre de cas étudier qui sont faux : 256
+
+nombre de cas étudier : 455
+nombre de cas étudier qui sont faux : 256
+
+nombre de cas étudier : 456
+nombre de cas étudier qui sont faux : 257
+
+nombre de cas étudier : 457
+nombre de cas étudier qui sont faux : 258
+
+nombre de cas étudier : 458
+nombre de cas étudier qui sont faux : 259
+
+nombre de cas étudier : 459
+nombre de cas étudier qui sont faux : 260
+
+nombre de cas étudier : 460
+nombre de cas étudier qui sont faux : 260
+
+nombre de cas étudier : 461
+nombre de cas étudier qui sont faux : 261
+
+nombre de cas étudier : 462
+nombre de cas étudier qui sont faux : 262
+
+nombre de cas étudier : 463
+nombre de cas étudier qui sont faux : 263
+
+nombre de cas étudier : 464
+nombre de cas étudier qui sont faux : 263
+
+nombre de cas étudier : 465
+nombre de cas étudier qui sont faux : 264
+
+nombre de cas étudier : 466
+nombre de cas étudier qui sont faux : 264
+
+nombre de cas étudier : 467
+nombre de cas étudier qui sont faux : 264
+
+nombre de cas étudier : 468
+nombre de cas étudier qui sont faux : 264
+
+nombre de cas étudier : 469
+nombre de cas étudier qui sont faux : 264
+
+nombre de cas étudier : 470
+nombre de cas étudier qui sont faux : 265
+
+nombre de cas étudier : 471
+nombre de cas étudier qui sont faux : 265
+
+nombre de cas étudier : 472
+nombre de cas étudier qui sont faux : 265
+
+nombre de cas étudier : 473
+nombre de cas étudier qui sont faux : 266
+
+nombre de cas étudier : 474
+nombre de cas étudier qui sont faux : 266
+
+nombre de cas étudier : 475
+nombre de cas étudier qui sont faux : 267
+
+nombre de cas étudier : 476
+nombre de cas étudier qui sont faux : 267
+
+nombre de cas étudier : 477
+nombre de cas étudier qui sont faux : 267
+
+nombre de cas étudier : 478
+nombre de cas étudier qui sont faux : 268
+
+nombre de cas étudier : 479
+nombre de cas étudier qui sont faux : 268
+
+nombre de cas étudier : 480
+nombre de cas étudier qui sont faux : 269
+
+nombre de cas étudier : 481
+nombre de cas étudier qui sont faux : 269
+
+nombre de cas étudier : 482
+nombre de cas étudier qui sont faux : 270
+
+nombre de cas étudier : 483
+nombre de cas étudier qui sont faux : 270
+
+nombre de cas étudier : 484
+nombre de cas étudier qui sont faux : 271
+
+nombre de cas étudier : 485
+nombre de cas étudier qui sont faux : 271
+
+nombre de cas étudier : 486
+nombre de cas étudier qui sont faux : 271
+
+nombre de cas étudier : 487
+nombre de cas étudier qui sont faux : 271
+
+nombre de cas étudier : 488
+nombre de cas étudier qui sont faux : 271
+
+nombre de cas étudier : 489
+nombre de cas étudier qui sont faux : 271
+
+nombre de cas étudier : 490
+nombre de cas étudier qui sont faux : 271
+
+nombre de cas étudier : 491
+nombre de cas étudier qui sont faux : 271
+
+nombre de cas étudier : 492
+nombre de cas étudier qui sont faux : 272
+
+nombre de cas étudier : 493
+nombre de cas étudier qui sont faux : 272
+
+nombre de cas étudier : 494
+nombre de cas étudier qui sont faux : 272
+
+nombre de cas étudier : 495
+nombre de cas étudier qui sont faux : 272
+
+nombre de cas étudier : 496
+nombre de cas étudier qui sont faux : 272
+
+nombre de cas étudier : 497
+nombre de cas étudier qui sont faux : 272
+
+nombre de cas étudier : 498
+nombre de cas étudier qui sont faux : 272
+
+nombre de cas étudier : 499
+nombre de cas étudier qui sont faux : 272
+
+nombre de cas étudier : 500
+nombre de cas étudier qui sont faux : 273
+
+nombre de cas étudier : 501
+nombre de cas étudier qui sont faux : 273
+
+nombre de cas étudier : 502
+nombre de cas étudier qui sont faux : 273
+
+nombre de cas étudier : 503
+nombre de cas étudier qui sont faux : 273
+
+nombre de cas étudier : 504
+nombre de cas étudier qui sont faux : 273
+
+nombre de cas étudier : 505
+nombre de cas étudier qui sont faux : 274
+
+nombre de cas étudier : 506
+nombre de cas étudier qui sont faux : 275
+
+nombre de cas étudier : 507
+nombre de cas étudier qui sont faux : 276
+
+nombre de cas étudier : 508
+nombre de cas étudier qui sont faux : 277
+
+nombre de cas étudier : 509
+nombre de cas étudier qui sont faux : 277
+
+nombre de cas étudier : 510
+nombre de cas étudier qui sont faux : 277
+
+nombre de cas étudier : 511
+nombre de cas étudier qui sont faux : 278
+
+nombre de cas étudier : 512
+nombre de cas étudier qui sont faux : 279
+
+nombre de cas étudier : 513
+nombre de cas étudier qui sont faux : 279
+
+nombre de cas étudier : 514
+nombre de cas étudier qui sont faux : 279
+
+nombre de cas étudier : 515
+nombre de cas étudier qui sont faux : 280
+
+nombre de cas étudier : 516
+nombre de cas étudier qui sont faux : 280
+

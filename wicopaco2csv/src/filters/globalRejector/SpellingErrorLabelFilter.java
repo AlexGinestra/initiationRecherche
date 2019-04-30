@@ -40,7 +40,8 @@ public class SpellingErrorLabelFilter extends FiltersStatistics implements Globa
 	
 	private boolean loadLabels() {
 		/* ouverture du fichier */
-		Document document = ParserXML.getDocumentTraversal("../doss.nosync/spelling_error-v3.xml");
+		//Document document = ParserXML.getDocumentTraversal("../doss.nosync/spelling_error-v3.xml");
+		Document document = ParserXML.getDocumentTraversal("../../test/spelling_error-v3.xml");
 		DocumentTraversal traversal = (DocumentTraversal) document;
 		if(traversal == null) {
 			return false;
@@ -125,8 +126,6 @@ public class SpellingErrorLabelFilter extends FiltersStatistics implements Globa
 						/* browse <modif> tag */
 						for(int j = 0 ; j < nList.getLength() ; j++) {
 							
-							String bef, aft;
-							NodeList nodeListBefAft = nList.item(j).getChildNodes();
 							/* browse the child of <modif> tag */
 							for(int l = 0 ; l < nList.getLength() ; l++) {
 								Node nTempBefAft = nList.item(l);

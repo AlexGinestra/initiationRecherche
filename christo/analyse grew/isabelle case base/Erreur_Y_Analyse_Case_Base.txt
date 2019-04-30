@@ -1,0 +1,159 @@
+id :  1
+Il y a trop de bruit pour travailler.
+
+id :  20
+Il s'est blessé.
+
+id :  23
+Il faut pallier ce problème.
+
+id :  24
+Donne-le moi !
+
+id :  25
+Donne m'en un !
+
+id :  34
+Savez-vous planter les choux ?
+
+id :  46
+Il faut boire du lait tous les jours.
+
+id :  52
+J'ai peu de temps.
+
+id :  53
+Je ne peux plus me concentrer avec tout ce bruit.
+
+id :  58
+Tu peux te faire très mal !
+
+id :  60
+Il faut le retrouver avant qu'il ne fasse une bêtise.
+
+id :  72
+Tout est bien qui finit bien.
+
+id :  77
+Qu’elle est belle, la barbe de Victor !
+
+id :  83
+Une connexion est l'action de lier, d'unir des choses l'une avec l'autre.
+
+id :  84
+Les conséquences de cet évènement se développèrent quelques années après.
+
+id :  87
+Ma tante Fernande m’a légué dix mille euros.
+
+id :  107
+Explique-le lui.
+
+id :  108
+Donne-moi l'heure.
+
+id :  110
+Je suis allé quelques fois au cinéma.
+
+id :  119
+Quant à vous cher amis, nous allons avoir une petite discussion.
+
+id :  120
+Quant aux fautes d'orthographe, sachez que je serai impitoyable.
+
+id :  123
+Le temps semble s’être arrêté.
+
+id :  124
+J'ai tant de travail que je partirai plus tard ce soir.
+
+id :  125
+Je n'ai jamais vu tant de fautes que dans ce livre.
+
+id :  127
+Il a tant d’amis qu’il ne manquera de rien.
+
+id :  128
+Je me retenais à la rampe tant mes jambes mollissaient.
+
+id :  129
+T'en a-t-il parlé ?
+
+id :  130
+T'en souviens-tu ?
+
+id :  132
+Sers-toi, je t’en prie.
+
+id :  150
+Essaye le nôtre.
+
+id :  155
+C'est moi qui suis le plus intelligent.
+
+id :  162
+Je me demande pourquoi elle est partie ?
+
+id :  163
+Notre émission de ce soir vous expliquera comment il a pu s'échapper.
+
+id :  168
+Il s'agit d'un personnage non négligeable.
+
+id :  171
+Je commence à progresser quoique le français soit une langue difficile.
+
+id :  173
+Ça m'arrive souvent.
+
+id :  175
+Jamais d'espace avant la virgule et le point, toujours un espace après.
+
+id :  177
+Dans ce cas, le verbe est mis au participe.
+
+id :  178
+Il y a toujours un espace avant et jamais après le signe ouvrant. Il y a toujours un espace après et jamais avant le signe fermant.
+
+id :  179
+La soirée était agitée et bruyante ; le conducteur avait peur, quoiqu’il se fût imbibé d'alcool.
+
+id :  180
+Les guillemets françaises sont à utiliser principalement ; les guillemets anglaises servent seulement à l'interieur des guillemets françaises.
+
+id :  182
+Paul Valéry a dit :« L'art est fait de beaux détails. »
+
+id :  184
+Hélas ! vous ne le reverrez pas avant longtemps.
+
+id :  188
+Ce que je vais vous dire, écoutez-bien ( ceci est très important), est la pure vérité.
+
+id :  189
+Ton récit est très bien, quoique (il est) un peu court.
+
+id :  191
+« Il se tourna vers moi et me demanda : "Avez-vous vu ?" ».
+
+id :  192
+« Raymond Queneau la décrivait comme "la science du malheur des hommes".
+
+id :  193
+« Pierre Reverdy a dit : "Créer revient à penser plus fortement." »
+
+id :  194
+« "Çà" est un adverbe de lieu. »
+
+id :  196
+Après une séance de yoga, je me sens tellement « cool ».
+
+id :  198
+Selon L'Académie française, « prolongation » doit être employé dans le sens temporel.
+
+id :  199
+Il ne faut aucun espace ni avant ni après l'apostrophe.
+
+id :  202
+Fais-lui plaisir.
+

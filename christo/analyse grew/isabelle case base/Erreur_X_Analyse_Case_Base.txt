@@ -1,0 +1,1347 @@
+id :  2
+La raison est parce que tu as déjà suivi le cours.
+# sent_id = 00000
+1	La	le	D	DET	_	2	det	_	_
+2	raison	raison	N	NC	s=c	3	suj	_	_
+3	est	être	V	V	m=ind	_	_	_	_
+4	parce_que	parce_que	C	CS	s=s	3	mod	_	_
+5	tu	cln	CL	CLS	s=suj	8	suj	_	_
+6	as	avoir	V	V	m=ind	8	aux.tps	_	_
+7	déjà	déjà	ADV	ADV	_	8	mod	_	_
+8	suivi	suivre	V	VPP	m=part|t=past	4	obj.cpl	_	_
+9	le	le	D	DET	_	10	det	_	_
+10	cours	cour|cours	N	NC	s=c	8	obj	_	_
+11	.	.	PONCT	PONCT	_	3	ponct	_	_
+
+
+id :  4
+Ici, on a la chance de vivre et s’exprimer en français.
+# sent_id = 00000
+1	Ici	ici	ADV	ADV	_	4	mod	_	_
+2	,	,	PONCT	PONCT	_	4	ponct	_	_
+3	on	cln	CL	CLS	s=suj	4	suj	_	_
+4	a	avoir	V	V	m=ind	_	_	_	_
+5	la	le	D	DET	_	6	det	_	_
+6	chance	chance	N	NC	s=c	4	obj	_	_
+7	de	de	P	P	_	6	dep	_	_
+8	vivre	vivre	V	VINF	m=inf	7	obj.p	_	_
+9	et	et	C	CC	s=c	8	coord	_	_
+10	s'	se	CL	CLR	s=refl	11	aff	_	_
+11	exprimer	exprimer	V	VINF	m=inf	9	dep.coord	_	_
+12	en	en	P	P	_	11	mod	_	_
+13	français	français	N	NC	s=c	12	obj.p	_	_
+14	.	.	PONCT	PONCT	_	4	ponct	_	_
+
+
+id :  5
+Je crois qu’on a rien à cacher.
+# sent_id = 00000
+1	Je	cln	CL	CLS	s=suj	2	suj	_	_
+2	crois	croire	V	V	m=ind	_	_	_	_
+3	qu'	que	C	CS	s=s	2	obj	_	_
+4	on	cln	CL	CLS	s=suj	5	suj	_	_
+5	a	avoir	V	V	m=ind	3	obj.cpl	_	_
+6	rien	rien	PRO	PRO	_	5	obj	_	_
+7	à	à	P	P	_	6	dep	_	_
+8	cacher	cacher	V	VINF	m=inf	7	obj.p	_	_
+9	.	.	PONCT	PONCT	_	2	ponct	_	_
+
+
+id :  7
+Peut-être ses parents n’ont rien vu venir.
+# sent_id = 00000
+1	Peut-être	peut-être	ADV	ADV	_	3	mod	_	_
+2	ses	son	D	DET	_	3	det	_	_
+3	parents	parent	N	NC	s=c	7	suj	_	_
+4	n'	ne	ADV	ADV	_	7	mod	_	_
+5	ont	avoir	V	V	m=ind	7	aux.tps	_	_
+6	rien	rien	PRO	PRO	_	7	obj	_	_
+7	vu	voir	V	VPP	m=part|t=past	_	_	_	_
+8	venir	venir	V	VINF	m=inf	7	ato	_	_
+9	.	.	PONCT	PONCT	_	7	ponct	_	_
+
+
+id :  8
+Je vais mangé.
+# sent_id = 00000
+1	Je	cln	CL	CLS	s=suj	2	suj	_	_
+2	vais	aller	V	V	m=ind	_	_	_	_
+3	mangé	manger	V	VPP	m=part|t=past	2	mod	_	_
+4	.	.	PONCT	PONCT	_	2	ponct	_	_
+
+
+id :  13
+Je viendrais demain.
+# sent_id = 00000
+1	Je	cln	CL	CLS	s=suj	2	suj	_	_
+2	viendrais	venir	V	V	m=ind	_	_	_	_
+3	demain	demain	ADV	ADV	_	2	mod	_	_
+4	.	.	PONCT	PONCT	_	2	ponct	_	_
+
+
+id :  14
+Si je le pouvais, je viendrai.
+# sent_id = 00000
+1	Si	si	C	CS	s=s	7	mod	_	_
+2	je	cln	CL	CLS	s=suj	4	suj	_	_
+3	le	cla	CL	CLO	s=obj	4	obj	_	_
+4	pouvais	pouvoir	V	V	m=ind	1	obj.cpl	_	_
+5	,	,	PONCT	PONCT	_	7	ponct	_	_
+6	je	cln	CL	CLS	s=suj	7	suj	_	_
+7	viendrai	venir	V	V	m=ind	_	_	_	_
+8	.	.	PONCT	PONCT	_	7	ponct	_	_
+
+
+id :  15
+Ou est-il ?
+# sent_id = 00000
+1	Ou	ou	C	CC	s=c	_	_	_	_
+2	est	être	V	V	m=ind	1	dep.coord	_	_
+3	-il	cln|ilimp	CL	CLS	s=suj	2	suj	_	_
+4	?	?	PONCT	PONCT	_	1	ponct	_	_
+
+
+id :  16
+Tu désires du fromage où un dessert ?
+# sent_id = 00000
+1	Tu	cln	CL	CLS	s=suj	2	suj	_	_
+2	désires	désirer	V	V	m=ind	_	_	_	_
+3	du	*du	P+D	P+D	_	2	mod	_	_
+4	fromage	fromage	N	NC	s=c	3	obj.p	_	_
+5	où	où	PRO	PROREL	s=rel	7	mod	_	_
+6	un	un	D	DET	_	7	det	_	_
+7	dessert	dessert	N	NC	s=c	4	mod.rel	_	_
+8	?	?	PONCT	PONCT	_	2	ponct	_	_
+
+
+id :  17
+Il souhaite qu'il eût lu sa lettre.
+# sent_id = 00000
+1	Il	cln|ilimp	CL	CLS	s=suj	2	suj	_	_
+2	souhaite	souhaiter	V	V	m=ind	_	_	_	_
+3	qu'	que	C	CS	s=s	2	obj	_	_
+4	il	cln|ilimp	CL	CLS	s=suj	6	suj	_	_
+5	eût	avoir	V	VS	m=subj	6	aux.tps	_	_
+6	lu	lire	V	VPP	m=part|t=past	3	obj.cpl	_	_
+7	sa	son	D	DET	_	8	det	_	_
+8	lettre	lettre	N	NC	s=c	6	obj	_	_
+9	.	.	PONCT	PONCT	_	2	ponct	_	_
+
+
+id :  18
+Il souhaitait qu'il ait lu sa lettre.
+# sent_id = 00000
+1	Il	cln|ilimp	CL	CLS	s=suj	2	suj	_	_
+2	souhaitait	souhaiter	V	V	m=ind	_	_	_	_
+3	qu'	que	C	CS	s=s	2	obj	_	_
+4	il	cln|ilimp	CL	CLS	s=suj	6	suj	_	_
+5	ait	avoir	V	VS	m=subj	6	aux.tps	_	_
+6	lu	lire	V	VPP	m=part|t=past	3	obj.cpl	_	_
+7	sa	son	D	DET	_	8	det	_	_
+8	lettre	lettre	N	NC	s=c	6	obj	_	_
+9	.	.	PONCT	PONCT	_	2	ponct	_	_
+
+
+id :  21
+Pierre a mangée la tarte.
+# sent_id = 00000
+1	Pierre	Pierre	N	NPP	s=p	3	suj	_	_
+2	a	avoir	V	V	m=ind	3	aux.tps	_	_
+3	mangée	manger	V	VPP	m=part|t=past	_	_	_	_
+4	la	le	D	DET	_	5	det	_	_
+5	tarte	tarte	N	NC	s=c	3	obj	_	_
+6	.	.	PONCT	PONCT	_	3	ponct	_	_
+
+
+id :  22
+La tarte que Pierre a mangé.
+# sent_id = 00000
+1	La	le	D	DET	_	2	det	_	_
+2	tarte	tarte	N	NC	s=c	_	_	_	_
+3	que	que	PRO	PROREL	s=rel	6	obj	_	_
+4	Pierre	Pierre	N	NPP	s=p	6	suj	_	_
+5	a	avoir	V	V	m=ind	6	aux.tps	_	_
+6	mangé	manger	V	VPP	m=part|t=past	2	mod.rel	_	_
+7	.	.	PONCT	PONCT	_	2	ponct	_	_
+
+
+id :  26
+Elles sont parti.
+# sent_id = 00000
+1	Elles	cln	CL	CLS	s=suj	3	suj	_	_
+2	sont	être	V	V	m=ind	3	aux.tps	_	_
+3	parti	partir	V	VPP	m=part|t=past	_	_	_	_
+4	.	.	PONCT	PONCT	_	3	ponct	_	_
+
+
+id :  29
+Toutes avaient des bijous en or.
+# sent_id = 00000
+1	Toutes	tout	A	ADJ	_	2	mod	_	_
+2	avaient	avoir	V	V	m=ind	_	_	_	_
+3	des	un	D	DET	_	4	det	_	_
+4	bijous	*bijou	N	NC	s=c	2	suj	_	_
+5	en	en	P	P	_	4	dep	_	_
+6	or	or	N	NC	s=c	5	obj.p	_	_
+7	.	.	PONCT	PONCT	_	2	ponct	_	_
+
+
+id :  30
+Les racines tordues s'accrochent entre les caillous.
+# sent_id = 00000
+1	Les	le	D	DET	_	2	det	_	_
+2	racines	racine	N	NC	s=c	5	suj	_	_
+3	tordues	*tordu	A	ADJ	_	2	mod	_	_
+4	s'	se	CL	CLR	s=refl	5	obj	_	_
+5	accrochent	accrocher	V	V	m=ind	_	_	_	_
+6	entre	entre	P	P	_	5	mod	_	_
+7	les	le	D	DET	_	8	det	_	_
+8	caillous	*caillou	N	NC	s=c	6	obj.p	_	_
+9	.	.	PONCT	PONCT	_	5	ponct	_	_
+
+
+id :  31
+Viens sur mes genous.
+# sent_id = 00000
+1	Viens	Viens	N	NPP	s=p	_	_	_	_
+2	sur	sur	P	P	_	1	dep	_	_
+3	mes	son	D	DET	_	4	det	_	_
+4	genous	*genou	N	NC	s=c	2	obj.p	_	_
+5	.	.	PONCT	PONCT	_	1	ponct	_	_
+
+
+id :  32
+Ce sont de vrais hibous.
+# sent_id = 00000
+1	Ce	ce	CL	CLS	s=suj	2	suj	_	_
+2	sont	être	V	V	m=ind	_	_	_	_
+3	de	de	P	P	_	2	de_obj	_	_
+4	vrais	vrai	A	ADJ	_	5	mod	_	_
+5	hibous	*hibou	N	NC	s=c	3	obj.p	_	_
+6	.	.	PONCT	PONCT	_	2	ponct	_	_
+
+
+id :  33
+Il avait de nombreux joujous.
+# sent_id = 00000
+1	Il	cln|ilimp	CL	CLS	s=suj	2	suj	_	_
+2	avait	avoir	V	V	m=ind	_	_	_	_
+3	de	un	D	DET	_	5	det	_	_
+4	nombreux	nombreux	A	ADJ	_	5	mod	_	_
+5	joujous	*joujou	N	NC	s=c	2	obj	_	_
+6	.	.	PONCT	PONCT	_	2	ponct	_	_
+
+
+id :  35
+La malpropreté facilite la propagation des pous.
+# sent_id = 00000
+1	La	le	D	DET	_	2	det	_	_
+2	malpropreté	malpropreté	N	NC	s=c	3	suj	_	_
+3	facilite	faciliter	V	V	m=ind	_	_	_	_
+4	la	le	D	DET	_	5	det	_	_
+5	propagation	propagation	N	NC	s=c	3	obj	_	_
+6	des	*des	P+D	P+D	_	5	dep	_	_
+7	pous	*pou	N	NC	s=c	6	obj.p	_	_
+8	.	.	PONCT	PONCT	_	3	ponct	_	_
+
+
+id :  36
+Elle ouvrit la porte et la referma violamment.
+# sent_id = 00000
+1	Elle	cln	CL	CLS	s=suj	2	suj	_	_
+2	ouvrit	ouvrir	V	V	m=ind	_	_	_	_
+3	la	le	D	DET	_	4	det	_	_
+4	porte	porte	N	NC	s=c	2	obj	_	_
+5	et	et	C	CC	s=c	2	coord	_	_
+6	la	cla	CL	CLO	s=obj	7	obj	_	_
+7	referma	refermer	V	V	m=ind	5	dep.coord	_	_
+8	violamment	*violamment	ADV	ADV	_	7	mod	_	_
+9	.	.	PONCT	PONCT	_	2	ponct	_	_
+
+
+id :  37
+Les Anglais se préparaient à supporter patiamment le despotisme de Henri VIII.
+# sent_id = 00000
+1	Les	le	D	DET	_	2	det	_	_
+2	Anglais	anglais	N	NC	s=c	4	suj	_	_
+3	se	se	CL	CLR	s=refl	4	obj	_	_
+4	préparaient	préparer	V	V	m=ind	_	_	_	_
+5	à	à	P	P	_	4	a_obj	_	_
+6	supporter	supporter	V	VINF	m=inf	5	obj.p	_	_
+7	patiamment	*patiamment	ADV	ADV	_	6	mod	_	_
+8	le	le	D	DET	_	9	det	_	_
+9	despotisme	despotisme	N	NC	s=c	6	obj	_	_
+10	de	de	P	P	_	9	dep	_	_
+11	Henri	Henri	N	NPP	s=p	10	obj.p	_	_
+12	VIII	*VIII	N	NPP	s=p	11	mod	_	_
+13	.	.	PONCT	PONCT	_	4	ponct	_	_
+
+
+id :  38
+Il parle intelligeamment de toutes choses.
+# sent_id = 00000
+1	Il	cln|ilimp	CL	CLS	s=suj	2	suj	_	_
+2	parle	parler	V	V	m=ind	_	_	_	_
+3	intelligeamment	*intelligeamment	ADV	ADV	_	2	mod	_	_
+4	de	de	P	P	_	2	de_obj	_	_
+5	toutes	tout	D	DET	_	6	det	_	_
+6	choses	chose	N	NC	s=c	4	obj.p	_	_
+7	.	.	PONCT	PONCT	_	2	ponct	_	_
+
+
+id :  39
+Les objets brillemment éclairés sont entourés d'une frange colorée.
+# sent_id = 00000
+1	Les	le	D	DET	_	2	det	_	_
+2	objets	objet	N	NC	s=c	6	suj	_	_
+3	brillemment	*brillemment	ADV	ADV	_	2	mod	_	_
+4	éclairés	éclairé	A	ADJ	_	2	mod	_	_
+5	sont	être	V	V	m=ind	6	aux.pass	_	_
+6	entourés	entourer	V	VPP	m=part|t=past	_	_	_	_
+7	d'	de	P	P	_	6	p_obj.agt	_	_
+8	une	un	D	DET	_	9	det	_	_
+9	frange	frange	N	NC	s=c	7	obj.p	_	_
+10	colorée	coloré	A	ADJ	_	9	mod	_	_
+11	.	.	PONCT	PONCT	_	6	ponct	_	_
+
+
+id :  40
+Elle va étonnemment bien à présent.
+# sent_id = 00000
+1	Elle	cln	CL	CLS	s=suj	2	suj	_	_
+2	va	aller	V	V	m=ind	_	_	_	_
+3	étonnemment	*étonnemment	ADV	ADV	_	2	mod	_	_
+4	bien	bien	ADV	ADV	_	5	mod	_	_
+5	à_présent	à_présent	ADV	ADV	_	2	mod	_	_
+6	.	.	PONCT	PONCT	_	2	ponct	_	_
+
+
+id :  43
+Tu as vus mes clés ?
+# sent_id = 00000
+1	Tu	cln	CL	CLS	s=suj	3	suj	_	_
+2	as	avoir	V	V	m=ind	3	aux.tps	_	_
+3	vus	voir	V	VPP	m=part|t=past	_	_	_	_
+4	mes	son	D	DET	_	5	det	_	_
+5	clés	clé	N	NC	s=c	3	obj	_	_
+6	?	?	PONCT	PONCT	_	3	ponct	_	_
+
+
+id :  52
+J'ai peus de temps.
+# sent_id = 00000
+1	J'	cln	CL	CLS	s=suj	2	suj	_	_
+2	ai	avoir	V	V	m=ind	_	_	_	_
+3	peus	*peus	ADV	ADV	_	2	mod	_	_
+4	de	de	P	P	_	2	mod	_	_
+5	temps	temps	N	NC	s=c	4	obj.p	_	_
+6	.	.	PONCT	PONCT	_	2	ponct	_	_
+
+
+id :  55
+Il peux partir du jour au lendemain.
+# sent_id = 00000
+1	Il	cln|ilimp	CL	CLS	s=suj	2	suj	_	_
+2	peux	pouvoir	V	V	m=ind	_	_	_	_
+3	partir	partir	V	VINF	m=inf	2	obj	_	_
+4	du	*du	P+D	P+D	_	3	p_obj.o	_	_
+5	jour	jour	N	NC	s=c	4	obj.p	_	_
+6	au	*au	P+D	P+D	_	5	dep	_	_
+7	lendemain	lendemain	N	NC	s=c	6	obj.p	_	_
+8	.	.	PONCT	PONCT	_	2	ponct	_	_
+
+
+id :  59
+Il n'en n'a pas.
+# sent_id = 00000
+1	Il	cln|ilimp	CL	CLS	s=suj	5	suj	_	_
+2	n'	ne	ADV	ADV	_	5	mod	_	_
+3	en	clg|cll	CL	CLO	s=obj	5	obj	_	_
+4	n'	ne	ADV	ADV	_	5	mod	_	_
+5	a	avoir	V	V	m=ind	_	_	_	_
+6	pas	pas	ADV	ADV	_	5	mod	_	_
+7	.	.	PONCT	PONCT	_	5	ponct	_	_
+
+
+id :  61
+On a fait la vaisselle après qu'ils soient partis.
+# sent_id = 00000
+1	On	cln	CL	CLS	s=suj	3	suj	_	_
+2	a	avoir	V	V	m=ind	3	aux.tps	_	_
+3	fait	faire	V	VPP	m=part|t=past	_	_	_	_
+4	la	le	D	DET	_	5	det	_	_
+5	vaisselle	vaisselle	N	NC	s=c	3	obj	_	_
+6	après_qu'	après_que	C	CS	s=s	3	mod	_	_
+7	ils	cln	CL	CLS	s=suj	9	suj	_	_
+8	soient	être	V	VS	m=subj	9	aux.tps	_	_
+9	partis	partir	V	VPP	m=part|t=past	6	obj.cpl	_	_
+10	.	.	PONCT	PONCT	_	3	ponct	_	_
+
+
+id :  62
+Ce garçon peut-être agressif quand il a bu !
+# sent_id = 00000
+1	Ce	ce	D	DET	_	2	det	_	_
+2	garçon	garçon	N	NC	s=c	_	_	_	_
+3	peut-être	peut-être	ADV	ADV	_	4	mod	_	_
+4	agressif	agressif	A	ADJ	_	2	mod	_	_
+5	quand	quand	C	CS	s=s	4	mod	_	_
+6	il	cln|ilimp	CL	CLS	s=suj	8	suj	_	_
+7	a	avoir	V	V	m=ind	8	aux.tps	_	_
+8	bu	boire	V	VPP	m=part|t=past	5	obj.cpl	_	_
+9	!	!	PONCT	PONCT	_	2	ponct	_	_
+
+
+id :  66
+Toute homme est mortel.
+# sent_id = 00000
+1	Toute	tout	D	DET	_	2	det	_	_
+2	homme	homme	N	NC	s=c	3	suj	_	_
+3	est	être	V	V	m=ind	_	_	_	_
+4	mortel	mortel	A	ADJ	_	3	ats	_	_
+5	.	.	PONCT	PONCT	_	3	ponct	_	_
+
+
+id :  67
+Tous le monde est là.
+# sent_id = 00000
+1	Tous	tout	A	ADJ	_	3	mod	_	_
+2	le	le	D	DET	_	3	det	_	_
+3	monde	monde	N	NC	s=c	4	suj	_	_
+4	est	être	V	V	m=ind	_	_	_	_
+5	là	là	ADV	ADV	_	4	p_obj.o	_	_
+6	.	.	PONCT	PONCT	_	4	ponct	_	_
+
+
+id :  68
+Toutes la classe travaille.
+# sent_id = 00000
+1	Toutes	tout	A	ADJ	_	3	mod	_	_
+2	la	le	D	DET	_	3	det	_	_
+3	classe	classe	N	NC	s=c	4	suj	_	_
+4	travaille	travailler	V	V	m=ind	_	_	_	_
+5	.	.	PONCT	PONCT	_	4	ponct	_	_
+
+
+id :  69
+Tout les élèves travaillent.
+# sent_id = 00000
+1	Tout	tout	ADV	ADV	_	4	mod	_	_
+2	les	le	D	DET	_	3	det	_	_
+3	élèves	élève	N	NC	s=c	4	suj	_	_
+4	travaillent	travailler	V	V	m=ind	_	_	_	_
+5	.	.	PONCT	PONCT	_	4	ponct	_	_
+
+
+id :  70
+Toute les filles travaillent.
+# sent_id = 00000
+1	Toute	tout	A	ADJ	_	3	mod	_	_
+2	les	le	D	DET	_	3	det	_	_
+3	filles	fille	N	NC	s=c	4	suj	_	_
+4	travaillent	travailler	V	V	m=ind	_	_	_	_
+5	.	.	PONCT	PONCT	_	4	ponct	_	_
+
+
+id :  71
+Le papier fut réduit en tous petits morceaux.
+# sent_id = 00000
+1	Le	le	D	DET	_	2	det	_	_
+2	papier	papier	N	NC	s=c	4	suj	_	_
+3	fut	être	V	V	m=ind	4	aux.pass	_	_
+4	réduit	réduire	V	VPP	m=part|t=past	_	_	_	_
+5	en	en	P	P	_	4	mod	_	_
+6	tous	tout	D	DET	_	8	det	_	_
+7	petits	petit	A	ADJ	_	8	mod	_	_
+8	morceaux	morceau	N	NC	s=c	5	obj.p	_	_
+9	.	.	PONCT	PONCT	_	4	ponct	_	_
+
+
+id :  73
+Toute travaillent.
+# sent_id = 00000
+1	Toute	tout	A	ADJ	_	2	mod	_	_
+2	travaillent	travailler	V	V	m=ind	_	_	_	_
+3	.	.	PONCT	PONCT	_	2	ponct	_	_
+
+
+id :  75
+Tout autre solution n'est pas envisageable.
+# sent_id = 00000
+1	Tout	tout	ADV	ADV	_	2	mod	_	_
+2	autre	autre	A	ADJ	_	3	mod	_	_
+3	solution	solution	N	NC	s=c	5	suj	_	_
+4	n'	ne	ADV	ADV	_	5	mod	_	_
+5	est	être	V	V	m=ind	_	_	_	_
+6	pas	pas	ADV	ADV	_	7	mod	_	_
+7	envisageable	envisageable	A	ADJ	_	5	ats	_	_
+8	.	.	PONCT	PONCT	_	5	ponct	_	_
+
+
+id :  77
+Quelle est belle, la barbe de Victor !
+# sent_id = 00000
+1	Quelle	*Quelle	A	ADJWH	s=int	2	mod	_	_
+2	est	être	V	V	m=ind	_	_	_	_
+3	belle	beau	A	ADJ	_	2	ats	_	_
+4	,	,	PONCT	PONCT	_	2	ponct	_	_
+5	la	le	D	DET	_	6	det	_	_
+6	barbe	barbe	N	NC	s=c	2	suj	_	_
+7	de	de	P	P	_	6	dep	_	_
+8	Victor	Victor	N	NPP	s=p	7	obj.p	_	_
+9	!	!	PONCT	PONCT	_	2	ponct	_	_
+
+
+id :  78
+Ce sont leur chats.
+# sent_id = 00000
+1	Ce	ce	CL	CLS	s=suj	2	suj	_	_
+2	sont	être	V	V	m=ind	_	_	_	_
+3	leur	son	D	DET	_	4	det	_	_
+4	chats	chat	N	NC	s=c	2	ats	_	_
+5	.	.	PONCT	PONCT	_	2	ponct	_	_
+
+
+id :  80
+Les écritures de la Cour de Rome sont pleines d’abbréviations.
+# sent_id = 00000
+1	Les	le	D	DET	_	2	det	_	_
+2	écritures	écriture	N	NC	s=c	8	suj	_	_
+3	de	de	P	P	_	2	dep	_	_
+4	la	le	D	DET	_	5	det	_	_
+5	Cour	*Cour	N	NPP	s=p	3	obj.p	_	_
+6	de	de	P	P	_	5	dep	_	_
+7	Rome	Rome	N	NPP	s=p	6	obj.p	_	_
+8	sont	être	V	V	m=ind	_	_	_	_
+9	pleines	plein	A	ADJ	_	8	ats	_	_
+10	d'	de	P	P	_	9	de_obj	_	_
+11	abbréviations	*abbréviation	N	NC	s=c	10	obj.p	_	_
+12	.	.	PONCT	PONCT	_	8	ponct	_	_
+
+
+id :  81
+L’accompte est un premier versement à valoir sur l’achat.
+# sent_id = 00000
+1	L'	le	D	DET	_	2	det	_	_
+2	accompte	*accompte	N	NC	s=c	3	suj	_	_
+3	est	être	V	V	m=ind	_	_	_	_
+4	un	un	D	DET	_	6	det	_	_
+5	premier	premier	A	ADJ	_	6	mod	_	_
+6	versement	versement	N	NC	s=c	3	ats	_	_
+7	à	à	P	P	_	3	mod	_	_
+8	valoir	valoir	V	VINF	m=inf	7	obj.p	_	_
+9	sur	sur	P	P	_	8	mod	_	_
+10	l'	le	D	DET	_	11	det	_	_
+11	achat	achat	N	NC	s=c	9	obj.p	_	_
+12	.	.	PONCT	PONCT	_	3	ponct	_	_
+
+
+id :  85
+Pour cause ou sous prétexte d’éthymologie, il introduisit des lettres dans les mots.
+# sent_id = 00000
+1	Pour	pour	P	P	_	10	mod	_	_
+2	cause	cause	N	NC	s=c	1	obj.p	_	_
+3	ou	ou	C	CC	s=c	1	coord	_	_
+4	sous	sous	P	P	_	3	dep.coord	_	_
+5	prétexte	prétexte	N	NC	s=c	4	obj.p	_	_
+6	d'	de	P	P	_	5	dep	_	_
+7	éthymologie	*éthymologie	N	NC	s=c	6	obj.p	_	_
+8	,	,	PONCT	PONCT	_	10	ponct	_	_
+9	il	cln|ilimp	CL	CLS	s=suj	10	suj	_	_
+10	introduisit	introduire	V	V	m=ind	_	_	_	_
+11	des	un	D	DET	_	12	det	_	_
+12	lettres	lettre	N	NC	s=c	10	obj	_	_
+13	dans	dans	P	P	_	12	dep	_	_
+14	les	le	D	DET	_	15	det	_	_
+15	mots	mot|mots	N	NC	s=c	13	obj.p	_	_
+16	.	.	PONCT	PONCT	_	10	ponct	_	_
+
+
+id :  86
+Il était ému par une de ces sensations pour lesquelles il manque un language.
+# sent_id = 00000
+1	Il	cln|ilimp	CL	CLS	s=suj	3	suj	_	_
+2	était	être	V	V	m=ind	3	aux.pass	_	_
+3	ému	émouvoir	V	VPP	m=part|t=past	_	_	_	_
+4	par	par	P	P	_	3	p_obj.agt	_	_
+5	une	un	PRO	PRO	_	4	obj.p	_	_
+6	de	de	P	P	_	5	dep	_	_
+7	ces	ce	D	DET	_	8	det	_	_
+8	sensations	sensation	N	NC	s=c	6	obj.p	_	_
+9	pour	pour	P	P	_	12	mod	_	_
+10	lesquelles	lequel	PRO	PROREL	s=rel	9	obj.p	_	_
+11	il	cln|ilimp	CL	CLS	s=suj	12	suj	_	_
+12	manque	manquer	V	V	m=ind	8	mod.rel	_	_
+13	un	un	D	DET	_	14	det	_	_
+14	language	*language	N	NC	s=c	12	obj	_	_
+15	.	.	PONCT	PONCT	_	3	ponct	_	_
+
+
+id :  87
+Ma tante Fernande m’a légué dix milles euros.
+# sent_id = 00000
+1	Ma	son	D	DET	_	2	det	_	_
+2	tante	tante	N	NC	s=c	6	suj	_	_
+3	Fernande	Fernande	N	NPP	s=p	2	mod	_	_
+4	m'	cla|cld	CL	CLO	s=obj	6	a_obj	_	_
+5	a	avoir	V	V	m=ind	6	aux.tps	_	_
+6	légué	léguer	V	VPP	m=part|t=past	_	_	_	_
+7	dix	*dix	D	DET	_	8	det	_	_
+8	milles	mille	N	NC	s=c	6	obj	_	_
+9	euros	euro	N	NC	s=c	8	mod	_	_
+10	.	.	PONCT	PONCT	_	6	ponct	_	_
+
+
+id :  88
+Si j'aurais su, je ne serais pas venu.
+# sent_id = 00000
+1	Si	si	C	CS	s=s	10	mod	_	_
+2	j'	cln	CL	CLS	s=suj	4	suj	_	_
+3	aurais	avoir	V	V	m=ind	4	aux.tps	_	_
+4	su	savoir	V	VPP	m=part|t=past	1	obj.cpl	_	_
+5	,	,	PONCT	PONCT	_	10	ponct	_	_
+6	je	cln	CL	CLS	s=suj	10	suj	_	_
+7	ne	ne	ADV	ADV	_	10	mod	_	_
+8	serais	être	V	V	m=ind	10	aux.tps	_	_
+9	pas	pas	ADV	ADV	_	10	mod	_	_
+10	venu	venir	V	VPP	m=part|t=past	_	_	_	_
+11	.	.	PONCT	PONCT	_	10	ponct	_	_
+
+
+id :  89
+La pomme que j'ai mangé est fade.
+# sent_id = 00000
+1	La	le	D	DET	_	2	det	_	_
+2	pomme	pomme	N	NC	s=c	7	suj	_	_
+3	que	que	PRO	PROREL	s=rel	6	obj	_	_
+4	j'	cln	CL	CLS	s=suj	6	suj	_	_
+5	ai	avoir	V	V	m=ind	6	aux.tps	_	_
+6	mangé	manger	V	VPP	m=part|t=past	2	mod.rel	_	_
+7	est	être	V	V	m=ind	_	_	_	_
+8	fade	fade	A	ADJ	_	7	ats	_	_
+9	.	.	PONCT	PONCT	_	7	ponct	_	_
+
+
+id :  90
+Les disques durs que j'ai planté.
+# sent_id = 00000
+1	Les	le	D	DET	_	2	det	_	_
+2	disques	disque	N	NC	s=c	_	_	_	_
+3	durs	dur	A	ADJ	_	2	mod	_	_
+4	que	que	PRO	PROREL	s=rel	7	obj	_	_
+5	j'	cln	CL	CLS	s=suj	7	suj	_	_
+6	ai	avoir	V	V	m=ind	7	aux.tps	_	_
+7	planté	planter	V	VPP	m=part|t=past	2	mod.rel	_	_
+8	.	.	PONCT	PONCT	_	2	ponct	_	_
+
+
+id :  91
+La femme à qui j'ai parlée.
+# sent_id = 00000
+1	La	le	D	DET	_	2	det	_	_
+2	femme	femme	N	NC	s=c	_	_	_	_
+3	à	à	P	P	_	7	a_obj	_	_
+4	qui	qui	PRO	PROREL	s=rel	3	obj.p	_	_
+5	j'	cln	CL	CLS	s=suj	7	suj	_	_
+6	ai	avoir	V	V	m=ind	7	aux.tps	_	_
+7	parlée	parler	V	VPP	m=part|t=past	2	mod.rel	_	_
+8	.	.	PONCT	PONCT	_	2	ponct	_	_
+
+
+id :  92
+Les femmes auxquelles j'ai pensées.
+# sent_id = 00000
+1	Les	le	D	DET	_	2	det	_	_
+2	femmes	femme	N	NC	s=c	_	_	_	_
+3	auxquelles	*auxquelles	P+PRO	P+PRO	_	5	mod	_	_
+4	j'	cln	CL	CLS	s=suj	5	suj	_	_
+5	ai	avoir	V	V	m=ind	2	mod.rel	_	_
+6	pensées	pensée	N	NC	s=c	5	obj	_	_
+7	.	.	PONCT	PONCT	_	2	ponct	_	_
+
+
+id :  93
+Les femmes dont j'ai rêvées.
+# sent_id = 00000
+1	Les	le	D	DET	_	2	det	_	_
+2	femmes	femme	N	NC	s=c	_	_	_	_
+3	dont	dont	PRO	PROREL	s=rel	6	de_obj	_	_
+4	j'	cln	CL	CLS	s=suj	6	suj	_	_
+5	ai	avoir	V	V	m=ind	6	aux.tps	_	_
+6	rêvées	rêver	V	VPP	m=part|t=past	2	mod.rel	_	_
+7	.	.	PONCT	PONCT	_	2	ponct	_	_
+
+
+id :  95
+C'est la voiture à ma mère.
+# sent_id = 00000
+1	C'	ce	CL	CLS	s=suj	2	suj	_	_
+2	est	être	V	V	m=ind	_	_	_	_
+3	la	le	D	DET	_	4	det	_	_
+4	voiture	voiture	N	NC	s=c	2	ats	_	_
+5	à	à	P	P	_	4	dep	_	_
+6	ma	son	D	DET	_	7	det	_	_
+7	mère	mère	N	NC	s=c	5	obj.p	_	_
+8	.	.	PONCT	PONCT	_	2	ponct	_	_
+
+
+id :  96
+Arthur est un ami de moi.
+# sent_id = 00000
+1	Arthur	Arthur	N	NPP	s=p	2	suj	_	_
+2	est	être	V	V	m=ind	_	_	_	_
+3	un	un	D	DET	_	4	det	_	_
+4	ami	ami	N	NC	s=c	2	ats	_	_
+5	de	de	P	P	_	4	dep	_	_
+6	moi	lui	PRO	PRO	_	5	obj.p	_	_
+7	.	.	PONCT	PONCT	_	2	ponct	_	_
+
+
+id :  97
+Cette chienne appartient de mon père.
+# sent_id = 00000
+1	Cette	ce	D	DET	_	2	det	_	_
+2	chienne	chien|chienne	N	NC	s=c	3	suj	_	_
+3	appartient	appartenir	V	V	m=ind	_	_	_	_
+4	de	de	P	P	_	3	mod	_	_
+5	mon	son	D	DET	_	6	det	_	_
+6	père	père	N	NC	s=c	4	obj.p	_	_
+7	.	.	PONCT	PONCT	_	3	ponct	_	_
+
+
+id :  98
+Peut-t-il le faire ?
+# sent_id = 00000
+1	Peut	pouvoir	V	V	m=ind	_	_	_	_
+2	-t-il	cln|ilimp	CL	CLS	s=suj	1	suj	_	_
+3	le	cla	CL	CLO	s=obj	4	obj	_	_
+4	faire	faire	V	VINF	m=inf	1	obj	_	_
+5	?	?	PONCT	PONCT	_	1	ponct	_	_
+
+
+id :  99
+Comprend-t-il ?
+# sent_id = 00000
+1	Comprend	comprendre	V	V	m=ind	_	_	_	_
+2	-t-il	cln|ilimp	CL	CLS	s=suj	1	suj	_	_
+3	?	?	PONCT	PONCT	_	1	ponct	_	_
+
+
+id :  106
+Pouvons nous y aller ?
+# sent_id = 00000
+1	Pouvons	pouvoir	V	V	m=ind	_	_	_	_
+2	nous	cln	CL	CLS	s=suj	1	suj	_	_
+3	y	cld|cll	CL	CLO	s=obj	4	mod	_	_
+4	aller	aller	V	VINF	m=inf	1	obj	_	_
+5	?	?	PONCT	PONCT	_	1	ponct	_	_
+
+
+id :  109
+Quelques fois, il pète un plomb !
+# sent_id = 00000
+1	Quelques	quelque	D	DET	_	2	det	_	_
+2	fois	foi|fois	N	NC	s=c	5	mod	_	_
+3	,	,	PONCT	PONCT	_	5	ponct	_	_
+4	il	cln|ilimp	CL	CLS	s=suj	5	suj	_	_
+5	pète	péter	V	V	m=ind	_	_	_	_
+6	un	un	D	DET	_	7	det	_	_
+7	plomb	plomb	N	NC	s=c	5	obj	_	_
+8	!	!	PONCT	PONCT	_	5	ponct	_	_
+
+
+id :  110
+Je suis allé quelquefois au cinéma.
+# sent_id = 00000
+1	Je	cln	CL	CLS	s=suj	2	suj	_	_
+2	suis	être|suivre	V	V	m=ind	_	_	_	_
+3	allé	aller	V	VPP	m=part|t=past	2	mod	_	_
+4	quelquefois	quelquefois	ADV	ADV	_	5	mod	_	_
+5	au	*au	P+D	P+D	_	3	p_obj.o	_	_
+6	cinéma	cinéma	N	NC	s=c	5	obj.p	_	_
+7	.	.	PONCT	PONCT	_	2	ponct	_	_
+
+
+id :  115
+Il ne roule quand voiture.
+# sent_id = 00000
+1	Il	cln|ilimp	CL	CLS	s=suj	3	suj	_	_
+2	ne	ne	ADV	ADV	_	3	mod	_	_
+3	roule	rouler	V	V	m=ind	_	_	_	_
+4	quand	*quand	ADV	ADVWH	s=int	5	mod	_	_
+5	voiture	voiture	N	NC	s=c	3	mod	_	_
+6	.	.	PONCT	PONCT	_	3	ponct	_	_
+
+
+id :  116
+Il ne travaille quant été...
+# sent_id = 00000
+1	Il	cln|ilimp	CL	CLS	s=suj	3	suj	_	_
+2	ne	ne	ADV	ADV	_	3	mod	_	_
+3	travaille	travailler	V	V	m=ind	_	_	_	_
+4	quant	*quant	ADV	ADV	_	5	mod	_	_
+5	été	être	V	VPP	m=part|t=past	3	mod	_	_
+6	...	...	PONCT	PONCT	_	3	ponct	_	_
+
+
+id :  129
+Temps a-t-il parlé ?
+# sent_id = 00000
+1	Temps	temps	N	NC	s=c	4	suj	_	_
+2	a	avoir	V	V	m=ind	4	aux.tps	_	_
+3	-t-il	cln|ilimp	CL	CLS	s=suj	4	suj	_	_
+4	parlé	parler	V	VPP	m=part|t=past	_	_	_	_
+5	?	?	PONCT	PONCT	_	4	ponct	_	_
+
+
+id :  130
+Tant souviens-tu ?
+# sent_id = 00000
+1	Tant	tant	ADV	ADV	_	2	mod	_	_
+2	souviens	souvenir	V	V	m=ind	_	_	_	_
+3	-tu	cln	CL	CLS	s=suj	2	suj	_	_
+4	?	?	PONCT	PONCT	_	2	ponct	_	_
+
+
+id :  136
+Il me tends une part de tarte.
+# sent_id = 00000
+1	Il	cln|ilimp	CL	CLS	s=suj	3	suj	_	_
+2	me	cla|cld	CL	CLO	s=obj	3	a_obj	_	_
+3	tends	tendre	V	V	m=ind	_	_	_	_
+4	une	un	D	DET	_	5	det	_	_
+5	part	part	N	NC	s=c	3	obj	_	_
+6	de	de	P	P	_	5	dep	_	_
+7	tarte	tarte	N	NC	s=c	6	obj.p	_	_
+8	.	.	PONCT	PONCT	_	3	ponct	_	_
+
+
+id :  141
+Tu tend une feuille de chiendent entre tes deux pouces et tu souffles dans l’intervalle.
+# sent_id = 00000
+1	Tu	cln	CL	CLS	s=suj	2	suj	_	_
+2	tend	tendre	V	V	m=ind	_	_	_	_
+3	une	un	D	DET	_	4	det	_	_
+4	feuille	feuille	N	NC	s=c	2	obj	_	_
+5	de	de	P	P	_	4	dep	_	_
+6	chiendent	chiendent	N	NC	s=c	5	obj.p	_	_
+7	entre	entre	P	P	_	6	dep	_	_
+8	tes	son	D	DET	_	10	det	_	_
+9	deux	*deux	A	ADJ	_	10	mod	_	_
+10	pouces	pouce	N	NC	s=c	7	obj.p	_	_
+11	et	et	C	CC	s=c	2	coord	_	_
+12	tu	cln	CL	CLS	s=suj	13	suj	_	_
+13	souffles	souffler	V	V	m=ind	11	dep.coord	_	_
+14	dans	dans	P	P	_	13	mod	_	_
+15	l'	le	D	DET	_	16	det	_	_
+16	intervalle	intervalle	N	NC	s=c	14	obj.p	_	_
+17	.	.	PONCT	PONCT	_	2	ponct	_	_
+
+
+id :  142
+Faire rapporter les bails précédents.
+# sent_id = 00000
+1	Faire	faire	V	VINF	m=inf	2	aux.caus	_	_
+2	rapporter	rapporter	V	VINF	m=inf	_	_	_	_
+3	les	le	D	DET	_	4	det	_	_
+4	bails	*bail	N	NC	s=c	2	obj	_	_
+5	précédents	précédent	A	ADJ	_	4	mod	_	_
+6	.	.	PONCT	PONCT	_	2	ponct	_	_
+
+
+id :  143
+Ce naturaliste a des corails très rares.
+# sent_id = 00000
+1	Ce	ce	D	DET	_	2	det	_	_
+2	naturaliste	naturaliste	N	NC	s=c	3	suj	_	_
+3	a	avoir	V	V	m=ind	_	_	_	_
+4	des	un	D	DET	_	5	det	_	_
+5	corails	*corail	N	NC	s=c	3	obj	_	_
+6	très	très	ADV	ADV	_	7	mod	_	_
+7	rares	rare	A	ADJ	_	5	mod	_	_
+8	.	.	PONCT	PONCT	_	3	ponct	_	_
+
+
+id :  144
+Le tout est éclairé par le brin de lumière naturelle qui passe à travers les soupirails.
+# sent_id = 00000
+1	Le	le	D	DET	_	2	det	_	_
+2	tout	tout	N	NC	s=c	4	suj	_	_
+3	est	être	V	V	m=ind	4	aux.pass	_	_
+4	éclairé	éclairer	V	VPP	m=part|t=past	_	_	_	_
+5	par	par	P	P	_	4	p_obj.agt	_	_
+6	le	le	D	DET	_	7	det	_	_
+7	brin	brin	N	NC	s=c	5	obj.p	_	_
+8	de	de	P	P	_	7	dep	_	_
+9	lumière	lumière	N	NC	s=c	8	obj.p	_	_
+10	naturelle	naturel	A	ADJ	_	9	mod	_	_
+11	qui	qui	PRO	PROREL	s=rel	12	suj	_	_
+12	passe	passer	V	V	m=ind	7	mod.rel	_	_
+13	à_travers	à_travers	P	P	_	12	p_obj.o	_	_
+14	les	le	D	DET	_	15	det	_	_
+15	soupirails	*soupirail	N	NC	s=c	13	obj.p	_	_
+16	.	.	PONCT	PONCT	_	4	ponct	_	_
+
+
+id :  145
+Derrière la herse était une porte épaisse à deux vantails.
+# sent_id = 00000
+1	Derrière	derrière	P	P	_	4	p_obj.o	_	_
+2	la	le	D	DET	_	3	det	_	_
+3	herse	herse	N	NC	s=c	1	obj.p	_	_
+4	était	être	V	V	m=ind	_	_	_	_
+5	une	un	D	DET	_	6	det	_	_
+6	porte	porte	N	NC	s=c	4	suj	_	_
+7	épaisse	épais	A	ADJ	_	6	mod	_	_
+8	à	à	P	P	_	7	mod	_	_
+9	deux	*deux	D	DET	_	10	det	_	_
+10	vantails	*vantail	N	NC	s=c	8	obj.p	_	_
+11	.	.	PONCT	PONCT	_	4	ponct	_	_
+
+
+id :  146
+Le jour ne pénétrait qu’à travers les vitrails coloriés.
+# sent_id = 00000
+1	Le	le	D	DET	_	2	det	_	_
+2	jour	jour	N	NC	s=c	4	suj	_	_
+3	ne	ne	ADV	ADV	_	4	mod	_	_
+4	pénétrait	pénétrer	V	V	m=ind	_	_	_	_
+5	qu'	que	ADV	ADV	_	6	mod	_	_
+6	à_travers	à_travers	P	P	_	4	p_obj.o	_	_
+7	les	le	D	DET	_	8	det	_	_
+8	vitrails	*vitrail	N	NC	s=c	6	obj.p	_	_
+9	coloriés	colorier	V	VPP	m=part|t=past	8	mod	_	_
+10	.	.	PONCT	PONCT	_	4	ponct	_	_
+
+
+id :  147
+Vôtre maison est belle.
+# sent_id = 00000
+1	Vôtre	vôtre	A	ADJ	_	2	mod	_	_
+2	maison	maison	N	NC	s=c	3	suj	_	_
+3	est	être	V	V	m=ind	_	_	_	_
+4	belle	beau	A	ADJ	_	3	ats	_	_
+5	.	.	PONCT	PONCT	_	3	ponct	_	_
+
+
+id :  148
+Tu veux voir nôtre chien ?
+# sent_id = 00000
+1	Tu	cln	CL	CLS	s=suj	2	suj	_	_
+2	veux	vouloir	V	V	m=ind	_	_	_	_
+3	voir	voir	V	VINF	m=inf	2	obj	_	_
+4	nôtre	*nôtre	PRO	PRO	_	3	obj	_	_
+5	chien	chien	N	NC	s=c	4	mod	_	_
+6	?	?	PONCT	PONCT	_	2	ponct	_	_
+
+
+id :  151
+C'est toi qui est le plus lourd.
+# sent_id = 00000
+1	C'	ce	CL	CLS	s=suj	2	suj	_	_
+2	est	être	V	V	m=ind	_	_	_	_
+3	toi	lui	PRO	PRO	_	2	ats	_	_
+4	qui	qui	PRO	PROREL	s=rel	5	suj	_	_
+5	est	être	V	V	m=ind	2	mod.cleft	_	_
+6	le	le	D	DET	_	8	det	_	_
+7	plus	plus	ADV	ADV	_	8	mod	_	_
+8	lourd	lourd	A	ADJ	_	5	ats	_	_
+9	.	.	PONCT	PONCT	_	2	ponct	_	_
+
+
+id :  152
+C'est moi qui a gagné.
+# sent_id = 00000
+1	C'	ce	CL	CLS	s=suj	2	suj	_	_
+2	est	être	V	V	m=ind	_	_	_	_
+3	moi	lui	PRO	PRO	_	2	ats	_	_
+4	qui	qui	PRO	PROREL	s=rel	6	suj	_	_
+5	a	avoir	V	V	m=ind	6	aux.tps	_	_
+6	gagné	gagner	V	VPP	m=part|t=past	2	mod.cleft	_	_
+7	.	.	PONCT	PONCT	_	2	ponct	_	_
+
+
+id :  153
+C'est toi qui est la plus belle.
+# sent_id = 00000
+1	C'	ce	CL	CLS	s=suj	2	suj	_	_
+2	est	être	V	V	m=ind	_	_	_	_
+3	toi	lui	PRO	PRO	_	2	ats	_	_
+4	qui	qui	PRO	PROREL	s=rel	5	suj	_	_
+5	est	être	V	V	m=ind	2	mod.cleft	_	_
+6	la	le	D	DET	_	8	det	_	_
+7	plus	plus	ADV	ADV	_	8	mod	_	_
+8	belle	beau	A	ADJ	_	5	ats	_	_
+9	.	.	PONCT	PONCT	_	2	ponct	_	_
+
+
+id :  154
+C'est elle qui es la plus folle.
+# sent_id = 00000
+1	C'	ce	CL	CLS	s=suj	2	suj	_	_
+2	est	être	V	V	m=ind	_	_	_	_
+3	elle	lui	PRO	PRO	_	2	ats	_	_
+4	qui	qui	PRO	PROREL	s=rel	5	suj	_	_
+5	es	être	V	V	m=ind	2	mod.cleft	_	_
+6	la	le	D	DET	_	8	det	_	_
+7	plus	plus	ADV	ADV	_	8	mod	_	_
+8	folle	fou	A	ADJ	_	5	ats	_	_
+9	.	.	PONCT	PONCT	_	2	ponct	_	_
+
+
+id :  155
+C'est moi qui est le plus intelligent.
+# sent_id = 00000
+1	C'	ce	CL	CLS	s=suj	2	suj	_	_
+2	est	être	V	V	m=ind	_	_	_	_
+3	moi	lui	PRO	PRO	_	2	ats	_	_
+4	qui	qui	PRO	PROREL	s=rel	5	suj	_	_
+5	est	être	V	V	m=ind	2	mod.cleft	_	_
+6	le	le	D	DET	_	8	det	_	_
+7	plus	plus	ADV	ADV	_	8	mod	_	_
+8	intelligent	intelligent	A	ADJ	_	5	ats	_	_
+9	.	.	PONCT	PONCT	_	2	ponct	_	_
+
+
+id :  156
+C'est moi qui va.
+# sent_id = 00000
+1	C'	ce	CL	CLS	s=suj	2	suj	_	_
+2	est	être	V	V	m=ind	_	_	_	_
+3	moi	lui	PRO	PRO	_	2	ats	_	_
+4	qui	qui	PRO	PROREL	s=rel	5	suj	_	_
+5	va	aller	V	V	m=ind	2	mod.cleft	_	_
+6	.	.	PONCT	PONCT	_	2	ponct	_	_
+
+
+id :  157
+Le couple français a en moyenne 1,7 enfants.
+# sent_id = 00000
+1	Le	le	D	DET	_	2	det	_	_
+2	couple	couple	N	NC	s=c	4	suj	_	_
+3	français	français	A	ADJ	_	2	mod	_	_
+4	a	avoir	V	V	m=ind	_	_	_	_
+5	en_moyenne	en_moyenne	ADV	ADV	_	7	mod	_	_
+6	1,7	*1,7	D	DET	_	7	det	_	_
+7	enfants	enfant	N	NC	s=c	4	obj	_	_
+8	.	.	PONCT	PONCT	_	4	ponct	_	_
+
+
+id :  158
+Le premier prix est de deux million d'euros.
+# sent_id = 00000
+1	Le	le	D	DET	_	3	det	_	_
+2	premier	premier	A	ADJ	_	3	mod	_	_
+3	prix	prix	N	NC	s=c	4	suj	_	_
+4	est	être	V	V	m=ind	_	_	_	_
+5	de	de	P	P	_	4	de_obj	_	_
+6	deux	*deux	D	DET	_	7	det	_	_
+7	million	million	N	NC	s=c	5	obj.p	_	_
+8	d'	de	P	P	_	7	dep	_	_
+9	euros	euro	N	NC	s=c	8	obj.p	_	_
+10	.	.	PONCT	PONCT	_	4	ponct	_	_
+
+
+id :  159
+Il est plus tôt paresseux.
+# sent_id = 00000
+1	Il	cln|ilimp	CL	CLS	s=suj	2	suj	_	_
+2	est	être	V	V	m=ind	_	_	_	_
+3	plus	plus	ADV	ADV	_	4	mod	_	_
+4	tôt	tôt	ADV	ADV	_	2	mod	_	_
+5	paresseux	paresseux	A	ADJ	_	2	ats	_	_
+6	.	.	PONCT	PONCT	_	2	ponct	_	_
+
+
+id :  160
+Il est parti plutôt que prévu.
+# sent_id = 00000
+1	Il	cln|ilimp	CL	CLS	s=suj	3	suj	_	_
+2	est	être	V	V	m=ind	3	aux.tps	_	_
+3	parti	partir	V	VPP	m=part|t=past	_	_	_	_
+4	plutôt_que	plutôt_que	P	P	_	3	mod	_	_
+5	prévu	prévoir	V	VPP	m=part|t=past	4	obj.p	_	_
+6	.	.	PONCT	PONCT	_	3	ponct	_	_
+
+
+id :  161
+Ils étaient contraints de dormir tête bêche.
+# sent_id = 00000
+1	Ils	cln	CL	CLS	s=suj	2	suj	_	_
+2	étaient	étayer|être	V	V	m=ind	_	_	_	_
+3	contraints	contraindre	V	VPP	m=part|t=past	2	mod	_	_
+4	de	de	P	P	_	3	de_obj	_	_
+5	dormir	dormir	V	VINF	m=inf	4	obj.p	_	_
+6	tête	tête	N	NC	s=c	5	mod	_	_
+7	bêche	bêche	N	NC	s=c	6	mod	_	_
+8	.	.	PONCT	PONCT	_	2	ponct	_	_
+
+
+id :  164
+J'aimerais savoir combien a-t-il gagné au poker.
+# sent_id = 00000
+1	J'	cln	CL	CLS	s=suj	2	suj	_	_
+2	aimerais	aimer	V	V	m=ind	_	_	_	_
+3	savoir	savoir	V	VINF	m=inf	2	obj	_	_
+4	combien	*combien	ADV	ADVWH	s=int	7	mod	_	_
+5	a	avoir	V	V	m=ind	7	aux.tps	_	_
+6	-t-il	cln|ilimp	CL	CLS	s=suj	7	suj	_	_
+7	gagné	gagner	V	VPP	m=part|t=past	3	obj	_	_
+8	au	*au	P+D	P+D	_	7	mod	_	_
+9	poker	poker	N	NC	s=c	8	obj.p	_	_
+10	.	.	PONCT	PONCT	_	2	ponct	_	_
+
+
+id :  165
+Ses discours font toujours appel à la compassion et à la non violence.
+# sent_id = 00000
+1	Ses	son	D	DET	_	2	det	_	_
+2	discours	discours	N	NC	s=c	3	suj	_	_
+3	font	faire	V	V	m=ind	_	_	_	_
+4	toujours	toujours	ADV	ADV	_	5	mod	_	_
+5	appel	*appel	A	ADJ	_	3	ato	_	_
+6	à	à	P	P	_	5	mod	_	_
+7	la	le	D	DET	_	8	det	_	_
+8	compassion	compassion	N	NC	s=c	6	obj.p	_	_
+9	et	et	C	CC	s=c	6	coord	_	_
+10	à	à	P	P	_	9	dep.coord	_	_
+11	la	le	D	DET	_	12	det	_	_
+12	non	non	N	NC	s=c	10	obj.p	_	_
+13	violence	violence	N	NC	s=c	12	mod	_	_
+14	.	.	PONCT	PONCT	_	3	ponct	_	_
+
+
+id :  167
+Il laissa sa phrase non-achevée.
+# sent_id = 00000
+1	Il	cln|ilimp	CL	CLS	s=suj	2	suj	_	_
+2	laissa	laisser	V	V	m=ind	_	_	_	_
+3	sa	son	D	DET	_	4	det	_	_
+4	phrase	phrase	N	NC	s=c	2	obj	_	_
+5	non-	non-	PREF	PREF	_	6	mod	_	_
+6	achevée	achever	V	VPP	m=part|t=past	2	ato	_	_
+7	.	.	PONCT	PONCT	_	2	ponct	_	_
+
+
+id :  170
+Quoique je dise, personne ne veut m'écouter.
+# sent_id = 00000
+1	Quoique	quoique	C	CS	s=s	7	mod	_	_
+2	je	cln	CL	CLS	s=suj	3	suj	_	_
+3	dise	dire	V	VS	m=subj	1	obj.cpl	_	_
+4	,	,	PONCT	PONCT	_	7	ponct	_	_
+5	personne	personne	PRO	PRO	_	7	suj	_	_
+6	ne	ne	ADV	ADV	_	7	mod	_	_
+7	veut	vouloir	V	V	m=ind	_	_	_	_
+8	m'	cla|cld	CL	CLO	s=obj	9	obj	_	_
+9	écouter	écouter	V	VINF	m=inf	7	obj	_	_
+10	.	.	PONCT	PONCT	_	7	ponct	_	_
+
+
+id :  172
+As-tu vu çà ?
+# sent_id = 00000
+1	As	avoir	V	V	m=ind	3	aux.tps	_	_
+2	-tu	cln	CL	CLS	s=suj	3	suj	_	_
+3	vu	voir	V	VPP	m=part|t=past	_	_	_	_
+4	çà	*çà	ADV	ADV	_	3	mod	_	_
+5	?	?	PONCT	PONCT	_	3	ponct	_	_
+
+
+id :  174
+On voyait ça et là des tableaux d’une petite dimension.
+# sent_id = 00000
+1	On	cln	CL	CLS	s=suj	2	suj	_	_
+2	voyait	voir	V	V	m=ind	_	_	_	_
+3	ça_et_là	*ça_et_là	ADV	ADV	_	2	mod	_	_
+4	des	un	D	DET	_	5	det	_	_
+5	tableaux	tableau	N	NC	s=c	2	obj	_	_
+6	d'	de	P	P	_	5	dep	_	_
+7	une	un	D	DET	_	9	det	_	_
+8	petite	petit	A	ADJ	_	9	mod	_	_
+9	dimension	dimension	N	NC	s=c	6	obj.p	_	_
+10	.	.	PONCT	PONCT	_	2	ponct	_	_
+
+
+id :  176
+Ces investissements ne m'ont pas coûté très cher .
+# sent_id = 00000
+1	Ces	ce	D	DET	_	2	det	_	_
+2	investissements	investissement	N	NC	s=c	7	suj	_	_
+3	ne	ne	ADV	ADV	_	7	mod	_	_
+4	m'	cla|cld	CL	CLO	s=obj	7	obj	_	_
+5	ont	avoir	V	V	m=ind	7	aux.tps	_	_
+6	pas	pas	ADV	ADV	_	7	mod	_	_
+7	coûté	coûter	V	VPP	m=part|t=past	_	_	_	_
+8	très	très	ADV	ADV	_	9	mod	_	_
+9	cher	cher	A	ADJ	_	7	mod	_	_
+10	.	.	PONCT	PONCT	_	7	ponct	_	_
+
+
+id :  181
+Les trois plus grandes villes de France sont: Paris, Marseille et Lyon.
+# sent_id = 00000
+1	Les	le	D	DET	_	5	det	_	_
+2	trois	*trois	A	ADJ	_	5	mod	_	_
+3	plus	plus	ADV	ADV	_	4	mod	_	_
+4	grandes	grand	A	ADJ	_	5	mod	_	_
+5	villes	ville	N	NC	s=c	8	suj	_	_
+6	de	de	P	P	_	5	dep	_	_
+7	France	France	N	NPP	s=p	6	obj.p	_	_
+8	sont	être	V	V	m=ind	_	_	_	_
+9	:	:	PONCT	PONCT	_	10	ponct	_	_
+10	Paris	Paris	N	NPP	s=p	8	ats	_	_
+11	,	,	PONCT	PONCT	_	10	coord	_	_
+12	Marseille	Marseille	N	NPP	s=p	11	dep.coord	_	_
+13	et	et	C	CC	s=c	10	coord	_	_
+14	Lyon	Lyon	N	NPP	s=p	13	dep.coord	_	_
+15	.	.	PONCT	PONCT	_	8	ponct	_	_
+
+
+id :  183
+Que cette fleur est belle!
+# sent_id = 00000
+1	Que	que	C	CS	s=s	_	_	_	_
+2	cette	ce	D	DET	_	3	det	_	_
+3	fleur	fleur	N	NC	s=c	4	suj	_	_
+4	est	être	V	V	m=ind	1	obj.cpl	_	_
+5	belle	beau	A	ADJ	_	4	ats	_	_
+6	!	!	PONCT	PONCT	_	1	ponct	_	_
+
+
+id :  185
+Allez-vous dimanche prochain à la piscine?
+# sent_id = 00000
+1	Allez	aller	V	V	m=ind	_	_	_	_
+2	-vous	cln	CL	CLS	s=suj	1	suj	_	_
+3	dimanche	dimanche	N	NC	s=c	1	mod	_	_
+4	prochain	prochain	A	ADJ	_	3	mod	_	_
+5	à	à	P	P	_	4	mod	_	_
+6	la	le	D	DET	_	7	det	_	_
+7	piscine	piscine	N	NC	s=c	5	obj.p	_	_
+8	?	?	PONCT	PONCT	_	1	ponct	_	_
+
+
+id :  186
+Comment ça va ?Ça va.
+# sent_id = 00000
+1	Comment	*Comment	ADV	ADVWH	s=int	3	mod	_	_
+2	ça	cela	PRO	PRO	_	3	suj	_	_
+3	va	aller	V	V	m=ind	_	_	_	_
+4	?	?	PONCT	PONCT	_	3	ponct	_	_
+5	Ça	cela	PRO	PRO	_	6	suj	_	_
+6	va	aller	V	V	m=ind	3	mod	_	_
+7	.	.	PONCT	PONCT	_	3	ponct	_	_
+
+
+id :  187
+Cette mesure est révisée(sur décision du Conseil).
+# sent_id = 00000
+1	Cette	ce	D	DET	_	2	det	_	_
+2	mesure	mesure	N	NC	s=c	4	suj	_	_
+3	est	être	V	V	m=ind	4	aux.pass	_	_
+4	révisée	réviser	V	VPP	m=part|t=past	_	_	_	_
+5	(	(	PONCT	PONCT	_	4	ponct	_	_
+6	sur	sur	P	P	_	4	mod	_	_
+7	décision	décision	N	NC	s=c	6	obj.p	_	_
+8	du	*du	P+D	P+D	_	7	dep	_	_
+9	Conseil	*Conseil	N	NPP	s=p	8	obj.p	_	_
+10	)	)	PONCT	PONCT	_	4	ponct	_	_
+11	.	.	PONCT	PONCT	_	4	ponct	_	_
+
+
+id :  190
+Il n'a pu se présenter à son entretien (ce n'était d'ailleurs pas la première fois)et n'a même pas pris la peine de s'excuser.
+# sent_id = 00000
+1	Il	cln|ilimp	CL	CLS	s=suj	4	suj	_	_
+2	n'	ne	ADV	ADV	_	4	mod	_	_
+3	a	avoir	V	V	m=ind	4	aux.tps	_	_
+4	pu	pouvoir	V	VPP	m=part|t=past	_	_	_	_
+5	se	se	CL	CLR	s=refl	6	obj	_	_
+6	présenter	présenter	V	VINF	m=inf	4	obj	_	_
+7	à	à	P	P	_	6	a_obj	_	_
+8	son	son	D	DET	_	9	det	_	_
+9	entretien	entretien	N	NC	s=c	7	obj.p	_	_
+10	(	(	PONCT	PONCT	_	6	ponct	_	_
+11	ce	ce	CL	CLS	s=suj	13	suj	_	_
+12	n'	ne	ADV	ADV	_	13	mod	_	_
+13	était	être	V	V	m=ind	6	mod.inc	_	_
+14	d'_ailleurs	*d'_ailleurs	ADV	ADV	_	13	mod	_	_
+15	pas	pas	ADV	ADV	_	18	mod	_	_
+16	la	le	D	DET	_	18	det	_	_
+17	première	premier	A	ADJ	_	18	mod	_	_
+18	fois	foi|fois	N	NC	s=c	13	ats	_	_
+19	)	)	PONCT	PONCT	_	6	ponct	_	_
+20	et	et	C	CC	s=c	4	coord	_	_
+21	n'	ne	ADV	ADV	_	25	mod	_	_
+22	a	avoir	V	V	m=ind	25	aux.tps	_	_
+23	même	même	ADV	ADV	_	25	mod	_	_
+24	pas	pas	ADV	ADV	_	25	mod	_	_
+25	pris	prendre	V	VPP	m=part|t=past	20	dep.coord	_	_
+26	la	le	D	DET	_	27	det	_	_
+27	peine	peine	N	NC	s=c	25	obj	_	_
+28	de	de	P	P	_	27	dep	_	_
+29	s'	se	CL	CLR	s=refl	30	aff	_	_
+30	excuser	excuser	V	VINF	m=inf	28	obj.p	_	_
+31	.	.	PONCT	PONCT	_	4	ponct	_	_
+
+
+id :  195
+Cette table est vraiment« maganée », comme on dit au Québec.
+# sent_id = 00000
+1	Cette	ce	D	DET	_	2	det	_	_
+2	table	table	N	NC	s=c	3	suj	_	_
+3	est	être	V	V	m=ind	_	_	_	_
+4	vraiment	vraiment	ADV	ADV	_	3	mod	_	_
+5	"	"	PONCT	PONCT	_	6	ponct	_	_
+6	maganée	*magané	A	ADJ	_	3	ats	_	_
+7	"	"	PONCT	PONCT	_	6	ponct	_	_
+8	,	,	PONCT	PONCT	_	6	ponct	_	_
+9	comme	comme	C	CS	s=s	6	mod	_	_
+10	on	cln	CL	CLS	s=suj	11	suj	_	_
+11	dit	dire	V	V	m=ind	9	obj.cpl	_	_
+12	au	*au	P+D	P+D	_	11	a_obj	_	_
+13	Québec	Québec	N	NPP	s=p	12	obj.p	_	_
+14	.	.	PONCT	PONCT	_	3	ponct	_	_
+
+
+id :  197
+C'est l'abréviation de « cela».
+# sent_id = 00000
+1	C'	ce	CL	CLS	s=suj	2	suj	_	_
+2	est	être	V	V	m=ind	_	_	_	_
+3	l'	le	D	DET	_	4	det	_	_
+4	abréviation	abréviation	N	NC	s=c	2	ats	_	_
+5	de	de	P	P	_	4	dep	_	_
+6	"	"	PONCT	PONCT	_	7	ponct	_	_
+7	cela	cela	PRO	PRO	_	5	obj.p	_	_
+8	"	"	PONCT	PONCT	_	7	ponct	_	_
+9	.	.	PONCT	PONCT	_	2	ponct	_	_
+
+
+id :  200
+L' église du village avec sa chaire en bois sculpté.
+# sent_id = 00000
+1	L'	le	D	DET	_	2	det	_	_
+2	église	église	N	NC	s=c	_	_	_	_
+3	du	*du	P+D	P+D	_	2	dep	_	_
+4	village	village	N	NC	s=c	3	obj.p	_	_
+5	avec	avec	P	P	_	4	dep	_	_
+6	sa	son	D	DET	_	7	det	_	_
+7	chaire	chaire	N	NC	s=c	5	obj.p	_	_
+8	en	en	P	P	_	7	dep	_	_
+9	bois	bois	N	NC	s=c	8	obj.p	_	_
+10	sculpté	sculpter	V	VPP	m=part|t=past	9	mod	_	_
+11	.	.	PONCT	PONCT	_	2	ponct	_	_
+
+
+id :  201
+Pourquoi est -elle partie ?
+# sent_id = 00000
+1	Pourquoi	*Pourquoi	ADV	ADVWH	s=int	2	mod	_	_
+2	est	être	V	V	m=ind	_	_	_	_
+3	-elle	cln	CL	CLS	s=suj	2	suj	_	_
+4	partie	partie	N	NC	s=c	2	ats	_	_
+5	?	?	PONCT	PONCT	_	2	ponct	_	_
+
+
