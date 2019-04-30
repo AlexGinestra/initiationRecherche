@@ -287,7 +287,7 @@ public class ParserXML {
 		parser.addPurifier(new SpecialCaracterPurifier(specialCharacters));
 		
 		
-		for(GlobalRejectionFilter f : parser.globalRejectors) {
+		/*for(GlobalRejectionFilter f : parser.globalRejectors) {
 			((FiltersStatistics) f).activateOutput();
 		}
 		for(LocalRejectionFilter f : parser.localRejectors) {
@@ -295,7 +295,7 @@ public class ParserXML {
 		}
 		for(PurifierFilter f : parser.purifiers) {
 			((FiltersStatistics) f).activateOutput();
-		}
+		}*/
 		
 		//start the treatment
 		parser.parser();

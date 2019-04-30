@@ -41,23 +41,38 @@ public class SentencePurifier extends FiltersStatistics implements PurifierFilte
 		
 		charTreated += before.length(); //data for stat
 		
-		int startIndex = 0, firstPoint = 0, lastPointB = 0, lastPointA = 0;
+		int firstPoint = 0, lastPointB = before.length()-1, lastPointA = after.length()-1;
 		
 		//trouve le debut de la phrase
-		for(startIndex = 0 ; startIndex < before.length() && startIndex < after.length() ; startIndex++) {
-			
-			if(before.charAt(startIndex) != after.charAt(startIndex)) {
-				break;
-			}
+		for(int startIndex = 0 ; startIndex < before.length() && startIndex < after.length() && before.charAt(startIndex) == after.charAt(startIndex); startIndex++) {
 			if(isSentenceSeparator(before.charAt(startIndex))){
 				firstPoint = startIndex;
 			}
 		}
 		
-		//aller jusqu a la fin de la phrase 
-		for(lastPointB = startIndex ; lastPointB < before.length() && !isSentenceSeparator(before.charAt(lastPointB)); lastPointB++); 
-		for(lastPointA = startIndex ; lastPointA < after.length() && !isSentenceSeparator(after.charAt(lastPointA)); lastPointA++); 
 
+		int index = after.length()-1;
+		//aller jusqu a la fin de la phrase 
+		for(int i = before.length()-1 ; i > firstPoint && before.charAt(i) == after.charAt(index); i--) {
+			index = after.length()+i-before.length();
+			if(index < firstPoint) {
+				break;
+			}
+			if(isSentenceSeparator(before.charAt(i))) {
+				lastPointB = i;
+			}
+		}
+		index = before.length()-1;
+		for(int i = after.length()-1 ; i > firstPoint && after.charAt(i) == before.charAt(index); i--) {
+			index = before.length()+i-after.length();
+			if(index < firstPoint) {
+				break;
+			}
+			if(isSentenceSeparator(after.charAt(i))) {
+				lastPointA = i;
+			}
+		}
+		
 		charDeleted += before.length()-(lastPointB - firstPoint); //data for stat
 		
 		if(outputOn) {
