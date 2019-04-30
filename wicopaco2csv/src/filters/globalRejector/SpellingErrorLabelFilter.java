@@ -23,6 +23,8 @@ public class SpellingErrorLabelFilter extends FiltersStatistics implements Globa
 	
 	private int[] errorLabels;
 	private int pointeurBorneInf;
+	private int sentenceTreated;
+	private int sentenceRejected;
 	
 	public SpellingErrorLabelFilter() {
 		if(!loadLabels()) {
@@ -30,7 +32,8 @@ public class SpellingErrorLabelFilter extends FiltersStatistics implements Globa
 			errorLabels = null;
 		}
 		pointeurBorneInf = 0;
-		
+		sentenceTreated = 0;
+		sentenceRejected = 0;
 	}
 
 	
@@ -81,7 +84,7 @@ public class SpellingErrorLabelFilter extends FiltersStatistics implements Globa
 		for(int i = 0 ; i < listLabel.size() ; i++) {
 			errorLabels[i] = listLabel.get(i);
 		}		
-		
+				
 		return true;
 	}
 	
@@ -108,6 +111,7 @@ public class SpellingErrorLabelFilter extends FiltersStatistics implements Globa
 			Node n = nodeList.get(k);
 
 			if(n.getNodeName().equals("modif")) {
+				sentenceTreated++;
 				NamedNodeMap attr = n.getAttributes();
 				int id = Integer.parseInt(attr.getNamedItem("id").getTextContent());
 				
@@ -169,6 +173,7 @@ public class SpellingErrorLabelFilter extends FiltersStatistics implements Globa
 		
 		//remove the node that have to be in the list
 		for(int i = nodeWillBeRemoved.size()-1 ; i >= 0 ; i--) {
+			sentenceRejected++;
 			nodeList.remove((int)nodeWillBeRemoved.get(i));
 		}
 	}
@@ -199,8 +204,7 @@ public class SpellingErrorLabelFilter extends FiltersStatistics implements Globa
 
 	@Override
 	public void printStatistics() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("The SpellingErrorLabelFilter treated " + sentenceTreated + " sentences, and rejected " + sentenceRejected +" sentences.");				
 	}
 
 }
