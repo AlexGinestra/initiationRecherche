@@ -145,7 +145,7 @@ Parmi les premiers travaux, qui remontent aux ann\'{e}es 50 pendant la guerre fr
 Un correcteur automatique de la langue est un exemple d'outil utilisant des domaines du traitement automatique des langues. Il utilise des disciplines de recherche vari\'{e}es telles que l'analyse syntaxique, la correction orthographique et d'autres plus sp\'{e}cifiques telles que la d\'{e}limitation de phrase ou la morphologie. Un outil tel que celui-ci est un monstre de conception et de d\'{e}veloppement, et les meilleurs correcteurs automatiques connus \`{a} ce jour ont \'{e}t\'{e} d\'{e}velopp\'{e}s par des entreprises internationales comme Microsoft, Google ou encore Apple. 
 \newline
 
-Contrairement aux cas d\'{e}crits pr\'{e}c\'{e}demment, notre sujet consiste \`{a} cr\'{e}er un syst\`{e}me permettant la correction automatique de phrases françaises en s'appuyant sur le raisonnement \`{a} partir de cas (R\`{a}PC). Pour r\'{e}pondre \`{a} cette probl\'{e}matique, nous allons tout d'abord introduire le raisonnement \`{a} partir de cas et expliquer comment il va nous permettre de corriger des phrases. Puis nous aborderons une partie plus pratique o\`{u} nous d\'{e}taillerons les diff\'{e}rentes \'{e}tapes permettant de r\'{e}soudre notre probl\'{e}matique. Nous parlerons ensuite des r\'{e}sultats obtenus suite \`{a} nos d\'{e}veloppements et finirons par introduire les suites possibles de notre projet.
+Contrairement aux cas d\'{e}crits pr\'{e}c\'{e}demment, notre sujet consiste \`{a} cr\'{e}er un syst\`{e}me permettant la correction automatique de phrases fran\c{c}aises en s'appuyant sur le raisonnement \`{a} partir de cas (R\`{a}PC). Pour r\'{e}pondre \`{a} cette probl\'{e}matique, nous allons tout d'abord introduire le raisonnement \`{a} partir de cas et expliquer comment il va nous permettre de corriger des phrases. Puis nous aborderons une partie plus pratique o\`{u} nous d\'{e}taillerons les diff\'{e}rentes \'{e}tapes permettant de r\'{e}soudre notre probl\'{e}matique. Nous parlerons ensuite des r\'{e}sultats obtenus suite \`{a} nos d\'{e}veloppements et finirons par introduire les suites possibles de notre projet.
 \newline
 
 \cleardoublepage
@@ -188,9 +188,8 @@ Nous avons dans notre base de cas un couple tel que celui-ci : "Il a recommencer
 La rem\'{e}moration va donc rapprocher notre probl\`{e}me cible du probl\`{e}me source. Puis en utilisant la solution du probl\`{e}me source ainsi que l'explication, l'adaptation va pouvoir nous fournir une solution de notre probl\`{e}me cible qui sera "Tu n'as pas mang\'{e}".
 \newline
 \newline
-Pour parvenir \`{a} r\'{e}soudre notre probl\'{e}matique qui est la correction automatique du français \`{a} l'aide du raisonnement \`{a} partir du cas, il nous faut donc une base de cas qui permette en th\'{e}orie de corriger toutes les erreurs possibles du français. En prenant en compte tous les types d'erreurs possibles (grammaire, orthographe, conjugaison, etc.), il y aurait un nombre immense de cas \`{a} d\'{e}finir dans notre base, ce qui s'av\'{e}rerait long et fastidieux \`{a} construire \`{a} la main. Le but de notre projet est donc de construire une base de cas \`{a} l'aide d'outils qui permettrait une certaine automatisation du remplissage. 
+Pour parvenir \`{a} r\'{e}soudre notre probl\'{e}matique qui est la correction automatique du fran\c{c}ais \`{a} l'aide du raisonnement \`{a} partir du cas, il nous faut donc une base de cas qui permette en th\'{e}orie de corriger toutes les erreurs possibles du fran\c{c}ais. En prenant en compte tous les types d'erreurs possibles (grammaire, orthographe, conjugaison, etc.), il y aurait un nombre immense de cas \`{a} d\'{e}finir dans notre base, ce qui s'av\'{e}rerait long et fastidieux \`{a} construire \`{a} la main. Le but de notre projet est donc de construire une base de cas \`{a} l'aide d'outils qui permettrait une certaine automatisation du remplissage. 
 
-\cleardoublepage
 
 %===== 2eme sous partie ====
 \subsection{Travail existant}
@@ -201,7 +200,7 @@ Une premi\`{e}re piste nous a \'{e}t\'{e} fournie par un groupe d'\'{e}tudiants 
 Notre d\'{e}but d'\'{e}tude a donc \'{e}t\'{e} guid\'{e} par les moyens mis en oeuvre pour effectuer un remplissage automatique de leur base de cas initiale, et plus particuli\`{e}rement un : les corpus de WiCoPaCo (Wikipedia Correction and Paraphrase Corpus). Le site WiCoPaCo met en libre acc\`{e}s des fichiers au format XML contenant des phrases, ou parties de phrases avec une correction effectu\'{e}e ainsi qu'un commentaire \'{e}ventuel laiss\'{e} par l'auteur de la correction. Ces fichiers sont le r\'{e}sultat des corrections faites par les administrateurs des pages Wikip\'{e}dia, ce qui n\'{e}cessite une correction \'{e}tant donn\'{e} que le contenu des pages est apport\'{e} par des utilisateurs. Les fichiers en question contiennent donc des centaines de milliers de cas compos\'{e}s de la mani\`{e}re suivante : le groupe de phrase avant modification avec la mise en \'{e}vidence de la faute, suivi du m\^{e}me groupe de phrase avec la correction apport\'{e}e \'{e}galement mise en \'{e}vidence. 
 \newline
 \newline
-L'int\'{e}r\^{e}t principal de ces fichiers \'{e}tant l'\'{e}norme masse de donn\'{e}es qu'ils contiennent, nous permettant ainsi d'en extraire un grand nombre de cas. Cependant, m\^{e}me si cette solution semble \^{e}tre id\'{e}ale et simple \`{a} mettre en place, il s'av\`{e}re qu'elle est loin d'\^{e}tre parfaite. Car sur ces corrections, une partie \'{e}tant des corrections de contenu, une autre \'{e}tant des reformulations, et bien d'autres types de corrections n'\'{e}tant pas des erreurs de français mais sont pourtant contenues dans ces fichiers. La probl\'{e}matique de l'\'{e}puration de cette \'{e}norme masse de donn\'{e}es se pose donc.
+L'int\'{e}r\^{e}t principal de ces fichiers \'{e}tant l'\'{e}norme masse de donn\'{e}es qu'ils contiennent, nous permettant ainsi d'en extraire un grand nombre de cas. Cependant, m\^{e}me si cette solution semble \^{e}tre id\'{e}ale et simple \`{a} mettre en place, il s'av\`{e}re qu'elle est loin d'\^{e}tre parfaite. Car sur ces corrections, une partie \'{e}tant des corrections de contenu, une autre \'{e}tant des reformulations, et bien d'autres types de corrections n'\'{e}tant pas des erreurs de fran\c{c}ais mais sont pourtant contenues dans ces fichiers. La probl\'{e}matique de l'\'{e}puration de cette \'{e}norme masse de donn\'{e}es se pose donc.
 \newline
 \newline
 Face \`{a} ce probl\`{e}me, le groupe d'\'{e}tudiants de L3 avait mis en place un script python qui prenait un fichier XML en entr\'{e}e et produisait en fichier CSV en sortie. Le script s'occupait aussi de la suppression de certains cas : les retours en arri\`{e}re. Il ne retenait donc pas les cas qui \'{e}taient des retours sur correction, c'est \`{a} dire lorsque le correcteur transformait une phrase A en phrase B, puis transformait \`{a} nouveau la phrase B en phrase A.
@@ -214,13 +213,13 @@ C'est donc en reprenant cette base de travail que nous avons d\'{e}but\'{e} notr
 
 %===== 3eme sous partie ====
 \subsection{Mise en place du projet}
-Pour mettre en place notre projet, nous avons donc grandement utilis\'{e} le travail d\'{e}j\`{a} effectu\'{e} par nos coll\`{e}gues qui nous ont pr\'{e}c\'{e}d\'{e}s. Nous avons d\'{e}cid\'{e} d'utiliser l'\'{e}norme quantit\'{e} de cas que nous fournissait les fichiers XML de WiCoPaCo pour cr\'{e}er notre base de cas automatiques. Ces fichiers regroupant plus de 200 000 cas, elle serait suffisamment cons\'{e}quente pour couvrir un maximum d'erreur de français. N\'{e}anmoins, comme cela a \'{e}t\'{e} expliqu\'{e} ci-dessus, nous ne pouvons pas seulement transformer ces fichiers directement en une base de cas car un grand nombre de cas n'est pas exploitable. Nous devons donc reprendre le travail qui a \'{e}t\'{e} fait en amont et continuer \`{a} filtrer les cas jusqu'\`{a} obtenir un ensemble de cas corrects.
+Pour mettre en place notre projet, nous avons donc grandement utilis\'{e} le travail d\'{e}j\`{a} effectu\'{e} par nos coll\`{e}gues qui nous ont pr\'{e}c\'{e}d\'{e}s. Nous avons d\'{e}cid\'{e} d'utiliser l'\'{e}norme quantit\'{e} de cas que nous fournissait les fichiers XML de WiCoPaCo pour cr\'{e}er notre base de cas automatiques. Ces fichiers regroupant plus de 200 000 cas, elle serait suffisamment cons\'{e}quente pour couvrir un maximum d'erreur de fran\c{c}ais. N\'{e}anmoins, comme cela a \'{e}t\'{e} expliqu\'{e} ci-dessus, nous ne pouvons pas seulement transformer ces fichiers directement en une base de cas car un grand nombre de cas n'est pas exploitable. Nous devons donc reprendre le travail qui a \'{e}t\'{e} fait en amont et continuer \`{a} filtrer les cas jusqu'\`{a} obtenir un ensemble de cas corrects.
 \newline
 \newline
 \`{a} la suite d'une r\'{e}flexion sur le d\'{e}veloppement de notre projet, nous avons d\'{e}cid\'{e} de ne pas reprendre les travaux effectu\'{e}s par les \'{e}tudiants pr\'{e}c\'{e}dent pour plusieurs raisons : premi\`{e}rement, bien que nous comprenions l'id\'{e}e directrice du d\'{e}veloppement, nous n'avions pas toutes les subtilit\'{e}s pour comprendre parfaitement le code. De plus, nous avions dans l'optique d'impl\'{e}menter plusieurs filtres afin de rendre la cr\'{e}ation de ceux-ci plus facile. Nous nous sommes donc r\'{e}solus \`{a} utiliser le langage orient\'{e} objet Java pour le d\'{e}veloppement de notre application. C'est un langage que nous avons eu l'habitude d'utiliser au cours de nos \'{e}tudes. Il permet de lire et d'\'{e}crire des fichiers ais\'{e}ment et permet, une fois le projet structur\'{e}, une impl\'{e}mentation simple et rapide de nouvelles fonctionnalit\'{e}s.
 \newline
 \newline
-Cependant, notre projet consistant \`{a} trouver la correction d'une phrase de français en utilisant une base de cas, nous n'avons par cons\'{e}quent pas acc\`{e}s \`{a} un analyseur syntaxique ou orthographique pour pouvoir d\'{e}tecter si une phrase contient des erreurs. Nos encadrants nous ont demand\'{e} de r\'{e}fl\'{e}chir \`{a} une m\'{e}thode permettant d'accomplir cette d\'{e}tection.
+Cependant, notre projet consistant \`{a} trouver la correction d'une phrase de fran\c{c}ais en utilisant une base de cas, nous n'avons par cons\'{e}quent pas acc\`{e}s \`{a} un analyseur syntaxique ou orthographique pour pouvoir d\'{e}tecter si une phrase contient des erreurs. Nos encadrants nous ont demand\'{e} de r\'{e}fl\'{e}chir \`{a} une m\'{e}thode permettant d'accomplir cette d\'{e}tection.
 
 
 %===== 2eme partie ====
@@ -232,14 +231,21 @@ Suite \`{a} la mise en place de notre sujet, nous nous sommes donc concentr\'{e}
 
 %===== 1ere sous sous partie ====
 \subsubsection{Grew}
-Le premier de nos deux axes \'{e}tait la d\'{e}couverte d'un outil permettant l'analyse des phrases pour en trouver les potentielles fautes de français. Pour cela, nos encadrants nous ont orient\'{e}s vers GREW, un logiciel dont un de nos encadrants, Bruno Guillaume, connaît bien le fonctionnement. Ce logiciel permet, \`{a} partir d'une ou plusieurs phrases donn\'{e}es en param\`{e}tres, de construire un graphe \`{a} partir des lemmes de chaque mot ainsi que gr\^{a}ce au contexte des phrases. Ce graphe permet de d\'{e}duire les liens que chaque mot entretient avec les autres mots de la phrase. Voici un exemple de graphe que cr\'{e}e l'outil GREW \`{a} partir de la phrase "C'est une femme tr\`{e}s intelligente."
+Le premier de nos deux axes \'{e}tait la d\'{e}couverte d'un outil permettant l'analyse des phrases pour en trouver les potentielles fautes de fran\c{c}ais. Pour cela, nos encadrants nous ont orient\'{e}s vers GREW, un logiciel dont un de nos encadrants, Bruno Guillaume, conna\^{i}t bien le fonctionnement. Ce logiciel permet, \`{a} partir d'une ou plusieurs phrases donn\'{e}es en param\`{e}tres, de construire un graphe \`{a} partir des lemmes de chaque mot ainsi que gr\^{a}ce au contexte des phrases. Ce graphe permet de d\'{e}duire les liens que chaque mot entretient avec les autres mots de la phrase. Voici un exemple de graphe que cr\'{e}e l'outil GREW \`{a} partir de la phrase "C'est une femme tr\`{e}s intelligente."
 
 %==== image ====
 \begin{center}
 \includegraphics[width=10cm]{graphgrew.png} %l'image est retaill\'ee pour avoir une largeur de 10cm
 \end{center}
 
-Nous voyons ici que GREW n'a pas r\'{e}ussi \`{a} lier le 'S' avec les autres mots. Nous dirons par la suite qu'un graphe dans lequel un ou plusieurs mots ne sont li\'{e}s \`{a} aucun autre est un graphe qui repr\'{e}sente une qui comporte une ou plusieurs erreurs de français. Notre objectif est donc d'observer  les r\'{e}sultats de GREW sur des exemples multiples et vari\'{e}s, et d'analyser ses performances.
+Nous pouvons donc retrouver dans ce graphe le lemme de chaque mot, situ\'{e} sous le mot correspondant ainsi que les liens qu'il a avec les autres, repr\'{e}sent\'{e}s par des fl\`{e}ches qui lie les mots entre eux. Cet outil n'est donc pas un outil de d\'{e}tection d'erreur à proprement parl\'{e}. Cependant il permet, si une phrase n'est pas bien assembl\'{e} ou dans les cas o\`{u} il n'arrive pas à trouver les liens entre les mots d'une phrase, de cr\'{e}er des graphes o\`{u} tous les mots ne sont pas li\'{e}s entre eux. Prenons par exemple la phrase utilis\'{e}e dans le graphe pr\'{e}c\'{e}dent et remplaçons Le "C'est" par "S'est", ce qui est une erreur classique de français. Dans ce cas, GREW r\'{e}alise le graphe suivant :
+
+%==== image ====
+\begin{center}
+\includegraphics[width=10cm]{imgGrew.png} %l'image est retaill\'ee pour avoir une largeur de 10cm
+\end{center}
+
+Nous voyons ici que GREW n'a pas r\'{e}ussi \`{a} lier le 'S' avec les autres mots. Nous dirons par la suite qu'un graphe dans lequel un ou plusieurs mots ne sont li\'{e}s \`{a} aucun autre est un graphe qui repr\'{e}sente une qui comporte une ou plusieurs erreurs de fran\c{c}ais. Notre objectif est donc d'observer  les r\'{e}sultats de GREW sur des exemples multiples et vari\'{e}s, et d'analyser ses performances.
 \newline
 \newline
 Tout d'abord, nous avons donc d\^{u} installer GREW, ce qui fut complexe aux vu des d\'{e}pendances de ce dernier. L'installation nous a permis d'utiliser l'outil en ligne de commande, puis par l'interm\'{e}diaire d'un script BASH, qui nous a permis d'automatiser son utilisation. L'objectif de ce script \'{e}tait de faire analyser un grand nombre de phrases par GREW, correct ou incorrect, et de v\'{e}rifier par le biais de fichier de sortie, le pourcentage de phrases bien analys\'{e}es par celui-ci. Pour se faire, nous avons regroup\'{e} les cas du fichier XML de WiCoPaCo dans un fichier CSV. Ces cas \'{e}taient repr\'{e}sent\'{e}s comme sur la photo ci-dessous :
@@ -252,14 +258,14 @@ Tout d'abord, nous avons donc d\^{u} installer GREW, ce qui fut complexe aux vu 
 Chaque cas est compos\'{e} de 3 \'{e}l\'{e}ments : une phrase fausse, une phrase corrig\'{e}e, ainsi qu'un commentaire expliquant la nature de la correction. Sur cette image, la premi\`{e}re ligne correspond \`{a} la phrase avec erreur, la seconde correspond \`{a} la phrase corrig\'{e}e et la derni\`{e}re au commentaire.
 \newline
 \newline
-De plus, une \'{e}tudiante de l'\'{e}cole T\'{e}l\'{e}com Saint-\'{e}tienne, Mme Isabelle Mornard, est venue effectuer un stage au sein du Loria, sous l'encadrement de M. Jean Lieber. Son objectif en tant que stagiaire \'{e}tait de nous aider \`{a} comprendre les diff\'{e}rentes erreurs possibles de la langue française ainsi que de les cat\'{e}goriser. En plus de cela, un de ses objectifs \'{e}tait de cr\'{e}er \`{a} la main une base de cas d'environ 200 cas regroupant des erreurs de chaque cat\'{e}gories. La base de cas a \'{e}t\'{e} remplie dans un fichier Python et chaque cas \'{e}tait repr\'{e}sent\'{e} comme ci-dessous :
+De plus, une \'{e}tudiante de l'\'{e}cole T\'{e}l\'{e}com Saint-\'{e}tienne, Mme Isabelle Mornard, est venue effectuer un stage au sein du Loria, sous l'encadrement de M. Jean Lieber. Son objectif en tant que stagiaire \'{e}tait de nous aider \`{a} comprendre les diff\'{e}rentes erreurs possibles de la langue fran\c{c}aise ainsi que de les cat\'{e}goriser. En plus de cela, un de ses objectifs \'{e}tait de cr\'{e}er \`{a} la main une base de cas d'environ 200 cas regroupant des erreurs de chaque cat\'{e}gories. La base de cas a \'{e}t\'{e} remplie dans un fichier Python et chaque cas \'{e}tait repr\'{e}sent\'{e} comme ci-dessous :
 
 %==== image ====
 \begin{center}
 \includegraphics[width=14cm]{exemple2.png} %l'image est retaill\'ee pour avoir une largeur de 10cm
 \end{center}
 
-Un cas dans ce fichier est repr\'{e}sent\'{e} par 3 ou 4 lignes : la premi\`{e}re est une phrase avec une erreur, la seconde est une phrase correcte, la troisi\`{e}me est l'explication de la correction et la derni\`{e}re ligne est la provenance de l'exemple. La provenance est souvent est un site web de correction de français. Nous avons donc utilis\'{e} notre script sur la base de cas d'Isabelle ainsi que sur notre base de cas pour tester l'outil GREW. Les fichiers r\'{e}sultants de ces tests nous ont permis de mieux comprendre son fonctionnement ainsi que ses limites.
+Un cas dans ce fichier est repr\'{e}sent\'{e} par 3 ou 4 lignes : la premi\`{e}re est une phrase avec une erreur, la seconde est une phrase correcte, la troisi\`{e}me est l'explication de la correction et la derni\`{e}re ligne est la provenance de l'exemple. La provenance est souvent est un site web de correction de fran\c{c}ais. Nous avons donc utilis\'{e} notre script sur la base de cas d'Isabelle ainsi que sur notre base de cas pour tester l'outil GREW. Les fichiers r\'{e}sultants de ces tests nous ont permis de mieux comprendre son fonctionnement ainsi que ses limites.
 
 %==== image ====
 \begin{center}
@@ -337,7 +343,7 @@ L'utilisation de DOM sous forme d'arbre nous permet donc une facilit\'{e} de d\'
 
 %===== 2eme sous sous partie ====
 \subsubsection{Protocole d'ajout de filtres}
-C'est ici que nous allons traiter le coeur du sujet : la mani\`{e}re dont les filtres ont \'{e}t\'{e} conçu. Ces filtres \'{e}tant un point crucial dans l'obtention d'un r\'{e}sultat int\'{e}ressant pour notre recherche, il semblait plus que n\'{e}cessaire de mettre en place un protocol rigoureux pour la validation des filtres. Le protocole \'{e}tait assez simple, mais n'en demeurait pas moins efficace.
+C'est ici que nous allons traiter le coeur du sujet : la mani\`{e}re dont les filtres ont \'{e}t\'{e} con\c{c}u. Ces filtres \'{e}tant un point crucial dans l'obtention d'un r\'{e}sultat int\'{e}ressant pour notre recherche, il semblait plus que n\'{e}cessaire de mettre en place un protocol rigoureux pour la validation des filtres. Le protocole \'{e}tait assez simple, mais n'en demeurait pas moins efficace.
 Pour commencer, nous examinions le contenu du fichier WiCoPaCo dans le but de trouver plusieurs cas qui ne correspondaient pas \`{a} nos crit\`{e}res de s\'{e}lection. Une fois le cas relev\'{e}, il fallait l'analyser et comprendre pourquoi il ne concordait pas avec nos attentes, de sorte \`{a} trouver une r\`{e}gle nous permettant de d\'{e}tecter ce type de cas. Apr\`{e}s quoi, nous nous penchions sur la mani\`{e}re dont le filtre allait \^{e}tre impl\'{e}ment\'{e} en s'appuyant sur la r\`{e}gle que nous avions \'{e}labor\'{e}e.
 Ensuite, une fois le filtre d\'{e}velopp\'{e}, une multitude de tests devaient \^{e}tre effectu\'{e}s afin de s'assurer que celui ci \'{e}tait bien fonctionnel. Nous ex\'{e}cutions donc le filtre sur un extrait du fichier de WiCoPaCo contenant quelques centaines de cas, et nous observions ceux rejet\'{e}s. Si le filtre se comportait comme nous l'attendions sur cette base test de taille r\'{e}duite, nous consid\'{e}rions que le filtre \'{e}tait fonctionnel. Si le r\'{e}sultat se r\'{e}v\'{e}lait \^{e}tre imparfait, nous entreprenions un ajustement de la r\`{e}gle jusqu'\`{a} obtention du r\'{e}sultat escompt\'{e}. 
 Puis, une fois le filtre op\'{e}rationnel, une analyse statistique de l'ex\'{e}cution de ce filtre, appliqu\'{e} avec les autres filtres d\'{e}j\`{a} existant, sur le fichier entier \'{e}tait effectu\'{e}e. Le but de la d\'{e}marche \'{e}tait de d\'{e}montrer l'utilit\'{e} de ce dernier malgr\'{e} l'existence d'autres filtres. Si les r\'{e}sultats statistiques attestaient de l'int\'{e}r\^{e}t du filtre, alors ce dernier \'{e}tait accept\'{e} et ajout\'{e} au projet.
@@ -352,7 +358,7 @@ Il est \'{e}galement possible d'activer la sortie pour chacun des filtres, chaqu
 \subsection{D\'{e}tail sur les diff\'{e}rents filtres}
 %===== 1ere sous sous partie ====
 \subsubsection{Le type GlobalRejector}
-Comme expliqu\'{e} de mani\`{e}re succincte plus tôt, le type de filtre GlobalRejector est une cat\'{e}gorie contenant les filtres qui n\'{e}cessite une analyse enti\`{e}re du document d'entr\'{e}e, pour y collecter des informations, afin de statuer sur l'acceptation d'un cas. 
+Comme expliqu\'{e} de mani\`{e}re succincte plus t\^{o}t, le type de filtre GlobalRejector est une cat\'{e}gorie contenant les filtres qui n\'{e}cessite une analyse enti\`{e}re du document d'entr\'{e}e, pour y collecter des informations, afin de statuer sur l'acceptation d'un cas. 
 	Dans cette cat\'{e}gorie se trouve deux filtres:
 Le premier \'{e}tant le "RollbackFilter", qui a pour but de refuser les retours sur correction. Le filtre parcourt une premi\`{e}re fois enti\`{e}rement le fichier en r\'{e}pertoriant chaque correction, puis lors du parcours du document pour le traitement des cas, le filtre scrute ses donn\'{e}es pour voir si une modification inverse est effectu\'{e}e \`{a} un moment. S'il existe une modification inverse dans le document, alors le cas est rejet\'{e}.
 Voici un exemple que le RollbackFilter rejette :
@@ -381,7 +387,7 @@ Voici un exemple que le EstheticalRestructurationRejector rejette :
 \begin{center}
 \includegraphics[width=12cm]{exemple12.png} %l'image est retaill\'ee pour avoir une largeur de 10cm
 \end{center}
-Le deuxi\`{e}me, "NumberRejector" \'{e}limine les corrections portant sur les chiffres, car ce sont des corrections de contenu (date, pourcentage, ...) et donc, elles ne constituent pas d'erreurs de français. 
+Le deuxi\`{e}me, "NumberRejector" \'{e}limine les corrections portant sur les chiffres, car ce sont des corrections de contenu (date, pourcentage, ...) et donc, elles ne constituent pas d'erreurs de fran\c{c}ais. 
 Voici un exemple que le NumberRejector rejette :
 %==== image ====
 \begin{center}
