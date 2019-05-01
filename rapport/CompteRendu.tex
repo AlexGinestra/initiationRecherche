@@ -238,7 +238,7 @@ Le premier de nos deux axes \'{e}tait la d\'{e}couverte d'un outil permettant l'
 \includegraphics[width=10cm]{graphgrew.png} %l'image est retaill\'ee pour avoir une largeur de 10cm
 \end{center}
 
-Nous pouvons donc retrouver dans ce graphe le lemme de chaque mot, situ\'{e} sous le mot correspondant ainsi que les liens qu'il a avec les autres, repr\'{e}sent\'{e}s par des fl\`{e}ches qui lie les mots entre eux. Cet outil n'est donc pas un outil de d\'{e}tection d'erreur à proprement parl\'{e}. Cependant il permet, si une phrase n'est pas bien assembl\'{e} ou dans les cas o\`{u} il n'arrive pas à trouver les liens entre les mots d'une phrase, de cr\'{e}er des graphes o\`{u} tous les mots ne sont pas li\'{e}s entre eux. Prenons par exemple la phrase utilis\'{e}e dans le graphe pr\'{e}c\'{e}dent et remplaçons Le "C'est" par "S'est", ce qui est une erreur classique de français. Dans ce cas, GREW r\'{e}alise le graphe suivant :
+Nous pouvons donc retrouver dans ce graphe le lemme de chaque mot, situ\'{e} sous le mot correspondant ainsi que les liens qu'il a avec les autres, repr\'{e}sent\'{e}s par des fl\`{e}ches qui lie les mots entre eux. Cet outil n'est donc pas un outil de d\'{e}tection d'erreur \`{a} proprement parl\'{e}. Cependant il permet, si une phrase n'est pas bien assembl\'{e} ou dans les cas o\`{u} il n'arrive pas \`{a} trouver les liens entre les mots d'une phrase, de cr\'{e}er des graphes o\`{u} tous les mots ne sont pas li\'{e}s entre eux. Prenons par exemple la phrase utilis\'{e}e dans le graphe pr\'{e}c\'{e}dent et remplaçons Le "C'est" par "S'est", ce qui est une erreur classique de français. Dans ce cas, GREW r\'{e}alise le graphe suivant :
 
 %==== image ====
 \begin{center}
@@ -412,6 +412,49 @@ va se transformer par l'application du filtre SentencePurifier en :
 Enfin, le filtre SpecialCaracterPurifier, est assez simple. Il consiste \`{a} supprimer les caract\`{e}res sp\'{e}ciaux suivant: "\$", "*" , "/", "\#" , se trouvant au d\'{e}but de la premi\`{e}re phrase des cas. Les corrections pouvant \^{e}tre effectu\'{e}e sur tout le contenu de la page, certains cas sont des annotations en pied de page et ont donc une mise en forme particuli\`{e}re.
 Ce filtre n'a d'int\'{e}r\^{e}t que s'il est appliqu\'{e} apr\`{e}s le filtre "SentencePurifier", car il risquerait d'effectuer le m\^{e}me travail
 
+%===== 3ere partie ====
+\section{R\'{e}sultats}
+
+%===== 1ere sous partie ====
+\subsection{Statistiques}
+
+%===== 1ere sous sous partie ====
+\subsubsection{Les filtres GlobalRejector}
+contenu:
+statistiques de chaque filtre 
+pour chaque filtres :
+\begin{itemize}
+\item nombre de cas enlev\'{e} (nombre et pourcentage) sur la base de test, puis sur tout le fichier de WiCoPaCo
+\item temps d'ex\'{e}cution
+\end{itemize}
+
+%===== 2eme sous sous partie ====
+\subsubsection{Les filtres LocalRejector}
+contenu:
+de meme que la sous sous partie precedente
+
+%===== 3eme sous sous partie ====
+\subsubsection{Les filtres Purifier}
+contenu:
+de meme que la partie sous sous precedente
+
+%===== 2eme sous partie ====
+\subsection{R\'{e}sultat final}
+contenu:
+comparaison entre le fichiers WiCoPaCo de base et la pseudo base de cas obtenue:
+\begin{itemize}
+\item Nombre de cas enlev\'{e} au total
+\item Nombre de cas \'{e}pur\'{e} au total
+\item Temps de traitement des donn\'{e}es
+\end{itemize}
+
+%===== 3eme sous partie ====
+\subsection{Ouverture}
+contenu:
+\begin{itemize}
+\item Les difficult\'{e}s rencontr\'{e}s au cours de notre initiation \`{a} la recherche
+\item Le travail qu'il reste \`{a} accomplir (finir l'\'{e}puration de la base de cas puis rem\'{e}moration et adaptation pour obtenir un logiciel fonctionnel)
+\end{itemize}
 
 
 \end{document}
