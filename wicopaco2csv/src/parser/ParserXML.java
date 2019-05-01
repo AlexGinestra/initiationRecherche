@@ -89,7 +89,9 @@ public class ParserXML {
 
 		/* ouverture du fichier xml en entre */
 		//Document document = ParserXML.getDocumentTraversal("../doss.nosync/wico_v2_complet.xml");
-		Document document = ParserXML.getDocumentTraversal("../../test/wico_v2_complet.xml");
+		Document document = ParserXML.getDocumentTraversal("../alex/truc.xml");
+
+		//Document document = ParserXML.getDocumentTraversal("../../test/wico_v2_complet.xml");
 		DocumentTraversal traversal = (DocumentTraversal) document;
 		if (traversal == null) {
 			System.out.println("erreur");
@@ -253,7 +255,7 @@ public class ParserXML {
 		List<Character> specialCharacters = Arrays.asList(specChar);
 
 		// adding differents globalRejector
-		parser.addGlobalRejector(new SpellingErrorLabelFilter());
+		//parser.addGlobalRejector(new SpellingErrorLabelFilter());
 		parser.addGlobalRejector(new RollbackFilter());
 
 		// adding differents localRejector
@@ -265,10 +267,15 @@ public class ParserXML {
 		parser.addPurifier(new SpecialCaracterPurifier(specialCharacters));
 
 
-		for(GlobalRejectionFilter f : parser.globalRejectors) { ((FiltersStatistics)
-				f).activateOutput(); } for(LocalRejectionFilter f : parser.localRejectors) {
-					((FiltersStatistics) f).activateOutput(); } for(PurifierFilter f :
-						parser.purifiers) { ((FiltersStatistics) f).activateOutput(); }
+		for(GlobalRejectionFilter f : parser.globalRejectors) { 
+			((FiltersStatistics)f).activateOutput(); 
+		} 
+		for(LocalRejectionFilter f : parser.localRejectors) {
+			((FiltersStatistics) f).activateOutput(); 
+		} 
+		for(PurifierFilter f : parser.purifiers) { 
+			((FiltersStatistics) f).activateOutput(); 
+		}
 
 
 					// start the treatment
