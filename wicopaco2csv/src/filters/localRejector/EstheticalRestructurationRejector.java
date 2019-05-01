@@ -163,7 +163,7 @@ public class EstheticalRestructurationRejector extends FiltersStatistics impleme
 		
 		//test if the file already exist
 		if(file.exists()) {
-			System.out.println("le fichier rejectedByEsteticalRestructurationRejector.csv existe deja");
+			System.out.println("le fichier rejectedByEstheticalRestructurationRejector.csv existe deja");
 			System.exit(0);
 		}
 		
