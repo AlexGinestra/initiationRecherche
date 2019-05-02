@@ -56,7 +56,7 @@
 	\end{flushright}
 	\vfill\null\columnbreak
 	\begin{flushleft}
-	Orpailleur et S\'emagramme\newline Bruno Guillaume, Yves Lepage, Jean Lieber et Emmanuel Nauer
+	K et S\'emagramme\newline Bruno Guillaume, Yves Lepage, Jean Lieber et Emmanuel Nauer
 	\end{flushleft}
 \end{multicols}
 \end{multicols}
@@ -83,7 +83,9 @@ L'Universit\'{e} de Lorraine n'entend donner ni approbation ni improbation aux o
 \vspace*{10mm}
 
 Tout d'abord, nous tenons \`{a} remercier toute l'\'{e}quipe p\'{e}dagogique du d\'{e}partement informatique de la facult\'{e} des sciences et technologies pour les quatre ann\'{e}es de formation en Master informatique.
+\newline
 De plus, nous remercions toutes les personnes qui ont contribu\'{e} au bon d\'{e}roulement de notre travail et qui nous ont aid\'{e} lors de la r\'{e}daction de ce rapport. Premi\`{e}rement, nous adressons nos remerciements \`{a} notre professeur, Madame Marie-Laure Alves, qui nous a beaucoup aid\'{e}. Son \'{e}coute et ses conseils nous ont permis de progresser dans notre d\'{e}marche.
+\newline
 Nous tenons \'{e}galement \`{a} remercier vivement notre encadrant, Monsieur Jean Lieber, enseignant chercheur au LORIA, pour son accueil, le temps pass\'{e} ensemble et le partage de son expertise au quotidien. Nous remercions \'{e}galement toute l'\'{e}quipe K et l'\'{e}quipe S\'{e}magramme pour leur accueil et leur disponibilit\'{e}, et en particulier Monsieur Emmanuel Nauer, qui nous a beaucoup aid\'{e} \`{a} comprendre les probl\'{e}matiques de recherche sur lesquelles nous travaillions. Enfin, nous tenons \`{a} remercier toutes les personnes qui nous ont conseill\'{e} et relu lors de la r\'{e}daction de ce rapport : nos familles, nos professeurs et aussi nos camarades de cours.
 
 \cleardoublepage
@@ -113,17 +115,28 @@ Nous tenons \'{e}galement \`{a} remercier vivement notre encadrant, Monsieur Jea
 \vspace*{2mm}
 
 Le raisonnement \`{a} partir de cas (R\`{a}PC) est un raisonnement hypoth\'etique (en g\'en\'eral) qui consiste \`{a} r\'esoudre un nouveau probl\`{e}me (le probl\`{e}me cible, not\'e cible) en s'appuyant sur une base de cas, un cas \'etant la repr\'esentation d'un \'episode de r\'esolution de probl\`{e}me. On appelle cas source un \'el\'ement de la base de cas. Souvent, on repr\'esente un cas source simplement par un couple (srce, sol(srce)) : srce est un probl\`{e}me source, sol(srce) est une solution de ce probl\`{e}me source. Un mod\`{e}le du processus de R\`{a}PC classique comprend deux \'etapes d'inf\'erence : 
+\newline
 Rem\'emoration : un cas source (srce, sol(srce)) jug\'e similaire au probl\`{e}me cible (par exemple, sur la base d'une distance entre probl\`{e}mes) est s\'electionn\'e. 
+\newline
 Adaptation : La solution sol(srce) de ce cas est modifi\'ee en une solution candidate sol(cible) de cible. 
-
+\newline
 La correction de phrases est la probl\'ematique de la transformation d'une phrase incorrecte (en particulier, grammaticalement) en une phrase corrig\'ee (nous choisirons la langue fran\c{c}aise dans ce travail, m\^eme si la probl\'ematique existe dans toutes les langues). Un cas de correction de phrase est donc un couple (srce, sol(srce)) o\`{u} srce est une phrase incorrecte et sol(srce) une correction de srce. Par exemple, on a les deux cas : 
+\newline
 srce1 = Tu as pas mang\'e. sol(srce1) = Tu n'as pas mang\'e. 
+\newline
 srce2 = Il a recommencer. sol(srce2) = Il a recommenc\'e. 
+\newline
 L'adaptation se fait par des techniques de raisonnement par analogie : la solution sol(cible) est solution d'une \'equation analogique << srce est \`{a} sol(srce) ce que cible est \`{a} y >>. Par exemple, l'adaptation de (srce2, sol(srce2)) \`{a} cible = Tu as manger. consiste \`{a} r\'esoudre Il a recommencer. est \`{a} Il a recommenc\'e. ce que Tu as manger. est \`{a} x qui a pour solution, avec la relation d'analogie utilis\'ee dans le projet, x = Tu as mang\'e., proposition de solution propos\'ee par le syst\`{e}me. 
+\newline
+\newline
 Sujet : 
+\newline
 Comme pour tout syst\`{e}me \`{a} base de connaissances, la qualit\'e d'un syst\`{e}me de R\`{a}PC d\'epend de celle de son moteur d'inf\'erences mais \'egalement de la qualit\'e de sa base de connaissances, en particulier de sa base de cas. Une bonne base de cas doit avoir plusieurs qualit\'es. Les cas sources doivent \^etre corrects. Elle doit avoir une bonne couverture (et permettre de r\'esoudre correctement une proportion importante de cas). Elle devrait ne pas \^etre trop redondante (certains cas diff\'erents correspondent \`{a} la m\^eme correction). 
+\newline
 Pour cela, on pourra consulter les mouchards d'\'edition de Wikip\'edia pour en extraire des listes de fautes grammaticales ou orthographiques typiques, ainsi que des sites de dict\'ees ou d'orthographe. Il faudra mettre en place les outils de collecte automatiques, param\'etrables en fonction des sites. 
+\newline
 Une autre piste est la mise en place d'un jeu interactif avec un but. Le but est de faire corriger des phrases fautives par les joueurs. La phrase corrig\'ee devrait \'emerger de la majorit\'e des propositions de correction. Les phrases fautives pourraient \^etre extraites de listes d'exemples fautifs, ou produites automatiquement \`{a} partir de patrons pr\'ed\'efinis ou par application de l'analogie sur des cas d\'ej\`{a} collect\'es.
+\newline
 Une courte \'etude bibliographique sur la maintenance de base de cas permettra de sugg\'erer des pistes pour l'acquisition d'une bonne base de cas. Il faudra mettre en place une m\'ethode pour cela, qui pourra s'appuyer sur les sites mentionn\'es ci-dessus.
 
 \cleardoublepage
@@ -138,6 +151,7 @@ Une courte \'etude bibliographique sur la maintenance de base de cas permettra d
 
 
 Le TAL (traitement automatique des langues) est un domaine d'\'{e}tude dont l'objectif est de cr\'{e}er des outils de traitement de la langue pour diverses applications. Il traite de nombreux sujets notamment dans le domaine de la compr\'{e}hension automatique des textes, la traduction automatique, ou encore la correction automatique des fautes orthographiques et grammaticales. C'est pourquoi linguistes et informaticiens collaborent \'{e}troitement sur l'\'{e}tude de la langue et le traitement automatique des donn\'{e}es. Le traitement automatique du langage couvre donc un large panel de disciplines de recherche et se trouve \`{a} l'origine de nombreux travaux. 
+\newline
 \newline
 Parmi les premiers travaux, qui remontent aux ann\'{e}es 50 pendant la guerre froide, se trouve la mise au point du premier traducteur automatique. Nomm\'{e} "experience Georgetown-IBM" et d\'{e}velopp\'{e} par l'universit\'{e} de Georgetown en collaboration avec la soci\'{e}t\'{e} IBM, le projet offrait la possibilit\'{e} de traduire du russe vers l'anglais. C'est en 1954 que la premi\`{e}re d\'{e}monstration sur une soixantaine de phrases s'est faite, une vraie prouesse technologique pour l'\'{e}poque. Depuis, le traitement automatique des langues a bien \'{e}volu\'{e} et est devenu un domaine pluridisciplinaire. Il peut allier la linguistique, l'informatique, et m\^{e}me se coupler \`{a} de l'intelligence artificielle pour cr\'{e}er des applications de plus en plus complexes nous permettant de simplifier nos t\^{a}ches quotidiennes. 
 \newline
@@ -344,9 +358,13 @@ L'utilisation de DOM sous forme d'arbre nous permet donc une facilit\'{e} de d\'
 %===== 2eme sous sous partie ====
 \subsubsection{Protocole d'ajout de filtres}
 C'est ici que nous allons traiter le coeur du sujet : la mani\`{e}re dont les filtres ont \'{e}t\'{e} con\c{c}u. Ces filtres \'{e}tant un point crucial dans l'obtention d'un r\'{e}sultat int\'{e}ressant pour notre recherche, il semblait plus que n\'{e}cessaire de mettre en place un protocol rigoureux pour la validation des filtres. Le protocole \'{e}tait assez simple, mais n'en demeurait pas moins efficace.
+\newline
 Pour commencer, nous examinions le contenu du fichier WiCoPaCo dans le but de trouver plusieurs cas qui ne correspondaient pas \`{a} nos crit\`{e}res de s\'{e}lection. Une fois le cas relev\'{e}, il fallait l'analyser et comprendre pourquoi il ne concordait pas avec nos attentes, de sorte \`{a} trouver une r\`{e}gle nous permettant de d\'{e}tecter ce type de cas. Apr\`{e}s quoi, nous nous penchions sur la mani\`{e}re dont le filtre allait \^{e}tre impl\'{e}ment\'{e} en s'appuyant sur la r\`{e}gle que nous avions \'{e}labor\'{e}e.
+\newline
 Ensuite, une fois le filtre d\'{e}velopp\'{e}, une multitude de tests devaient \^{e}tre effectu\'{e}s afin de s'assurer que celui ci \'{e}tait bien fonctionnel. Nous ex\'{e}cutions donc le filtre sur un extrait du fichier de WiCoPaCo contenant quelques centaines de cas, et nous observions ceux rejet\'{e}s. Si le filtre se comportait comme nous l'attendions sur cette base test de taille r\'{e}duite, nous consid\'{e}rions que le filtre \'{e}tait fonctionnel. Si le r\'{e}sultat se r\'{e}v\'{e}lait \^{e}tre imparfait, nous entreprenions un ajustement de la r\`{e}gle jusqu'\`{a} obtention du r\'{e}sultat escompt\'{e}. 
+\newline
 Puis, une fois le filtre op\'{e}rationnel, une analyse statistique de l'ex\'{e}cution de ce filtre, appliqu\'{e} avec les autres filtres d\'{e}j\`{a} existant, sur le fichier entier \'{e}tait effectu\'{e}e. Le but de la d\'{e}marche \'{e}tait de d\'{e}montrer l'utilit\'{e} de ce dernier malgr\'{e} l'existence d'autres filtres. Si les r\'{e}sultats statistiques attestaient de l'int\'{e}r\^{e}t du filtre, alors ce dernier \'{e}tait accept\'{e} et ajout\'{e} au projet.
+\newline
 Enfin, nous appliquions tous les filtres sur les quelques 400 000 cas et entreprenions une nouvelle analyse sur le fichier de sortie du logiciel en qu\^{e}te de cas ne correspondant pas \`{a} nos crit\`{e}res pour recommencer le protocole.
 
 %===== 3eme sous sous partie ====
