@@ -359,11 +359,15 @@ L'utilisation de DOM sous forme d'arbre nous permet donc une facilit\'{e} de d\'
 \subsubsection{Protocole d'ajout de filtres}
 C'est ici que nous allons traiter le coeur du sujet : la mani\`{e}re dont les filtres ont \'{e}t\'{e} con\c{c}u. Ces filtres \'{e}tant un point crucial dans l'obtention d'un r\'{e}sultat int\'{e}ressant pour notre recherche, il semblait plus que n\'{e}cessaire de mettre en place un protocol rigoureux pour la validation des filtres. Le protocole \'{e}tait assez simple, mais n'en demeurait pas moins efficace.
 \newline
+\newline
 Pour commencer, nous examinions le contenu du fichier WiCoPaCo dans le but de trouver plusieurs cas qui ne correspondaient pas \`{a} nos crit\`{e}res de s\'{e}lection. Une fois le cas relev\'{e}, il fallait l'analyser et comprendre pourquoi il ne concordait pas avec nos attentes, de sorte \`{a} trouver une r\`{e}gle nous permettant de d\'{e}tecter ce type de cas. Apr\`{e}s quoi, nous nous penchions sur la mani\`{e}re dont le filtre allait \^{e}tre impl\'{e}ment\'{e} en s'appuyant sur la r\`{e}gle que nous avions \'{e}labor\'{e}e.
+\newline
 \newline
 Ensuite, une fois le filtre d\'{e}velopp\'{e}, une multitude de tests devaient \^{e}tre effectu\'{e}s afin de s'assurer que celui ci \'{e}tait bien fonctionnel. Nous ex\'{e}cutions donc le filtre sur un extrait du fichier de WiCoPaCo contenant quelques centaines de cas, et nous observions ceux rejet\'{e}s. Si le filtre se comportait comme nous l'attendions sur cette base test de taille r\'{e}duite, nous consid\'{e}rions que le filtre \'{e}tait fonctionnel. Si le r\'{e}sultat se r\'{e}v\'{e}lait \^{e}tre imparfait, nous entreprenions un ajustement de la r\`{e}gle jusqu'\`{a} obtention du r\'{e}sultat escompt\'{e}. 
 \newline
+\newline
 Puis, une fois le filtre op\'{e}rationnel, une analyse statistique de l'ex\'{e}cution de ce filtre, appliqu\'{e} avec les autres filtres d\'{e}j\`{a} existant, sur le fichier entier \'{e}tait effectu\'{e}e. Le but de la d\'{e}marche \'{e}tait de d\'{e}montrer l'utilit\'{e} de ce dernier malgr\'{e} l'existence d'autres filtres. Si les r\'{e}sultats statistiques attestaient de l'int\'{e}r\^{e}t du filtre, alors ce dernier \'{e}tait accept\'{e} et ajout\'{e} au projet.
+\newline
 \newline
 Enfin, nous appliquions tous les filtres sur les quelques 400 000 cas et entreprenions une nouvelle analyse sur le fichier de sortie du logiciel en qu\^{e}te de cas ne correspondant pas \`{a} nos crit\`{e}res pour recommencer le protocole.
 
