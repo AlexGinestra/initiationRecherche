@@ -256,15 +256,15 @@ public class ParserXML {
 
 		// adding differents globalRejector
 		//parser.addGlobalRejector(new SpellingErrorLabelFilter());
-		parser.addGlobalRejector(new RollbackFilter());
+		//parser.addGlobalRejector(new RollbackFilter());
 
 		// adding differents localRejector
-		parser.addLocalRejector(new NumberRejector());
+		//parser.addLocalRejector(new NumberRejector());
 		parser.addLocalRejector(new EstheticalRestructurationRejector());
 
 		// adding differents casters
-		parser.addPurifier(new SentencePurifier());
-		parser.addPurifier(new SpecialCaracterPurifier(specialCharacters));
+		//parser.addPurifier(new SentencePurifier());
+		//parser.addPurifier(new SpecialCaracterPurifier(specialCharacters));
 
 
 		for(GlobalRejectionFilter f : parser.globalRejectors) { 
@@ -278,19 +278,19 @@ public class ParserXML {
 		}
 
 
-					// start the treatment
-					parser.parser();
+		// start the treatment
+		parser.parser();
 
-					for (GlobalRejectionFilter f : parser.globalRejectors) {
-						((FiltersStatistics) f).printStatistics();
-					}
-					for (LocalRejectionFilter f : parser.localRejectors) {
-						((FiltersStatistics) f).printStatistics();
-					}
-					for (PurifierFilter f : parser.purifiers) {
-						((FiltersStatistics) f).printStatistics();
-					}
-					System.out.println("execution time : " + (System.currentTimeMillis() - startTime) + " ms");
+		for (GlobalRejectionFilter f : parser.globalRejectors) {
+			((FiltersStatistics) f).printStatistics();
+		}
+		for (LocalRejectionFilter f : parser.localRejectors) {
+			((FiltersStatistics) f).printStatistics();
+		}
+		for (PurifierFilter f : parser.purifiers) {
+			((FiltersStatistics) f).printStatistics();
+		}
+		System.out.println("execution time : " + (System.currentTimeMillis() - startTime) + " ms");
 	}
 
 }

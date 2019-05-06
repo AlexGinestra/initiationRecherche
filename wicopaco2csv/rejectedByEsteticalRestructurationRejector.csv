@@ -1,9 +1,14 @@
 before	after	id
+Sorbonne	Faculté des lettres	4
+Faculté des lettres	Sorbonne	5
 sténo	sténographie	12
+petite	grd	15
+grd	petite	16
 s' occupe de	se penche sur	17
 algèbre linéaire	elbi	18
 elbi	Algebre lineaire	19
 forces	déplacements	20
+XIXeme	XIXe	21
 sa	leur	24
 concerne	porte	27
 L' implémentation	La mise en œuvre	30
@@ -11,18 +16,32 @@ f),	f( n)),	32
 procédure	méthode	33
 de manière asymptotique	en moyenne	34
 l' " Esprit des Lois "	le Discours de la Méthode	35
+BABAGGE	BABBAGE ( 1792 -1871 )	36
+est à	est-à-	37
 est très	sera suffisamment	38
 francs	€	39
 Huit _	Problème des huit	41
 est	énonce	43
+persan	turkish	49
+turkish	persan	50
+persan Al Kwarizmi	arabe musulmanAl Kawarizmi	51
+arabe musulmanAl Kawarizmi	persan Al Kwarizmi	52
 Le site d'	L'	53
 va donner "	donnera	54
 of	de	61
+donnera	donne	62
 à peu près	déjà presque	65
+perse arabophone	arabo-musulman	66
+arabo-musulman	perse arabophone	67
+perse	musulman	69
+musulman	perse	70
+780-	780-mort	72
 / Elements . html	d' Algorithmique	74
 perse arabophone	arabe	78
 arabophone andalou	arabe	79
 arabe	perse	81
+moyen	moyenne	83
+moyenne	moyen	84
 Nestor KIRCHNER	Néstor Kirchner	86
 de l' actuel	du	91
 judicialiste	justicialiste ( péroniste )	92
@@ -30,14 +49,20 @@ règle	tutelle du	98
 font	ont longtemps fait	103
 politique	militaire	104
 qui	et	108
+*1er	* 1 er	109
 nl	he	110
 la Grande-Bretagne	le Royaume-Uni	111
+catholique	truand	112
+truand	catholique	113
 irlandais	gaelic	117
 civile	d' indépendance	119
 l' Ireland Act	le traité de Londres	122
+a annoncé	annonce	127
 UE	Union Européenne	129
 République Tchèque	Tchéquie	130
+Tchéquie	République tchèque	131
 République Tchèque	Tchéquie	132
+République tchèque	Tchéquie	133
 Hongrie	Hie	134
 Land	Länder	135
 Parlement	Conseil national	136
@@ -50,12 +75,25 @@ de	fr	149
 fédérale divisée en	fédérant	150
 triste mais néanmoins	tristement	152
 Autriche	Allemagne	154
+octobre	octobre2006	155
+24 novembre 2002	1er Octobre 2006	157
 Euro )	€)	161
+1950 ( source : Emmanuel	1950Emmanuel	162
 octobre	septembre	164
+7	34	168
+2	33	169
 Autriche	occupèrent	170
+par	psh ! ! ar	172
+psh ! ! ar	par	173
 le plus haut	culminant	178
 les feux de circulation	leurs phares	179
+copié	Inspiré	188
+Inspiré	copié	189
 Triumf	Triomphe	190
+quatre statues	une statue	191
 une statue	, entre autre , un haut relief	192
 charge	connotation	193
+1806	1999	196
+1999	1806	197
 L .	Louis-Robert	198
+::« l'	:« L'	53973

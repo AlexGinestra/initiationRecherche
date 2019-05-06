@@ -131,7 +131,7 @@ public class EstheticalRestructurationRejector extends FiltersStatistics impleme
 		}
 		
 		//if the Levenshtein distance is higher than the half of the shorter modification
-		if(2*levenshteinDist > sizeMinSentence) {
+		if(3*levenshteinDist > sizeMinSentence) {
 			//output for the rejected case
 			if(outputOn) {
 				map = new HashMap<String, String>();
