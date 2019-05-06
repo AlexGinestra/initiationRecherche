@@ -317,7 +317,7 @@ qui contient le contenu qui nous int\'{e}resse puisque c'est elle qui contient l
 \includegraphics[width=14cm]{exemple8.png} %l'image est retaill\'ee pour avoir une largeur de 10cm
 \end{center}
 
-Donc chacune de ces balises pouvaient potentiellement correspondre \`{a} un cas qui aurait pu s'ajouter \`{a} notre base de donn\'{e}es. Or, apr\`{e}s une \'{e}tude de ces fichiers nous avons observ\'{e} que chaque balise <modif> n'\'{e}tait pas forc\'{e}ment une correction de langue, c'est pourquoi il \'{e}tait n\'{e}cessaire d'effectuer un traitement sur les donn\'{e}es.
+Donc chacune de ces balises pouvait potentiellement correspondre \`{a} un cas qui aurait pu s'ajouter \`{a} notre base de cas. Or, apr\`{e}s une \'{e}tude de ces fichiers nous avons observ\'{e} que chaque balise <modif> n'\'{e}tait pas forc\'{e}ment une correction de langue, c'est pourquoi il \'{e}tait n\'{e}cessaire d'effectuer un traitement sur les donn\'{e}es.
 \newline
 \newline
 Donc nous avons entrepris la conception d'un logiciel qui prend en entr\'{e}e un fichier au format XML tir\'{e} du site WiCoPaCo, en extrait les cas puis les traitent de sorte \`{a} enlever ceux qui ne constituent pas un cas int\'{e}ressant pour la cr\'{e}ation d'une base de cas. Enfin, il retourne les cas retenus dans un fichier au format facilement exploitable.
@@ -328,20 +328,20 @@ Ce logiciel allait contenir plusieurs filtres pouvant \^{e}tre r\'{e}partis dans
 \newline
 
 
-Apr\`{e}s r\'{e}flexion, nous avons donc d\'{e}cid\'{e} de mettre en place 3 cat\'{e}gories distinctes de filtres tel que d\'{e}crit ci-dessous:
+Apr\`{e}s r\'{e}flexion, nous avons donc d\'{e}cid\'{e} de mettre en place 3 cat\'{e}gories distinctes de filtres :
 \begin{itemize}
-\item Le "globalRejector" qui accepte ou rejette un cas en fonction de l'ensemble du fichier, c'est \`{a} dire en fonction des autres cas de ce m\^{e}me fichier.
-\item Le "localRejector" qui accepte ou rejette un cas en ne regardant que le cas lui m\^{e}me.
-\item Le "Purifier" qui va r\'{e}duire la taille du cas en supprimant le surplus de caract\`{e}res non essentiels.
+\item Le <<\,globalRejector\,>> qui accepte ou rejette un cas en fonction de l'ensemble du fichier, c'est \`{a} dire en fonction des autres cas de ce m\^{e}me fichier.
+\item Le <<\,localRejector\,>> qui accepte ou rejette un cas en ne regardant que le cas lui m\^{e}me.
+\item Le <<\,Purifier\,>> qui va r\'{e}duire la taille du cas en supprimant le surplus de caract\`{e}res non essentiels.
 \end{itemize}
 Ces 3 types de filtres s'appliquent de mani\`{e}re cons\'{e}cutive par cat\'{e}gorie sur chaque cas extrait des fichiers WiCoPaCo. Une fois l'\'{e}puration effectu\'{e}e, le logiciel cr\'{e}e un fichier de sortie contenant les cas n'ayant pas \'{e}t\'{e} rejet\'{e}s. Concernant les donn\'{e}es de sorties du logiciel, nous avons d\'{e}cid\'{e} d'utiliser le format CSV afin de pouvoir facilement ins\'{e}rer son contenu dans une base de donn\'{e}es par la suite si besoin.
 
 %===== 2eme sous partie ====
 \subsection{R\'{e}flexions sur les fonctionnalit\'{e}s}
-Dans cette partie nous aborderons nos principales r\'{e}flexions qui ont orient\'{e} le d\'{e}veloppement du logiciel Java.
+Dans cette partie nous aborderons nos principales r\'{e}flexions qui ont orient\'{e} le d\'{e}veloppement du logiciel en Java.
 %===== 1ere sous sous partie ====
 \subsubsection{API pour la lecture de fichier}
-Comme les fichiers de WiCoPaCo sont au format XML, nous avons cherch\'{e} des API permettant une exploitation ais\'{e}e et pratique du contenu qu'il renferme. Nous avons donc utilis\'{e} l'API "DocumentBuilderFactory" ainsi que "ParserConfigurationException" provenant du package "javax.xml.parsers". Cette API permet de faire une repr\'{e}sentation en m\'{e}moire du fichier XML en un objet en structure d'arbre. Chaque noeud de cet arbre est une balise, et les enfants de ce noeud correspondent aux balises que ce noeud contient (cf illustration suivante). 
+Comme les fichiers de WiCoPaCo sont au format XML, nous avons cherch\'{e} des API permettant une exploitation ais\'{e}e et pratique du contenu qu'il renferme. Nous avons donc utilis\'{e} l'API <<\,DocumentBuilderFactory\,>> ainsi que <<\,ParserConfigurationException\,>> provenant du package <<\,javax.xml.parsers\,>>. Cette API permet de faire une repr\'{e}sentation en m\'{e}moire du fichier XML en un objet en structure d'arbre. Chaque noeud de cet arbre est une balise, et les enfants de ce noeud correspondent aux balises que ce noeud contient (cf illustration suivante). 
 
 %==== image ====
 \begin{center}
@@ -351,7 +351,7 @@ L'utilisation de DOM sous forme d'arbre nous permet donc une facilit\'{e} de d\'
 
 %===== 2eme sous sous partie ====
 \subsubsection{Protocole d'ajout de filtres}
-C'est ici que nous allons traiter le coeur du sujet : la mani\`{e}re dont les filtres ont \'{e}t\'{e} con\c{c}u. Ces filtres \'{e}tant un point crucial dans l'obtention d'un r\'{e}sultat int\'{e}ressant pour notre recherche, il semblait plus que n\'{e}cessaire de mettre en place un protocol rigoureux pour la validation des filtres. Le protocole \'{e}tait assez simple, mais n'en demeurait pas moins efficace.
+C'est ici que nous allons traiter le c{\oe}ur du sujet : la mani\`{e}re dont les filtres ont \'{e}t\'{e} con\c{c}us. Ces filtres \'{e}tant un point crucial dans l'obtention d'un r\'{e}sultat int\'{e}ressant pour notre recherche, il semblait plus que n\'{e}cessaire de mettre en place un protocole rigoureux pour la validation des filtres. Le protocole \'{e}tait assez simple, mais n'en demeurait pas moins efficace.
 \newline
 \newline
 Pour commencer, nous examinions le contenu du fichier WiCoPaCo dans le but de trouver plusieurs cas qui ne correspondaient pas \`{a} nos crit\`{e}res de s\'{e}lection. Une fois le cas relev\'{e}, il fallait l'analyser et comprendre pourquoi il ne concordait pas avec nos attentes, de sorte \`{a} trouver une r\`{e}gle nous permettant de d\'{e}tecter ce type de cas. Apr\`{e}s quoi, nous nous penchions sur la mani\`{e}re dont le filtre allait \^{e}tre impl\'{e}ment\'{e} en s'appuyant sur la r\`{e}gle que nous avions \'{e}labor\'{e}e.
@@ -367,16 +367,16 @@ Enfin, nous appliquions tous les filtres sur les quelques 400 000 cas et entrepr
 
 %===== 3eme sous sous partie ====
 \subsubsection{Fichier de sortie}
-Le logiciel, une fois les filtres appliqu\'{e}s sur un fichier pass\'{e} en entr\'{e}, devait produire une sortie exploitable facilement. C'est pourquoi nous avons d\'{e}cid\'{e} d'utiliser le format CSV. C'est un format simple, exportable, lisible par un humaine sous forme de tableau, et qui peut \^{e}tre ais\'{e}ment ins\'{e}rer dans une base de donn\'{e}es via un script si besoin en est. Chaque ligne correspond \`{a} un cas, et le fichier se forme en trois colonnes : la premi\`{e}re correspond au cas avant que la correction soit effectu\'{e}e, la seconde \'{e}tant le cas avec la correction, et la troisi\`{e}me colonne se trouve \^{e}tre l'\'{e}ventuel commentaire que l'auteur de la correction peut faire sur la correction qu'il effectue sur wikipedia.
-Il est \'{e}galement possible d'activer la sortie pour chacun des filtres, chaque fichier de sortie porte le nom de "RejectedBy" concat\'{e}n\'{e} avec le nom du filtre et contient les cas rejet\'{e}s. Cela permet de voir ce que chaque filtre a effectu\'{e} lors de l'ex\'{e}cution.
+Le logiciel, une fois les filtres appliqu\'{e}s sur un fichier pass\'{e} en entr\'{e}e, devait produire une sortie exploitable facilement. C'est pourquoi nous avons d\'{e}cid\'{e} d'utiliser le format CSV. C'est un format simple, exportable, lisible par un humain sous forme de tableau, et qui peut \^{e}tre ais\'{e}ment ins\'{e}r\'{e} dans une base de donn\'{e}es via un script si besoin en est. Chaque ligne correspond \`{a} un cas, et le fichier est compos\'{e} de trois colonnes : la premi\`{e}re correspond au cas avant que la correction soit effectu\'{e}e, la deuxi\`{e}me \'{e}tant le cas avec la correction, et la troisi\`{e}me colonne se trouve \^{e}tre l'\'{e}ventuel commentaire que l'auteur de la correction peut faire sur la correction qu'il effectue sur Wikipedia.
+Il est \'{e}galement possible d'activer la sortie pour chacun des filtres, chaque fichier de sortie porte le nom de <<\,RejectedBy\,>> concat\'{e}n\'{e} avec le nom du filtre et contient les cas rejet\'{e}s. Cela permet de voir ce que chaque filtre a effectu\'{e} lors de l'ex\'{e}cution.
 
 %===== 3eme sous partie ====
 \subsection{D\'{e}tail sur les diff\'{e}rents filtres}
 %===== 1ere sous sous partie ====
 \subsubsection{Le type GlobalRejector}
-Comme expliqu\'{e} de mani\`{e}re succincte plus t\^{o}t, le type de filtre GlobalRejector est une cat\'{e}gorie contenant les filtres qui n\'{e}cessite une analyse enti\`{e}re du document d'entr\'{e}e, pour y collecter des informations, afin de statuer sur l'acceptation d'un cas. 
+Comme expliqu\'{e} de mani\`{e}re succincte plus haut, le type de filtre GlobalRejector est une cat\'{e}gorie contenant les filtres qui n\'{e}cessite une analyse enti\`{e}re du document d'entr\'{e}e, pour y collecter des informations, afin de statuer sur l'acceptation d'un cas. 
 	Dans cette cat\'{e}gorie se trouve deux filtres:
-Le premier \'{e}tant le "RollbackFilter", qui a pour but de refuser les retours sur correction. Le filtre parcourt une premi\`{e}re fois enti\`{e}rement le fichier en r\'{e}pertoriant chaque correction, puis lors du parcours du document pour le traitement des cas, le filtre scrute ses donn\'{e}es pour voir si une modification inverse est effectu\'{e}e \`{a} un moment. S'il existe une modification inverse dans le document, alors le cas est rejet\'{e}.
+Le premier \'{e}tant le <<\,RollbackFilter\,>>, qui a pour but de refuser les retours sur correction. Le filtre parcourt une premi\`{e}re fois enti\`{e}rement le fichier en r\'{e}pertoriant chaque correction, puis lors du parcours du document pour le traitement des cas, le filtre scrute ses donn\'{e}es pour voir si une modification inverse est effectu\'{e}e \`{a} un moment. S'il existe une modification inverse dans le document, alors le cas est rejet\'{e}.
 Voici un exemple que le RollbackFilter rejette :
 On trouve une premi\`{e}re modification comme suit,
 %==== image ====
@@ -391,22 +391,22 @@ Puis, plus loin dans le document on trouve la correction inverse,
 \includegraphics[width=14cm]{exemple11.png} %l'image est retaill\'ee pour avoir une largeur de 10cm
 \end{center}
 
-Le second filtre de cette cat\'{e}gorie se nomme "SpellingErrorLabel", ce dernier est diff\'{e}rents des autres filtres, car il repose sur une \'{e}tude effectu\'{e}e sur WiCoPaCo faite par des chercheurs travaillant au LIMSI. Au sein de leurs r\'{e}sultats de recherche se trouve un fichier XML contenant les identifiants des cas comportant des erreurs lexicales, ainsi que des erreurs grammaticales. Donc le filtre r\'{e}pertorie les identifiants not\'{e}s par l'\'{e}quipe de chercheurs et rejette les cas dont l'identifiant n'appartient pas \`{a} ceux qui ont \'{e}t\'{e} relev\'{e}s par l'\'{e}quipe travaillant au LIMSI.
+Le deuxi\`{e} filtre de cette cat\'{e}gorie se nomme <<\,SpellingErrorLabel\,>>. Ce dernier est diff\'{e}rent des autres filtres, car il repose sur une \'{e}tude effectu\'{e}e sur WiCoPaCo faite par des chercheurs travaillant au LIMSI. Au sein de leurs r\'{e}sultats de recherche se trouve un fichier XML contenant les identifiants des cas comportant des erreurs lexicales, ainsi que des erreurs grammaticales. Donc le filtre r\'{e}pertorie les identifiants not\'{e}s par l'\'{e}quipe de chercheurs et rejette les cas dont l'identifiant n'appartient pas \`{a} ceux qui ont \'{e}t\'{e} relev\'{e}s par l'\'{e}quipe travaillant au LIMSI.
 
 %===== 2eme sous sous partie ====
 \subsubsection{Le type LocalRejector}
-Quand au type "LocalRejector", c'est une cat\'{e}gorie comprenant des filtres qui inspecte uniquement le cas et son contenu pour d\'{e}cider si le cas est rejet\'{e}. 
-	Deux filtres ont \'{e}t\'{e} impl\'{e}ment\'{e} dans cette cat\'{e}gorie:
-Le premier porte le nom de "EstheticalRestructurationRejector" et a pour but de d\'{e}tecter les reformulations ou restructuration de phrases. Pour ce faire, notre filtre utilise la distance d'\'{e}dition de Levenshtein, qui au sens math\'{e}matique du terme, est une distance donnant une mesure de la diff\'{e}rence entre deux chaînes de caract\`{e}res. Elle est \'{e}gale au nombre minimal de caract\`{e}res qu'il faut supprimer, ins\'{e}rer ou remplacer pour passer d'une chaîne \`{a} l'autre. C'est pourquoi si cette distance est importante par rapport \`{a} la taille des mots modifi\'{e}s, nous pouvons consid\'{e}rer que le mot entier a \'{e}t\'{e} chang\'{e} et que ce n'\'{e}tait pas une simple correction orthographique. 
+Quant au type <<\,LocalRejector\,>>, c'est une cat\'{e}gorie comprenant des filtres qui inspecte uniquement le cas et son contenu pour d\'{e}cider si le cas est rejet\'{e}. Deux filtres ont \'{e}t\'{e} impl\'{e}ment\'{e}s dans cette cat\'{e}gorie :
 \newline
-Notre filtre a \'{e}t\'{e} impl\'{e}ment\'{e} de la mani\`{e}re suivante: un cas est rejet\'{e} si la partie "correction effectu\'{e}e" a un nombre de caract\`{e}res inf\'{e}rieur \`{a} 4 et que la distance de Levenshtein est plus grande que la moiti\'{e} du mot le plus court, ou si la partie correction a un nombre de caract\`{e}res sup\'{e}rieur \`{a} 4 et que la distance calcul\'{e}e est plus grande que la moiti\'{e} de la plus petites partie modification.
+Le premier porte le nom de <<\,EstheticalRestructurationRejector\,>> et a pour but de d\'{e}tecter les reformulations ou restructuration de phrases. Pour ce faire, notre filtre utilise la distance d'\'{e}dition de Levenshtein, qui au sens math\'{e}matique du terme, est une distance donnant une mesure de la diff\'{e}rence entre deux cha\^{i}nes de caract\`{e}res. Elle est \'{e}gale au nombre minimal de caract\`{e}res qu'il faut supprimer, ins\'{e}rer ou remplacer pour passer d'une cha\^{i}ne \`{a} l'autre. C'est pourquoi si cette distance est importante par rapport \`{a} la taille des mots modifi\'{e}s, nous pouvons consid\'{e}rer que le mot entier a \'{e}t\'{e} chang\'{e} et que ce n'\'{e}tait pas une simple correction orthographique. 
+\newline
+Notre filtre a \'{e}t\'{e} impl\'{e}ment\'{e} de la mani\`{e}re suivante : un cas est rejet\'{e} si la partie <<\,correction effectu\'{e}e\,>> a un nombre de caract\`{e}res inf\'{e}rieur \`{a} 4 et que la distance de Levenshtein est plus grande que la moiti\'{e} du mot le plus court, ou si la partie correction a un nombre de caract\`{e}res sup\'{e}rieur \`{a} 4 et que la distance calcul\'{e}e est plus grande que la moiti\'{e} de la plus petites partie modification.
 Voici un exemple que le EstheticalRestructurationRejector rejette :
 
 %==== image ====
 \begin{center}
 \includegraphics[width=12cm]{exemple12.png} %l'image est retaill\'ee pour avoir une largeur de 10cm
 \end{center}
-Le deuxi\`{e}me, "NumberRejector" \'{e}limine les corrections portant sur les chiffres, car ce sont des corrections de contenu (date, pourcentage, ...) et donc, elles ne constituent pas d'erreurs de fran\c{c}ais. 
+Le deuxi\`{e}me, <<\,NumberRejector\,>> \'{e}limine les corrections portant sur les chiffres, car ce sont des corrections de contenu (date, pourcentage, ...) et donc, elles ne constituent pas d'erreurs de fran\c{c}ais. 
 Voici un exemple que le NumberRejector rejette :
 %==== image ====
 \begin{center}
@@ -415,9 +415,9 @@ Voici un exemple que le NumberRejector rejette :
 
 %===== 3eme sous sous partie ====
 \subsubsection{Le type Purifier}
-En plus de ces deux filtres, nous avons ajout\'{e} une autre cat\'{e}gorie, "PurifierFilter", qui n'est pas un filtre en soit car il rejette aucun cas. Ce "purificateur" a deux principaux objectifs: premi\`{e}rement, il sert a "\'{e}pur\'{e}" les cas qui seront retenu par les filtres pr\'{e}c\'{e}dent. Cette \'{e}puration permettra d'all\'{e}ger les donn\'{e}es pr\'{e}sent dans la base de cas mais surtout d'am\'{e}liorer les \'{e}tapes de rem\'{e}moration ainsi que d'adaptation en enlevant des caract\`{e}res inutiles. De plus, nous avons vu pr\'{e}c\'{e}demment dans l'utilisation du logiciel GREW que celui-ci n'arrivait pas \`{a} construire de graphe complet lorsque la cas \'{e}tudi\'{e} comportait des caract\`{e}res sp\'{e}ciaux. Cette \'{e}puration permettra aussi d'am\'{e}liorer la qualit\'{e} d'analyse de GREW pour la d\'{e}tection d'erreurs.
+En plus de ces deux filtres, nous avons ajout\'{e} une autre cat\'{e}gorie, <<\,PurifierFilter\,>>, qui n'est pas un filtre en soit car il rejette aucun cas. Ce <<\,purificateur\,>> a deux principaux objectifs: premi\`{e}rement, il sert \`{a} <<\,\'{e}pur\'{e}\,>> les cas qui seront retenu par les filtres pr\'{e}c\'{e}dent. Cette \'{e}puration permettra d'all\'{e}ger les donn\'{e}es pr\'{e}sent dans la base de cas mais surtout d'am\'{e}liorer les \'{e}tapes de rem\'{e}moration ainsi que d'adaptation en enlevant des caract\`{e}res inutiles. De plus, nous avons vu pr\'{e}c\'{e}demment dans l'utilisation du logiciel GREW que celui-ci n'arrivait pas \`{a} construire de graphe complet lorsque la cas \'{e}tudi\'{e} comportait des caract\`{e}res sp\'{e}ciaux. Cette \'{e}puration permettra aussi d'am\'{e}liorer la qualit\'{e} d'analyse de GREW pour la d\'{e}tection d'erreurs.
 
-Dans cette cat\'{e}gorie, nous retrouvons deux filtres. Le premier filtre, "SentencePurifier" a pour mission de supprimer tout le contenu superflu autour de la correction, et de n'en garder que le noyau. Le probl\`{e}me \'{e}tant que les cas contenus dans le fichier de WiCoPaCo sont souvent entour\'{e}s du contexte, qui n'est pas important pour l'utilisation que nous voulons en faire. C'est pourquoi nous avons d\'{e}cid\'{e} de supprimer le contexte, dans l'optique d'all\'{e}ger le fichier de sortie
+Dans cette cat\'{e}gorie, nous retrouvons deux filtres. Le premier filtre, <<\,SentencePurifier\,>> a pour mission de supprimer tout le contenu superflu autour de la correction, et de n'en garder que le noyau. Le probl\`{e}me \'{e}tant que les cas contenus dans le fichier de WiCoPaCo sont souvent entour\'{e}s du contexte, qui n'est pas important pour l'utilisation que nous voulons en faire. C'est pourquoi nous avons d\'{e}cid\'{e} de supprimer le contexte, dans l'optique d'all\'{e}ger le fichier de sortie
 Par exemple le cas : 
 
 %==== image ====
@@ -429,8 +429,8 @@ va se transformer par l'application du filtre SentencePurifier en :
 \begin{center}
 \includegraphics[width=14cm]{exemple15.png} %l'image est retaill\'ee pour avoir une largeur de 10cm
 \end{center}
-Enfin, le filtre SpecialCaracterPurifier, est assez simple. Il consiste \`{a} supprimer les caract\`{e}res sp\'{e}ciaux suivant: "\$", "*" , "/", "\#" , se trouvant au d\'{e}but de la premi\`{e}re phrase des cas. Les corrections pouvant \^{e}tre effectu\'{e}e sur tout le contenu de la page, certains cas sont des annotations en pied de page et ont donc une mise en forme particuli\`{e}re.
-Ce filtre n'a d'int\'{e}r\^{e}t que s'il est appliqu\'{e} apr\`{e}s le filtre "SentencePurifier", car il risquerait d'effectuer le m\^{e}me travail
+Enfin, le filtre SpecialCaracterPurifier, est assez simple. Il consiste \`{a} supprimer les caract\`{e}res sp\'{e}ciaux suivant: <<\,\$\,>>, <<\,*\,>>, <<\,/\,>>, <<\,\#\,>>, se trouvant au d\'{e}but de la premi\`{e}re phrase des cas. Les corrections pouvant \^{e}tre effectu\'{e}es sur tout le contenu de la page, certains cas sont des annotations en pied de page et ont donc une mise en forme particuli\`{e}re.
+Ce filtre n'a d'int\'{e}r\^{e}t que s'il est appliqu\'{e} apr\`{e}s le filtre <<\,SentencePurifier\,>>, car il risquerait d'effectuer le m\^{e}me travail
 
 %===== 3ere partie ====
 \section{R\'{e}sultats}

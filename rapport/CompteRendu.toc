@@ -7,18 +7,18 @@
 \contentsline {subsection}{\numberline {2.1}D\'{e}but du d\'{e}veloppement}{8}
 \contentsline {subsubsection}{\numberline {2.1.1}Grew}{8}
 \contentsline {subsubsection}{\numberline {2.1.2}Le logiciel Java}{9}
-\contentsline {subsection}{\numberline {2.2}R\'{e}flexions sur les fonctionnalit\'{e}s}{11}
-\contentsline {subsubsection}{\numberline {2.2.1}API pour la lecture de fichier}{11}
+\contentsline {subsection}{\numberline {2.2}R\'{e}flexions sur les fonctionnalit\'{e}s}{10}
+\contentsline {subsubsection}{\numberline {2.2.1}API pour la lecture de fichier}{10}
 \contentsline {subsubsection}{\numberline {2.2.2}Protocole d'ajout de filtres}{11}
 \contentsline {subsubsection}{\numberline {2.2.3}Fichier de sortie}{11}
-\contentsline {subsection}{\numberline {2.3}D\'{e}tail sur les diff\'{e}rents filtres}{12}
-\contentsline {subsubsection}{\numberline {2.3.1}Le type GlobalRejector}{12}
+\contentsline {subsection}{\numberline {2.3}D\'{e}tail sur les diff\'{e}rents filtres}{11}
+\contentsline {subsubsection}{\numberline {2.3.1}Le type GlobalRejector}{11}
 \contentsline {subsubsection}{\numberline {2.3.2}Le type LocalRejector}{12}
-\contentsline {subsubsection}{\numberline {2.3.3}Le type Purifier}{13}
+\contentsline {subsubsection}{\numberline {2.3.3}Le type Purifier}{12}
 \contentsline {section}{\numberline {3}R\'{e}sultats}{13}
 \contentsline {subsection}{\numberline {3.1}Statistiques}{13}
 \contentsline {subsubsection}{\numberline {3.1.1}Les filtres GlobalRejector}{13}
 \contentsline {subsubsection}{\numberline {3.1.2}Les filtres LocalRejector}{13}
 \contentsline {subsubsection}{\numberline {3.1.3}Les filtres Purifier}{13}
 \contentsline {subsection}{\numberline {3.2}R\'{e}sultat final}{13}
-\contentsline {subsection}{\numberline {3.3}Ouverture}{14}
+\contentsline {subsection}{\numberline {3.3}Ouverture}{13}
