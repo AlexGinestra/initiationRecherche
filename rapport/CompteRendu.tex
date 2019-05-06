@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[11pt]{article}
 
 \usepackage{graphicx}
 \usepackage{multicol}
@@ -208,7 +208,7 @@ Une premi\`{e}re piste nous a \'{e}t\'{e} fournie par un groupe d'\'{e}tudiants 
 Notre d\'{e}but d'\'{e}tude a donc \'{e}t\'{e} guid\'{e} par les moyens mis en {\oe}uvre pour effectuer un remplissage automatique de leur base de cas initiale, et plus particuli\`{e}rement un : les corpus de WiCoPaCo (\cite{Wikipedia Correction and Paraphrase Corpus} lien : \url{https://wicopaco.limsi.fr}). Le site WiCoPaCo met en libre acc\`{e}s des fichiers au format XML contenant des phrases, ou parties de phrases avec une correction effectu\'{e}e ainsi qu'un commentaire \'{e}ventuel laiss\'{e} par l'auteur de la correction. Ces fichiers sont le r\'{e}sultat des corrections faites par les administrateurs des pages Wikip\'{e}dia, ce qui n\'{e}cessite une correction \'{e}tant donn\'{e} que le contenu des pages est apport\'{e} par des utilisateurs. Les fichiers en question contiennent donc des centaines de milliers de cas compos\'{e}s de la mani\`{e}re suivante : le groupe de phrase avant modification avec la mise en \'{e}vidence de la faute, suivi du m\^{e}me groupe de phrase avec la correction apport\'{e}e \'{e}galement mise en \'{e}vidence. 
 \newline
 \newline
-L'int\'{e}r\^{e}t principal de ces fichiers \'{e}tant l'\'{e}norme masse de donn\'{e}es qu'ils contiennent, nous permettant ainsi d'en extraire un grand nombre de cas. Cependant, m\^{e}me si cette solution semble \^{e}tre id\'{e}ale et simple \`{a} mettre en place, il s'av\`{e}re qu'elle est loin d'\^{e}tre parfaite. Le probl\`{e}me de ces corrections est qu'une partie se trouve être des corrections de contenu, une autre \'{e}tant des reformulations, et bien d'autres types de corrections n'\'{e}tant pas des erreurs de fran\c{c}ais mais sont pourtant contenues dans ces fichiers. La probl\'{e}matique de l'\'{e}puration de cette \'{e}norme masse de donn\'{e}es se pose donc.
+L'int\'{e}r\^{e}t principal de ces fichiers \'{e}tant l'\'{e}norme masse de donn\'{e}es qu'ils contiennent, nous permettant ainsi d'en extraire un grand nombre de cas. Cependant, m\^{e}me si cette solution semble \^{e}tre id\'{e}ale et simple \`{a} mettre en place, il s'av\`{e}re qu'elle est loin d'\^{e}tre parfaite. Le probl\`{e}me de ces corrections est qu'une partie se trouve \^{e}tre des corrections de contenu, une autre \'{e}tant des reformulations, et bien d'autres types de corrections n'\'{e}tant pas des erreurs de fran\c{c}ais mais sont pourtant contenues dans ces fichiers. La probl\'{e}matique de l'\'{e}puration de cette \'{e}norme masse de donn\'{e}es se pose donc.
 \newline
 \newline
 Face \`{a} ce probl\`{e}me, le groupe d'\'{e}tudiants de L3 avait mis en place un script Python qui prenait un fichier XML en entr\'{e}e et produisait un fichier CSV en sortie. Le script s'occupait aussi de la suppression de certains cas : les retours en arri\`{e}re. Il ne retenait donc pas les cas qui \'{e}taient des retours sur correction, c'est-\`{a}-dire lorsque le correcteur transformait une phrase A en phrase B, puis transformait \`{a} nouveau la phrase B en phrase A.
@@ -246,7 +246,7 @@ Le premier de nos deux axes \'{e}tait la d\'{e}couverte d'un outil permettant l'
 \includegraphics[width=10cm]{graphgrew.png} %l'image est retaill\'ee pour avoir une largeur de 10cm
 \end{center}
 
-Nous pouvons donc retrouver dans ce graphe le lemme de chaque mot, situ\'{e} sous le mot correspondant ainsi que les liens qu'il a avec les autres, repr\'{e}sent\'{e}s par des fl\`{e}ches qui lient les mots entre eux. Cet outil n'est donc pas un outil de d\'{e}tection d'erreur \`{a} proprement parl\'{e}. Cependant il permet, si une phrase n'est pas bien assembl\'{e} ou dans les cas o\`{u} il n'arrive pas \`{a} trouver les liens entre les mots d'une phrase, de cr\'{e}er des graphes o\`{u} tous les mots ne sont pas li\'{e}s entre eux. Prenons par exemple la phrase utilis\'{e}e dans le graphe pr\'{e}c\'{e}dent et rempla\c{c}ons Le "C'est" par "S'est", ce qui est une erreur classique de fran\c{c}ais. Dans ce cas, GREW r\'{e}alise le graphe suivant :
+Nous pouvons donc retrouver dans ce graphe le lemme de chaque mot, situ\'{e} sous le mot correspondant ainsi que les liens qu'il a avec les autres, repr\'{e}sent\'{e}s par des fl\`{e}ches qui lient les mots entre eux. Cet outil n'est donc pas un outil de d\'{e}tection d'erreur \`{a} proprement parl\'{e}. Cependant il permet, si une phrase n'est pas bien assembl\'{e} ou dans les cas o\`{u} il n'arrive pas \`{a} trouver les liens entre les mots d'une phrase, de cr\'{e}er des graphes o\`{u} tous les mots ne sont pas li\'{e}s entre eux. Prenons par exemple la phrase utilis\'{e}e dans le graphe pr\'{e}c\'{e}dent et rempla\c{c}ons le mot <<\,C'est\,>> par <<\,S'est\,>>, ce qui est une erreur classique de fran\c{c}ais. Dans ce cas, GREW r\'{e}alise le graphe suivant :
 
 %==== image ====
 \begin{center}
@@ -330,7 +330,7 @@ Ce logiciel allait contenir plusieurs filtres pouvant \^{e}tre r\'{e}partis dans
 
 Apr\`{e}s r\'{e}flexion, nous avons donc d\'{e}cid\'{e} de mettre en place 3 cat\'{e}gories distinctes de filtres :
 \begin{itemize}
-\item Le <<\,globalRejector\,>> qui accepte ou rejette un cas en fonction de l'ensemble du fichier, c'est \`{a} dire en fonction des autres cas de ce m\^{e}me fichier.
+\item Le <<\,globalRejector\,>> qui accepte ou rejette un cas en fonction de l'ensemble du fichier, c'est-\`{a}-dire en fonction des autres cas de ce m\^{e}me fichier.
 \item Le <<\,localRejector\,>> qui accepte ou rejette un cas en ne regardant que le cas lui m\^{e}me.
 \item Le <<\,Purifier\,>> qui va r\'{e}duire la taille du cas en supprimant le surplus de caract\`{e}res non essentiels.
 \end{itemize}
