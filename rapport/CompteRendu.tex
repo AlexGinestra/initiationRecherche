@@ -192,9 +192,9 @@ Nous voyons donc qu'il est possible de r\'{e}soudre des probl\`{e}mes gr\^ace au
 \newline
 \newline
 Voici un exemple de r\'{e}solution de probl\`{e}me gr\^ace au raisonnement \`{a} partir de cas : 
-Voici le probl\`{e}me que nous rencontrons (probl\`{e}me cible) : <<\,Tu n'as pas manger\,>>.
-Nous avons dans notre base de cas un couple tel que celui-ci : <<\,Il a recommencer\,>> est le probl\`{e}me source et <<\,Il a recommenc\'{e}\,>> est la solution du probl\`{e}me source.
-La rem\'{e}moration va donc rapprocher notre probl\`{e}me cible du probl\`{e}me source et en utilisant la solution du probl\`{e}me source ainsi que l'explication, l'adaptation va pouvoir nous fournir une solution de notre probl\`{e}me cible qui sera <<\,Tu n'as pas mang\'{e}\,>>.
+Ici le probl\`{e}me que nous rencontrons est une phrase contenant une erreur de fran\c{c}ais (probl\`{e}me cible) : <<\,Tu n'as pas manger.\,>>.
+Nous avons dans notre base de cas un couple (phrase erron\'{e}e, phrase corrig\'{e}e) tel que celui-ci : (<<\,Il a recommencer.\,>>, <<\,Il a recommenc\'{e}.\,>>) o\`{u} la phrase erron\'{e}e est le probl\`{e}me source et la phrase corrig\'{e}e est la solution du probl\`{e}me source.
+La rem\'{e}moration va donc rapprocher notre probl\`{e}me cible du probl\`{e}me source et en utilisant la solution du probl\`{e}me source ainsi que l'explication, l'adaptation va pouvoir nous fournir une solution de notre probl\`{e}me cible qui sera <<\,Tu n'as pas mang\'{e}.\,>>.
 \newline
 \newline
 Pour parvenir \`{a} r\'{e}soudre notre probl\'{e}matique qui est la correction automatique du fran\c{c}ais \`{a} l'aide du raisonnement \`{a} partir du cas, il nous faut donc une base de cas qui permette en th\'{e}orie de corriger toutes les erreurs possible du fran\c{c}ais. En prenant en compte tous les types d'erreurs possibles (grammaire, orthographe, conjugaison, etc.), il y aurait un nombre immense de cas \`{a} d\'{e}finir dans notre base, ce qui est impossible \`{a} construire \`{a} la main. Le but de notre projet est donc de construire une base de cas \`{a} l'aide d'outils diverses et vari\'{e}s qui serait totalement automatis\'{e}e.
@@ -346,13 +346,13 @@ Ces 3 types de filtres s'appliquent de mani\`{e}re cons\'{e}cutive par cat\'{e}g
 Dans cette partie nous aborderons nos principales r\'{e}flexions qui ont orient\'{e} le d\'{e}veloppement du logiciel en Java.
 %===== 1ere sous sous partie ====
 \subsubsection{API pour la lecture de fichier}
-Comme les fichiers de WiCoPaCo sont au format XML, nous avons cherch\'{e} des API permettant une exploitation ais\'{e}e et pratique du contenu qu'il renferme. Nous avons donc utilis\'{e} l'API <<\,DocumentBuilderFactory\,>> ainsi que <<\,ParserConfigurationException\,>> provenant du package <<\,javax.xml.parsers\,>>. Cette API permet de faire une repr\'{e}sentation en m\'{e}moire du fichier XML en un objet en structure d'arbre. Chaque noeud de cet arbre est une balise, et les enfants de ce noeud correspondent aux balises que ce noeud contient (cf illustration suivante). 
+Comme les fichiers de WiCoPaCo sont au format XML, nous avons cherch\'{e} des API permettant une exploitation ais\'{e}e et pratique du contenu qu'ils renferment. Nous avons donc utilis\'{e} une API qui permet de repr\'{e}senter en m\'{e}moire le fichier XML en un objet en structure d'arbre. Chaque noeud de cet arbre est une balise, et les enfants de ce noeud correspondent aux balises que ce noeud contient (cf illustration suivante). 
 
 %==== image ====
 \begin{center}
 \includegraphics[width=14cm]{exemple9.png} %l'image est retaill\'ee pour avoir une largeur de 10cm
 \end{center}
-L'utilisation de DOM sous forme d'arbre nous permet donc une facilit\'{e} de d\'{e}veloppement pour le parcours et exploitation des balises ainsi que leurs contenus.
+	Cette API nous permet donc une facilit\'{e} de d\'{e}veloppement pour le parcours et l'exploitation des balises ainsi que leurs contenus.
 
 %===== 2eme sous sous partie ====
 \subsubsection{Protocole d'ajout de filtres}
@@ -368,7 +368,7 @@ Ensuite, une fois le filtre d\'{e}velopp\'{e}, une multitude de tests devaient \
 Puis, une fois le filtre op\'{e}rationnel, une analyse statistique de l'ex\'{e}cution de ce filtre, appliqu\'{e} avec les autres filtres d\'{e}j\`{a} existant, sur le fichier entier \'{e}tait effectu\'{e}e. Le but de la d\'{e}marche \'{e}tait de d\'{e}montrer l'utilit\'{e} de ce dernier malgr\'{e} l'existence d'autres filtres. Si les r\'{e}sultats statistiques attestaient de l'int\'{e}r\^{e}t du filtre, alors ce dernier \'{e}tait accept\'{e} et ajout\'{e} au projet.
 \newline
 \newline
-Enfin, nous appliquions tous les filtres sur les quelques 400 000 cas et entreprenions une nouvelle analyse sur le fichier de sortie du logiciel en qu\^{e}te de cas ne correspondant pas \`{a} nos crit\`{e}res pour recommencer le protocole.
+Enfin, nous appliquions tous les filtres sur les quelques 400 000 cas et entreprenions une nouvelle analyse sur le fichier de sortie du logiciel en qu\^{e}te de cas ne correspondant pas \`{a} nos crit\`{e}res pour recommencer le protocole. Le fonctionnement de chacun de ces filtres sera d\'{e}taill\'{e} plus bas (cf. partie 2.3).
 
 %===== 3eme sous sous partie ====
 \subsubsection{Fichier de sortie}
@@ -396,7 +396,7 @@ Puis, plus loin dans le document on trouve la correction inverse,
 \includegraphics[width=14cm]{exemple11.png} %l'image est retaill\'ee pour avoir une largeur de 10cm
 \end{center}
 
-Le deuxi\`{e} filtre de cette cat\'{e}gorie se nomme <<\,SpellingErrorLabel\,>>. Ce dernier est diff\'{e}rent des autres filtres, car il repose sur une \'{e}tude effectu\'{e}e sur WiCoPaCo faite par des chercheurs travaillant au LIMSI. Au sein de leurs r\'{e}sultats de recherche se trouve un fichier XML contenant les identifiants des cas comportant des erreurs lexicales, ainsi que des erreurs grammaticales. Donc le filtre r\'{e}pertorie les identifiants not\'{e}s par l'\'{e}quipe de chercheurs et rejette les cas dont l'identifiant n'appartient pas \`{a} ceux qui ont \'{e}t\'{e} relev\'{e}s par l'\'{e}quipe travaillant au LIMSI.
+Comme le fichier contient la correction <<\,agi\,>> en <<\,agit\,>>, puis <<\,agit\,>> en <<\,agi\,>> sur le m\^{e}me cas, le filtre rejette les deux corrections puisqu'il ne peut pas d\'{e}terminer laquelle de ces deux corrections est juste.
 
 %===== 2eme sous sous partie ====
 \subsubsection{Le type LocalRejector}
@@ -436,6 +436,25 @@ va se transformer par l'application du filtre SentencePurifier en :
 \end{center}
 Enfin, le filtre SpecialCaracterPurifier, est assez simple. Il consiste \`{a} supprimer les caract\`{e}res sp\'{e}ciaux suivant: <<\,\$\,>>, <<\,*\,>>, <<\,/\,>>, <<\,\#\,>>, se trouvant au d\'{e}but de la premi\`{e}re phrase des cas. Les corrections pouvant \^{e}tre effectu\'{e}es sur tout le contenu de la page, certains cas sont des annotations en pied de page et ont donc une mise en forme particuli\`{e}re.
 Ce filtre n'a d'int\'{e}r\^{e}t que s'il est appliqu\'{e} apr\`{e}s le filtre <<\,SentencePurifier\,>>, car il risquerait d'effectuer le m\^{e}me travail
+
+
+%===== 4eme sous sous partie ====
+\subsubsection{Travail effectu\'{e} par LIMSI}
+
+Gr\^{a}ce \`{a} nos recherches effectu\'{e}es sur WiCoPaCo, nous avons pu trouver des travaux effectu\'{e}s par des chercheurs de LIMSI[\cite[3]{3}]. Ces travaux \autocite[1]{https://wicopaco.limsi.fr/pub/taln10.pdf} leurs ont permis d'extraire automatiquement des fichiers XML de WiCoPaCo un corpus d'erreurs compos\'{e} de 72 483 erreurs lexicales et 74 100 erreurs grammaticales. Leurs r\'{e}sultats peuvent \^{e}tre extraits 
+\`{a} partir d'un fichier XML regroupant les 150 000 cas, pr\'{e}sent\'{e} sous la forme :
+
+%==== image ====
+\begin{center}
+\includegraphics[width=7cm]{exemple16.png} %l'image est retaill\'ee pour avoir une largeur de 10cm
+\end{center}
+
+Chaque cas est repr\'{e}sent\'{e} par un identifiant <<\,id\,>>, correspondant \`{a} l'identifiant du cas dans le fichier XML de WiCoPaCo. De plus, une \'{e}tiquette est associ\'{e}e afin de pr\'{e}ciser si ce cas est une erreur lexicale (non-word errors) ou grammaticale (real-word errors). Nous avons donc associ\'{e} leurs travaux aux n\^{o}tres en cr\'{e}ant un filtre s'intitulant <<\,SpellingErrorLabel\,>>, bien qu'il ne soit pas \`{a} proprement dit un filtre car il peut uniquement s'appliquer sur la base de cas de WiCoPaCo. Ce filtre permet de ne garder que les cas dont l'identifiant est inscrit dans le fichier r\'{e}sultant des travaux de LIMSI.
+\newline
+\newline
+Cependant, leur fichier repr\'{e}sente quelques probl\`{e}mes : premi\`{e}rement, leur fichier de r\'{e}sultats est un travail obtenu \`{a} partir de l'analyse du fichier de WiCoPaCo. Ce fichier sera donc utile seulement si nous analysons les cas de WICoPaCo, mais sera inutile si nous prenons une autre base de cas \`{a} analyser. Deuxi\`{e}mement, leur travail est muni d'un document expliquant leurs d\'{e}veloppement mais celui-ci n'est pas tr\`{e}s explicite quant \`{a} la nature de leurs filtres. Nous ne pouvons donc pas assurer que leurs travail ne supprime pas de cas qui nous serait utiles. Nous nous questionnons donc sur l'utilit\'{e} de ce filtre pour notre projet.
+\newline
+\newline
 
 %===== 3ere partie ====
 \section{R\'{e}sultats}
@@ -516,6 +535,7 @@ contenu:
 \begin{thebibliography}{1}
   \bibitem{1} Wikipedia Correction and Paraphrase Corpus \url{https://wicopaco.limsi.fr}
   \bibitem{2} Graph Rewriting for Natural Language Processing \url{http://grew.fr}
+  \bibitem{3} Laboratoire d'informatique pour la m\'{e}canique et les sciences de l'ing\'{e}nieur \url{https://www.limsi.fr/fr/}
   
 \end{thebibliography}
 \end{document}
