@@ -8,6 +8,8 @@
 \usepackage{url}
 \usepackage{vmargin}
 \setmarginsrb{20mm}{20mm}{20mm}{20mm}{0mm}{0mm}{4mm}{8mm}
+\usepackage[backend=bibtex,style=verbose-trad2]{biblatex}
+
 
 \begin{document}
 
@@ -93,17 +95,19 @@ Nous tenons \'{e}galement \`{a} remercier vivement notre encadrant, Monsieur Jea
 
 
 %======Sommaire====== 
+\thispagestyle{empty}
 \begin{center}
 {\bfseries \huge Sommaire}
 \end{center}
 \tableofcontents
 
 
-\setcounter{page}{3}
 
 \cleardoublepage
 
 %=====Rappel du sujet====
+\thispagestyle{empty}
+
 \begin{center}
 {\bfseries \huge Rappel du sujet}
 \end{center}
@@ -147,6 +151,7 @@ Une courte \'etude bibliographique sur la maintenance de base de cas permettra d
 \begin{center}
 {\bfseries \huge Introduction}
 \end{center}
+\setcounter{page}{5}
 
 \vspace*{35mm}
 
@@ -205,7 +210,7 @@ Nous voyons donc qu'il est possible de r\'{e}soudre des probl\`{e}mes gr\^{a}ce 
 Une premi\`{e}re piste nous a \'{e}t\'{e} fournie par un groupe d'\'{e}tudiants de L3 de 2017-2018 compos\'{e} de M. Giang, M. Levy et M. Ly, qui avaient travaill\'{e} sur un projet intitul\'{e} Corrector. Le projet consistait \`{a} faire un site WEB capable d'apporter une correction \`{a} une phrase erron\'{e}e donn\'{e}e en entr\'{e}e. Cette correction devait se faire \`{a} l'aide d'une base de cas qui pouvait s'enrichir avec des interactions humaines (utilisateur/administrateur du site). 
 \newline
 \newline
-Notre d\'{e}but d'\'{e}tude a donc \'{e}t\'{e} guid\'{e} par les moyens mis en {\oe}uvre pour effectuer un remplissage automatique de leur base de cas initiale, et plus particuli\`{e}rement un : les corpus de WiCoPaCo (\cite{Wikipedia Correction and Paraphrase Corpus} lien : \url{https://wicopaco.limsi.fr}). Le site WiCoPaCo met en libre acc\`{e}s des fichiers au format XML contenant des phrases, ou parties de phrases avec une correction effectu\'{e}e ainsi qu'un commentaire \'{e}ventuel laiss\'{e} par l'auteur de la correction. Ces fichiers sont le r\'{e}sultat des corrections faites par les administrateurs des pages Wikip\'{e}dia, ce qui n\'{e}cessite une correction \'{e}tant donn\'{e} que le contenu des pages est apport\'{e} par des utilisateurs. Les fichiers en question contiennent donc des centaines de milliers de cas compos\'{e}s de la mani\`{e}re suivante : le groupe de phrase avant modification avec la mise en \'{e}vidence de la faute, suivi du m\^{e}me groupe de phrase avec la correction apport\'{e}e \'{e}galement mise en \'{e}vidence. 
+Notre d\'{e}but d'\'{e}tude a donc \'{e}t\'{e} guid\'{e} par les moyens mis en {\oe}uvre pour effectuer un remplissage automatique de leur base de cas initiale, et plus particuli\`{e}rement un : les corpus de WiCoPaCo [\cite[1]{1}]. Le site WiCoPaCo met en libre acc\`{e}s des fichiers au format XML contenant des phrases, ou parties de phrases avec une correction effectu\'{e}e ainsi qu'un commentaire \'{e}ventuel laiss\'{e} par l'auteur de la correction. Ces fichiers sont le r\'{e}sultat des corrections faites par les administrateurs des pages Wikip\'{e}dia, ce qui n\'{e}cessite une correction \'{e}tant donn\'{e} que le contenu des pages est apport\'{e} par des utilisateurs. Les fichiers en question contiennent donc des centaines de milliers de cas compos\'{e}s de la mani\`{e}re suivante : le groupe de phrase avant modification avec la mise en \'{e}vidence de la faute, suivi du m\^{e}me groupe de phrase avec la correction apport\'{e}e \'{e}galement mise en \'{e}vidence. 
 \newline
 \newline
 L'int\'{e}r\^{e}t principal de ces fichiers \'{e}tant l'\'{e}norme masse de donn\'{e}es qu'ils contiennent, nous permettant ainsi d'en extraire un grand nombre de cas. Cependant, m\^{e}me si cette solution semble \^{e}tre id\'{e}ale et simple \`{a} mettre en place, il s'av\`{e}re qu'elle est loin d'\^{e}tre parfaite. Le probl\`{e}me de ces corrections est qu'une partie se trouve \^{e}tre des corrections de contenu, une autre \'{e}tant des reformulations, et bien d'autres types de corrections n'\'{e}tant pas des erreurs de fran\c{c}ais mais sont pourtant contenues dans ces fichiers. La probl\'{e}matique de l'\'{e}puration de cette \'{e}norme masse de donn\'{e}es se pose donc.
@@ -239,7 +244,7 @@ Suite \`{a} la mise en place de notre sujet, nous nous sommes donc concentr\'{e}
 
 %===== 1ere sous sous partie ====
 \subsubsection{Grew}
-Le premier de nos deux axes \'{e}tait la d\'{e}couverte d'un outil permettant l'analyse des phrases pour en trouver les potentielles fautes de fran\c{c}ais. Pour cela, nos encadrants nous ont orient\'{e}s vers GREW (\url{http://grew.fr}), un logiciel dont un de nos encadrants, Bruno Guillaume, conna\^{i}t bien le fonctionnement. Ce logiciel permet, \`{a} partir d'une ou plusieurs phrases donn\'{e}es en param\`{e}tres, de construire un graphe \`{a} partir des lemmes de chaque mot ainsi que gr\^{a}ce au contexte des phrases. Ce graphe permet de d\'{e}duire les liens que chaque mot entretient avec les autres mots de la phrase. Voici un exemple de graphe que cr\'{e}e l'outil GREW \`{a} partir de la phrase <<\,C'est une femme tr\`{e}s intelligente.\,>>
+Le premier de nos deux axes \'{e}tait la d\'{e}couverte d'un outil permettant l'analyse des phrases pour en trouver les potentielles fautes de fran\c{c}ais. Pour cela, nos encadrants nous ont orient\'{e}s vers GREW [\cite[2]{2}], un logiciel dont un de nos encadrants, Bruno Guillaume, conna\^{i}t bien le fonctionnement. Ce logiciel permet, \`{a} partir d'une ou plusieurs phrases donn\'{e}es en param\`{e}tres, de construire un graphe \`{a} partir des lemmes de chaque mot ainsi que gr\^{a}ce au contexte des phrases. Ce graphe permet de d\'{e}duire les liens que chaque mot entretient avec les autres mots de la phrase. Voici un exemple de graphe que cr\'{e}e l'outil GREW \`{a} partir de la phrase <<\,C'est une femme tr\`{e}s intelligente.\,>>
 
 %==== image ====
 \begin{center}
@@ -477,5 +482,41 @@ contenu:
 \end{itemize}
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%======biblio======
+\begin{thebibliography}{1}
+  \bibitem{1} Wikipedia Correction and Paraphrase Corpus \url{https://wicopaco.limsi.fr}
+  \bibitem{2} Graph Rewriting for Natural Language Processing \url{http://grew.fr}
+  
+\end{thebibliography}
 \end{document}
 
