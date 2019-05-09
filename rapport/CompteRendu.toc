@@ -21,7 +21,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {2.2.1}API pour la lecture de fichier}{11}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.2.2}Protocole d'ajout de filtres}{11}
+\contentsline {subsubsection}{\numberline {2.2.2}Protocole d'ajout de filtres}{12}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {2.2.3}Fichier de sortie}{12}
 \defcounter {refsection}{0}\relax 
@@ -31,7 +31,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {2.3.2}Le type LocalRejector}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.3.3}Le type Purifier}{13}
+\contentsline {subsubsection}{\numberline {2.3.3}Le type Purifier}{14}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {2.3.4}Travail effectu\'{e} par LIMSI}{14}
 \defcounter {refsection}{0}\relax 

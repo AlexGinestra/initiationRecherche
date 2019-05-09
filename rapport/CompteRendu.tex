@@ -5,6 +5,7 @@
 \usepackage[latin1]{inputenc} % package caracteres francais
 \usepackage[T1]{fontenc}      % package caracteres francais
 \usepackage[francais]{babel}  % package caracteres francais
+\usepackage{array}
 \usepackage{url}
 \usepackage{vmargin}
 \setmarginsrb{20mm}{20mm}{20mm}{20mm}{0mm}{0mm}{4mm}{8mm}
@@ -279,11 +280,25 @@ De plus, une \'{e}tudiante de l'\'{e}cole T\'{e}l\'{e}com Saint-\'{e}tienne, Mme
 \end{center}
 
 Un cas dans ce fichier est repr\'{e}sent\'{e} par 3 ou 4 lignes : la premi\`{e}re est une phrase avec une erreur, la deuxi\`{e}me est une phrase correcte, la troisi\`{e}me est l'explication de la correction et la derni\`{e}re ligne est la provenance de l'exemple. La provenance est souvent un site web de correction de fran\c{c}ais. Nous avons donc utilis\'{e} notre script sur la base de cas d'Isabelle ainsi que sur notre base de cas pour tester l'outil GREW. Les fichiers r\'{e}sultants de ces tests nous ont permis de mieux comprendre son fonctionnement ainsi que ses limites.
+\newline
+\newline
 
-%==== image ====
+\newcolumntype{M}[1]{>{\raggedright}m{#1}}
+%tableau
 \begin{center}
-\includegraphics[width=14cm]{exemple3.png} %l'image est retaill\'ee pour avoir une largeur de 10cm
+\begin{tabular}{|M{4cm}|M{3cm}|M{3cm}|M{3cm}|M{3cm}|}
+   \hline
+    \, & \multicolumn{2}{|c|}{Base de cas d'Isabelle} & \multicolumn{2}{|c|}{Base de cas de WiCoPaCo} \tabularnewline
+   \hline
+    \, &Cas ne comportant des erreurs & Cas ne comportant pas d'erreurs & Cas comportant des erreurs & Cas ne comportant pas d'erreurs \tabularnewline
+   \hline
+    Nombre d'erreurs d\'{e}tect\'{e}es / nombre de cas & 101 / 202 & 53 / 102 & 279 / 500 & 273 / 500 \tabularnewline
+   \hline
+     Pourcentage d'erreurs d\'{e}tect\'{e}es & 50 \% & 26 \% & 56\% & 56\% \tabularnewline
+   \hline
+\end{tabular}
 \end{center}
+
 
 Les r\'{e}sultats que nous analysons dans les fichiers de sorties nous montrent que dans les cas contenant une erreur, le logiciel GREW d\'{e}tecte cette erreur une fois sur deux. Cependant, ces r\'{e}sultats nous montrent aussi que le logiciel d\'{e}tecte une erreur 40 \% du temps sur des cas ne comportant pas d'erreur. N\'{e}anmoins, nous avons r\'{e}ussi \`{a} trouver des sch\'{e}mas de phrase qui se r\'{e}p\`{e}tent et pour lesquelles le logiciel ne marche pas correctement. Par exemple, tous les cas comportant des caract\`{e}res sp\'{e}ciaux tel que des accolades, des parenth\`{e}ses, des tirets, des point-virgule, des points d'interrogation, etc. sont des cas pour lesquels GREW n'arrive pas \`{a} cr\'{e}er un graphe complet correspondant et donc est consid\'{e}r\'{e} comme un cas contenant une faute m\^{e}me si ce n'est pas toujours le cas. A contrario, les cas contenant des erreurs de conjugaisons sont des cas o\`{u} un graphe complet est parfois cr\'{e}\'{e} et donc consid\'{e}r\'{e} comme sans faute. Nous pouvons donc en conclure que le logiciel GREW n'est pas infaillible quant \`{a} la d\'{e}tection d'erreur mais que des am\'{e}liorations peuvent \^{e}tre effectu\'{e}es sur les cas pour pouvoir obtenir de meilleurs r\'{e}sultats. Il est important de noter que GREW n'est pas un outil d\'{e}velopp\'{e} pour d\'{e}tecter les erreurs de fran\c{c}ais.
 
@@ -517,19 +532,69 @@ contenu:
 
 
 
+%tableau
+\begin{center}
+\begin{tabular}{|M{6cm}|M{5cm}|M{6cm}|}
+   \hline
+    \, &Nombre d'erreurs d\'{e}tect\'{e}es / nombre de cas trait\'{e}s & Pourcentage de phrases rejet\'{e}es \tabularnewline
+   \hline
+    Filtre EstheticalRestructurationRejector & 145 141 / 408 816 & 35,5\% \tabularnewline
+   \hline
+\end{tabular}
+\end{center}
+
+
+
+%tableau
+\begin{center}
+\begin{tabular}{|M{4cm}|M{5cm}|M{6cm}|}
+   \hline
+    \, &Nombre d'erreurs d\'{e}tect\'{e}es / nombre de cas trait\'{e}s & Pourcentage de phrases rejet\'{e}es \tabularnewline
+   \hline
+    Filtre NumberRejector & 47 194 / 408 816 & 11,5\% \tabularnewline
+   \hline
+\end{tabular}
+\end{center}
 
 
 
 
+%tableau
+\begin{center}
+\begin{tabular}{|M{4cm}|M{5cm}|M{6cm}|}
+   \hline
+    \, &Nombre d'erreurs d\'{e}tect\'{e}es / nombre de cas trait\'{e}s & Pourcentage de phrases rejet\'{e}es \tabularnewline
+   \hline
+    Filtre RollbackFilter & 154 449 / 408 816 & 37,7\% \tabularnewline
+   \hline
+\end{tabular}
+\end{center}
 
 
 
+%tableau
+\begin{center}
+\begin{tabular}{|M{4cm}|M{5cm}|M{6cm}|}
+   \hline
+    \, &Nombre de caract\`{e}r supprim\'{e}s / nombre de caract\`{e}res trait\'{e}s & Pourcentage de caract\`{e}res supprim\'{e}s \tabularnewline
+   \hline
+    Filtre SentencePurifier & 28 740 736 / 119 554 961 & 24\% \tabularnewline
+   \hline
+\end{tabular}
+\end{center}
 
 
 
-
-
-
+%tableau
+\begin{center}
+\begin{tabular}{|M{4cm}|M{5cm}|M{6cm}|}
+   \hline
+    \, &Nombre de caract\`{e}r supprim\'{e}s / nombre de phrases trait\'{e}es & Pourcentage de caract\`{e}res supprim\'{e}s par phrase\tabularnewline
+   \hline
+    Filtre SpecialCaracterPurifier & 191 163 / 817 632 & 23,3\% \tabularnewline
+   \hline
+\end{tabular}
+\end{center}
 
 
 
