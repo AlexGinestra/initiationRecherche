@@ -119,11 +119,7 @@ public class ParserXML {
 			}
 		}
 		
-		// clean the node list that have to be treated
-		for (GlobalRejectionFilter f : globalRejectors) {
-			f.cleanTheList(nodeList);
-		}
-
+		
 		
 
 		
@@ -137,7 +133,11 @@ public class ParserXML {
 			}
 		}
 		
-		
+		// clean the node list that have to be treated
+				for (GlobalRejectionFilter f : globalRejectors) {
+					f.cleanTheList(nodeList);
+				}
+
 		
 		// treat the node list that will be in the output file
 		for (Node node : nodeList) {
@@ -258,8 +258,9 @@ public class ParserXML {
 		List<Character> specialCharacters = Arrays.asList(specChar);
 
 		// adding differents globalRejector
-		parser.addGlobalRejector(new SpellingErrorLabelFilter());
+	
 		parser.addGlobalRejector(new RollbackFilter());
+		parser.addGlobalRejector(new SpellingErrorLabelFilter());
 
 		// adding differents localRejector
 		parser.addLocalRejector(new NumberRejector());
