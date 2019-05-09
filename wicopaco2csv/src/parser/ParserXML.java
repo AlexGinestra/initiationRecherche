@@ -129,7 +129,6 @@ public class ParserXML {
 				f = null;
 			}
 
-			System.gc();
 			// treat the node list that will be in the output file
 			for (Node node : nodeList) {
 				boolean hasToBeAddedInDB = true;
@@ -255,16 +254,16 @@ public class ParserXML {
 		List<Character> specialCharacters = Arrays.asList(specChar);
 
 		// adding differents globalRejector
-		//parser.addGlobalRejector(new SpellingErrorLabelFilter());
-		//parser.addGlobalRejector(new RollbackFilter());
+		parser.addGlobalRejector(new SpellingErrorLabelFilter());
+		parser.addGlobalRejector(new RollbackFilter());
 
 		// adding differents localRejector
-		//parser.addLocalRejector(new NumberRejector());
+		parser.addLocalRejector(new NumberRejector());
 		parser.addLocalRejector(new EstheticalRestructurationRejector());
 
 		// adding differents casters
-		//parser.addPurifier(new SentencePurifier());
-		//parser.addPurifier(new SpecialCaracterPurifier(specialCharacters));
+		parser.addPurifier(new SentencePurifier());
+		parser.addPurifier(new SpecialCaracterPurifier(specialCharacters));
 
 
 		for(GlobalRejectionFilter f : parser.globalRejectors) { 

@@ -285,11 +285,11 @@ Un cas dans ce fichier est repr\'{e}sent\'{e} par 3 ou 4 lignes : la premi\`{e}r
 \includegraphics[width=14cm]{exemple3.png} %l'image est retaill\'ee pour avoir une largeur de 10cm
 \end{center}
 
-Les r\'{e}sultats que nous analysons dans les fichiers de sorties nous montrent que dans les cas contenant une erreur, le logiciel GREW d\'{e}tecte cette erreur une fois sur deux. Cependant, ces r\'{e}sultats nous montrent aussi que le logiciel d\'{e}tecte une erreur 40 \% du temps sur des cas ne comportant pas d'erreur. N\'{e}anmoins, nous avons r\'{e}ussi \`{a} trouver des sch\'{e}mas de phrase qui se r\'{e}p\`{e}tent et pour lesquelles le logiciel ne marche pas correctement. Par exemple, tous les cas comportant des caract\`{e}res sp\'{e}ciaux tel que des accolades, des parenth\`{e}ses, des tirets, des point-virgule, des points d'interrogation, etc. sont des cas pour lesquels GREW n'arrive pas \`{a} cr\'{e}er un graphe complet correspondant et donc est consid\'{e}r\'{e} comme un cas contenant une faute m\^{e}me si ce n'est pas toujours le cas. A contrario, les cas contenant des erreurs de conjugaisons sont des cas o\`{u} un graphe complet est parfois cr\'{e}\'{e} et donc consid\'{e}r\'{e} comme sans faute. Nous pouvons donc en conclure que le logiciel GREW n'est pas infaillible quant \`{a} la d\'{e}tection d'erreur mais que des am\'{e}liorations peuvent \^{e}tre effectu\'{e}es sur les cas pour pouvoir obtenir de meilleurs r\'{e}sultats.
+Les r\'{e}sultats que nous analysons dans les fichiers de sorties nous montrent que dans les cas contenant une erreur, le logiciel GREW d\'{e}tecte cette erreur une fois sur deux. Cependant, ces r\'{e}sultats nous montrent aussi que le logiciel d\'{e}tecte une erreur 40 \% du temps sur des cas ne comportant pas d'erreur. N\'{e}anmoins, nous avons r\'{e}ussi \`{a} trouver des sch\'{e}mas de phrase qui se r\'{e}p\`{e}tent et pour lesquelles le logiciel ne marche pas correctement. Par exemple, tous les cas comportant des caract\`{e}res sp\'{e}ciaux tel que des accolades, des parenth\`{e}ses, des tirets, des point-virgule, des points d'interrogation, etc. sont des cas pour lesquels GREW n'arrive pas \`{a} cr\'{e}er un graphe complet correspondant et donc est consid\'{e}r\'{e} comme un cas contenant une faute m\^{e}me si ce n'est pas toujours le cas. A contrario, les cas contenant des erreurs de conjugaisons sont des cas o\`{u} un graphe complet est parfois cr\'{e}\'{e} et donc consid\'{e}r\'{e} comme sans faute. Nous pouvons donc en conclure que le logiciel GREW n'est pas infaillible quant \`{a} la d\'{e}tection d'erreur mais que des am\'{e}liorations peuvent \^{e}tre effectu\'{e}es sur les cas pour pouvoir obtenir de meilleurs r\'{e}sultats. Il est important de noter que GREW n'est pas un outil d\'{e}velopp\'{e} pour d\'{e}tecter les erreurs de fran\c{c}ais.
 
 
 %===== 2eme sous sous partie ====
-\subsubsection{Le logiciel Java}
+\subsubsection{WiCorrector}
 Notre second axe \'{e}tait la mise au point d'un outil simple permettant de traiter les donn\'{e}es des fichiers WiCoPaCo. Ces derniers se pr\'{e}sentant sous la forme suivante:
 %==== image ====
 \begin{center}
@@ -325,7 +325,7 @@ qui contient le contenu qui nous int\'{e}resse puisque c'est elle qui contient l
 Donc chacune de ces balises pouvait potentiellement correspondre \`{a} un cas qui aurait pu s'ajouter \`{a} notre base de cas. Or, apr\`{e}s une \'{e}tude de ces fichiers nous avons observ\'{e} que chaque balise <modif> n'\'{e}tait pas forc\'{e}ment une correction de langue, c'est pourquoi il \'{e}tait n\'{e}cessaire d'effectuer un traitement sur les donn\'{e}es.
 \newline
 \newline
-Donc nous avons entrepris la conception d'un logiciel qui prend en entr\'{e}e un fichier au format XML tir\'{e} du site WiCoPaCo, en extrait les cas puis les traitent de sorte \`{a} enlever ceux qui ne constituent pas un cas int\'{e}ressant pour la cr\'{e}ation d'une base de cas. Enfin, il retourne les cas retenus dans un fichier au format facilement exploitable.
+Donc nous avons entrepris la conception d'un logiciel qui porte le nom de WiCorrector. Celui-ci prend en entr\'{e}e un fichier au format XML tir\'{e} du site WiCoPaCo, en extrait les cas puis les traitent de sorte \`{a} enlever ceux qui ne constituent pas un cas int\'{e}ressant pour la cr\'{e}ation d'une base de cas. Enfin, il retourne les cas retenus dans un fichier au format facilement exploitable.
 \newline
 \newline
 Ce logiciel allait contenir plusieurs filtres pouvant \^{e}tre r\'{e}partis dans des cat\'{e}gories bien pr\'{e}cises, donc nous nous sommes tourn\'{e}s vers un langage orient\'{e} objet poss\'{e}dant des propri\'{e}t\'{e}s telles que l'h\'{e}ritage. Le langage Java semblait donc bien correspondre \`{a} nos besoins gr\^{a}ce \`{a} son polymorphisme de variable, de plus il est possible de trouver en ligne de nombreuses API pour l'exploitation de fichier XML.
@@ -404,8 +404,16 @@ Quant au type <<\,LocalRejector\,>>, c'est une cat\'{e}gorie comprenant des filt
 \newline
 Le premier porte le nom de <<\,EstheticalRestructurationRejector\,>> et a pour but de d\'{e}tecter les reformulations ou restructuration de phrases. Pour ce faire, notre filtre utilise la distance d'\'{e}dition de Levenshtein, qui au sens math\'{e}matique du terme, est une distance donnant une mesure de la diff\'{e}rence entre deux cha\^{i}nes de caract\`{e}res. Elle est \'{e}gale au nombre minimal de caract\`{e}res qu'il faut supprimer, ins\'{e}rer ou remplacer pour passer d'une cha\^{i}ne \`{a} l'autre. C'est pourquoi si cette distance est importante par rapport \`{a} la taille des mots modifi\'{e}s, nous pouvons consid\'{e}rer que le mot entier a \'{e}t\'{e} chang\'{e} et que ce n'\'{e}tait pas une simple correction orthographique. 
 \newline
-Notre filtre a \'{e}t\'{e} impl\'{e}ment\'{e} de la mani\`{e}re suivante : un cas est rejet\'{e} si la partie <<\,correction effectu\'{e}e\,>> a un nombre de caract\`{e}res inf\'{e}rieur \`{a} 4 et que la distance de Levenshtein est plus grande que la moiti\'{e} du mot le plus court, ou si la partie correction a un nombre de caract\`{e}res sup\'{e}rieur \`{a} 4 et que la distance calcul\'{e}e est plus grande que la moiti\'{e} de la plus petites partie modification.
-Voici un exemple que le EstheticalRestructurationRejector rejette :
+Notre filtre a \'{e}t\'{e} impl\'{e}ment\'{e} de la mani\`{e}re suivante, un cas est rejet\'{e} si :
+\begin{itemize}
+\item La longueur de la plus petite cha\^{i}ne de caract\`{e}res entre l'avant et l'apr\`{e}s correction est inf\'{e}rieure à 4 caract\`{e}res, et que la distance de Levenshtein est plus grande que la moiti\'{e} de la plus petite cha\^{i}ne.
+\end{itemize}
+Ou, si
+\begin{itemize}
+\item La longueur de la plus petite cha\^{i}ne de caract\`{e}res entre l'avant et l'apr\`{e}s correction est sup\'{e}rieure ou \'{e}gale \`{a} 4 caract\`{e}res, et que la distance calcul\'{e}e est plus grande qu'un tiers de la plus petite cha\^{i}ne.
+\end{itemize}
+ Le choix d'une telle impl\'{e}mentation r\'{e}sulte d'une premi\`{e}re r\'{e}flexion sur les possibles fautes que l'on peut faire, et le rapport de taille entre la faute et le mot en question. Puis cette r\'{e}flexion a \'{e}t\'{e} test\'{e}e de mani\`{e}re empirique sur 500 cas d'une base test, ou chaque cas rejet\'{e} ou accepté ont \'{e}t\'{e} analys\'{e} (seulement quelques fautes de conjugaison sont filtr\'{e}s \`{a} tort).
+ Voici un exemple que le EstheticalRestructurationRejector rejette :
 
 %==== image ====
 \begin{center}

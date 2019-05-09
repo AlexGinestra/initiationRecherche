@@ -42,12 +42,12 @@ public class SpecialCaracterPurifier extends FiltersStatistics implements Purifi
 		if(outputOn) {
 			map.clear();
 			//supprime le caractere special en debut de phrase
-			if(charList.contains(before.charAt(0))) {
+			if(before.length() > 0 && charList.contains(before.charAt(0))) {
 				map.put("before", ""+before.charAt(0));
 				before.deleteCharAt(0);
 				charDeleted++;
 			}
-			if(charList.contains(after.charAt(0))) {
+			if(after.length() > 0 && charList.contains(after.charAt(0))) {
 				map.put("after", ""+after.charAt(0));
 				after.deleteCharAt(0);
 				charDeleted++;
@@ -63,11 +63,11 @@ public class SpecialCaracterPurifier extends FiltersStatistics implements Purifi
 		}
 		else {
 			//supprime le caractere special en debut de phrase
-			if(charList.contains(before.charAt(0))) {
+			if(before.length() > 0 && charList.contains(before.charAt(0))) {
 				before.deleteCharAt(0);
 				charDeleted++;
 			}
-			if(charList.contains(after.charAt(0))) {
+			if(after.length() > 0 && charList.contains(after.charAt(0))) {
 				after.deleteCharAt(0);
 				charDeleted++;
 			}
