@@ -105,11 +105,11 @@ public class ParserXML {
 				null, true);
 		Node n = iterator.nextNode();
 
+		ArrayList<Node> nodeList = new ArrayList<Node>(); // contains <modif> items that are going to be treated
 
 		if (n.getNodeName().contentEquals("modifs")) {
 			NodeList nList = n.getChildNodes(); // var temp
 
-			ArrayList<Node> nodeList = new ArrayList<Node>(); // contains <modif> items that are going to be treated
 
 			// add all the <modif> nodes in the nodeList that will be treated
 			for (int i = 0; i < nList.getLength() - 1; i++) {
@@ -117,38 +117,41 @@ public class ParserXML {
 					nodeList.add(nList.item(i));
 				}
 			}
-
-			// clean the node list that have to be treated
-			for (GlobalRejectionFilter f : globalRejectors) {
-				f.cleanTheList(nodeList);
-			}
-
-			// closing writers
-			for (GlobalRejectionFilter f : globalRejectors) {
-				((FiltersStatistics) f).closeOutput();
-				f = null;
-			}
-
-			// treat the node list that will be in the output file
-			for (Node node : nodeList) {
-				boolean hasToBeAddedInDB = true;
-				/* apply local rejectorfilters */
-				for (LocalRejectionFilter f : localRejectors) {
-					if (f.hasToBeRemoved(node)) {
-						hasToBeAddedInDB = false;
-						break;
-					}
-				}
-
-				if (hasToBeAddedInDB) {
-					/* apply a purification on the case, then add it to the output file */
-					traiterModif(node);
-				}
-			}
-
+		}
+		
+		// clean the node list that have to be treated
+		for (GlobalRejectionFilter f : globalRejectors) {
+			f.cleanTheList(nodeList);
 		}
 
+		
+
+		
+		/* local rejector */
+		for(int i = nodeList.size()-1 ; i > 0 ; i--) {
+			for (LocalRejectionFilter f : localRejectors) {
+				if (f.hasToBeRemoved(nodeList.get(i))) {
+					nodeList.remove(i);
+				}
+			}
+		}
+		
+		
+		
+		// treat the node list that will be in the output file
+		for (Node node : nodeList) {
+			/* apply a purification on the case, then add it to the output file */
+			traiterModif(node);
+		}
+
+		
+
+		
 		// closing writers
+		for (GlobalRejectionFilter f : globalRejectors) {
+			((FiltersStatistics) f).closeOutput();
+			f = null;
+		}
 		for (LocalRejectionFilter f : localRejectors) {
 			((FiltersStatistics) f).closeOutput();
 		}
