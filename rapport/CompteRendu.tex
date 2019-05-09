@@ -598,16 +598,110 @@ contenu:
 
 
 
-%tableau
+
+
+%tableau global puis local
+\begin{center}
+\begin{tabular}{|M{6cm}|M{5cm}|M{6cm}|}
+   \hline
+    \, &Nombre d'erreurs d\'{e}tect\'{e}es / nombre de cas trait\'{e}s & Pourcentage de phrases rejet\'{e}es \tabularnewline
+   \hline
+    Filtre RollbackFilter & 154 449 / 408 816 & 37,7\% \tabularnewline
+   \hline
+    Filtre NumberRejector & 27 269 / 254 366 & 10,7\% \tabularnewline
+\hline
+Filtre EstheticalRestructurationRejector & 99 319 / 254 366 & 10,7\% \tabularnewline
+\hline
+\end{tabular}
+\end{center}
+
+
+
+
+
+%tableau local puis global
+\begin{center}
+\begin{tabular}{|M{6cm}|M{5cm}|M{6cm}|}
+   \hline
+    \, &Nombre d'erreurs d\'{e}tect\'{e}es / nombre de cas trait\'{e}s & Pourcentage de phrases rejet\'{e}es \tabularnewline
+   \hline
+    Filtre NumberRejector & 27 269 / 254 366 & 10,7\% \tabularnewline
+\hline
+Filtre EstheticalRestructurationRejector & 99 319 / 254 366 & 10,7\% \tabularnewline
+ \hline
+    Filtre RollbackFilter & 154 449 / 408 816 & 37,7\% \tabularnewline
+\hline
+
+\end{tabular}
+\end{center}
+
+
+
+
+
+%tableau travaux LIMSI seuls
 \begin{center}
 \begin{tabular}{|M{4cm}|M{5cm}|M{6cm}|}
    \hline
-    \, &Nombre de caract\`{e}r supprim\'{e}s / nombre de phrases trait\'{e}es & Pourcentage de caract\`{e}res supprim\'{e}s par phrase\tabularnewline
+    \, &Nombre d'erreurs d\'{e}tect\'{e}es / nombre de cas trait\'{e}s & Pourcentage de phrases rejet\'{e}es \tabularnewline
    \hline
-    Filtre SpecialCaracterPurifier & 191 163 / 817 632 & 23,3\% \tabularnewline
+    Filtre SpellingErrorLabelFilter & 269 943 / 408 816 & 66\% \tabularnewline
    \hline
 \end{tabular}
 \end{center}
+
+
+
+
+%tableau LIMSI puis nous
+\begin{center}
+\begin{tabular}{|M{6cm}|M{5cm}|M{6cm}|}
+   \hline
+    \, &Nombre d'erreurs d\'{e}tect\'{e}es / nombre de cas trait\'{e}s & Pourcentage de phrases rejet\'{e}es \tabularnewline
+    \hline
+    Filtre SpellingErrorLabelFilter & 269 943 / 408 816 & 66\% \tabularnewline
+   \hline
+       Filtre RollbackFilter & 46 623 / 138 873 & 33,5\% \tabularnewline
+ \hline
+    Filtre NumberRejector & 0 / 92 250 & 0\% \tabularnewline
+\hline
+Filtre EstheticalRestructurationRejector & 2 113 / 92 250 & 2,3\% \tabularnewline
+\hline
+\end{tabular}
+\end{center}
+
+
+%tableau nous puis LIMSI
+\begin{center}
+\begin{tabular}{|M{6cm}|M{5cm}|M{6cm}|}
+   \hline
+    \, &Nombre d'erreurs d\'{e}tect\'{e}es / nombre de cas trait\'{e}s & Pourcentage de phrases rejet\'{e}es \tabularnewline
+    \hline
+     Filtre NumberRejector & 47 194 / 408 815 & 11,5\% \tabularnewline
+\hline
+Filtre EstheticalRestructurationRejector & 148 485 / 361 621 & 41\% \tabularnewline
+\hline
+Filtre RollbackFilter & 85 358 / 213 137 & 40\% \tabularnewline
+ \hline
+    Filtre SpellingErrorLabelFilter & 57 551 / 127 779 & 45\% \tabularnewline
+   \hline
+   \end{tabular}
+\end{center}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
