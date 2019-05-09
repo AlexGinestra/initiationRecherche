@@ -132,6 +132,7 @@ public class ParserXML {
 			for (LocalRejectionFilter f : localRejectors) {
 				if (f.hasToBeRemoved(nodeList.get(i))) {
 					nodeList.remove(i);
+					break;
 				}
 			}
 		}
