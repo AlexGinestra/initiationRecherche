@@ -464,7 +464,7 @@ Ce filtre n'a d'int\'{e}r\^{e}t que s'il est appliqu\'{e} apr\`{e}s le filtre <<
 %===== 4eme sous sous partie ====
 \subsubsection{Travail effectu\'{e} par LIMSI}
 
-Gr\^{a}ce \`{a} nos recherches effectu\'{e}es sur WiCoPaCo, nous avons pu trouver des travaux effectu\'{e}s par des chercheurs de LIMSI[\cite[3]{3}]. Ces travaux \autocite[1]{https://wicopaco.limsi.fr/pub/taln10.pdf} leurs ont permis d'extraire automatiquement des fichiers XML de WiCoPaCo un corpus d'erreurs compos\'{e} de 72 483 erreurs lexicales et 74 100 erreurs grammaticales. Leurs r\'{e}sultats peuvent \^{e}tre extraits 
+Gr\^{a}ce \`{a} nos recherches effectu\'{e}es sur WiCoPaCo, nous avons pu trouver des travaux effectu\'{e}s par des chercheurs du LIMSI[\cite[3]{3}]. Ces travaux \autocite[1]{https://wicopaco.limsi.fr/pub/taln10.pdf} leurs ont permis d'extraire automatiquement des fichiers XML de WiCoPaCo un corpus d'erreurs compos\'{e} de 72 483 erreurs lexicales et 74 100 erreurs grammaticales. Leurs r\'{e}sultats peuvent \^{e}tre extraits 
 \`{a} partir d'un fichier XML regroupant les 150 000 cas, pr\'{e}sent\'{e} sous la forme :
 
 %==== image ====
@@ -596,7 +596,7 @@ Cela se d\'{e}montre assez facilement puisque les filtres que nous avons impl\'{
 \subsubsection{Comparaison travaux LIMSI}
 Comme nous l'avions \'{e}voqu\'{e} pr\'{e}c\'{e}demment, des travaux avaient d\'{e}j\`{a} \'{e}t\'{e} r\'{e}alis\'{e}s par des chercheurs sur les fichiers de WiCoPaCo (cf. partie 2.3.4). Nous allons donc, dans cette partie, croiser leurs travaux avec les n\^{o}tres, et analyser les r\'{e}sultats que l'on obtient.
 
-Ci-dessous se trouve un tableau r\'{e}sumant la s\'{e}lection que les chercheurs de LIMSI ont effectu\'{e}s sur le fichier en question.
+Ci-dessous se trouve un tableau r\'{e}sumant la s\'{e}lection que les chercheurs du LIMSI ont effectu\'{e}s sur le fichier en question.
 %tableau travaux LIMSI seuls
 \begin{center}
 \begin{tabular}{|M{4cm}|M{5cm}|M{6cm}|}
@@ -610,7 +610,7 @@ Ci-dessous se trouve un tableau r\'{e}sumant la s\'{e}lection que les chercheurs
 Il en r\'{e}sulte donc un fichier de 138 873 cas, et l'ex\'{e}cution n'a dur\'{e}e qu'une dizaine de secondes.
 \newline
 \newline
-Dans un premier temps nous allons appliquer les travaux des chercheurs de LIMSI, puis nous utiliserons nos filtres sur le fichier complet de WiCoPaCo.
+Dans un premier temps nous allons appliquer les travaux des chercheurs du LIMSI, puis nous utiliserons nos filtres sur le fichier complet de WiCoPaCo.
 Voici ci-dessous les r\'{e}sultats de l'ex\'{e}cution.
 
 %tableau LIMSI puis nous
@@ -630,8 +630,9 @@ Filtre EstheticalRestructurationRejector & 2 113 / 92 250 & 2,3\% \tabularnewlin
 \end{tabular}
 \end{center}
 
-Il en r\'{e}sulte un fichier de 90 137 cas, et on s'aper\c{c}oit que le filtre <<\,NumberRejector\,>> n'a plus d'effet sur la suppression de cas. On peut donc supposer que les chercheurs de LIMSI ont d\'{e}j\`{a} effectu\'{e} ce filtrage.
-
+Il en r\'{e}sulte un fichier de 90 137 cas, et on s'aper\c{c}oit que le filtre <<\,NumberRejector\,>> n'a plus d'effet sur la suppression de cas. On peut donc supposer que les chercheurs du LIMSI ont d\'{e}j\`{a} effectu\'{e} ce filtrage.
+\newline
+\newline
 Nous allons maintenant effectu\'{e} notre filtrage, puis le leur.
 Les r\'{e}sultats de l'ex\'{e}cution se trouvent dans le tableau ci-dessous.
 
@@ -653,31 +654,36 @@ Filtre RollbackFilter & 85 358 / 213 137 & 40\% \tabularnewline
 \end{center}
 Il en r\'{e}sulte un fichier de 70 228 cas.
 \newline
-Ici, il est important de noter que l'ordre de filtrage a son importance car les deux filtrages ne sont pas commutatifs, mais \'{e}galement que nos travaux permettent une \'{e}puration additionnelle \`{a} leur s\'{e}lection.
+On constate que l'ordre des fichiers \`{a} son importance et nous pouvons \'{e}mettre l'hypoth\`{e}se que cela provient du RollbackFilter, puisque si la s\'{e}lection effectu\'{e}e par l'\'{e}quipe de chercheurs du LIMSI enl\`{e}ve un cas A qui devient B, mais ne retire pas le cas ou B redevient A, alors notre filtre ne fonctionner correctement.
+Donc, il est crucial de noter que l'ordre de filtrage a son importance car les deux filtrages ne sont pas commutatifs, mais \'{e}galement que nos travaux permettent une \'{e}puration additionnelle \`{a} leur s\'{e}lection.
 
 
 %===== 2eme sous partie ====
-\subsection{R\'{e}sultat final}
-contenu:
-comparaison entre le fichiers WiCoPaCo de base et la pseudo base de cas obtenue:
-\begin{itemize}
-\item Nombre de cas enlev\'{e} au total
-\item Nombre de cas \'{e}pur\'{e} au total
-\item Temps de traitement des donn\'{e}es
-\end{itemize}
+\subsection{Analyse des r\'{e}sultats}
+Dans cette partie nous allons parler de la conclusion de notre projet en pr\'{e}sentant les r\'{e}sultats finaux de nos d\'{e}veloppements. Notre sujet consistait \`{a} obtenir une base de cas correcte en appliquant des filtres sur une base de donn\'{e}es bruit\'{e}es. Ces filtres permettrait donc de nettoyer cette base de cas.
+\newline
+\newline
+	La base de cas bruit\'{e}e choisie a \'{e}t\'{e} WiCoPaCo, sur laquelle nous avons appliqu\'{e} des filtres pour l'\'{e}pur\'{e}e. Apr\`{e}s le d\'{e}veloppement de plusieurs filtres ainsi qu'avec l'aide d'une \'{e}tude faite sur cette m\^{e}me base de cas, nous avons effectu\'{e} une s\'{e}rie de test pour s'assurer de l'efficacit\'{e} ainsi que la commutativit\'{e} des filtres et nous en avons d\'{e}duit la meilleure ex\'{e}cution possible. D'apr\`{e}s les tests effectu\'{e} ci-dessus, nous arrivons \`{a} la conclusion que le meilleur ordonnancement de filtres est le celui-ci : 
+\newline
+\newline
+Nous devons premi\`{e}rement ex\'{e}cut\'{e} nos filtres de la cat\'{e}gorie <<\,LocalRejector\,>> puis nos filtres <<\,GlobalRejector\,>>. Cette ordre n'a pas d'importance au niveau de la qualit\'{e} des cas enlev\'{e} mais permet de gagner du temps lors de l'ex\'{e}cution de notre programme. Deuxi\`{e}mement, nous devons lanc\'{e} le filtre cr\'{e}\'{e} \`{a} partir du travail des chercheurs du LIMSI. Nous appliquons ce filtre apr\`{e}s les nôtres et non avant car le travail effectu\'{e} par le LIMSI supprime des cas dont nos filtres ont besoin pour effectuer correctement leur travail.
+\newline
+\newline
+En suivant cet ordre, nous arrivons \`{a} enlever 338 588 cas, soit \`{a} peu pr\`{e}s 82,82\% des cas.
 
 %===== 3eme sous partie ====
-\subsection{Ouverture}
-contenu:
-\begin{itemize}
-\item Les difficult\'{e}s rencontr\'{e}s au cours de notre initiation \`{a} la recherche
-\item Le travail qu'il reste \`{a} accomplir (finir l'\'{e}puration de la base de cas puis rem\'{e}moration et adaptation pour obtenir un logiciel fonctionnel)
-\end{itemize}
+\subsection{Le devenir de nos recherches}
+Au cours de cette recherche, nous nous sommes heurt\'{e}s \`{a} de nombreuses difficult\'{e}s comme la recherche et l'utilisation de travaux existants, ou la mise en place de certains filtres qui n\'{e}cessitaient un certains calibrage comme le filtre <<\,EstheticalRestructurationRejector\,>>.
+\newline
+Cependant, il reste beaucoup \`{a} faire ne serait-ce que d'approfondir le filtrage des erreurs sur la base de cas de WiCoPaCo, et s'assurer qu'il ne reste plus d'erreurs dans les cas r\'{e}sultants.
+\newline
+De plus il reste de nombreuses pistes que nous n'avons malheureusement pas eu le temps d'explorer, comme la cr\'{e}ation d'outils de collecte automatiques, ou la mise en place de jeu interactif ayant pour but cach\'{e} de faire corriger des fautes \`{a} au joueur. 
+\newline
+Tous ces ustensiles pourraient se r\'{e}v\'{e}ler \^{e}tre plus qu'efficace dans la confection de cette base de cas qui est essentielle pour le bon fonctionnement du correcteur de fran\c{c}ais fonctionnant sur un syst\`{e}me de raisonnement \`{a} partir de cas.  
 
 
 
-
-
+%========Conclusion=======
 
 
 %======biblio======
