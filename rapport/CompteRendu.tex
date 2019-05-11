@@ -509,7 +509,7 @@ Dans cette partie nous donnerons les r\'{e}sultats de chacun de nos filtres en e
 \end{tabular}
 \end{center}
 
-Notez que l'ex\'{e}cution de chaque filtre ne prend pas plus de quelques minutes \`{a} se faire sur tout le fichier (en dehors du RollbackFiltrer qui prend plusieurs dixaines de minutes \`{a} cause sa complexit\'{e} algorithmique).
+Notez que l'ex\'{e}cution de chaque filtre ne prend pas plus de quelques minutes \`{a} se faire sur tout le fichier (en dehors du RollbackFiltrer qui prend plusieurs dizaines de minutes \`{a} cause sa complexit\'{e} algorithmique).
 \newline
 \newline
 {\bfseries Cat\'{e}gorie de filtres supprimant le contenu superflu d'un cas :}
@@ -518,7 +518,7 @@ Notez que l'ex\'{e}cution de chaque filtre ne prend pas plus de quelques minutes
 \begin{center}
 \begin{tabular}{|M{4cm}|M{5cm}|M{6cm}|}
    \hline
-    \, &Nombre de caract\`{e}r supprim\'{e}s / nombre de caract\`{e}res trait\'{e}s & Pourcentage de caract\`{e}res supprim\'{e}s \tabularnewline
+    \, &Nombre de caract\`{e}res supprim\'{e}s / nombre de caract\`{e}res trait\'{e}s & Pourcentage de caract\`{e}res supprim\'{e}s \tabularnewline
    \hline
     Filtre SentencePurifier & 28 740 736 / 119 554 961 & 24\% \tabularnewline
    \hline
@@ -530,14 +530,14 @@ Notez que l'ex\'{e}cution de chaque filtre ne prend pas plus de quelques minutes
 \begin{center}
 \begin{tabular}{|M{4cm}|M{5cm}|M{6cm}|}
    \hline
-    \, &Nombre de caract\`{e}r supprim\'{e}s / nombre de phrases trait\'{e}es & Pourcentage de caract\`{e}res supprim\'{e}s par phrase\tabularnewline
+    \, &Nombre de caract\`{e}res supprim\'{e}s / nombre de phrases trait\'{e}es & Pourcentage de caract\`{e}res supprim\'{e}s par phrase\tabularnewline
    \hline
     Filtre SpecialCaracterPurifier & 191 163 / 817 632 & 23,3\% \tabularnewline
    \hline
 \end{tabular}
 \end{center}
 
-Quant aux filtres <<\,Purifier\,>>, leurs ex\'{e}cutions ne d\'{e}passe pas quelques dixaines de secondes.
+Quant aux filtres <<\,Purifier\,>>, leurs ex\'{e}cutions ne d\'{e}passe pas quelques dizaines de secondes.
 
 
 
@@ -554,7 +554,7 @@ Ci-dessous se trouve le tableau des r\'{e}sultats de l'ex\'{e}cution la cat\'{e}
    \hline
     \, &Nombre de cas rejet\'{e}s / nombre de cas trait\'{e}s & Pourcentage de cas rejet\'{e}s \tabularnewline
    \hline
-    Filtre RollbackFilter & 154 449 / 408 816 & 37,7\% \tabularnewline
+    Filtre RollbackFilter & 154 450 / 408 816 & 37,7\% \tabularnewline
    \hline
     Filtre NumberRejector & 27 269 / 254 366 & 10,7\% \tabularnewline
 \hline
@@ -592,47 +592,11 @@ Apr\`{e}s comparaison des deux fichiers de sorties, nous avons constat\'{e}s qu'
 Cela se d\'{e}montre assez facilement puisque les filtres que nous avons impl\'{e}ment\'{e}s ne traitent que le contenu de la balise encadrant la partie corrig\'{e}e, et ce de la m\^{e}me mani\`{e}re que ce soit avant ou apr\`{e}s la correction. Donc on peut dire que l'ordre d'ex\'{e}cution des filtres a peu d'importance, si ce n'est le temps d'ex\'{e}cution du logiciel (environ trois fois plus rapide dans une configuration que dans l'autre).
 
 
-%===== 2eme sous partie ====
-\subsection{R\'{e}sultat final}
-contenu:
-comparaison entre le fichiers WiCoPaCo de base et la pseudo base de cas obtenue:
-\begin{itemize}
-\item Nombre de cas enlev\'{e} au total
-\item Nombre de cas \'{e}pur\'{e} au total
-\item Temps de traitement des donn\'{e}es
-\end{itemize}
+%===== 3eme sous sous partie ====
+\subsubsection{Comparaison travaux LIMSI}
+Comme nous l'avions \'{e}voqu\'{e} pr\'{e}c\'{e}demment, des travaux avaient d\'{e}j\`{a} \'{e}t\'{e} r\'{e}alis\'{e}s par des chercheurs sur les fichiers de WiCoPaCo (cf. partie 2.3.4). Nous allons donc, dans cette partie, croiser leurs travaux avec les n\^{o}tres, et analyser les r\'{e}sultats que l'on obtient.
 
-%===== 3eme sous partie ====
-\subsection{Ouverture}
-contenu:
-\begin{itemize}
-\item Les difficult\'{e}s rencontr\'{e}s au cours de notre initiation \`{a} la recherche
-\item Le travail qu'il reste \`{a} accomplir (finir l'\'{e}puration de la base de cas puis rem\'{e}moration et adaptation pour obtenir un logiciel fonctionnel)
-\end{itemize}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Ci-dessous se trouve un tableau r\'{e}sumant la s\'{e}lection que les chercheurs de LIMSI ont effectu\'{e}s sur le fichier en question.
 %tableau travaux LIMSI seuls
 \begin{center}
 \begin{tabular}{|M{4cm}|M{5cm}|M{6cm}|}
@@ -643,9 +607,11 @@ contenu:
    \hline
 \end{tabular}
 \end{center}
-
-
-
+Il en r\'{e}sulte donc un fichier de 138 873 cas, et l'ex\'{e}cution n'a dur\'{e}e qu'une dizaine de secondes.
+\newline
+\newline
+Dans un premier temps nous allons appliquer les travaux des chercheurs de LIMSI, puis nous utiliserons nos filtres sur le fichier complet de WiCoPaCo.
+Voici ci-dessous les r\'{e}sultats de l'ex\'{e}cution.
 
 %tableau LIMSI puis nous
 \begin{center}
@@ -664,6 +630,10 @@ Filtre EstheticalRestructurationRejector & 2 113 / 92 250 & 2,3\% \tabularnewlin
 \end{tabular}
 \end{center}
 
+Il en r\'{e}sulte un fichier de 90 137 cas, et on s'aper\c{c}oit que le filtre <<\,NumberRejector\,>> n'a plus d'effet sur la suppression de cas. On peut donc supposer que les chercheurs de LIMSI ont d\'{e}j\`{a} effectu\'{e} ce filtrage.
+
+Nous allons maintenant effectu\'{e} notre filtrage, puis le leur.
+Les r\'{e}sultats de l'ex\'{e}cution se trouvent dans le tableau ci-dessous.
 
 %tableau nous puis LIMSI
 \begin{center}
@@ -681,19 +651,28 @@ Filtre RollbackFilter & 85 358 / 213 137 & 40\% \tabularnewline
    \hline
    \end{tabular}
 \end{center}
+Il en r\'{e}sulte un fichier de 70 228 cas.
+\newline
+Ici, il est important de noter que l'ordre de filtrage a son importance car les deux filtrages ne sont pas commutatifs, mais \'{e}galement que nos travaux permettent une \'{e}puration additionnelle \`{a} leur s\'{e}lection.
 
 
+%===== 2eme sous partie ====
+\subsection{R\'{e}sultat final}
+contenu:
+comparaison entre le fichiers WiCoPaCo de base et la pseudo base de cas obtenue:
+\begin{itemize}
+\item Nombre de cas enlev\'{e} au total
+\item Nombre de cas \'{e}pur\'{e} au total
+\item Temps de traitement des donn\'{e}es
+\end{itemize}
 
-
-
-
-
-
-
-
-
-
-
+%===== 3eme sous partie ====
+\subsection{Ouverture}
+contenu:
+\begin{itemize}
+\item Les difficult\'{e}s rencontr\'{e}s au cours de notre initiation \`{a} la recherche
+\item Le travail qu'il reste \`{a} accomplir (finir l'\'{e}puration de la base de cas puis rem\'{e}moration et adaptation pour obtenir un logiciel fonctionnel)
+\end{itemize}
 
 
 
