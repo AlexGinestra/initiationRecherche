@@ -421,7 +421,7 @@ Le premier porte le nom de <<\,EstheticalRestructurationRejector\,>> et a pour b
 \newline
 Notre filtre a \'{e}t\'{e} impl\'{e}ment\'{e} de la mani\`{e}re suivante, un cas est rejet\'{e} si :
 \begin{itemize}
-\item La longueur de la plus petite cha\^{i}ne de caract\`{e}res entre l'avant et l'apr\`{e}s correction est inf\'{e}rieure à 4 caract\`{e}res, et que la distance de Levenshtein est plus grande que la moiti\'{e} de la plus petite cha\^{i}ne.
+\item La longueur de la plus petite cha\^{i}ne de caract\`{e}res entre l'avant et l'apr\`{e}s correction est inf\'{e}rieure \`{a} 4 caract\`{e}res, et que la distance de Levenshtein est plus grande que la moiti\'{e} de la plus petite cha\^{i}ne.
 \end{itemize}
 Ou, si
 \begin{itemize}
@@ -482,14 +482,69 @@ Cependant, leur fichier repr\'{e}sente quelques probl\`{e}mes : premi\`{e}rement
 %===== 3ere partie ====
 \section{R\'{e}sultats}
 
+Dans cette derni\`{e}re partie, nous allons donc vous montrez les r\'{e}sultats que nous avons obtenus suite au d\'{e}veloppement de WiCorrector. Nous aborderons aussi les probl\`{e}mes que nous avons rencontr\'{e}s au cours de cette initiation \`{a} la recherche ainsi que les possibles suites qui peuvent \^{e}tre donn\'{e}es \`{a} nos travaux.
+
 %===== 1ere sous partie ====
 \subsection{Statistiques}
 
 %===== 1ere sous sous partie ====
-\subsubsection{Les filtres GlobalRejector}
-contenu:
-statistiques de chaque filtre 
-pour chaque filtres :
+\subsubsection{Ex\'{e}cution individuelle des filtres}
+Dans cette partie nous donnerons les r\'{e}sultats de chacun de nos filtres en ex\'{e}cution seul sur le fichier de WiCoPaCo complet, et nous analyserons les r\'{e}sultats de chacun d'eux.
+\newline
+\newline
+{\bfseries Cat\'{e}gorie de filtres rejetant des cas :}
+
+%tableau
+\begin{center}
+\begin{tabular}{|M{4cm}|M{5cm}|M{6cm}|}
+   \hline
+    \, &Nombre de cas rejet\'{e}s / nombre de cas trait\'{e}s & Pourcentage de cas rejet\'{e}s \tabularnewline
+   \hline
+    Filtre RollbackFilter & 154 449 / 408 816 & 37,7\% \tabularnewline
+   \hline
+    Filtre EstheticalRestructurationRejector & 145 141 / 408 816 & 35,5\% \tabularnewline
+   \hline
+      Filtre NumberRejector & 47 194 / 408 816 & 11,5\% \tabularnewline
+   \hline
+\end{tabular}
+\end{center}
+
+Notez que l'ex\'{e}cution de chaque filtre ne prend pas plus de quelques minutes \`{a} s'ex\'{e}cuter sur tout le fichier (en dehors du RollbackFiltrer qui prend plusieurs dixaines de minutes \`{a} cause sa complexit\'{e} algorithmique).
+\newline
+\newline
+{\bfseries Cat\'{e}gorie de filtres supprimant le contenu superflu d'un cas :}
+
+%tableau
+\begin{center}
+\begin{tabular}{|M{4cm}|M{5cm}|M{6cm}|}
+   \hline
+    \, &Nombre de caract\`{e}r supprim\'{e}s / nombre de caract\`{e}res trait\'{e}s & Pourcentage de caract\`{e}res supprim\'{e}s \tabularnewline
+   \hline
+    Filtre SentencePurifier & 28 740 736 / 119 554 961 & 24\% \tabularnewline
+   \hline
+\end{tabular}
+\end{center}
+
+
+%tableau
+\begin{center}
+\begin{tabular}{|M{4cm}|M{5cm}|M{6cm}|}
+   \hline
+    \, &Nombre de caract\`{e}r supprim\'{e}s / nombre de phrases trait\'{e}es & Pourcentage de caract\`{e}res supprim\'{e}s par phrase\tabularnewline
+   \hline
+    Filtre SpecialCaracterPurifier & 191 163 / 817 632 & 23,3\% \tabularnewline
+   \hline
+\end{tabular}
+\end{center}
+
+Quant aux filtres <<\,Purifier\,>>, leurs ex\'{e}cutions ne prend pas plus de quelques dixaines de secondes.
+
+blabla resutat
+\newline
+\newline
+
+
+
 \begin{itemize}
 \item nombre de cas enlev\'{e} (nombre et pourcentage) sur la base de test, puis sur tout le fichier de WiCoPaCo
 \item temps d'ex\'{e}cution
@@ -532,69 +587,7 @@ contenu:
 
 
 
-%tableau
-\begin{center}
-\begin{tabular}{|M{6cm}|M{5cm}|M{6cm}|}
-   \hline
-    \, &Nombre de cas rejet\'{e}s / nombre de cas trait\'{e}s & Pourcentage de cas rejet\'{e}ss \tabularnewline
-   \hline
-    Filtre EstheticalRestructurationRejector & 145 141 / 408 816 & 35,5\% \tabularnewline
-   \hline
-\end{tabular}
-\end{center}
 
-
-
-%tableau
-\begin{center}
-\begin{tabular}{|M{4cm}|M{5cm}|M{6cm}|}
-   \hline
-    \, &Nombre de cas rejet\'{e}s / nombre de cas trait\'{e}s & Pourcentage de cas rejet\'{e}s \tabularnewline
-   \hline
-    Filtre NumberRejector & 47 194 / 408 816 & 11,5\% \tabularnewline
-   \hline
-\end{tabular}
-\end{center}
-
-
-
-
-%tableau
-\begin{center}
-\begin{tabular}{|M{4cm}|M{5cm}|M{6cm}|}
-   \hline
-    \, &Nombre de cas rejet\'{e}s / nombre de cas trait\'{e}s & Pourcentage de cas rejet\'{e}s \tabularnewline
-   \hline
-    Filtre RollbackFilter & 154 449 / 408 816 & 37,7\% \tabularnewline
-   \hline
-\end{tabular}
-\end{center}
-
-
-
-%tableau
-\begin{center}
-\begin{tabular}{|M{4cm}|M{5cm}|M{6cm}|}
-   \hline
-    \, &Nombre de caract\`{e}r supprim\'{e}s / nombre de caract\`{e}res trait\'{e}s & Pourcentage de caract\`{e}res supprim\'{e}s \tabularnewline
-   \hline
-    Filtre SentencePurifier & 28 740 736 / 119 554 961 & 24\% \tabularnewline
-   \hline
-\end{tabular}
-\end{center}
-
-
-
-%tableau
-\begin{center}
-\begin{tabular}{|M{4cm}|M{5cm}|M{6cm}|}
-   \hline
-    \, &Nombre de caract\`{e}r supprim\'{e}s / nombre de phrases trait\'{e}es & Pourcentage de caract\`{e}res supprim\'{e}s par phrase\tabularnewline
-   \hline
-    Filtre SpecialCaracterPurifier & 191 163 / 817 632 & 23,3\% \tabularnewline
-   \hline
-\end{tabular}
-\end{center}
 
 
 
