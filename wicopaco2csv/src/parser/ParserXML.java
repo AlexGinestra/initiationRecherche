@@ -89,9 +89,9 @@ public class ParserXML {
 
 		/* ouverture du fichier xml en entre */
 		//Document document = ParserXML.getDocumentTraversal("../doss.nosync/wico_v2_complet.xml");
-		Document document = ParserXML.getDocumentTraversal("../alex/truc.xml");
+		//Document document = ParserXML.getDocumentTraversal("../alex/truc.xml");
 
-		//Document document = ParserXML.getDocumentTraversal("../../test/wico_v2_complet.xml");
+		Document document = ParserXML.getDocumentTraversal("../../test/wico_v2_complet.xml");
 		DocumentTraversal traversal = (DocumentTraversal) document;
 		if (traversal == null) {
 			System.out.println("erreur");
@@ -118,11 +118,14 @@ public class ParserXML {
 				}
 			}
 		}
-		
-		
-		
 
-		
+
+
+
+
+
+
+
 		/* local rejector */
 		for(int i = nodeList.size()-1 ; i > 0 ; i--) {
 			for (LocalRejectionFilter f : localRejectors) {
@@ -132,22 +135,23 @@ public class ParserXML {
 				}
 			}
 		}
-		
-		// clean the node list that have to be treated
-				for (GlobalRejectionFilter f : globalRejectors) {
-					f.cleanTheList(nodeList);
-				}
 
 		
+
+		// clean the node list that have to be treated
+		for (GlobalRejectionFilter f : globalRejectors) {
+			f.cleanTheList(nodeList);
+		}
+
 		// treat the node list that will be in the output file
 		for (Node node : nodeList) {
 			/* apply a purification on the case, then add it to the output file */
 			traiterModif(node);
 		}
 
-		
 
-		
+
+
 		// closing writers
 		for (GlobalRejectionFilter f : globalRejectors) {
 			((FiltersStatistics) f).closeOutput();
@@ -258,9 +262,10 @@ public class ParserXML {
 		List<Character> specialCharacters = Arrays.asList(specChar);
 
 		// adding differents globalRejector
-	
+
+		//parser.addGlobalRejector(new SpellingErrorLabelFilter());
 		parser.addGlobalRejector(new RollbackFilter());
-		parser.addGlobalRejector(new SpellingErrorLabelFilter());
+
 
 		// adding differents localRejector
 		parser.addLocalRejector(new NumberRejector());
