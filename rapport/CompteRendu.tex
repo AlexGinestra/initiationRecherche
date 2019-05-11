@@ -489,7 +489,7 @@ Dans cette derni\`{e}re partie, nous allons donc vous montrez les r\'{e}sultats 
 
 %===== 1ere sous sous partie ====
 \subsubsection{Ex\'{e}cution individuelle des filtres}
-Dans cette partie nous donnerons les r\'{e}sultats de chacun de nos filtres en ex\'{e}cution seul sur le fichier de WiCoPaCo complet, et nous analyserons les r\'{e}sultats de chacun d'eux.
+Dans cette partie nous donnerons les r\'{e}sultats de chacun de nos filtres en ex\'{e}cution seul sur le fichier de WiCoPaCo complet.
 \newline
 \newline
 {\bfseries Cat\'{e}gorie de filtres rejetant des cas :}
@@ -509,7 +509,7 @@ Dans cette partie nous donnerons les r\'{e}sultats de chacun de nos filtres en e
 \end{tabular}
 \end{center}
 
-Notez que l'ex\'{e}cution de chaque filtre ne prend pas plus de quelques minutes \`{a} s'ex\'{e}cuter sur tout le fichier (en dehors du RollbackFiltrer qui prend plusieurs dixaines de minutes \`{a} cause sa complexit\'{e} algorithmique).
+Notez que l'ex\'{e}cution de chaque filtre ne prend pas plus de quelques minutes \`{a} se faire sur tout le fichier (en dehors du RollbackFiltrer qui prend plusieurs dixaines de minutes \`{a} cause sa complexit\'{e} algorithmique).
 \newline
 \newline
 {\bfseries Cat\'{e}gorie de filtres supprimant le contenu superflu d'un cas :}
@@ -537,28 +537,60 @@ Notez que l'ex\'{e}cution de chaque filtre ne prend pas plus de quelques minutes
 \end{tabular}
 \end{center}
 
-Quant aux filtres <<\,Purifier\,>>, leurs ex\'{e}cutions ne prend pas plus de quelques dixaines de secondes.
-
-blabla resutat
-\newline
-\newline
+Quant aux filtres <<\,Purifier\,>>, leurs ex\'{e}cutions ne d\'{e}passe pas quelques dixaines de secondes.
 
 
-
-\begin{itemize}
-\item nombre de cas enlev\'{e} (nombre et pourcentage) sur la base de test, puis sur tout le fichier de WiCoPaCo
-\item temps d'ex\'{e}cution
-\end{itemize}
 
 %===== 2eme sous sous partie ====
-\subsubsection{Les filtres LocalRejector}
-contenu:
-de meme que la sous sous partie precedente
+\subsubsection{Superposition et commutativit\'{e} des filtres}
+Il est int\'{e}ressant de voir si l'ordre d'application des filtres a une incidence sur le fichier de sortie. Cela permet de s'assurer que les filtres, entre eux, ne s'entravent pas dans l'ex\'{e}cution de leurs fonctions. 
+Nous allons donc ex\'{e}cuter les filtres rejetant des cas dans des ordres diff\'{e}rents sur le fichier complet.
+\newline
+\newline
+Ci-dessous se trouve le tableau des r\'{e}sultats de l'ex\'{e}cution la cat\'{e}gorie de filtres <<\,GlobalRejector\,>>, puis la cat\'{e}gorie de filtres <<\,LocalRejector\,>> sur le fichier WiCoPaCo complet. Les filtres ont \'{e}t\'{e}s appliqu\'{e}s dans le m\^{e}me ordre que celui d'apparition dans le tableau.
+%tableau global puis local
+\begin{center}
+\begin{tabular}{|M{6cm}|M{5cm}|M{6cm}|}
+   \hline
+    \, &Nombre de cas rejet\'{e}s / nombre de cas trait\'{e}s & Pourcentage de cas rejet\'{e}s \tabularnewline
+   \hline
+    Filtre RollbackFilter & 154 449 / 408 816 & 37,7\% \tabularnewline
+   \hline
+    Filtre NumberRejector & 27 269 / 254 366 & 10,7\% \tabularnewline
+\hline
+Filtre EstheticalRestructurationRejector & 99 319 / 227 097 & 43,7\% \tabularnewline
+\hline
+\end{tabular}
+\end{center}
+Nous obtenons donc un fichier de sortie comportant 127 779 cas.
+\newline
+NB : Dans cette configuration, l'ex\'{e}uction compl\`{e}te a dur\'{e}e une quarantaine de minutes sur une de nos machines.
+\newline
+\newline
+Ci-dessous se trouve le tableau des r\'{e}sultats de l'ex\'{e}cution la cat\'{e}gorie de filtres <<\,LocalRejector\,>>,  puis la cat\'{e}gorie de filtres <<\,GlobalRejector\,>> sur le fichier WiCoPaCo complet. Les filtres ont \'{e}t\'{e}s appliqu\'{e}s dans le m\^{e}me ordre que celui d'apparition dans le tableau
+%tableau local puis global
+\begin{center}
+\begin{tabular}{|M{6cm}|M{5cm}|M{6cm}|}
+   \hline
+    \, &Nombre de cas rejet\'{e}s / nombre de cas trait\'{e}s & Pourcentage de cas rejet\'{e}s \tabularnewline
+   \hline
+    Filtre NumberRejector & 47 194 / 408 816 & 11,5\% \tabularnewline
+\hline
+Filtre EstheticalRestructurationRejector & 148 485 / 361 622 & 41\% \tabularnewline
+ \hline
+    Filtre RollbackFilter & 85 358 / 213 138 & 40\% \tabularnewline
+\hline
+\end{tabular}
+\end{center}
+Nous obtenons donc un fichier de sortie comportant 127 779 cas.
+\newline
+NB : Dans cette configuration, l'ex\'{e}uction compl\`{e}te a dur\'{e}e une douzaine de minutes sur une de nos machines.
+\newline
+\newline
 
-%===== 3eme sous sous partie ====
-\subsubsection{Les filtres Purifier}
-contenu:
-de meme que la partie sous sous precedente
+Apr\`{e}s comparaison des deux fichiers de sorties, nous avons constat\'{e}s qu'ils \'{e}taient identiques en nombre de cas, mais aussi en contenu. Nous pouvons donc supposer que les filtres sont commutatifs.
+Cela se d\'{e}montre assez facilement puisque les filtres que nous avons impl\'{e}ment\'{e}s ne traitent que le contenu de la balise encadrant la partie corrig\'{e}e, et ce de la m\^{e}me mani\`{e}re que ce soit avant ou apr\`{e}s la correction. Donc on peut dire que l'ordre d'ex\'{e}cution des filtres a peu d'importance, si ce n'est le temps d'ex\'{e}cution du logiciel (environ trois fois plus rapide dans une configuration que dans l'autre).
+
 
 %===== 2eme sous partie ====
 \subsection{R\'{e}sultat final}
@@ -593,40 +625,9 @@ contenu:
 
 
 
-%tableau global puis local
-\begin{center}
-\begin{tabular}{|M{6cm}|M{5cm}|M{6cm}|}
-   \hline
-    \, &Nombre de cas rejet\'{e}s / nombre de cas trait\'{e}s & Pourcentage de cas rejet\'{e}s \tabularnewline
-   \hline
-    Filtre RollbackFilter & 154 449 / 408 816 & 37,7\% \tabularnewline
-   \hline
-    Filtre NumberRejector & 27 269 / 254 366 & 10,7\% \tabularnewline
-\hline
-Filtre EstheticalRestructurationRejector & 99 319 / 254 366 & 10,7\% \tabularnewline
-\hline
-\end{tabular}
-\end{center}
 
 
 
-
-
-%tableau local puis global
-\begin{center}
-\begin{tabular}{|M{6cm}|M{5cm}|M{6cm}|}
-   \hline
-    \, &Nombre de cas rejet\'{e}s / nombre de cas trait\'{e}s & Pourcentage de cas rejet\'{e}s \tabularnewline
-   \hline
-    Filtre NumberRejector & 27 269 / 254 366 & 10,7\% \tabularnewline
-\hline
-Filtre EstheticalRestructurationRejector & 99 319 / 254 366 & 10,7\% \tabularnewline
- \hline
-    Filtre RollbackFilter & 154 449 / 408 816 & 37,7\% \tabularnewline
-\hline
-
-\end{tabular}
-\end{center}
 
 
 
@@ -670,7 +671,7 @@ Filtre EstheticalRestructurationRejector & 2 113 / 92 250 & 2,3\% \tabularnewlin
    \hline
     \, &Nombre de cas rejet\'{e}s / nombre de cas trait\'{e}s & Pourcentage de cas rejet\'{e}s \tabularnewline
     \hline
-     Filtre NumberRejector & 47 194 / 408 815 & 11,5\% \tabularnewline
+     Filtre NumberRejector & 47 194 / 408 816 & 11,5\% \tabularnewline
 \hline
 Filtre EstheticalRestructurationRejector & 148 485 / 361 621 & 41\% \tabularnewline
 \hline
