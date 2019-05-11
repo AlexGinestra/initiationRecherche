@@ -292,9 +292,9 @@ Un cas dans ce fichier est repr\'{e}sent\'{e} par 3 ou 4 lignes : la premi\`{e}r
    \hline
     \, &Cas ne comportant des erreurs & Cas ne comportant pas d'erreurs & Cas comportant des erreurs & Cas ne comportant pas d'erreurs \tabularnewline
    \hline
-    Nombre d'erreurs d\'{e}tect\'{e}es / nombre de cas & 101 / 202 & 53 / 102 & 279 / 500 & 273 / 500 \tabularnewline
+    Nombre de cas rejet\'{e}s / nombre de cas & 101 / 202 & 53 / 102 & 279 / 500 & 273 / 500 \tabularnewline
    \hline
-     Pourcentage d'erreurs d\'{e}tect\'{e}es & 50 \% & 26 \% & 56\% & 56\% \tabularnewline
+     Pourcentage de cas rejet\'{e}s & 50 \% & 26 \% & 56\% & 56\% \tabularnewline
    \hline
 \end{tabular}
 \end{center}
@@ -427,7 +427,7 @@ Ou, si
 \begin{itemize}
 \item La longueur de la plus petite cha\^{i}ne de caract\`{e}res entre l'avant et l'apr\`{e}s correction est sup\'{e}rieure ou \'{e}gale \`{a} 4 caract\`{e}res, et que la distance calcul\'{e}e est plus grande qu'un tiers de la plus petite cha\^{i}ne.
 \end{itemize}
- Le choix d'une telle impl\'{e}mentation r\'{e}sulte d'une premi\`{e}re r\'{e}flexion sur les possibles fautes que l'on peut faire, et le rapport de taille entre la faute et le mot en question. Puis cette r\'{e}flexion a \'{e}t\'{e} test\'{e}e de mani\`{e}re empirique sur 500 cas d'une base test, ou chaque cas rejet\'{e} ou accepté ont \'{e}t\'{e} analys\'{e} (seulement quelques fautes de conjugaison sont filtr\'{e}s \`{a} tort).
+ Le choix d'une telle impl\'{e}mentation r\'{e}sulte d'une premi\`{e}re r\'{e}flexion sur les possibles fautes qu'il est possible de faire, et plus pr\'{e}cisement sur le rapport entre la taille de la faute et la taille du mot en question. Puis cette r\'{e}flexion a \'{e}t\'{e} test\'{e}e de mani\`{e}re empirique sur 500 cas d'une base test, ou chaque cas rejet\'{e} ou accept\'{e} ont \'{e}t\'{e} analys\'{e} pour ajuster les param\`{e}tres du filtre (seulement quelques fautes de conjugaison sont filtr\'{e}s \`{a} tort).
  Voici un exemple que le EstheticalRestructurationRejector rejette :
 
 %==== image ====
@@ -536,7 +536,7 @@ contenu:
 \begin{center}
 \begin{tabular}{|M{6cm}|M{5cm}|M{6cm}|}
    \hline
-    \, &Nombre d'erreurs d\'{e}tect\'{e}es / nombre de cas trait\'{e}s & Pourcentage de phrases rejet\'{e}es \tabularnewline
+    \, &Nombre de cas rejet\'{e}s / nombre de cas trait\'{e}s & Pourcentage de cas rejet\'{e}ss \tabularnewline
    \hline
     Filtre EstheticalRestructurationRejector & 145 141 / 408 816 & 35,5\% \tabularnewline
    \hline
@@ -549,7 +549,7 @@ contenu:
 \begin{center}
 \begin{tabular}{|M{4cm}|M{5cm}|M{6cm}|}
    \hline
-    \, &Nombre d'erreurs d\'{e}tect\'{e}es / nombre de cas trait\'{e}s & Pourcentage de phrases rejet\'{e}es \tabularnewline
+    \, &Nombre de cas rejet\'{e}s / nombre de cas trait\'{e}s & Pourcentage de cas rejet\'{e}s \tabularnewline
    \hline
     Filtre NumberRejector & 47 194 / 408 816 & 11,5\% \tabularnewline
    \hline
@@ -563,7 +563,7 @@ contenu:
 \begin{center}
 \begin{tabular}{|M{4cm}|M{5cm}|M{6cm}|}
    \hline
-    \, &Nombre d'erreurs d\'{e}tect\'{e}es / nombre de cas trait\'{e}s & Pourcentage de phrases rejet\'{e}es \tabularnewline
+    \, &Nombre de cas rejet\'{e}s / nombre de cas trait\'{e}s & Pourcentage de cas rejet\'{e}s \tabularnewline
    \hline
     Filtre RollbackFilter & 154 449 / 408 816 & 37,7\% \tabularnewline
    \hline
@@ -604,7 +604,7 @@ contenu:
 \begin{center}
 \begin{tabular}{|M{6cm}|M{5cm}|M{6cm}|}
    \hline
-    \, &Nombre d'erreurs d\'{e}tect\'{e}es / nombre de cas trait\'{e}s & Pourcentage de phrases rejet\'{e}es \tabularnewline
+    \, &Nombre de cas rejet\'{e}s / nombre de cas trait\'{e}s & Pourcentage de cas rejet\'{e}s \tabularnewline
    \hline
     Filtre RollbackFilter & 154 449 / 408 816 & 37,7\% \tabularnewline
    \hline
@@ -623,7 +623,7 @@ Filtre EstheticalRestructurationRejector & 99 319 / 254 366 & 10,7\% \tabularnew
 \begin{center}
 \begin{tabular}{|M{6cm}|M{5cm}|M{6cm}|}
    \hline
-    \, &Nombre d'erreurs d\'{e}tect\'{e}es / nombre de cas trait\'{e}s & Pourcentage de phrases rejet\'{e}es \tabularnewline
+    \, &Nombre de cas rejet\'{e}s / nombre de cas trait\'{e}s & Pourcentage de cas rejet\'{e}s \tabularnewline
    \hline
     Filtre NumberRejector & 27 269 / 254 366 & 10,7\% \tabularnewline
 \hline
@@ -643,7 +643,7 @@ Filtre EstheticalRestructurationRejector & 99 319 / 254 366 & 10,7\% \tabularnew
 \begin{center}
 \begin{tabular}{|M{4cm}|M{5cm}|M{6cm}|}
    \hline
-    \, &Nombre d'erreurs d\'{e}tect\'{e}es / nombre de cas trait\'{e}s & Pourcentage de phrases rejet\'{e}es \tabularnewline
+    \, &Nombre de cas rejet\'{e}s / nombre de cas trait\'{e}s & Pourcentage de cas rejet\'{e}s \tabularnewline
    \hline
     Filtre SpellingErrorLabelFilter & 269 943 / 408 816 & 66\% \tabularnewline
    \hline
@@ -657,7 +657,7 @@ Filtre EstheticalRestructurationRejector & 99 319 / 254 366 & 10,7\% \tabularnew
 \begin{center}
 \begin{tabular}{|M{6cm}|M{5cm}|M{6cm}|}
    \hline
-    \, &Nombre d'erreurs d\'{e}tect\'{e}es / nombre de cas trait\'{e}s & Pourcentage de phrases rejet\'{e}es \tabularnewline
+    \, &Nombre de cas rejet\'{e}s / nombre de cas trait\'{e}s & Pourcentage de cas rejet\'{e}s \tabularnewline
     \hline
     Filtre SpellingErrorLabelFilter & 269 943 / 408 816 & 66\% \tabularnewline
    \hline
@@ -675,7 +675,7 @@ Filtre EstheticalRestructurationRejector & 2 113 / 92 250 & 2,3\% \tabularnewlin
 \begin{center}
 \begin{tabular}{|M{6cm}|M{5cm}|M{6cm}|}
    \hline
-    \, &Nombre d'erreurs d\'{e}tect\'{e}es / nombre de cas trait\'{e}s & Pourcentage de phrases rejet\'{e}es \tabularnewline
+    \, &Nombre de cas rejet\'{e}s / nombre de cas trait\'{e}s & Pourcentage de cas rejet\'{e}s \tabularnewline
     \hline
      Filtre NumberRejector & 47 194 / 408 815 & 11,5\% \tabularnewline
 \hline
