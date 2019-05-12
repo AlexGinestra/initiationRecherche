@@ -92,7 +92,7 @@ Tout d'abord, nous tenons \`{a} remercier toute l'\'{e}quipe p\'{e}dagogique du 
 \newline
 De plus, nous remercions toutes les personnes qui ont contribu\'{e} au bon d\'{e}roulement de notre travail et qui nous ont aid\'{e} lors de la r\'{e}daction de ce rapport. Premi\`{e}rement, nous adressons nos remerciements \`{a} notre professeur, Madame Marie-Laure Alves, qui nous a beaucoup aid\'{e}s. Son \'{e}coute et ses conseils nous ont permis de progresser dans notre d\'{e}marche.
 \newline
-Nous tenons \'{e}galement \`{a} remercier vivement notre encadrant, Monsieur Jean Lieber, enseignant chercheur au LORIA[\cite[1]{1}], pour son accueil, le temps pass\'{e} ensemble et le partage de son expertise au quotidien. Nous remercions \'{e}galement toute l'\'{e}quipe K et l'\'{e}quipe S\'{e}magramme pour leur accueil et leur disponibilit\'{e}, et en particulier Monsieur Emmanuel Nauer, qui nous a beaucoup aid\'{e} \`{a} comprendre les probl\'{e}matiques de recherche sur lesquelles nous travaillions. Enfin, nous tenons \`{a} remercier toutes les personnes qui nous ont conseill\'{e}s et relus lors de la r\'{e}daction de ce rapport : nos familles, nos professeurs et aussi nos camarades de cours.
+Nous tenons \'{e}galement \`{a} remercier vivement notre encadrant, Monsieur Jean Lieber, enseignant chercheur au LORIA \autocite[1]{http://www.loria.fr/fr/}, pour son accueil, le temps pass\'{e} ensemble et le partage de son expertise au quotidien. Nous remercions \'{e}galement toute l'\'{e}quipe K et l'\'{e}quipe S\'{e}magramme pour leur accueil et leur disponibilit\'{e}, et en particulier Monsieur Emmanuel Nauer, qui nous a beaucoup aid\'{e} \`{a} comprendre les probl\'{e}matiques de recherche sur lesquelles nous travaillions. Enfin, nous tenons \`{a} remercier toutes les personnes qui nous ont conseill\'{e}s et relus lors de la r\'{e}daction de ce rapport : nos familles, nos professeurs et aussi nos camarades de cours.
 
 \cleardoublepage
 
@@ -213,7 +213,7 @@ Nous voyons donc qu'il est possible de r\'{e}soudre des probl\`{e}mes gr\^{a}ce 
 Une premi\`{e}re piste nous a \'{e}t\'{e} fournie par un groupe d'\'{e}tudiants de L3 de 2017-2018 compos\'{e} de M. Giang, M. Levy et M. Ly, qui avait travaill\'{e} sur un projet intitul\'{e} Corrector. Le projet consistait \`{a} faire un site WEB capable d'apporter une correction \`{a} une phrase erron\'{e}e donn\'{e}e en entr\'{e}e. Cette correction devait se faire \`{a} l'aide d'une base de cas qui pouvait s'enrichir avec des interactions humaines (utilisateur/administrateur du site). 
 \newline
 \newline
-Notre d\'{e}but d'\'{e}tude a donc \'{e}t\'{e} guid\'{e} par les moyens mis en {\oe}uvre pour effectuer un remplissage automatique de leur base de cas initiale, et plus particuli\`{e}rement un : les corpus de WiCoPaCo [\cite[2]{2}]. Le site WiCoPaCo met en libre acc\`{e}s des fichiers au format XML contenant des phrases, ou parties de phrases avec une correction effectu\'{e}e ainsi qu'un commentaire \'{e}ventuel laiss\'{e} par l'auteur de la correction. Ces fichiers sont le r\'{e}sultat des corrections faites par les administrateurs des pages Wikip\'{e}dia, ce qui n\'{e}cessite une correction \'{e}tant donn\'{e} que le contenu des pages est apport\'{e} par des utilisateurs. Les fichiers en question contiennent donc des centaines de milliers de cas compos\'{e}s de la mani\`{e}re suivante : le groupe de phrases avant modification avec la mise en \'{e}vidence de la faute, suivi du m\^{e}me groupe de phrases avec la correction apport\'{e}e \'{e}galement mise en \'{e}vidence. 
+Notre d\'{e}but d'\'{e}tude a donc \'{e}t\'{e} guid\'{e} par les moyens mis en {\oe}uvre pour effectuer un remplissage automatique de leur base de cas initiale, et plus particuli\`{e}rement un : les corpus de WiCoPaCo \autocite[2]{https://wicopaco.limsi.fr}. Le site WiCoPaCo met en libre acc\`{e}s des fichiers au format XML contenant des phrases, ou parties de phrases avec une correction effectu\'{e}e ainsi qu'un commentaire \'{e}ventuel laiss\'{e} par l'auteur de la correction. Ces fichiers sont le r\'{e}sultat des corrections faites par les administrateurs des pages Wikip\'{e}dia, ce qui n\'{e}cessite une correction \'{e}tant donn\'{e} que le contenu des pages est apport\'{e} par des utilisateurs. Les fichiers en question contiennent donc des centaines de milliers de cas compos\'{e}s de la mani\`{e}re suivante : le groupe de phrases avant modification avec la mise en \'{e}vidence de la faute, suivi du m\^{e}me groupe de phrases avec la correction apport\'{e}e \'{e}galement mise en \'{e}vidence. 
 \newline
 \newline
 L'int\'{e}r\^{e}t principal de ces fichiers \'{e}tant l'\'{e}norme masse de donn\'{e}es qu'ils contiennent, nous permettant ainsi d'en extraire un grand nombre de cas. Cependant, m\^{e}me si cette solution semble \^{e}tre id\'{e}ale et simple \`{a} mettre en place, il s'av\`{e}re qu'elle est loin d'\^{e}tre parfaite. Le probl\`{e}me de ces corrections est qu'une partie se trouve \^{e}tre des corrections de contenu, une autre \'{e}tant des reformulations, et bien d'autres types de corrections n'\'{e}tant pas des erreurs de fran\c{c}ais mais sont pourtant contenues dans ces fichiers. La probl\'{e}matique de l'\'{e}puration de cette \'{e}norme masse de donn\'{e}es se pose donc.
@@ -247,7 +247,7 @@ Suite \`{a} la mise en place de notre sujet, nous nous sommes donc concentr\'{e}
 
 %===== 1ere sous sous partie ====
 \subsubsection{Grew}
-Le premier de nos deux axes \'{e}tait la d\'{e}couverte d'un outil permettant l'analyse des phrases pour en trouver les potentielles fautes de fran\c{c}ais. Pour cela, nos encadrants nous ont orient\'{e}s vers GREW [\cite[3]{3}], un logiciel dont un de nos encadrants, Bruno Guillaume, conna\^{i}t bien le fonctionnement. Ce logiciel permet, \`{a} partir d'une ou plusieurs phrases donn\'{e}es en param\`{e}tre, de construire un graphe \`{a} partir des lemmes de chaque mot ainsi que gr\^{a}ce au contexte des phrases. Ce graphe permet de d\'{e}duire les liens que chaque mot entretient avec les autres mots de la phrase. Voici un exemple de graphe que cr\'{e}e l'outil GREW \`{a} partir de la phrase <<\,C'est une femme tr\`{e}s intelligente.\,>>
+Le premier de nos deux axes \'{e}tait la d\'{e}couverte d'un outil permettant l'analyse des phrases pour en trouver les potentielles fautes de fran\c{c}ais. Pour cela, nos encadrants nous ont orient\'{e}s vers GREW \autocite[3]{http://grew.fr}, un logiciel dont un de nos encadrants, Bruno Guillaume, conna\^{i}t bien le fonctionnement. Ce logiciel permet, \`{a} partir d'une ou plusieurs phrases donn\'{e}es en param\`{e}tre, de construire un graphe \`{a} partir des lemmes de chaque mot ainsi que gr\^{a}ce au contexte des phrases. Ce graphe permet de d\'{e}duire les liens que chaque mot entretient avec les autres mots de la phrase. Voici un exemple de graphe que cr\'{e}e l'outil GREW \`{a} partir de la phrase <<\,C'est une femme tr\`{e}s intelligente.\,>>
 
 %==== image ====
 \begin{center}
@@ -466,7 +466,7 @@ Ce filtre n'a d'int\'{e}r\^{e}t que s'il est appliqu\'{e} apr\`{e}s le filtre <<
 %===== 4eme sous sous partie ====
 \subsubsection{Travail effectu\'{e} par LIMSI}
 
-Gr\^{a}ce \`{a} nos recherches effectu\'{e}es sur WiCoPaCo, nous avons pu trouver des travaux[\cite[4]{4}] effectu\'{e}s par des chercheurs du LIMSI[\cite[5]{5}]. Ces travaux \autocite[1]{https://wicopaco.limsi.fr/pub/taln10.pdf} leurs ont permis d'extraire automatiquement des fichiers XML de WiCoPaCo un corpus d'erreurs compos\'{e} de 72 483 erreurs lexicales et 74 100 erreurs grammaticales. Leurs r\'{e}sultats peuvent \^{e}tre extraits 
+Gr\^{a}ce \`{a} nos recherches effectu\'{e}es sur WiCoPaCo, nous avons pu trouver des travaux[\cite[1]{1}] effectu\'{e}s par des chercheurs du LIMSI \autocite[4]{https://www.limsi.fr/fr/}. Ces travaux leurs ont permis d'extraire automatiquement des fichiers XML de WiCoPaCo un corpus d'erreurs compos\'{e} de 72 483 erreurs lexicales et 74 100 erreurs grammaticales. Leurs r\'{e}sultats peuvent \^{e}tre extraits 
 \`{a} partir d'un fichier XML regroupant les 150 000 cas, pr\'{e}sent\'{e} sous la forme :
 
 %==== image ====
@@ -668,7 +668,7 @@ Dans cette partie nous allons pr\'{e}senter les r\'{e}sultats finaux de nos d\'{
 	La base de cas bruit\'{e}e choisie a \'{e}t\'{e} WiCoPaCo, sur laquelle nous avons appliqu\'{e} des filtres pour l'\'{e}purer. Apr\`{e}s le d\'{e}veloppement de plusieurs filtres ainsi qu'avec l'aide d'une \'{e}tude faite sur cette m\^{e}me base de cas, nous avons effectu\'{e} une s\'{e}rie de tests pour regarder l'efficacit\'{e} et la commutativit\'{e} des filtres et nous en avons d\'{e}duit la meilleure ex\'{e}cution possible. D'apr\`{e}s les tests effectu\'{e}s ci-dessus, nous arrivons \`{a} la conclusion que le meilleur ordonnancement de filtres est le suivant : 
 \newline
 \newline
-Premi\`{e}rement, nous devons  ex\'{e}cuter nos filtres de la cat\'{e}gorie <<\,LocalRejector\,>> puis nos filtres <<\,GlobalRejector\,>>. Cet ordre importe peu en ce qui concerne la qualit\'{e} des cas enlev\'{e}s mais permet de gagner du temps lors de l'ex\'{e}cution de notre programme. Deuxi\`{e}mement, nous devons lancer le filtre cr\'{e}\'{e} \`{a} partir du travail des chercheurs de LIMSI. Nous appliquons ce filtre apr\`{e}s les n\^{o}tres et non avant car le travail effectu\'{e} par le groupe du LIMSI supprime des cas dont nos filtres ont besoin pour effectuer correctement leur t\^{a}che.
+Premi\`{e}rement, nous devons  ex\'{e}cuter nos filtres de la cat\'{e}gorie <<\,LocalRejector\,>> puis nos filtres\newline<<\,GlobalRejector\,>>. Cet ordre importe peu en ce qui concerne la qualit\'{e} des cas enlev\'{e}s mais permet de gagner du temps lors de l'ex\'{e}cution de notre programme. Deuxi\`{e}mement, nous devons lancer le filtre cr\'{e}\'{e} \`{a} partir du travail des chercheurs de LIMSI. Nous appliquons ce filtre apr\`{e}s les n\^{o}tres et non avant car le travail effectu\'{e} par le groupe du LIMSI supprime des cas dont nos filtres ont besoin pour effectuer correctement leur t\^{a}che.
 \newline
 \newline
 En suivant cet ordre, nous arrivons \`{a} enlever 338 588 cas, soit \`{a} peu pr\`{e}s 82,82\% des cas. Bien que 4 cas sur 5 soient enlev\'{e}s de la base de cas, il reste tout de m\^{e}me 70 228 cas, ce qui est largement suffisant pour cr\'{e}er une base de cas. Cependant, l'utilisation du travail effectu\'{e} par les chercheurs de LIMSI n'est pas appropri\'{e} \`{a} notre travail de recherche, qui consiste \`{a} cr\'{e}er des outils permettant de nettoyer une base de cas bruit\'{e}e. Dans le cas ou une base de cas autre que WiCoPaCo serait utilis\'{e}, leur travail n'apporterait aucune information. 
@@ -696,19 +696,69 @@ Tous ces ustensiles pourraient se r\'{e}v\'{e}ler \^{e}tre plus qu'efficace dans
 {\bfseries \huge Conclusion}
 \end{center}
 \vspace*{35mm}
-
+Pour conclure ce projet d'initiation \`{a} la recherche, nous rappelons que ce sujet fait suite \`{a} des travaux effectu\'{e}s par des \'{e}tudiants de L3 Informatique en 2017-2018. Ces derniers ayant pour but la construction d'une base de cas contenant des corrections de fran\c{c}ais. Ce projet \'{e}tait encadr\'{e} par les \'{e}quipes K et S\'{e}magramme du Loria, constitu\'{e}es de Bruno Guillaume, Yves Lepage, Jean Lieber et Emmanuel Nauer.
+\newline
+\newline
+	Au cours de ces 6 mois d'initiation \`{a} la recherche, nous avons \'{e}tudi\'{e} le raisonnement \`{a} partir de cas, analys\'{e} le corpus de correction d'erreur de fran\c{c}ais de Wikip\'{e}dia, WiCoPaCo, ainsi que d\'{e}velopp\'{e} un logiciel Java, WiCorrector, qui permet l'\'{e}puration d'un corpus de correction de phrase de fran\c{c}ais. Toutes ces diff\'{e}rentes \'{e}tapes ont \'{e}t\'{e} tr\`{e}s enrichissantes, car elles nous ont donn\'{e} la possibilit\'{e} d'en apprendre plus sur le secteur de la recherche. De plus, le fait de travailler dans un secteur jusqu'alors inconnu nous a permis d'apprendre de nouvelles techniques de travail telles que la recherche et l'utilisation de publication scientifique, ainsi que la r\'{e}daction d'une revue scientifique. Enfin, travailler sur un sujet de recherche nous a pouss\'{e} \`{a} acqu\'{e}rir de nouvelles connaissances, dans des domaines tels que le raisonnement \`{a} partir de cas, l'utilisation d'un syst\`{e}me de composition de documents, LaTeX, ainsi que la cr\'{e}ation de protocoles rigoureux, pour l'avancement de notre projet.
+\newline
+\newline
+	Cependant, nous sommes conscients que notre projet est loin d'\^{e}tre achev\'{e}, car il reste certainement des erreurs que nous n'avons pas encore trait\'{e}s. De plus, plusieurs aspects de notre sujet de recherche n'ont pas \'{e}t\'{e} abord\'{e} tel que la cr\'{e}ation d'un jeu permettant la correction d'erreurs de fran\c{c}ais par les utilisateurs, ou l'analyse de corpus contenant des erreurs de fran\c{c}ais autre que WiCoPaCo. De nombreuses questions restent donc en suspens, elles pourront \'{e}ventuellement \^{e}tre \'{e}claircies par de prochains chercheurs qui travailleront sur ce sujet. Aussi, chaque nouvelle correction au sein de l'encyclop\'{e}die Wikip\'{e}dia ou chaque cr\'{e}ation de corpus d'erreur de fran\c{c}ais pourrait \^{e}tre un tremplin vers la r\'{e}solution de notre sujet de recherche.
 
 
 \cleardoublepage
+
 %======biblio======
-\begin{thebibliography}{1}
-\bibitem{1} Laboratoire lorrain de recherche en informatique et ses applications \url{http://www.loria.fr/fr/}
-  \bibitem{2} Wikipedia Correction and Paraphrase Corpus \url{https://wicopaco.limsi.fr}
-  \bibitem{3} Graph Rewriting for Natural Language Processing \url{http://grew.fr}
-  \bibitem{4} Travaux effectu\'{e}s sur le fichier contenant les 400 000 entr\'{e}es \url{https://wicopaco.limsi.fr/pub/taln10.pdf}
-    \bibitem{5} Laboratoire d'informatique pour la m\'{e}canique et les sciences de l'ing\'{e}nieur \url{https://www.limsi.fr/fr/}
-\end{thebibliography}
-[6] Rapport r\'{e}pertoriant un grand nombre de fautes et leurs d\'{e}finition \url{https://wicopaco.limsi.fr/pub/typologie-modifications-wikipedia.pdf}
+\begin{center}
+{\bfseries \huge Bibliographie}
+\end{center}
+\vspace*{35mm}
+[1] Thierry Lecroq (Univ. Rouen). Distance entre mots 2012
+\newline
+\newline
+[2] Andr\'{e} Giang, Rapport de stage sur Corrector 2018
+\newline
+\newline
+[3] Damien Levy, Rapport de stage sur Corrector 2018
+\newline
+\newline
+[4] Nam LY, Rapport de stage sur Corrector 2018
+\newline
+\newline
+[5] Guillaume Wisniewski, Aur\'{e}lien Max and Fran\c{c}ois Yvon, Recueil et analyse d'un corpus \'{e}cologique de corrections orthographiques extrait des r\'{e}visions de Wikip\'{e}dia, TALN 2010, Montr\'{e}al, Canada
+\newline
+\newline
+[6] Camille Dutrey, Houda Bouamor, Delphine Bernhard and Aur\'{e}lien Max, Typologie des modifications dans les r\'{e}visions de Wikip\'{e}dia, LIMSI Technical Report 2011-01
+\newline
+\newline
+
+\cleardoublepage
+
+
+
+
+
+%====== glossaire ======
+\begin{center}
+{\bfseries \huge Glossaire}
+\end{center}
+\vspace*{35mm}
+1 - LIMSI : Laboratoire lorrain de recherche en informatique et ses applications
+\newline
+\newline
+2 - WiCoPaCo : Wikipedia Correction and Paraphrase Corpus
+\newline
+\newline
+3 - GREW : Graph Rewriting for Natural Language Processing
+\newline
+\newline
+4 - LIMSI : Laboratoire d'informatique pour la m\'{e}canique et les sciences de l'ing\'{e}nieur
+\newline
+\newline
+\cleardoublepage
+
+
+
+
 
 
 \cleardoublepage
